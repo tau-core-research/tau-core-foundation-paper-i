@@ -47,7 +47,7 @@
 \newcommand{\im}{\operatorname{im}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\title{\textbf{Tau Core: An Atemporal Morphological Readout Framework for Emergent Physical Dynamics}\\
+\title{\textbf{Tau Core: An Atemporal Morphological Readout Framework for Emergent Physical Descriptions}\\
 \large Foundation Paper I}
 \author{Jozsef Olcsak\\
 \small Independent researcher\\
@@ -265,6 +265,10 @@ description, as a readout:
   M_{4D} = U_{4D}^{\Mta}(\Rmap(s)).
   \label{eq:block-readout}
 \end{equation}
+This difference has physical content only if independent readout constraints
+exist beyond the spacetime block itself.  If no non-spacetime readout imposes
+source-frozen restrictions, the distinction remains a metaphysical
+rephrasing rather than a physical branch.
 The difference is not cosmetic.  In a block-universe view the four-dimensional
 object is the final arena.  In Tau Core it is an arena produced by a readout.
 The parent response can in principle have distinctions that one readout
@@ -333,6 +337,10 @@ An endpoint-blind Tau response is a map or relation
 whose input is the parent seed and admissible parent-side constraints, not the
 observational endpoint.  Endpoint blindness is a non-leakage rule, not a proof
 that the response is physically real.
+When \(\Rmap\) is relational rather than single-valued, \(\Rmap(s)\) denotes
+the admissible response class, or a representative chosen by an explicitly
+declared source-freeze rule.  No endpoint residual may be used to select the
+representative.
 \end{definition}
 
 \begin{definition}[Morphological body]
@@ -358,6 +366,38 @@ more specialized observable structure.  Each readout has its own null
 directions and validation boundary.  When \(\Mta\) is fixed by the declared
 source class, we suppress it and write \(U_i(r)\).
 \end{definition}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{L{0.16\linewidth}L{0.26\linewidth}L{0.23\linewidth}L{0.17\linewidth}}
+\toprule
+Readout family & Parent/source class & Readout form & Minimal freeze target\\
+\midrule
+Spacetime & local chart and metric handles & \(U_{4D}^{\Mta}(r)\) &
+local interval or chart limit\\
+Observer-time & clock, interface, and path records &
+\(U_{\rm time}^{\Mta}(r,\mathcal O,\gamma)\) &
+proper-time limit or frozen path correction\\
+Quantum access & access, phase, context, or outcome records &
+\(U_q^{\Mta}(r)\) &
+normalized access probabilities or a null/control rule\\
+Gravity & weak-field, closure, lensing, or acceleration records &
+\(U_g^{\Mta}(r)\) &
+Newtonian/GR limit or quotient-visible residual\\
+Mass/source & density, source-measure, flavor, or particle-content records &
+\(U_m^{\Mta}(r)\) &
+conserved source measure or declared mass/source map\\
+Cosmology & web, void, path, clock, or expansion records &
+\(U_{\rm cosmo}^{\Mta}(r)\) &
+FLRW/LCDM limit or frozen residual channel\\
+\bottomrule
+\end{tabular}
+\caption{Readout families and illustrative parent/source classes.  The table
+does not derive the families physically; it records the minimal bookkeeping
+needed before a branch can become more than a vocabulary.}
+\label{tab:readout-families}
+\end{table}
 
 \begin{definition}[Relift]
 A relift for a readout \(U_i\) is a map or partial map
@@ -389,7 +429,7 @@ coordinate expression
 \end{definition}
 
 The obstruction condition and its chart-level representative are not
-dark-matter formulae or quantum-collapse formulae.  They are abstract
+dark-matter formulas or quantum-collapse formulas.  They are abstract
 incompleteness records.  A physical branch must later specify the codomain,
 quotient, units, known limits, and empirical test.
 
@@ -637,7 +677,7 @@ This is also why observer time must be sector-typed.  A clock used in a
 galaxy-rotation analysis, a lensing time-delay analysis, a cosmological
 distance analysis, and a quantum measurement protocol are not automatically
 the same parent object.  They may share a local proper-time limit, but that
-limit has to be earned.
+limit must be derived or justified inside the declared branch.
 
 \section{Toy model with effective time}
 
@@ -881,6 +921,13 @@ the morphological body.  Equivalently one may regard \(U_i\) as a map on
 \(\mathcal M_\tau\times\RTspace\).  This does not say that \(\Mta\) has been
 physically derived.  It says that readout selection is not source-free.
 
+For a concrete branch, \(\Mta\) must also be admissible and frozen.  This means
+that the projected handles used to select \(\Mta\), the allowed family of
+readout kernels, and any source-overlap decisions between channels must be
+declared before endpoint scoring.  If \(\Mta\) is changed after seeing the
+endpoint residual, the branch is phenomenological-only unless an independent
+source review reopens the selection.
+
 This point also prevents double counting.  If two proposed correction terms
 use the same source coordinate, they should not be added independently unless
 a source-side split justifies the separation.  Otherwise the readout model is
@@ -938,6 +985,16 @@ an appropriate self-dualizing pairing, continuous homogeneous reversible
 symmetry, composition rigidity, and trace uniqueness, then a Born/Hilbert
 representation becomes a conditional target.
 \end{quote}
+In this limited sense, the quantum readout is not a sealed sector.  A
+parent-side distinction with access, phase, contextual, or noncommuting
+structure may have quantum-facing and non-quantum-facing projections.  If such
+a distinction survives the null quotient of a gravity, mass/source,
+observer-time, or cosmological readout, a quantum-like signature could appear
+inside that sector's residual structure.  This is not the claim that quantum
+mechanics acts directly on every other readout.  It is the weaker claim that
+several readouts may expose different aspects of the same parent-side
+structure, and that any shared use must be controlled by source-overlap and
+double-counting rules.
 This is a conditional reconstruction route, not a derivation.  The present
 paper includes quantum readout only to show where it sits in the common
 architecture.
@@ -1022,7 +1079,7 @@ For the MOND program, the attractive point is that Tau Core does not begin by
 assuming that the standard cold-particle halo picture is the whole story.  It
 allows the possibility that galaxy-scale acceleration regularities are
 effective consequences of a deeper gravitational/readout structure.  The
-irritating point, from a strict MOND perspective, is that Tau Core does not
+limiting point, from a strict MOND perspective, is that Tau Core does not
 promote MOND itself to final ontology.  It treats MOND-like laws, if they
 appear, as possible intermediate effective rules:
 \[

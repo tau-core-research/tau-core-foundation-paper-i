@@ -49,7 +49,7 @@
 \newcommand{\im}{\operatorname{im}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\title{\textbf{Tau Core: időtlen morfológiai kiolvasási keret az emergens fizikai dinamikához}\\
+\title{\textbf{Tau Core: időtlen morfológiai kiolvasási keret az emergens fizikai leírásokhoz}\\
 \large Foundation Paper I -- magyar változat}
 \author{Olcsák József\\
 \small Független kutató\\
@@ -241,6 +241,10 @@ A Tau Core ezzel szemben egy jó négydimenziós blokkot kiolvasásként kezel:
   M_{4D}=U_{4D}^{\Mta}(\Rmap(s)).
   \label{eq:block-readout-hu}
 \end{equation}
+A különbségnek csak akkor van fizikai tartalma, ha a téridőblokkon túl
+független readout-kényszerek is megjelennek.  Ha nincs nem-téridő readout,
+amely source-frozen korlátozást ad, akkor a különbség inkább metafizikai
+átfogalmazás marad, nem fizikai ág.
 A különbség nem kozmetikai.  A blokk-univerzumban a 4D objektum a végső színtér.
 A Tau Core-ban ez a színtér egy readout eredménye.  A parent-válaszban lehetnek
 olyan különbségek, amelyeket az egyik kiolvasás azonosít, a másik elfelejt, a
@@ -290,6 +294,10 @@ Endpoint-vak Tau-válasz egy
 \]
 térkép vagy reláció, amelynek inputja a parent forrásmag és az admisszibilis
 parent-oldali kényszerek, nem pedig a megfigyelési endpoint.
+Ha \(\Rmap\) reláció és nem egyértékű térkép, akkor \(\Rmap(s)\) az
+admisszibilis válaszosztályt, vagy egy explicit source-freeze szabállyal
+kiválasztott reprezentánst jelöl.  Endpoint residual nem használható a
+reprezentáns kiválasztására.
 \end{definition}
 
 \begin{definition}[Morfológiai test]
@@ -313,6 +321,38 @@ szerkezet.  Ha \(\Mta\) a deklarált forrásosztály által rögzített, rövide
 \(U_i(r)\)-t írunk.  Minden kiolvasásnak saját null-iránya és validációs
 határa van.
 \end{definition}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\begin{tabular}{L{0.16\linewidth}L{0.26\linewidth}L{0.23\linewidth}L{0.17\linewidth}}
+\toprule
+Readout-család & Parent/forrásosztály & Readout-alak & Minimális freeze-cél\\
+\midrule
+Téridő & lokális chart- és metrikus handle-ök & \(U_{4D}^{\Mta}(r)\) &
+lokális intervallum vagy chart-limit\\
+Megfigyelői idő & óra-, interface- és path-rekordok &
+\(U_{\rm time}^{\Mta}(r,\mathcal O,\gamma)\) &
+sajátidő-limit vagy fagyasztott path-korrekció\\
+Kvantum-hozzáférés & hozzáférési, fázis-, kontextus- vagy kimenet-rekordok &
+\(U_q^{\Mta}(r)\) &
+normalizált hozzáférési valószínűségek vagy null/kontroll szabály\\
+Gravitáció & gyenge-mezős, closure-, lencsézési vagy gyorsulási rekordok &
+\(U_g^{\Mta}(r)\) &
+Newtoni/GR-limit vagy quotientben látható residual\\
+Tömeg/forrás & sűrűség-, forrásmérték-, flavor- vagy részecsketartalom-rekordok &
+\(U_m^{\Mta}(r)\) &
+konzervált forrásmérték vagy deklarált tömeg/forrás térkép\\
+Kozmológia & web-, void-, path-, clock- vagy expanziós rekordok &
+\(U_{\rm cosmo}^{\Mta}(r)\) &
+FLRW/LCDM-limit vagy fagyasztott residual-csatorna\\
+\bottomrule
+\end{tabular}
+\caption{Readout-családok és illusztratív parent/forrásosztályok.  A táblázat
+nem vezeti le fizikailag a családokat; azt rögzíti, milyen minimális
+könyvelés kell ahhoz, hogy egy ág több legyen puszta szókincsnél.}
+\label{tab:readout-families-hu}
+\end{table}
 
 \begin{definition}[Relift]
 Egy \(U_i\) kiolvasáshoz tartozó relift olyan térkép vagy részleges térkép
@@ -739,6 +779,13 @@ kondicionált.  Ekvivalensen írható
 Ez nem bizonyítja, hogy \(\Mta\) fizikailag le van vezetve; csak azt mondja,
 hogy a readout-választás nem forrásmentes.
 
+Konkrét ágban \(\Mta\)-nak admisszibilisnek és fagyasztottnak is kell lennie.
+Ez azt jelenti, hogy a \(\Mta\)-t kiválasztó vetített handle-öket, a megengedett
+readout-kernelcsaládot és a csatornák közötti source-overlap döntéseket
+endpoint scoring előtt deklarálni kell.  Ha \(\Mta\) az endpoint residual
+megtekintése után változik, az ág phenomenological-only státuszú marad, hacsak
+független forrásreview nem nyitja újra a választást.
+
 \section{Megfigyelői idő}
 
 A Tau Core a megfigyelői időt readoutként kezeli, nem parent-oldali primitív
@@ -775,6 +822,17 @@ ahhoz, hogy Hilbert-tér jellegű kvantumelmélet kényszerüljön
 \cite{BarnumWilce2014}.  A Tau Core ezeket boundary-discipline-ként használhatja,
 de nem állíthatja, hogy pusztán egy véges kontextuális readout-grammar már
 komplex Hilbert-teret implikál.
+
+Ebben a korlátozott értelemben a kvantum-readout nem zárt sziget.  Egy
+parent-oldali különbség, amely hozzáférési, fázis-, kontextuális vagy nem
+kommutáló szerkezetet hordoz, rendelkezhet kvantum-facing és nem-kvantum-facing
+vetületekkel is.  Ha ez a különbség túléli egy gravitációs, tömeg/forrás,
+megfigyelői idő vagy kozmológiai readout null-quotientjét, akkor quantum-like
+nyom megjelenhet az adott szektor residual-szerkezetében.  Ez nem azt állítja,
+hogy a kvantummechanika közvetlenül hat minden más readoutra.  Csak azt az
+óvatosabb állítást teszi, hogy több readout ugyanannak a parent-oldali
+szerkezetnek különböző aspektusait teheti láthatóvá, és ezt source-overlap és
+double-counting szabályokkal kell kontrollálni.
 
 \section{Gravitációs és sötétszektor-readoutok}
 
