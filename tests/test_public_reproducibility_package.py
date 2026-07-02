@@ -43,8 +43,10 @@ def test_figures_included():
     text = TEX.read_text()
     for fig in [
         "fig_core_spine.pdf",
+        "fig_block_vs_tau.pdf",
         "fig_readout_atlas.pdf",
         "fig_hidden_defect.pdf",
+        "fig_effective_time_readout.pdf",
         "fig_claim_ladder.pdf",
     ]:
         assert fig in text
@@ -57,5 +59,14 @@ def test_arxiv_zip_source_only():
         names = zf.namelist()
     assert "main.tex" in names
     assert "refs.bib" in names
-    assert all(not name.endswith(".pdf") for name in names)
+    assert "main.pdf" not in names
+    for fig in [
+        "figures/fig_core_spine.pdf",
+        "figures/fig_block_vs_tau.pdf",
+        "figures/fig_readout_atlas.pdf",
+        "figures/fig_hidden_defect.pdf",
+        "figures/fig_effective_time_readout.pdf",
+        "figures/fig_claim_ladder.pdf",
+    ]:
+        assert fig in names
     assert all(not name.endswith(".aux") for name in names)

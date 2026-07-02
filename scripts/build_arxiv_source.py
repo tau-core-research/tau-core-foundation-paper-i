@@ -14,7 +14,9 @@ def main():
     files = []
     for path in SRC.rglob("*"):
         if path.is_file():
-            if path.suffix in {".aux", ".bbl", ".blg", ".log", ".out", ".toc", ".pdf"}:
+            if path.suffix in {".aux", ".bbl", ".blg", ".log", ".out", ".toc"}:
+                continue
+            if path.name == "main.pdf":
                 continue
             files.append(path)
     with zipfile.ZipFile(OUT, "w", compression=zipfile.ZIP_DEFLATED) as zf:
