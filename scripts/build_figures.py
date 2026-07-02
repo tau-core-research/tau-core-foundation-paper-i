@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build publication-style schematic figures for Foundation Paper I.
 
-The figures are conceptual, not empirical.  They are generated as vector PDFs
+The figures are conceptual, not empirical. They are generated as vector PDFs
 so the paper remains reproducible and arXiv-friendly.
 """
 
@@ -38,13 +38,14 @@ COL = {
     "warning_edge": "#ad5a00",
     "defect": "#ffe9e9",
     "defect_edge": "#b22222",
-    "neutral": "#f5f5f5",
+    "neutral": "#f7f7f7",
     "neutral_edge": "#555555",
     "dark": "#333333",
+    "grid": "#777777",
 }
 
 
-def setup(width=9.5, height=4.8):
+def setup(width=9.8, height=4.8):
     fig, ax = plt.subplots(figsize=(width, height))
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
@@ -64,11 +65,11 @@ def box(ax, x, y, w, h, text, fc, ec, fs=9, lw=1.1, align="center"):
         (x, y),
         w,
         h,
-        boxstyle="round,pad=0.012,rounding_size=0.018",
+        boxstyle="round,pad=0.010,rounding_size=0.014",
         linewidth=lw,
         edgecolor=ec,
         facecolor=fc,
-        zorder=2,
+        zorder=3,
     )
     ax.add_patch(patch)
     ax.text(
@@ -79,31 +80,38 @@ def box(ax, x, y, w, h, text, fc, ec, fs=9, lw=1.1, align="center"):
         va="center",
         fontsize=fs,
         color="#111111",
-        linespacing=1.22,
-        zorder=3,
+        linespacing=1.20,
+        zorder=4,
     )
     return patch
 
 
-def label(ax, x, y, text, fs=9, color="#333333", ha="center", weight="normal"):
-    ax.text(x, y, text, fontsize=fs, color=color, ha=ha, va="center", weight=weight)
+def label(ax, x, y, text, fs=9, color="#333333", ha="center", va="center", weight="normal", bbox=False):
+    kwargs = {}
+    if bbox:
+        kwargs["bbox"] = dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.96)
+    ax.text(x, y, text, fontsize=fs, color=color, ha=ha, va=va, weight=weight, zorder=5, **kwargs)
 
 
-def arrow(ax, start, end, color="#333333", lw=1.2, rad=0.0, style="-|>"):
+def arrow(ax, start, end, color="#333333", lw=1.15, rad=0.0, style="-|>", z=2):
     ax.add_patch(
         FancyArrowPatch(
             start,
             end,
             arrowstyle=style,
-            mutation_scale=13,
+            mutation_scale=12,
             linewidth=lw,
             color=color,
             connectionstyle=f"arc3,rad={rad}",
-            shrinkA=4,
-            shrinkB=4,
-            zorder=1,
+            shrinkA=0,
+            shrinkB=0,
+            zorder=z,
         )
     )
+
+
+def line(ax, xs, ys, color="#333333", lw=1.0, z=1):
+    ax.plot(xs, ys, color=color, lw=lw, zorder=z)
 
 
 def panel_label(ax, text):
@@ -111,71 +119,81 @@ def panel_label(ax, text):
 
 
 def figure_core_spine():
-    fig, ax = setup(height=4.2)
+    fig, ax = setup(width=10.2, height=4.4)
     panel_label(ax, "A. Minimal Tau Core spine")
-    y = 0.56
-    box(ax, 0.04, y, 0.14, 0.16, "source seed\n$s$", COL["warning"], COL["warning_edge"])
-    box(ax, 0.25, y, 0.18, 0.16, "endpoint-blind\nresponse\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"])
-    box(ax, 0.50, y, 0.18, 0.16, "morphological\nbody\n$M_\\tau$", COL["morph"], COL["morph_edge"])
-    box(ax, 0.76, y, 0.18, 0.16, "sector readout\n$U_i[R_\\tau(s)]$", COL["readout"], COL["readout_edge"])
-    arrow(ax, (0.18, y + 0.08), (0.25, y + 0.08))
-    arrow(ax, (0.43, y + 0.08), (0.50, y + 0.08))
-    arrow(ax, (0.68, y + 0.08), (0.76, y + 0.08))
-    label(ax, 0.215, 0.73, "not time evolution", fs=8, color=COL["warning_edge"])
-    label(ax, 0.465, 0.73, "conditions readout", fs=8, color=COL["morph_edge"])
-    label(ax, 0.72, 0.73, "sector exit", fs=8, color=COL["readout_edge"])
-
+    y = 0.58
+    nodes = [
+        (0.055, 0.14, "source seed\n$s$", COL["warning"], COL["warning_edge"]),
+        (0.285, 0.18, "endpoint-blind\nresponse\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"]),
+        (0.535, 0.18, "morphological\nbody\n$M_\\tau$", COL["morph"], COL["morph_edge"]),
+        (0.785, 0.16, "sector readout\n$U_i[R_\\tau(s)]$", COL["readout"], COL["readout_edge"]),
+    ]
+    centers = []
+    for x, w, text, fc, ec in nodes:
+        box(ax, x, y, w, 0.16, text, fc, ec, fs=9)
+        centers.append((x, x + w, x + w / 2))
+    # Arrows run only in the gaps between boxes; labels sit above with white backing.
+    arrow(ax, (centers[0][1] + 0.018, y + 0.08), (centers[1][0] - 0.018, y + 0.08), color=COL["dark"])
+    arrow(ax, (centers[1][1] + 0.018, y + 0.08), (centers[2][0] - 0.018, y + 0.08), color=COL["dark"])
+    arrow(ax, (centers[2][1] + 0.018, y + 0.08), (centers[3][0] - 0.018, y + 0.08), color=COL["dark"])
+    label(ax, 0.245, 0.80, "not time evolution", fs=7.8, color=COL["warning_edge"], bbox=True)
+    label(ax, 0.500, 0.80, "conditions readout", fs=7.8, color=COL["morph_edge"], bbox=True)
+    label(ax, 0.745, 0.80, "sector exit", fs=7.8, color=COL["readout_edge"], bbox=True)
     box(
         ax,
-        0.06,
-        0.17,
-        0.88,
-        0.20,
-        "Claim level: formal framework / position paper.\nNot empirical validation, not a completed physical theory.",
+        0.18,
+        0.24,
+        0.64,
+        0.16,
+        "Claim level: formal framework / position paper\nnot empirical validation; not a completed physical theory",
         "#ffffff",
         "#777777",
         fs=9,
     )
-    label(ax, 0.50, 0.06, "$s \\mapsto R_\\tau(s) \\mapsto U_i(R_\\tau(s))$", fs=13, weight="bold")
+    label(ax, 0.50, 0.10, "$s \\mapsto R_\\tau(s) \\mapsto U_i(R_\\tau(s))$", fs=13, weight="bold")
     save(fig, "fig_core_spine.pdf")
 
 
 def figure_block_comparison():
-    fig, ax = setup(height=5.0)
+    fig, ax = setup(width=10.2, height=5.1)
     panel_label(ax, "B. Block-universe ontology versus Tau Core readout")
 
-    # Left block: standard block universe.
-    ax.add_patch(Rectangle((0.07, 0.20), 0.36, 0.58, facecolor="#f7f7f7", edgecolor="#555555", lw=1.1))
+    # Left: a clean 4D block sketch.
+    ax.add_patch(Rectangle((0.07, 0.25), 0.34, 0.48, facecolor="#f8f8f8", edgecolor="#555555", lw=1.1, zorder=2))
     for i in range(5):
-        x = 0.10 + 0.06 * i
-        ax.plot([x, x + 0.15], [0.24, 0.74], color="#9a9a9a", lw=0.8)
+        x = 0.11 + 0.052 * i
+        line(ax, [x, x + 0.14], [0.29, 0.69], color="#9a9a9a", lw=0.8, z=3)
     for i in range(4):
-        y = 0.30 + 0.10 * i
-        ax.plot([0.09, 0.40], [y, y + 0.04], color="#b0b0b0", lw=0.8)
-    label(ax, 0.25, 0.83, "Block-universe reading", fs=11, weight="bold")
-    label(ax, 0.25, 0.13, "$\\mathrm{Reality}=M_{4D}$", fs=12, weight="bold")
-    label(ax, 0.25, 0.08, "4D spacetime history is the final object", fs=8)
+        y = 0.34 + 0.08 * i
+        line(ax, [0.10, 0.38], [y, y + 0.035], color="#b0b0b0", lw=0.8, z=3)
+    label(ax, 0.24, 0.82, "Block-universe reading", fs=11, weight="bold")
+    label(ax, 0.24, 0.16, "$\\mathrm{Reality}=M_{4D}$", fs=12, weight="bold")
+    label(ax, 0.24, 0.10, "4D spacetime history is the final object", fs=8)
 
-    # Right: Tau Core.
-    box(ax, 0.58, 0.60, 0.22, 0.14, "parent response\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"])
-    box(ax, 0.58, 0.34, 0.22, 0.14, "4D readout\n$U_{4D}$", COL["readout"], COL["readout_edge"])
-    ax.add_patch(Rectangle((0.56, 0.15), 0.26, 0.10, facecolor="#f7f7f7", edgecolor="#555555", lw=1.0))
-    label(ax, 0.69, 0.20, "$M_{4D}$", fs=11, weight="bold")
-    arrow(ax, (0.69, 0.60), (0.69, 0.48), color=COL["readout_edge"])
-    arrow(ax, (0.69, 0.34), (0.69, 0.25), color=COL["readout_edge"])
-    label(ax, 0.69, 0.83, "Tau Core reading", fs=11, weight="bold")
-    label(ax, 0.69, 0.08, "$M_{4D}=U_{4D}(R_\\tau(s))$", fs=12, weight="bold")
-    label(ax, 0.69, 0.03, "4D block is a sector output, not final ontology", fs=8)
+    # Right: parent response -> readout -> 4D block, vertically separated.
+    box(ax, 0.62, 0.62, 0.22, 0.13, "parent response\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"])
+    box(ax, 0.62, 0.40, 0.22, 0.13, "4D readout\n$U_{4D}$", COL["readout"], COL["readout_edge"])
+    box(ax, 0.62, 0.20, 0.22, 0.10, "$M_{4D}$", COL["neutral"], COL["neutral_edge"], fs=11)
+    arrow(ax, (0.73, 0.62), (0.73, 0.53), color=COL["readout_edge"])
+    arrow(ax, (0.73, 0.40), (0.73, 0.30), color=COL["readout_edge"])
+    label(ax, 0.73, 0.82, "Tau Core reading", fs=11, weight="bold")
+    label(ax, 0.73, 0.13, "$M_{4D}=U_{4D}(R_\\tau(s))$", fs=12, weight="bold")
+    label(ax, 0.73, 0.07, "4D block is a sector output, not final ontology", fs=8)
 
-    ax.plot([0.50, 0.50], [0.10, 0.88], color="#bbbbbb", lw=1.0, ls="--")
-    label(ax, 0.50, 0.92, "comparison", fs=8, color="#666666")
+    line(ax, [0.50, 0.50], [0.10, 0.86], color="#bbbbbb", lw=1.0, z=1)
+    label(ax, 0.50, 0.90, "comparison", fs=8, color="#666666", bbox=True)
     save(fig, "fig_block_vs_tau.pdf")
 
 
 def figure_readout_atlas():
-    fig, ax = setup(width=10.2, height=5.8)
+    fig, ax = setup(width=10.8, height=5.9)
     panel_label(ax, "C. Readout atlas with null and closure boundaries")
-    box(ax, 0.39, 0.78, 0.22, 0.12, "parent response\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"])
+    box(ax, 0.40, 0.79, 0.20, 0.11, "parent response\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"])
+
+    # A bus avoids arrows crossing node labels.
+    bus_y = 0.71
+    line(ax, [0.13, 0.87], [bus_y, bus_y], color=COL["readout_edge"], lw=1.0, z=1)
+    arrow(ax, (0.50, 0.79), (0.50, bus_y), color=COL["readout_edge"], lw=1.0)
 
     nodes = [
         ("$U_{4D}$\nspacetime", 0.06),
@@ -185,67 +203,82 @@ def figure_readout_atlas():
         ("$U_m$\nmass/source", 0.80),
     ]
     for text, x in nodes:
-        box(ax, x, 0.58, 0.14, 0.10, text, COL["readout"], COL["readout_edge"], fs=8)
-        arrow(ax, (0.50, 0.78), (x + 0.07, 0.68), color=COL["readout_edge"], lw=1.0)
-        box(ax, x, 0.40, 0.14, 0.09, "null quotient\n$N_i$", "#ffffff", "#777777", fs=7.6)
-        box(ax, x, 0.26, 0.14, 0.09, "closure test\n$C_i$", "#ffffff", "#777777", fs=7.6)
-        arrow(ax, (x + 0.07, 0.58), (x + 0.07, 0.49), color="#777777", lw=0.8)
-        arrow(ax, (x + 0.07, 0.40), (x + 0.07, 0.35), color="#777777", lw=0.8)
-    label(ax, 0.50, 0.14, "Each sector needs its own codomain, null quotient, closure test, and validation boundary.", fs=9)
+        cx = x + 0.07
+        arrow(ax, (cx, bus_y), (cx, 0.64), color=COL["readout_edge"], lw=1.0)
+        box(ax, x, 0.54, 0.14, 0.10, text, COL["readout"], COL["readout_edge"], fs=8)
+        arrow(ax, (cx, 0.54), (cx, 0.47), color="#777777", lw=0.8)
+        box(ax, x, 0.38, 0.14, 0.09, "null quotient\n$N_i$", "#ffffff", "#777777", fs=7.6)
+        arrow(ax, (cx, 0.38), (cx, 0.32), color="#777777", lw=0.8)
+        box(ax, x, 0.23, 0.14, 0.09, "closure test\n$C_i$", "#ffffff", "#777777", fs=7.6)
+    label(ax, 0.50, 0.13, "Each sector needs its own codomain, null quotient, closure test, and validation boundary.", fs=9)
     label(ax, 0.50, 0.07, "A shared parent response does not imply automatic additivity of readout components.", fs=9)
     save(fig, "fig_readout_atlas.pdf")
 
 
 def figure_defect():
-    fig, ax = setup(height=5.0)
+    fig, ax = setup(width=10.4, height=5.4)
     panel_label(ax, "D. Relift failure as a readout-relative hidden defect")
-    box(ax, 0.05, 0.62, 0.14, 0.12, "$r=(a,b,c)$\nparent record", COL["parent"], COL["parent_edge"], fs=8)
-    box(ax, 0.29, 0.68, 0.16, 0.12, "$U_A(r)=(a,b)$", COL["readout"], COL["readout_edge"], fs=9)
-    box(ax, 0.55, 0.68, 0.17, 0.12, "$J_AU_A(r)=(a,b,0)$", COL["warning"], COL["warning_edge"], fs=8)
-    box(ax, 0.81, 0.68, 0.14, 0.12, "$h_A=(0,0,-c)$", COL["defect"], COL["defect_edge"], fs=8)
-    arrow(ax, (0.19, 0.68), (0.29, 0.74))
-    arrow(ax, (0.45, 0.74), (0.55, 0.74))
-    arrow(ax, (0.72, 0.74), (0.81, 0.74))
+    box(ax, 0.04, 0.54, 0.16, 0.14, "$r=(a,b,c)$\nparent record", COL["parent"], COL["parent_edge"], fs=8.5)
 
-    box(ax, 0.29, 0.36, 0.16, 0.12, "$U_B(r)=(a,c)$", COL["readout"], COL["readout_edge"], fs=9)
-    box(ax, 0.55, 0.36, 0.17, 0.12, "$J_BU_B(r)=(a,0,c)$", COL["warning"], COL["warning_edge"], fs=8)
-    box(ax, 0.81, 0.36, 0.14, 0.12, "$h_B=(0,-b,0)$", COL["defect"], COL["defect_edge"], fs=8)
-    arrow(ax, (0.19, 0.67), (0.29, 0.42), rad=-0.08)
-    arrow(ax, (0.45, 0.42), (0.55, 0.42))
-    arrow(ax, (0.72, 0.42), (0.81, 0.42))
-
-    label(ax, 0.50, 0.20, "Hiddenness is relative to the declared readout and relift policy.", fs=9)
-    label(ax, 0.50, 0.12, "A defect is not automatically a new substance, force, or empirical discovery.", fs=9)
+    rows = [
+        (0.68, "$U_A(r)=(a,b)$", "$J_AU_A(r)=(a,b,0)$", "$h_A=(0,0,-c)$"),
+        (0.35, "$U_B(r)=(a,c)$", "$J_BU_B(r)=(a,0,c)$", "$h_B=(0,-b,0)$"),
+    ]
+    for y, u, relift, defect in rows:
+        box(ax, 0.30, y, 0.17, 0.11, u, COL["readout"], COL["readout_edge"], fs=8.8)
+        box(ax, 0.56, y, 0.19, 0.11, relift, COL["warning"], COL["warning_edge"], fs=8.3)
+        box(ax, 0.83, y, 0.13, 0.11, defect, COL["defect"], COL["defect_edge"], fs=8.3)
+        arrow(ax, (0.20, 0.61), (0.30, y + 0.055), color=COL["dark"], rad=0.0)
+        arrow(ax, (0.47, y + 0.055), (0.56, y + 0.055), color=COL["dark"])
+        arrow(ax, (0.75, y + 0.055), (0.83, y + 0.055), color=COL["dark"])
+    label(ax, 0.385, 0.84, "readout", fs=8, color=COL["readout_edge"], weight="bold")
+    label(ax, 0.655, 0.84, "canonical relift", fs=8, color=COL["warning_edge"], weight="bold")
+    label(ax, 0.895, 0.84, "hidden defect", fs=8, color=COL["defect_edge"], weight="bold")
+    box(
+        ax,
+        0.18,
+        0.12,
+        0.64,
+        0.13,
+        "Hiddenness is relative to the declared readout and relift policy.\nA defect is not automatically a new substance, force, or empirical discovery.",
+        "#ffffff",
+        "#777777",
+        fs=8.8,
+    )
     save(fig, "fig_hidden_defect.pdf")
 
 
 def figure_effective_time():
-    fig, ax = setup(height=4.8)
+    fig, ax = setup(width=10.4, height=5.1)
     panel_label(ax, "E. Effective time as a readout ordering")
-    # Parent record as ordered slots plus hidden component.
-    x0 = 0.08
+    label(ax, 0.20, 0.80, "atemporal parent record", fs=9, weight="bold")
+    x0 = 0.06
     for k in range(6):
-        ax.add_patch(Rectangle((x0 + 0.055 * k, 0.62), 0.045, 0.08, facecolor="#eaf4ea", edgecolor="#2f6b35", lw=0.8))
-        label(ax, x0 + 0.055 * k + 0.0225, 0.66, f"$a_{k}$", fs=8)
-    ax.add_patch(Rectangle((x0 + 0.36, 0.62), 0.045, 0.08, facecolor="#ffe9e9", edgecolor="#b22222", lw=0.8))
-    label(ax, x0 + 0.382, 0.66, "$c$", fs=8)
-    label(ax, 0.22, 0.78, "atemporal parent record", fs=9, weight="bold")
+        ax.add_patch(Rectangle((x0 + 0.055 * k, 0.65), 0.045, 0.075, facecolor=COL["parent"], edgecolor=COL["parent_edge"], lw=0.8, zorder=3))
+        label(ax, x0 + 0.055 * k + 0.0225, 0.687, f"$a_{k}$", fs=8)
+    ax.add_patch(Rectangle((x0 + 0.36, 0.65), 0.045, 0.075, facecolor=COL["defect"], edgecolor=COL["defect_edge"], lw=0.8, zorder=3))
+    label(ax, x0 + 0.382, 0.687, "$c$", fs=8)
 
-    box(ax, 0.50, 0.66, 0.16, 0.11, "$U_{seq}$\nordered sequence", COL["readout"], COL["readout_edge"], fs=8)
-    box(ax, 0.76, 0.66, 0.16, 0.11, "$\\Delta a_k=a_{k+1}-a_k$\neffective dynamics", COL["warning"], COL["warning_edge"], fs=8)
-    arrow(ax, (0.44, 0.66), (0.50, 0.71))
-    arrow(ax, (0.66, 0.71), (0.76, 0.71))
+    # Branch from a clean split point, not from a text box.
+    split = (0.46, 0.687)
+    arrow(ax, (0.43, 0.687), split, color=COL["dark"])
+    line(ax, [split[0], split[0]], [0.47, 0.72], color=COL["dark"], lw=1.0, z=1)
 
-    box(ax, 0.50, 0.33, 0.16, 0.11, "$U_{sum}$\naggregate", COL["readout"], COL["readout_edge"], fs=8)
-    box(ax, 0.76, 0.33, 0.16, 0.11, "$\\sum_k a_k$\nno internal order", COL["neutral"], COL["neutral_edge"], fs=8)
-    arrow(ax, (0.44, 0.64), (0.50, 0.39), rad=-0.15)
-    arrow(ax, (0.66, 0.39), (0.76, 0.39))
-    label(ax, 0.50, 0.13, "The parent record need not evolve for a readout to display an ordered time parameter.", fs=9)
+    box(ax, 0.56, 0.66, 0.16, 0.11, "$U_{seq}$\nordered sequence", COL["readout"], COL["readout_edge"], fs=8)
+    box(ax, 0.80, 0.66, 0.15, 0.11, "$\\Delta a_k$\neffective dynamics", COL["warning"], COL["warning_edge"], fs=8)
+    arrow(ax, (split[0], 0.72), (0.56, 0.715), color=COL["dark"])
+    arrow(ax, (0.72, 0.715), (0.80, 0.715), color=COL["dark"])
+
+    box(ax, 0.56, 0.39, 0.16, 0.11, "$U_{sum}$\naggregate", COL["readout"], COL["readout_edge"], fs=8)
+    box(ax, 0.80, 0.39, 0.15, 0.11, "$\\sum_k a_k$\nno internal order", COL["neutral"], COL["neutral_edge"], fs=8)
+    arrow(ax, (split[0], 0.47), (0.56, 0.445), color=COL["dark"])
+    arrow(ax, (0.72, 0.445), (0.80, 0.445), color=COL["dark"])
+    label(ax, 0.50, 0.17, "The parent record need not evolve for a readout to display an ordered time parameter.", fs=9)
     save(fig, "fig_effective_time_readout.pdf")
 
 
 def figure_claim_ladder():
-    fig, ax = setup(width=10.2, height=5.0)
+    fig, ax = setup(width=10.4, height=5.0)
     panel_label(ax, "F. Claim-boundary ladder")
     levels = [
         ("Definition", "symbols\nand objects", COL["neutral"], COL["neutral_edge"]),
@@ -254,18 +287,18 @@ def figure_claim_ladder():
         ("Toy model", "mechanism\ncheck", COL["readout"], COL["readout_edge"]),
         ("Empirical\nvalidation", "held-out data\n+ controls", COL["defect"], COL["defect_edge"]),
     ]
-    x = 0.045
+    xs = [0.055, 0.245, 0.435, 0.625, 0.815]
+    w = 0.145
     for idx, (title, subtitle, fc, ec) in enumerate(levels):
-        box(ax, x, 0.54, 0.15, 0.20, f"{title}\n{subtitle}", fc, ec, fs=8.0)
+        box(ax, xs[idx], 0.55, w, 0.19, f"{title}\n{subtitle}", fc, ec, fs=8.0)
         if idx < len(levels) - 1:
-            arrow(ax, (x + 0.15, 0.64), (x + 0.19, 0.64))
-        x += 0.19
+            arrow(ax, (xs[idx] + w + 0.015, 0.645), (xs[idx + 1] - 0.015, 0.645), color=COL["dark"])
     box(
         ax,
-        0.12,
-        0.20,
-        0.76,
-        0.18,
+        0.16,
+        0.22,
+        0.68,
+        0.17,
         "Foundation Paper I stops before empirical validation.\nLater branches must add units, known limits, covariance,\ncontrols, and failure rules.",
         "#ffffff",
         "#777777",
@@ -275,7 +308,7 @@ def figure_claim_ladder():
 
 
 def figure_status_matrix():
-    fig, ax = plt.subplots(figsize=(10.2, 4.9))
+    fig, ax = plt.subplots(figsize=(10.4, 4.9))
     rows = [
         "Tau substrate",
         "Seed-response map",
@@ -287,7 +320,6 @@ def figure_status_matrix():
         "Empirical validation",
     ]
     cols = ["Defined", "Postulated", "Toy mechanism", "Validated", "Open blocker"]
-    # Codes: 0 blank, 1 present, 2 explicitly not claimed, 3 open blocker.
     data = np.array(
         [
             [1, 1, 0, 2, 3],
@@ -313,7 +345,7 @@ def figure_status_matrix():
         spine.set_visible(False)
     ax.set_xticks(np.arange(-0.5, len(cols), 1), minor=True)
     ax.set_yticks(np.arange(-0.5, len(rows), 1), minor=True)
-    ax.grid(which="minor", color="#777777", linestyle="-", linewidth=0.7)
+    ax.grid(which="minor", color=COL["grid"], linestyle="-", linewidth=0.7)
     ax.tick_params(which="minor", bottom=False, left=False)
     labels = {1: "yes", 2: "not\nclaimed", 3: "open"}
     for i in range(data.shape[0]):

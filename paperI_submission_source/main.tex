@@ -8,11 +8,21 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{array}
+\usepackage{tocloft}
 \setlength{\emergencystretch}{2em}
+
+\setcounter{tocdepth}{1}
+\renewcommand{\contentsname}{Manuscript Roadmap}
+\renewcommand{\cfttoctitlefont}{\Large\bfseries}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftsecnumwidth}{2.6em}
 
 \hypersetup{
   colorlinks=true,
-  linkcolor=blue!50!black,
+  linkcolor=black,
   citecolor=blue!50!black,
   urlcolor=blue!50!black
 }
@@ -72,7 +82,9 @@ physical parent action.  It is a position paper and formal conjecture scaffold,
 not empirical evidence for a new physical law.
 \end{abstract}
 
+\clearpage
 \tableofcontents
+\clearpage
 
 \section{Purpose and claim boundary}
 
