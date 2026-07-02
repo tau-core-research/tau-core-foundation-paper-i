@@ -32,7 +32,9 @@ rather than primitive inputs.
 
 - `paperI_submission_source/main.tex`: manuscript source.
 - `paperI_submission_source/refs.bib`: references.
-- `figures/`: generated schematic figures.
+- `figures/`: generated vector schematic figures, including the core spine,
+  block-universe comparison, readout atlas, effective-time toy model,
+  hidden-defect model, claim ladder, and claim-status matrix.
 - `scripts/`: figure, PDF, arXiv, and reproduction scripts.
 - `tests/`: smoke tests for the public package.
 

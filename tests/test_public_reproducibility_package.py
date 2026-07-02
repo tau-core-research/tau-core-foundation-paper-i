@@ -48,6 +48,7 @@ def test_figures_included():
         "fig_hidden_defect.pdf",
         "fig_effective_time_readout.pdf",
         "fig_claim_ladder.pdf",
+        "fig_status_matrix.pdf",
     ]:
         assert fig in text
         assert (ROOT / "paperI_submission_source" / "figures" / fig).exists()
@@ -67,6 +68,7 @@ def test_arxiv_zip_source_only():
         "figures/fig_hidden_defect.pdf",
         "figures/fig_effective_time_readout.pdf",
         "figures/fig_claim_ladder.pdf",
+        "figures/fig_status_matrix.pdf",
     ]:
         assert fig in names
     assert all(not name.endswith(".aux") for name in names)

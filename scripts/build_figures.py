@@ -10,6 +10,7 @@ from pathlib import Path
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Rectangle
+import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -244,33 +245,94 @@ def figure_effective_time():
 
 
 def figure_claim_ladder():
-    fig, ax = setup(height=4.7)
+    fig, ax = setup(width=10.2, height=5.0)
     panel_label(ax, "F. Claim-boundary ladder")
     levels = [
-        ("Definition", "symbols and objects", COL["neutral"], COL["neutral_edge"]),
-        ("Postulate", "declared framework", COL["warning"], COL["warning_edge"]),
-        ("Conditional theorem", "if assumptions pass", COL["parent"], COL["parent_edge"]),
-        ("Toy model", "mechanism check", COL["readout"], COL["readout_edge"]),
-        ("Empirical validation", "held-out data + controls", COL["defect"], COL["defect_edge"]),
+        ("Definition", "symbols\nand objects", COL["neutral"], COL["neutral_edge"]),
+        ("Postulate", "declared\nframework", COL["warning"], COL["warning_edge"]),
+        ("Conditional\ntheorem", "if assumptions\npass", COL["parent"], COL["parent_edge"]),
+        ("Toy model", "mechanism\ncheck", COL["readout"], COL["readout_edge"]),
+        ("Empirical\nvalidation", "held-out data\n+ controls", COL["defect"], COL["defect_edge"]),
     ]
-    x = 0.04
+    x = 0.045
     for idx, (title, subtitle, fc, ec) in enumerate(levels):
-        box(ax, x, 0.54, 0.16, 0.16, f"{title}\n{subtitle}", fc, ec, fs=8)
+        box(ax, x, 0.54, 0.15, 0.20, f"{title}\n{subtitle}", fc, ec, fs=8.0)
         if idx < len(levels) - 1:
-            arrow(ax, (x + 0.16, 0.62), (x + 0.19, 0.62))
+            arrow(ax, (x + 0.15, 0.64), (x + 0.19, 0.64))
         x += 0.19
     box(
         ax,
-        0.08,
-        0.23,
-        0.84,
-        0.15,
-        "Foundation Paper I stops before empirical validation.  Later branches must add units, known limits, covariance, controls, and failure rules.",
+        0.12,
+        0.20,
+        0.76,
+        0.18,
+        "Foundation Paper I stops before empirical validation.\nLater branches must add units, known limits, covariance,\ncontrols, and failure rules.",
         "#ffffff",
         "#777777",
-        fs=9,
+        fs=8.8,
     )
     save(fig, "fig_claim_ladder.pdf")
+
+
+def figure_status_matrix():
+    fig, ax = plt.subplots(figsize=(10.2, 4.9))
+    rows = [
+        "Tau substrate",
+        "Seed-response map",
+        "Morphological body",
+        "Sector readouts",
+        "Effective time",
+        "Hidden defect",
+        "GR / quantum / QFT",
+        "Empirical validation",
+    ]
+    cols = ["Defined", "Postulated", "Toy mechanism", "Validated", "Open blocker"]
+    # Codes: 0 blank, 1 present, 2 explicitly not claimed, 3 open blocker.
+    data = np.array(
+        [
+            [1, 1, 0, 2, 3],
+            [1, 1, 0, 2, 3],
+            [1, 1, 0, 2, 3],
+            [1, 1, 1, 2, 3],
+            [1, 1, 1, 2, 3],
+            [1, 1, 1, 2, 3],
+            [0, 0, 0, 2, 3],
+            [0, 0, 0, 2, 3],
+        ],
+        dtype=int,
+    )
+    colors = ["#ffffff", "#dff0df", "#ffe7c7", "#f2dede"]
+    cmap = mpl.colors.ListedColormap(colors)
+    ax.imshow(data, cmap=cmap, vmin=0, vmax=3, aspect="auto")
+    ax.set_xticks(range(len(cols)))
+    ax.set_xticklabels(cols, fontsize=8)
+    ax.set_yticks(range(len(rows)))
+    ax.set_yticklabels(rows, fontsize=8)
+    ax.tick_params(top=True, bottom=False, labeltop=True, labelbottom=False, length=0)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    ax.set_xticks(np.arange(-0.5, len(cols), 1), minor=True)
+    ax.set_yticks(np.arange(-0.5, len(rows), 1), minor=True)
+    ax.grid(which="minor", color="#777777", linestyle="-", linewidth=0.7)
+    ax.tick_params(which="minor", bottom=False, left=False)
+    labels = {1: "yes", 2: "not\nclaimed", 3: "open"}
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            if data[i, j]:
+                ax.text(j, i, labels[data[i, j]], ha="center", va="center", fontsize=7.6, color="#111111")
+    ax.set_title("G. Foundation Paper I claim-status matrix", loc="left", fontsize=10, weight="bold", pad=28)
+    ax.text(
+        0.5,
+        -0.16,
+        "Green cells mark framework content supplied here; orange/red cells mark explicit non-claims or blockers.",
+        transform=ax.transAxes,
+        ha="center",
+        va="center",
+        fontsize=8.5,
+        color="#333333",
+    )
+    fig.tight_layout(pad=1.6)
+    save(fig, "fig_status_matrix.pdf")
 
 
 def main():
@@ -280,6 +342,7 @@ def main():
     figure_defect()
     figure_effective_time()
     figure_claim_ladder()
+    figure_status_matrix()
 
 
 if __name__ == "__main__":
