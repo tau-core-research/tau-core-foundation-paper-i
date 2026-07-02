@@ -32,6 +32,10 @@ rather than primitive inputs.
 
 - `paperI_submission_source/main.tex`: manuscript source.
 - `paperI_submission_source/refs.bib`: references.
+- `paperI_submission_source/main.pdf`: generated English PDF.
+- `paperI_hungarian_source/main.tex`: Hungarian manuscript source.
+- `paperI_hungarian_source/main.pdf`: generated Hungarian PDF.
+- `tau_core_foundation_paper_i_hu.pdf`: convenience copy of the Hungarian PDF.
 - `figures/`: generated vector schematic figures, including the core spine,
   block-universe comparison, readout atlas, effective-time toy model,
   hidden-defect model, claim ladder, and claim-status matrix.

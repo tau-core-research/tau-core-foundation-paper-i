@@ -1,0 +1,933 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tocloft}
+\setlength{\emergencystretch}{4em}
+
+\setcounter{tocdepth}{1}
+\renewcommand{\contentsname}{Kézirat-útiterv}
+\renewcommand{\abstractname}{Kivonat}
+\renewcommand{\refname}{Hivatkozások}
+\renewcommand{\cfttoctitlefont}{\Large\bfseries}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftsecnumwidth}{2.8em}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\newtheorem{definition}{Definíció}
+\newtheorem{postulate}{Posztulátum}
+\newtheorem{proposition}{Állítás}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Sejtés}
+
+\newcommand{\T}{\mathcal T}
+\newcommand{\Ssrc}{\mathcal S}
+\newcommand{\Rtau}{R_{\tau}}
+\newcommand{\Ui}{U_i}
+\newcommand{\Mta}{M_{\tau}}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\Def}{\mathcal D}
+\newcommand{\Rel}{\mathcal J}
+\newcommand{\Null}{\mathcal N}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\im}{\operatorname{im}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{\textbf{Tau Core: időtlen morfológiai kiolvasási keret az emergens fizikai dinamikához}\\
+\large Foundation Paper I -- magyar változat}
+\author{Olcsák József\\
+\small Független kutató\\
+\small AI-segített elméleti fizikai kutatási munkafolyamat}
+\date{Draft v0.1 -- 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+A Tau Core ebben a kéziratban óvatos alapozó keretként jelenik meg, nem
+befejezett fizikai elméletként.  A kiinduló lehetőség az, hogy a szokásos
+dinamikus fizika nem feltétlenül primitív téridőn zajló időfejlődés, hanem
+egy mélyebb, időtlen válaszszerkezet effektív kiolvasása.  A minimális formai
+gerinc:
+\[
+  s \longmapsto \Rtau(s) \longmapsto U_i(\Rtau(s)),
+\]
+ahol \(s\) parent-oldali forrásmag, \(\Rtau(s)\) endpoint-vak Tau-válasz, és
+\(U_i\) szektor-kiolvasás: például téridő-, megfigyelői idő-, kvantum-,
+gravitációs vagy tömeg/forrás-kiolvasás.  A központi állítás architekturális:
+a formalizmus nyelvet ad a definíciók, posztulátumok, feltételes
+következmények, toy mechanizmusok és későbbi empirikus tesztek
+szétválasztására.  A kézirat elhatárolja a keretet a blokk-univerzum
+ontológiától és a szokásos téridő-mezőelmélettől, definiálja a Tau-oldali
+morfológiai testet, hét alapozó posztulátumot fogalmaz meg, a relift-kudarc
+nyelvén bevezeti a kiolvasás-relatív rejtett defektust, és véges toy
+modelleket ad a rejtettségre és az effektív időre.  A fő blokkolók is
+explicit módon szerepelnek: a paper nem vezeti le az általános
+relativitás\-elméletet, a kvantummechanikát, a Born-szabályt, a kvantum\-térelméletet,
+a Standard Modellt, a sötét anyagot, a sötét energiát vagy egy fizikai parent
+akciót.  Ez pozíció-paper és formai sejtésváz, nem empirikus bizonyíték új
+fizikai törvényre.
+\end{abstract}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Cél és állítási határ}
+
+Ez a kézirat az első római számozású Tau Core alapozó paper.  Elkülönül az
+arab számozású Tau Core papersorozattól, amely szűkebb empirikus vagy
+protokoll-csomagokra szolgál.  Itt a cél alapvetőbb: a jelenlegi alapnyelvet
+olyan formában rögzíteni, amely kritizálható, összehasonlítható és finomítható.
+
+Az állítási határ szándékosan szűk.  A paper formai architektúrát javasol.  Nem
+állít empirikus validációt.  Nem vezeti le az általános relativitáselméletet.
+Nem vezeti le a kvantummechanikát.  Nem váltja le a \(\Lambda\)CDM-et.  Nem
+oldja meg a mérési problémát, a sötét szektort, a neutrínófizikát vagy a
+Standard Modellt.  Olyan szókészletet ad, amelyben ezek a későbbi kérdések
+feltehetők anélkül, hogy a téridőbeli időfejlődést primitív szintnek vennénk.
+
+A központi gondolat egy sorban:
+\begin{equation}
+  s \longmapsto \Rtau(s) \longmapsto U_i(\Rtau(s)).
+  \label{eq:core-spine-hu}
+\end{equation}
+Az első nyíl nem időfejlődés.  Parent-oldali válaszreláció.  A második nyíl
+kiolvasás.  Fizikai elmélet csak akkor jelenik meg, ha egy kiolvasás
+megadta a kodomént, a null-politikát, a closure-tesztet és a validációs határt.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_core_spine.pdf}
+  \caption{A Foundation Paper I-ben használt minimális Tau Core gerinc.  A
+  parent-oldali forrásmag \(s\) endpoint-vak Tau-választ \(\Rtau(s)\) indukál.
+  A Tau-oldali morfológiai test \(\Mta\) kondicionálja a szektor-kiolvasásokat
+  \(U_i\).  Ez formai architektúra, nem empirikus validáció.}
+  \label{fig:core-spine-hu}
+\end{figure}
+
+Ezért a paper inkább formai sejtés- vagy pozíció-paper, mint fenomenológiai
+paper.  Akkor hasznos, ha a későbbi kutatási programot jobban cáfolhatóvá
+teszi.  Egy tág ontológia, amely nem fordítható fagyasztott forrásszabályokra,
+null-tesztekre vagy endpoint-vak előrejelzésekre, fizikaként nem hasznos.
+
+\section{Olvasói útiterv}
+
+A papernek két feladata van.  Először: rögzíti a későbbi Tau Core munka
+szókészletét.  Másodszor: kimondja, hogy ez a szókészlet mit nem bizonyít.
+
+\begin{center}
+\small
+\begin{tabular}{L{0.23\linewidth}L{0.43\linewidth}L{0.22\linewidth}}
+\toprule
+Rész & Szerep & Állítási szint\\
+\midrule
+Nyitó részek & Motiváció, név, viszony a blokk-univerzumhoz és a téridő-mezőképhez & Pozicionálás\\
+Alapszókészlet & Parent-válasz, morfológiai test, kiolvasás, relift, defektus & Definíciók\\
+Formai gerinc & Minimális kalkulus, forrásfegyelem, effektív idő, posztulátumok & Keretposztulátumok\\
+Toy réteg & Véges hidden-defect modell és morfológia/megfigyelői idő tisztázása & Toy mechanizmus\\
+Határréteg & Kvantum, gravitáció, kozmológia, korábbi paperek és ellenvetések & Határkijelölés\\
+Audit réteg & Érettségi checklist, alapozó sorozat, összegzés és nem-eredmények & Auditfegyelem\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A paper tehát gyenge állítási szinttől erősebb felé olvasandó.  A definíció nem
+válik automatikusan feltevéssé; a feltevés nem válik levezetett törvénnyé; a
+toy modell nem válik empirikus validációvá.  Későbbi paperek megpróbálhatnak
+konkrét ágakat előléptetni, de Foundation Paper I ezeket az előléptetéseket
+az állítási határán kívül tartja.
+
+\section{Miért kell alapozó paper?}
+
+A modern alapkutatás több iránya is megkérdőjelezi, hogy az idő, a téridő vagy
+a lokális dinamika primitív legyen.  A kanonikus kvantumgravitációban ismert a
+``problem of time'', ahol időtlen kényszeregyenlet mellett is megjelenhet
+effektív dinamika \cite{WheelerDeWitt1967,Rovelli2004}.  A relációs idő
+konstrukciói azt mutatják, hogy dinamika korrelációkon keresztül is leírható
+\cite{PageWootters1983}.  Időtlen vagy konfigurációs-tér alapú nézetek is
+léteznek \cite{Barbour1999}.  A kvantumrekonstrukciós programok pedig azt
+mutatják, hogy a kvantumformalizmus nagy része operacionális elvekből
+szervezhető \cite{Hardy2001,Chiribella2011,MasanesMueller2011}.
+
+A Tau Core nem állítja, hogy ezeket a programokat megoldja.  Más szervező
+kérdést használ:
+\begin{quote}
+Kezelhetők-e a megfigyelt szektorleírások egy mélyebb parent-válasz
+kiolvasásaiként, úgy, hogy az időfejlődés, a kvantumállapot, a gravitáció, a
+tömeg és a megfigyelői idő effektív szektorleírások legyenek, ne primitív
+kategóriák?
+\end{quote}
+Ez szándékosan tágabb kérdés, mint bármelyik egyedi ág.  Ha túl tág marad,
+metafizikává válik.  A jelen paper célja ennek megakadályozása: megadja azokat
+a minimális objektumokat, amelyek nélkül egy Tau Core állítás nem matematikailag
+értelmes.
+
+\section{A Tau Core név}
+
+A ``Tau Core'' név történeti.  A program időalapú intuícióból indult: talán a
+négydimenziós megfigyelő által látott idő nem primitív háttér, hanem vetített
+válasz.  Ez magyarázza a \(\tau\) jelölést, amely fizikában gyakran időhöz vagy
+sajátidőhöz kötődik.
+
+A jelenlegi architektúrában azonban \(\tau\) nem közönséges időt jelent.  A
+teória parent-state oldalát nevezi meg.  Az idő ebből az oldalból csak az egyik
+lehetséges kiolvasás.
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Jel vagy kifejezés & Jelentés itt & Nem ezt állítjuk\\
+\midrule
+\(\tau\) & parent-state oldal & maga a közönséges idő\\
+\(X_{\tau}\) & parent Tau-állapot & detektált fizikai mező\\
+\(\Rtau(s)\) & endpoint-vak válasz & időfejlődés\\
+\(U_{\rm time}\) & idő-kiolvasás & levezetett óraelmélet\\
+\(\Mta\) & morfológiai test & megfigyelt 4D alak\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Így a teória idő-motivált, de nem idő-redukcionista.  Nem azt mondja, hogy
+minden időből van.  Azt mondja, hogy az idő a kiolvasási oldalhoz tartozik,
+míg \(\tau\) azt a mélyebb oldalt nevezi meg, ahonnan idő és más fizikai
+szektorok kiolvashatók.
+
+\section{Eltérés a blokk-univerzumtól}
+
+A blokk-univerzum olvasat a négydimenziós téridőtörténetet végső objektumnak
+tekinti.  Ez nem szalmabáb: a relativisztikus háttér Minkowski
+négydimenziós téridő-formulációjával kezdődik \cite{Minkowski1909}, majd a
+Rietdijk--Putnam--Maxwell érvelés a szimultaneitás relativitásából
+négydimenzionalizmus vagy eternalizmus felé mutat
+\cite{Rietdijk1966,Putnam1967,Maxwell1985,Thyssen2023RPM}.  A standard
+filozófiai áttekintések a lét, keletkezés, eternalizmus és blokk-univerzum
+vitáját tárgyalják \cite{Savitt2021,MarkosianSullivan2025,PetersonSilberstein2010,Thyssen2020}.
+
+Egy tömör blokk-univerzum állítás:
+\begin{equation}
+  \text{Valóság}=M_{4D}.
+\end{equation}
+A Tau Core ezzel szemben egy jó négydimenziós blokkot kiolvasásként kezel:
+\begin{equation}
+  M_{4D}=U_{4D}(\Rtau(s)).
+  \label{eq:block-readout-hu}
+\end{equation}
+A különbség nem kozmetikai.  A blokk-univerzumban a 4D objektum a végső színtér.
+A Tau Core-ban ez a színtér egy readout eredménye.  A parent-válaszban lehetnek
+olyan különbségek, amelyeket az egyik kiolvasás azonosít, a másik elfelejt, a
+harmadik pedig effektív dinamikává fordít.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_block_vs_tau.pdf}
+  \caption{A blokk-univerzum összehasonlítás.  Bal oldalt a standard 4D blokk
+  olvasat, ahol a téridőtörténet a végső objektum.  Jobb oldalt a Tau Core
+  pozíció: ugyanaz az effektív 4D blokk lehet egy mélyebb parent-válasz stabil
+  kiolvasása.  Az ábra fogalmi különbséget mutat, nem az eternalizmus cáfolata.}
+  \label{fig:block-vs-tau-hu}
+\end{figure}
+
+\section{Eltérés a szokásos téridő-mezőelmélettől}
+
+Egy szokásos mezőelmélet téridőn adott mezővel indul:
+\begin{equation}
+  \phi:M_{4D}\to V,
+\end{equation}
+majd \(\phi(x,t)\) dinamikáját vizsgálja.  A Tau Core megfordítja a sorrendet:
+\begin{equation}
+  \phi_{\rm obs}(x,t)=U_{\phi}(\Rtau(s)).
+  \label{eq:field-readout-hu}
+\end{equation}
+A megfigyelt mező kiolvasás.  A téridő-koordináták is a kiolvasási struktúra
+részei.  Ez nem teszi rosszá a szokásos mezőelméletet.  Effektív, nagyon
+sikeres leírássá teszi, miután egy adott szektor-kiolvasás stabil lett.
+
+Ezért a Tau Core nem lehet sikeres pusztán attól, hogy új kiolvasási térképet
+ír.  Fizikává csak akkor válik, ha visszaad ismert limiteket és túlél
+empirikus kontrollokat.
+
+\section{Alapszókészlet}
+
+\begin{definition}[Parent forrásmag]
+A parent forrásmag \(s\in\Ssrc\) Tau-oldali forrásadat.  Nem megfigyelt
+endpoint, és nem választható ki abból a residualból, amelyet egy későbbi
+kiolvasás magyarázni akar.
+\end{definition}
+
+\begin{definition}[Endpoint-vak Tau-válasz]
+Endpoint-vak Tau-válasz egy
+\[
+  \Rtau:\Ssrc\to\mathcal R_{\tau}
+\]
+térkép vagy reláció, amelynek inputja a parent forrásmag és az admisszibilis
+parent-oldali kényszerek, nem pedig a megfigyelési endpoint.
+\end{definition}
+
+\begin{definition}[Morfológiai test]
+A Tau-oldali morfológiai test \(\Mta\) az intrinsic strukturált test, amely a
+kiolvasásokat kondicionálja.  Nem megfigyelt 4D morfológiai címke.  Tartalmazhat
+szektor-, ág-, fal-, null-, Hessian-support-, admisszibilitási-, history- és
+megfigyelő/útvonal-releváns szerkezetet.  A vetített morfológia csak egy
+readout-handle erre a mélyebb testre.
+\end{definition}
+
+\begin{definition}[Kiolvasás]
+Kiolvasás egy szektortérkép:
+\[
+  U_i:\mathcal R_{\tau}\to\Obs_i.
+\]
+A kodomén lehet téridőleírás, időrend, kvantum-hozzáférési állapot,
+gravitációs válasz, tömeg/forrás rekord vagy speciálisabb megfigyelhető
+szerkezet.  Minden kiolvasásnak saját null-iránya és validációs határa van.
+\end{definition}
+
+\begin{definition}[Relift]
+Egy \(U_i\) kiolvasáshoz tartozó relift olyan térkép vagy részleges térkép
+\[
+  J_i:\Obs_i\to\mathcal R_{\tau},
+\]
+amely megpróbál parent-válasz reprezentánst rekonstruálni egy kiolvasott
+rekordból.  Nem kell globálisan léteznie és nem kell egyértelműnek lennie.
+\end{definition}
+
+\begin{definition}[Kiolvasási defektus]
+Ha \(r=\Rtau(s)\), akkor a kiolvasási defektus
+\[
+  h_i(r)=J_i(U_i(r))-r,
+  \label{eq:defect-hu}
+\]
+amikor a kivonás értelmezett.  Általánosabban: annak ekvivalenciaosztálya,
+hogy \(J_iU_i(r)\) nem tér vissza az eredeti parent-válasz reprezentánshoz.
+\end{definition}
+
+Az \eqref{eq:defect-hu} egyenlet nem sötétanyag-képlet és nem kvantum-kollapszus
+képlet.  Absztrakt hiányossági rekord.  Egy fizikai ágnak később meg kell
+adnia a kodomént, a quotientet, az egységeket, az ismert limiteket és az
+empirikus tesztet.
+
+\section{Minimális kiolvasási kalkulus}
+
+Legyen \(\mathcal R_{\tau}\) parent-választér és \(U_i\) kiolvasás.  Az első
+matematikai objektum az indisztingválhatósági reláció:
+\begin{equation}
+  r\sim_i r' \quad\Longleftrightarrow\quad U_i(r)=U_i(r').
+  \label{eq:readout-equivalence-hu}
+\end{equation}
+Ez readout-relatív.  Egy különbség lehet láthatatlan az egyik szektorban és
+látható egy másikban.
+
+\begin{definition}[Kiolvasási kernel]
+\(U_i\) kiolvasási kernelje az \eqref{eq:readout-equivalence-hu} reláció.  Ha
+\(\mathcal R_{\tau}\) lineáris és \(U_i\) lineáris, ez a szokásos nulltérre
+egyszerűsödik.  Általában azonban ekvivalenciareláció, nem feltétlenül
+lineáris altér.
+\end{definition}
+
+\begin{definition}[Kiolvasási finomítás]
+\(U_j\) finomítja \(U_i\)-t, ha
+\[
+  r\sim_j r'\Longrightarrow r\sim_i r'.
+\]
+Vagyis \(U_j\) legalább annyi parent-válasz információt különböztet meg, mint
+\(U_i\).
+\end{definition}
+
+\begin{definition}[Közös kiolvasás]
+\(U_i\) és \(U_j\) közös kiolvasása:
+\[
+  U_{ij}(r)=(U_i(r),U_j(r)).
+\]
+Ekvivalenciarelációja:
+\[
+  \sim_{ij}=\sim_i\cap\sim_j.
+\]
+\end{definition}
+
+\begin{proposition}[A közös kiolvasás finomítja komponenseit]
+\(U_{ij}\) finomítja \(U_i\)-t és \(U_j\)-t is.
+\end{proposition}
+
+\begin{proof}
+Ha \(r\sim_{ij}r'\), akkor \(U_i(r)=U_i(r')\) és \(U_j(r)=U_j(r')\).  Tehát
+\(r\sim_i r'\) és \(r\sim_j r'\).
+\end{proof}
+
+Ezért a több-kiolvasásos tesztek értékesek lehetnek, de veszélyesek is: ha két
+kiolvasás nem független, akkor ugyanazt a forráskoordinátát kétszer számolhatja.
+Érett Tau Core ágnak ezért source-overlap ledgerre van szüksége.
+
+\section{Nullok, quotientek és védett identitás}
+
+Minden fizikai kiolvasásnak vannak null-irányaik: parent-változások, amelyeket
+az adott readout fizikailag irrelevánsnak tekint.  Jelölje \(N_i\) a
+null-relációt.  A quotient objektum:
+\[
+  [r]_i\in\mathcal R_{\tau}/N_i.
+\]
+A kiolvasás quotient-safe, ha
+\begin{equation}
+  rN_i r'\Longrightarrow U_i(r)=U_i(r').
+  \label{eq:quotient-safe-hu}
+\end{equation}
+Ha ez sérül, a readout különböző megfigyelhetőket rendel olyan parent
+állapotokhoz, amelyeket maga fizikailag ekvivalensnek deklarált.
+
+\begin{definition}[Védett forrásidentitás]
+Védett forrásidentitás egy \(Q_{\rm src}\) ekvivalenciareláció a parent-oldali
+forrásokon vagy forrásreprezentánsokon, amelyet a teória forrásszintű
+identitásként kezel.  A readout source-faithful, ha nem omlaszt össze külön
+\(Q_{\rm src}\)-osztályokat egy kiválasztott forrásosztályba anélkül, hogy ezt
+védett null-szerkezetként deklarálná.
+\end{definition}
+
+Ez konzisztenciaigény.  Nélküle a modell tetszőleges különbségeket rejthet a
+parent térbe, és csak az endpoint megtekintése után húzhatná elő őket.
+
+\section{Endpoint-vakság mint tudományos szabály}
+
+Endpoint-vak egy readout modell, ha a forrás, kernelcsalád, amplitúdószabály
+és null-politika rögzítve van az endpoint residual megtekintése előtt.  Ez nem
+filozófiai ízléskérdés.  Ez az egyetlen módja annak, hogy egy tág readout
+keret ne váljon görbeillesztéssé.
+
+A minimális endpoint-vak rekord tartalmazza:
+\begin{enumerate}[label=(E\arabic*)]
+  \item a forrásobjektumot vagy forrásproxyt;
+  \item a deklarált \(U_i\) readout-családot;
+  \item a null- és quotient-politikát;
+  \item az együtt használt csatornák source-overlap döntését;
+  \item freeze artifactot vagy időbélyegzett deklarációt;
+  \item tiltott endpoint mezőket;
+  \item kontrollokat és failure-feltételeket.
+\end{enumerate}
+
+Foundation Paper I nem futtat endpoint-tesztet.  Azt mondja ki, hogy a későbbi
+ágaknak miért van rá szükségük.
+
+\section{Hogyan jelenik meg effektív dinamika?}
+
+A Tau Core a primitív időfejlődést readout-paraméterezett változással váltja
+ki.  Legyen \(r=\Rtau(s)\) parent-szinten időtlen.  Tegyük fel, hogy egy
+\(U_i\) readout olyan rekordot ad, amely \(t_i\) paraméterrel koordinatizálható:
+\[
+  U_i(r)=o_i(t_i).
+\]
+Ekkor
+\[
+  \frac{do_i}{dt_i}
+\]
+a readouton belül értelmes.  Nem kell parent-idő szerinti deriváltnak lennie.
+Ez a minimális értelem, amelyben a dinamika emergens.
+
+Két readout ugyanarról a parent-válaszról eltérhet:
+\[
+  U_A(r)=o_A(t_A),\qquad U_B(r)=C_B.
+\]
+Az első időindexelt sorozatként, a második statikus korrelációként vagy
+kényszerként szervezi ugyanazt a parent-választ.  Nincs ellentmondás.
+
+\section{Toy modell effektív idővel}
+
+Legyen
+\[
+  r=(a_0,a_1,\ldots,a_n,c)\in\mathbb R^{n+2}.
+\]
+Definiáljuk:
+\[
+  U_{\rm seq}(r)=(a_0,a_1,\ldots,a_n).
+\]
+A \(k\) index effektív időkoordinátaként választható, és véges differencia
+írható:
+\[
+  \Delta a_k=a_{k+1}-a_k.
+\]
+A parent objektumban semmi nem fejlődött.  A parent-válasz már tartalmazta az
+indexelt szerkezetet; a readout rendet adott neki.
+
+Második readout:
+\[
+  U_{\rm sum}(r)=\sum_{k=0}^n a_k.
+\]
+Ez csak aggregátumot lát, idősort nem.  A rejtett komponens readout-relatív:
+\(U_{\rm sum}\) számára elveszik a rendezési információ, míg \(U_{\rm seq}\)
+számára például \(c\) marad rejtett.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_effective_time_readout.pdf}
+  \caption{Véges toy modell effektív időre.  A parent rekord maga nem fejlődik.
+  A sorozat-readout rendezett listát tár fel, ezért támogatja a \(\Delta a_k\)
+  véges differenciákat.  Az aggregált readout más megfigyelhetőt ad, és elveszíti
+  a belső sorrendet.}
+  \label{fig:effective-time-hu}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_readout_atlas.pdf}
+  \caption{Egy parent-válasznak több szektor-kiolvasása lehet: téridő,
+  megfigyelői idő, kvantum-hozzáférés, gravitációs válasz vagy tömeg/forrás
+  struktúra.  Minden szektornak saját kodomén, null-politika, closure-teszt és
+  validációs határ kell.}
+  \label{fig:readout-atlas-hu}
+\end{figure}
+
+\section{Hét alapozó posztulátum}
+
+Az alábbi posztulátumok nincsenek bizonyítva ebben a paperben.  A jelölt
+keretet definiálják.
+
+\begin{postulate}[Tau-szubsztrátum]
+Létezik egy parent-szintű \(\T\) struktúra, amely az alapozó szinten nem
+közönséges téridőbeli evolúció.
+\end{postulate}
+
+\begin{postulate}[Forrás-válasz]
+A fizikai konfigurációkat parent-szinten endpoint-vak válaszok reprezentálják:
+\[
+  s\in\Ssrc,\qquad r=\Rtau(s)\in\mathcal R_{\tau}.
+\]
+\end{postulate}
+
+\begin{postulate}[Endpoint-vakság]
+\(\Rtau(s)\), illetve bármely source objektum, amely readout-kernelt választ,
+nem használhatja azt az endpoint residualt, amelyet később magyarázni akar.
+\end{postulate}
+
+\begin{postulate}[Readout-emergencia]
+A megfigyelt fizikai leírások szektor-kiolvasások:
+\[
+  O_i=U_i(\Rtau(s)).
+\]
+Az idő, téridő, kvantum-hozzáférés, gravitáció és tömeg/forrás leírás readout
+jelölt, nem primitív kategória.
+\end{postulate}
+
+\begin{postulate}[Effektív dinamika]
+Időfejlődés csak akkor jelenik meg, ha egy readout stabil rendezést vagy
+óra-koordinátát enged meg.  Egy \(\frac{d}{dt}U_i(\Rtau(s))\) derivált
+effektív readout-derivált, nem primitív parent-idő derivált.
+\end{postulate}
+
+\begin{postulate}[Rejtett defektus]
+Ha egy readout és megengedett reliftje nem állítja vissza a parent-válasz
+reprezentánst a deklarált null-reláció modulo, a nem reliftelhető komponens a
+readout rejtett defektusaként kerül rögzítésre.
+\end{postulate}
+
+\begin{postulate}[Feszültség mint readout-kudarc]
+Egyes megfigyelési vagy elméleti feszültségek modellezhetők readout-, closure-
+vagy relift-defektusként.  Ez kutatási hipotézis, és csak source-frozen
+szabályok, kontrollok, ismert limitek és holdout tesztek után válik fizikává.
+\end{postulate}
+
+\section{Az állítási létra}
+
+A Tau Core egyik központi fegyelme az állítási szintek szétválasztása:
+definíció, posztulátum, sejtés, feltételes tétel, toy modell, numerikus
+evidencia és empirikus validáció nem felcserélhető.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_claim_ladder.pdf}
+  \caption{Foundation Paper I állítási létrája.  A kézirat definícióknál,
+  posztulátumoknál, feltételes következményeknél és toy mechanizmusoknál áll
+  meg.  Nem állít empirikus validációt.}
+  \label{fig:claim-ladder-hu}
+\end{figure}
+
+A tág alapozó programok tipikus hibája a nyelvi előléptetés: metaforából
+mechanizmus, mechanizmusból evidencia, evidenciából validáció lesz.  Ez a
+paper ezt nem teszi.  Az, hogy az observer-time readout, nem vezet le fizikai
+órát.  Az, hogy a sötét szektor esetleg hidden-defect nyelven is tárgyalható,
+nem tünteti el a sötét anyagot.  Az, hogy a kvantumállapot readout lehet, nem
+vezeti le a Hilbert-teret.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_status_matrix.pdf}
+  \caption{Foundation Paper I claim-status mátrixa.  A paper definiál és
+  posztulál egy parent-válasz/readout architektúrát, valamint toy mechanizmust
+  ad effektív időre és rejtett defektusokra.  Nem validál empirikusan, és nem
+  vezeti le GR-t, kvantummechanikát, QFT-t vagy fizikai parent akciót.}
+  \label{fig:status-matrix-hu}
+\end{figure}
+
+\section{Véges toy modell}
+
+Legyen a parent-választér:
+\[
+  \mathcal R_{\tau}=\mathbb R^3,\qquad r=(a,b,c).
+\]
+Két readout:
+\[
+  U_A(a,b,c)=(a,b),\qquad U_B(a,b,c)=(a,c).
+\]
+Ezek különböző koordinátákat felejtenek el.  Válasszunk kanonikus relifteket:
+\[
+  J_A(x,y)=(x,y,0),\qquad J_B(x,z)=(x,0,z).
+\]
+Ekkor:
+\[
+  h_A(r)=J_AU_A(r)-r=(0,0,-c),
+\]
+és
+\[
+  h_B(r)=J_BU_B(r)-r=(0,-b,0).
+\]
+Ugyanannak a parent-válasznak tehát különböző readoutok alatt különböző rejtett
+komponensei vannak.
+
+\begin{proposition}[Readout-relatív rejtett komponens]
+A fenti toy modellben ami \(U_A\) alatt rejtett, az \(U_B\) alatt látható
+lehet, és fordítva.
+\end{proposition}
+
+\begin{proof}
+\(c\) hiányzik \(U_A(a,b,c)\)-ből, és a \(J_A\) relift alatt
+\((0,0,-c)\) defektusként jelenik meg.  Ugyanez a koordináta jelen van
+\(U_B(a,b,c)\)-ben.  Hasonlóan \(b\) látható \(U_A\) alatt és rejtett \(U_B\)
+alatt.
+\end{proof}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_hidden_defect.pdf}
+  \caption{Readout-relatív rejtett defektusok.  Két kiolvasás ugyanarról a
+  parent-válaszról különböző relift-kudarcot adhat.  A rejtett komponens
+  először hiányossági rekord, nem automatikusan új erő vagy szubsztancia.}
+  \label{fig:hidden-defect-hu}
+\end{figure}
+
+\section{Morfológiai test és vetített morfológia}
+
+A ``morfológia'' szó félrevezető lehet.  Csillagászati használatban gyakran
+látható alakot vagy katalógustípust jelent.  A Tau Core-ban az elsődleges
+objektum nem a megfigyelt alak, hanem a Tau-oldali morfológiai test \(\Mta\).
+
+A morfológiai test strukturált forrásobjektum, amely kiolvasásokat kondicionál.
+Egy galaxis képe, rotációs görbéje, cosmic-web tenzora, lencsézési térképe vagy
+kvantummérési kontextusa csak vetített handle lehet erre a testre.  Egyetlen
+4D megjelenés gyakran nem tartalmaz elég információt a readout-releváns
+forrásról: hiányozhat history, observer/path geometria, closure-osztály vagy
+null-szerkezet.
+
+Minimális forma:
+\begin{equation}
+  O_i=U_i[\Mta](\Rtau(s)).
+  \label{eq:morph-conditioned-hu}
+\end{equation}
+A szögletes zárójel azt jelzi, hogy a readout-térkép függhet a morfológiai
+testtől.  Ez nem bizonyítja, hogy \(\Mta\) fizikailag le van vezetve; csak azt
+mondja, hogy a readout-választás nem forrásmentes.
+
+\section{Megfigyelői idő}
+
+A Tau Core a megfigyelői időt readoutként kezeli, nem parent-oldali primitív
+paraméterként:
+\begin{equation}
+  t_{\rm obs}^{S}
+  =
+  U_{\rm time}^{S}(\Rtau(s),\Mta,\mathcal O_S,\gamma_S),
+  \label{eq:observer-time-hu}
+\end{equation}
+ahol \(S\) szektor, \(\mathcal O_S\) megfigyelői interface-adat, \(\gamma_S\)
+pedig útvonal- vagy szelvényadat.
+
+Ez nem levezetett óraelmélet, hanem fegyelmi szabály.  Azt mondja, hogy a
+megfigyelő ideje a megfigyelő readout-csomagjához tartozik.  Egy későbbi
+fizikai elméletnek kell megmutatnia, mikor redukálódik sajátidőre és mikor
+enged korrekciókat.
+
+\section{Kvantum-readout}
+
+A kvantumág természetes célpontja a readout-nyelvnek, de itt különösen veszélyes
+a túlállítás.  Minimálisan:
+\begin{equation}
+  q=U_q(\Rtau(s)),
+\end{equation}
+ahol \(q\) hozzáférési állapot vagy valószínűségi hozzárendelés rekordja lehet.
+Ez messze van a Hilbert-tér vagy Born-szabály levezetésétől.
+
+A kvantumrekonstrukciós programok megmutatják, hogy a kvantumelmélet
+információelméleti vagy operacionális axiómákból is közelíthető
+\cite{Hardy2001,Chiribella2011,MasanesMueller2011}.  A generalizált
+probabilisztikus és Jordan-algebrai utak azt is mutatják, mennyi struktúra kell
+ahhoz, hogy Hilbert-tér jellegű kvantumelmélet kényszerüljön
+\cite{BarnumWilce2014}.  A Tau Core ezeket boundary-discipline-ként használhatja,
+de nem állíthatja, hogy pusztán egy véges kontextuális readout-grammar már
+komplex Hilbert-teret implikál.
+
+\section{Gravitációs és sötétszektor-readoutok}
+
+A gravitációs ág motiválja a hidden-defect szókészletet.  Egy gravitációs
+kiolvasás nem biztos, hogy minden forrásreleváns struktúrát vissza tud emelni
+Newtoni, relativisztikus vagy closure-kompatibilis leírásba:
+\begin{equation}
+  h_g=J_gU_g(\Rtau(s))-\Rtau(s).
+\end{equation}
+Ha \(h_g\) egy komponense túléli a deklarált null quotientet és mérhető 4D
+readoutja van, akkor residual-csatorna jelölt.  Ez még nem sötétanyag-helyettesítés.
+
+\section{Kozmológiai readout}
+
+A kozmológia természetes readout célpont, mert az expanziós történet,
+távolságlétra, növekedési adatok, lencsézés és CMB-inferencia mind
+modellfüggő readout-feltételezéseken keresztül tömörülnek.  Sémában:
+\begin{equation}
+  O_{\rm cosmo}
+  =
+  U_{\rm cosmo}(\Rtau(s),\Mta^U,\gamma_{\rm path},\mathcal O_{\rm obs}).
+\end{equation}
+Itt \(\Mta^U\) univerzumléptékű morfológiai test, \(\gamma_{\rm path}\)
+útvonal/környezet adat, \(\mathcal O_{\rm obs}\) pedig megfigyelői interface.
+Ez nem eredmény, hanem figyelmeztetés: a kozmológiai feszültségeket nem szabad
+egyetlen skálafaktor-függvénybe összenyomni explicit forrás- és kovarianciafegyelem
+nélkül.
+
+\section{Viszony a meglévő papersorozathoz}
+
+Az arab számozású Tau Core paperek nem szükségesek e foundation paper logikájához.
+Szűkebb, operacionális csomagok: galaxis-residualok, source-frozen morfológia
+vagy projekciós kernelek, sötétszektor-döntési protokollok, kozmológiai vagy
+web-witness auditok.  Ezek nem bizonyítják a parent ontológiát.
+
+Foundation Paper I ezzel szemben a közös szókészletet rögzíti.  Nem kölcsönzi
+a numerikus eredményeket bizonyítékként.  Egy későbbi pozitív audit motiválhatja
+a keretet, de nem validálja a parent elméletet, ha a parent forrástól a readout
+szabályig vezető út nem fagyasztott, nem körkörös és nem tesztelt.
+
+\section{Összevetés közeli gondolatokkal}
+
+\paragraph{Relációs idő.}
+A relációs idő megközelítései megmutatják, hogyan nyerhető dinamika
+korrelációkból.  A Tau Core egyetért azzal, hogy külső idő nem feltétlenül
+primitív, de ezt szélesebb readout-atlaszba helyezi.
+
+\paragraph{Shape dynamics és relációs konfiguráció.}
+A shape-dynamics inspirált munka arra figyelmeztet, hogy a téridő-struktúra
+más szimmetria- vagy relációs választással is reformulálható
+\cite{GomesKoslowski2012}.  A Tau Core ezt analógiaként használja, nem
+bizonyításként.
+
+\paragraph{Kvantumrekonstrukció.}
+A kvantumrekonstrukciós programok mintát adnak arra, hogyan lehet operacionális
+elvekből formalizmust építeni.  A Tau Core kvantumágának hasonló szintet kell
+elérnie.
+
+\paragraph{Holográfia és hibajavítás.}
+A holografikus kvantumhibajavítás megmutatja, hogy bulk-szerű struktúra
+nemtriviálisan kódolható és rekonstruálható határadatból
+\cite{AlmheiriDongHarlow2015}.  Itt ez readout/rekonstrukciós fegyelem analógiája,
+nem Tau-ontológiai bizonyíték.
+
+\section{Mi számítana előrelépésnek?}
+
+A keret akkor erősödik, ha az absztrakt readout-nyelv korlátos feladatokká
+válik:
+\begin{enumerate}[label=(\arabic*)]
+  \item nem körkörös parent válaszlaw \(\Rtau\) levezetése;
+  \item source-realizable morfológiai test \(\Mta\) definiálása;
+  \item quotient-safe null-politika bizonyítása egy readoutnál;
+  \item ismert fizikai limit, például sajátidő vagy Newtoni gravitáció
+  kontrollált readout-limitként való levezetése;
+  \item source-frozen empirikus szabályok, amelyek holdout teszten túlélnek;
+  \item negatív eredmények megőrzése a bukott kernelek utólagos újrahangolása
+  helyett.
+\end{enumerate}
+
+\section{Mi számítana bukásnak?}
+
+Egy reviewernek nem kellene kitalálnia a bukási feltételeket.  Foundation
+szinten a Tau Core gyengülne vagy visszaminősülne, ha a következők tartósan
+fennállnak:
+\begin{enumerate}[label=(F\arabic*)]
+  \item \textbf{Nincs source-realizable parent objektum.}  Ha egy ághoz nem
+  adható nem körkörös parent-oldali forrásosztály, az ág szókészlet marad,
+  nem fizika.
+  \item \textbf{Nincs quotient-safe readout.}  Ha deklaráltan null-ekvivalens
+  parent reprezentánsok különböző megfigyelhetőket adnak, a readout belsőleg
+  inkonzisztens.
+  \item \textbf{Nincs ismert-limit visszanyerés.}  Ha egy ág nem tudja
+  visszaadni a releváns standard limitet -- például sajátidőt, Newtoni
+  gravitációt, Born-valószínűségeket vagy \(\Lambda\)CDM viselkedést --, nem
+  léptethető elő.
+  \item \textbf{Endpoint leakage.}  Ha a forrásosztály, kernelcsalád vagy
+  amplitúdószabály abból a residualból van kiválasztva, amelyet később magyaráz,
+  az illesztés, nem Tau Core deriváció.
+  \item \textbf{Kontrollálatlan mentés.}  Ha minden bukás utólag hozzáadott,
+  nem korlátozott projekciós csatornával javítható, a keret elveszíti
+  tudományos tartalmát.
+\end{enumerate}
+
+Ezek nem puszta módszertani preferenciák.  Ezek azok a feltételek, amelyek
+alatt az alapnyelv nem válik fizikai kutatási programmá.  A negatív eredményt
+valódi visszaminősítésként kell megőrizni, nem terminológiai váltással elrejteni.
+
+\section{Várható ellenvetések}
+
+\paragraph{Ez csak nyelvváltás.}
+Komoly ellenvetés.  A keret csak akkor hasznos, ha a readout-nyelv új
+kényszereket kényszerít ki: endpoint-vakságot, null/quotient safety-t,
+source-overlap fegyelmet, ismert-limit visszanyerést és explicit
+failure-feltételeket.
+
+\paragraph{A parent-válasz nem megfigyelhető.}
+Feltételezés szerint nem közvetlenül megfigyelhető.  Ez önmagában nem végzetes:
+sok elméleti objektum csak korlátozott hatásokon keresztül inferált.  A kérdés
+az, hogy a deklarált readout-szabály ad-e olyan előrejelzést vagy kizárást,
+amely bukhatott volna.
+
+\paragraph{A keret bármit megmagyaráz.}
+Ez a legfontosabb veszély.  Ezért kell megőrizni a negatív eredményeket.  Egy
+bukott fagyasztott kernel visszaminősítendő, nem újrahangolandó.
+
+\paragraph{Az időtlen válasz blokk-univerzumnak hangzik.}
+A különbség az \eqref{eq:block-readout-hu} egyenlet: a 4D blokk itt readout,
+nem végső ontológia.
+
+\paragraph{Nincs fizikai törvény levezetve.}
+Helyes.  Foundation Paper I nem vezet le fizikai törvényt.  Azokat az
+objektumokat definiálja, amelyekre egy későbbi levezetésnek szüksége lenne.
+
+\section{Minimális matematikai érettségi checklist}
+
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}p{0.58\linewidth}}
+\toprule
+Követelmény & Jelentés\\
+\midrule
+Forrásdeklaráció & A parent-oldali forrás vagy proxy endpoint scoring előtt deklarált.\\
+Readout kodomén & Az \(\Obs_i\) megfigyelhető tér specifikált.\\
+Null-politika & Gauge, redundancia és protected-null irányok deklaráltak.\\
+Quotient safety & Ekvivalens parent reprezentánsok azonos readoutot adnak.\\
+Relift-politika & Az ág kimondja, hogy \(J_i\) létezik-e és hogyan.\\
+Ismert limit & A readout visszaad standard limitet, ahol kell.\\
+Failure-szabály & Bukott kontroll demóciót okoz, nem utólagos retuningot.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Ez gyengébb, mint egy teljes fizikai elmélet, de erősebb, mint egy metafora.
+
+\section{A római alapozó sorozat}
+
+Ez a paper külön római számozású foundation sorozat első tagja:
+\[
+\begin{array}{ll}
+\text{Paper 1--14} & \text{korlátos empirikus vagy protokoll-csomagok},\\
+\text{Foundation Paper I, II, ...} & \text{fogalmi és matematikai alapozó paperek}.
+\end{array}
+\]
+
+Javasolt következő tagok:
+\begin{itemize}
+  \item \textbf{Foundation Paper I}: időtlen morfológiai readout, fizikai
+  validációs claim nélkül.
+  \item \textbf{Foundation Paper II}: kvantum-readout, feltétlen Hilbert-,
+  Born- vagy QFT-levezetés nélkül.
+  \item \textbf{Foundation Paper III}: hidden defects és sötét szektorok,
+  sötétanyag- vagy sötétenergia-helyettesítési claim nélkül.
+  \item \textbf{Foundation Paper IV}: observer-time és kozmológia, Hubble
+  tension vagy \(\Lambda\)CDM replacement claim nélkül.
+  \item \textbf{Foundation Paper V}: flavor és neutrino readout, Standard
+  Model vagy neutrino-anomaly claim nélkül.
+\end{itemize}
+
+\section{Kompakt formai összegzés}
+
+A keret objektumcsomagként:
+\[
+  \mathfrak T
+  =
+  (\Ssrc,\mathcal R_{\tau},\Rtau,\Mta,\{U_i\},\{N_i\},\{J_i\}).
+\]
+Itt \(\Ssrc\) forrásdomén, \(\mathcal R_{\tau}\) válaszdomén, \(\Rtau\)
+endpoint-vak válaszreláció, \(\Mta\) morfológiai test, \(U_i\) readout,
+\(N_i\) null-politika, \(J_i\) opcionális relift.
+
+Minimális konzisztenciafeltételek:
+\begin{align}
+  &s \text{ endpoint leakage nélkül rögzített},\\
+  &r=\Rtau(s) \text{ definiált a deklarált forrásdoménen},\\
+  &rN_i r'\Rightarrow U_i(r)=U_i(r'),\\
+  &h_i(r)=J_iU_i(r)-r \text{ csak } N_i \text{ modulo értelmezett},\\
+  &\text{ismert fizikai limitek visszanyerése előléptetés előtt}.
+\end{align}
+
+A paper legerősebb állítása az, hogy \(\mathfrak T\) belsőleg szervezett
+kiinduló csomag readout-alapú kutatási programhoz.  Ez nem formális
+konzisztenciabizonyítás minden lehetséges Tau Core ágra, és nem bizonyítja,
+hogy a természet ilyen csomagot használ.
+
+\section{Mit nem bizonyít a paper?}
+
+\begin{itemize}
+  \item Nem bizonyítja, hogy a Tau-szubsztrátum fizikailag létezik.
+  \item Nem ad parent akciót.
+  \item Nem vezeti le a fizikai időt.
+  \item Nem vezeti le az általános relativitáselméletet.
+  \item Nem vezeti le a kvantummechanikát, Born-szabályt, kollapszust vagy QFT-t.
+  \item Nem vezeti le a Standard Modellt.
+  \item Nem magyarázza meg a neutrínófizikát.
+  \item Nem tünteti el a sötét anyagot vagy sötét energiát.
+  \item Nem validál empirikus Tau Core claimet.
+\end{itemize}
+
+Ezek a korlátok nem lábjegyzetek.  A claim részei.  Az alapozó paper célja,
+hogy a blokkolókat elég láthatóvá tegye ahhoz, hogy későbbi munka egyenként
+támadhassa őket.
+
+\section{Konklúzió}
+
+A Tau Core itt időtlen morfológiai readout keretként jelenik meg.  Az alapjavaslat:
+\[
+  s\mapsto\Rtau(s)\mapsto U_i(\Rtau(s)).
+\]
+Ebben az olvasatban a 4D téridőblokk nem végső ontológia, hanem egy readout:
+\[
+  M_{4D}=U_{4D}(\Rtau(s)).
+\]
+A fizikai idő ugyanígy readout-csatorna, nem maga a \(\tau\) jelentése.
+
+A paper hozzájárulása nem új empirikus eredmény, hanem korlátos szókészlet:
+parent forrásmag, endpoint-vak válasz, morfológiai test, szektor-readout,
+relift, rejtett defektus, observer-time readout és állítási létra.  Ez a
+szókészlet későbbi munkának élesebb kérdéseket ad: mely readoutok
+source-realizable-ek, mely defektusok élik túl a quotientet, mely ismert
+limitek nyerhetők vissza, mely source-frozen kernelek élik túl a holdout
+adatokat, és mely ágak buknak el.
+
+A legtisztább összegzés:
+\begin{quote}
+A Tau Core itt nem befejezett elméletként szerepel, hanem formai kutatási
+programként, amelyben az időfejlődés, téridő-mezők, kvantumállapot, gravitáció
+és sötétszektor-nyelv egy mélyebb, időtlen morfológiai válasz readout-problémáiként
+fogalmazhatók újra.
+\end{quote}
+
+Ha ez az újrafogalmazás csak rugalmas terminológiához vezet, el kell vetni.  Ha
+fagyasztott forrásszabályokhoz, visszanyert limitekhez és sikeres vagy bukott
+holdout tesztekhez vezet, akkor tudományos programmá válhat.  Ez a paper az
+első lépés: olyan formában mondja ki a programot, amely kritizálható.
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}
