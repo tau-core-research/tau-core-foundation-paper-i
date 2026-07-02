@@ -351,7 +351,9 @@ FLRW/LCDM-limit vagy fagyasztott residual-csatorna\\
 \caption{Readout-családok és illusztratív parent/forrásosztályok.  A táblázat
 nem vezeti le fizikailag a családokat; azt rögzíti, milyen minimális
 könyvelés kell ahhoz, hogy egy ág több legyen puszta szókincsnél.  A freeze
-célok ág-specifikus operacionális definíciók helyfoglalói, nem kalibrált
+célok szándékosan heterogén helyfoglalók.  Minden későbbi ágnak ezeket
+operacionálisan definiált mennyiségekkel, egységekkel, bizonytalanságokkal,
+nullmodellekkel és bukási szabályokkal kell kiváltania; itt még nem kalibrált
 megfigyelhető mennyiségek.}
 \label{tab:readout-families-hu}
 \end{table}
@@ -486,9 +488,9 @@ után:
 Kozmológiai ágban \(P_0\) lehet illesztett \(\Lambda\)CDM anyag/potenciál
 parent; más ágban az adott standard baseline.  Tau Core-kompatibilis többlet
 csak olyan residual cross-readout struktúra lehet, amely túléli a deklarált
-nullmodellt, kovarianciát és source-overlap ledgert.  Ezt residual
-cross-readout skeleton invariance néven, röviden \(R\)-CRSI-ként rögzítjük.
-Ez csak candidate-support fegyelem: nem validációs statisztika és nem
+nullmodellt, kovarianciát és source-overlap ledgert.  Csak jelölt-névként ezt
+a fegyelmet residual cross-readout skeleton invariance néven, röviden
+\(R\)-CRSI-ként rögzítjük.  Ez nem validációs statisztika és nem
 függetlenségi állítás.  E fegyelem nélkül a közös readout egyszerűen ugyanazt
 a forráskoordinátát számolhatja kétszer.
 
@@ -536,7 +538,8 @@ A kiolvasás quotient-safe, ha
   rN_i r'\Longrightarrow U_i(r)=U_i(r').
   \label{eq:quotient-safe-hu}
 \end{equation}
-Ha ez sérül, a readout különböző megfigyelhetőket rendel olyan parent
+Ha a \eqref{eq:quotient-safe-hu} quotient-safety feltétel sérül, a readout
+különböző megfigyelhetőket rendel olyan parent
 állapotokhoz, amelyeket maga fizikailag ekvivalensnek deklarált.
 
 Ekvivalensen a readoutnak faktorizálnia kell a quotienten:
@@ -851,6 +854,18 @@ ahhoz, hogy Hilbert-tér jellegű kvantumelmélet kényszerüljön
 de nem állíthatja, hogy pusztán egy véges kontextuális readout-grammar már
 komplex Hilbert-teret implikál.
 
+\begin{quote}
+Ha a Tau Core rendezett konvex hozzáférésiállapot-teret, szeparáló effektusokat,
+megfelelő ön-dualizáló párosítást, folytonos homogén reverzibilis szimmetriát,
+kompozíciós merevséget és trace-egyértelműséget szolgáltat, akkor a
+Born/Hilbert-reprezentáció feltételes célponttá válik.
+\end{quote}
+Ez a lista orientáció, nem rejtett kvantummechanika-import.  A konvex állapotok
+és szeparáló effektusok a preparáció/mérés elválasztását rögzítik; a
+szimmetria-, kompozíciós és trace-feltételek olyan regularitások, amelyek a
+Hilbert-szerű kvantumelméletet megkülönböztetik egy általános valószínűségi
+kalkulustól.  A Tau Core-nak egy későbbi kvantumágban ezeket is le kellene
+vezetnie vagy függetlenül igazolnia.
 Az itt felsorolt feltételek nem a Foundation Paper I posztulátumai.  Példák
 arra az extra rekonstrukciós struktúrára, amelyet egy későbbi kvantumágnak
 szállítania vagy helyettesítenie kellene.

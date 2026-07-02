@@ -213,7 +213,8 @@ instead separates:
   \quad \text{from} \quad
   \text{sector readout}.
 \]
-That separation is the entire point of Eq.~\eqref{eq:core-spine}.
+That separation is the entire point of the core-spine relation
+\eqref{eq:core-spine}.
 
 \section{The name Tau Core}
 
@@ -397,8 +398,9 @@ FLRW/LCDM limit or frozen residual channel\\
 \caption{Readout families and illustrative parent/source classes.  The table
 does not derive the families physically; it records the minimal bookkeeping
 needed before a branch can become more than a vocabulary.  The freeze targets
-are placeholders for branch-specific operational definitions, not yet
-calibrated observables.}
+are intentionally heterogeneous placeholders.  Each later branch must replace
+them by operationally defined quantities with units, uncertainties, null
+models, and failure rules; they are not yet calibrated observables.}
 \label{tab:readout-families}
 \end{table}
 
@@ -490,7 +492,8 @@ sector.
 
 \begin{definition}[Readout kernel]
 The readout kernel of \(U_i\) is the equivalence relation \(\sim_i\) defined
-by Eq.~\eqref{eq:readout-equivalence}.  If \(\RTspace\) has a linear
+by the readout-equivalence relation \eqref{eq:readout-equivalence}.  If
+\(\RTspace\) has a linear
 structure and \(U_i\) is linear, this reduces to the usual null space
 \(\Ker U_i\).  In general it is an equivalence relation, not necessarily a
 linear subspace.
@@ -553,9 +556,9 @@ For a cosmological branch \(P_0\) might be a matched \(\Lambda\)CDM
 matter/potential parent; for another branch it would be the relevant standard
 baseline.  A Tau Core-compatible excess would be residual cross-readout
 structure that survives the declared null model, covariance, and
-source-overlap ledger.  We call this residual cross-readout skeleton
-invariance, abbreviated \(R\)-CRSI.  The name is only a discipline for
-candidate support: it is not a validation statistic or an independence claim.
+source-overlap ledger.  As a candidate name only, this discipline may be
+called residual cross-readout skeleton invariance, abbreviated \(R\)-CRSI.
+The abbreviation is not a validation statistic and not an independence claim.
 Without this discipline, a joint readout may simply double count the same
 source coordinate.
 
@@ -616,9 +619,9 @@ Equivalently,
   q_i:\RTspace\to\RTspace/N_i,
 \]
 for an induced quotient readout \(\bar U_i:\RTspace/N_i\to\Obs_i\).
-If Eq.~\eqref{eq:quotient-safe} fails, the readout assigns different
-observables to parent states that it also declares physically equivalent.  Such
-a readout is internally inconsistent.
+If the quotient-safety condition \eqref{eq:quotient-safe} fails, the readout
+assigns different observables to parent states that it also declares physically
+equivalent.  Such a readout is internally inconsistent.
 
 The converse is not required.  A readout can identify more states than the
 declared null relation identifies.  That is precisely readout loss.  The
@@ -1013,6 +1016,12 @@ an appropriate self-dualizing pairing, continuous homogeneous reversible
 symmetry, composition rigidity, and trace uniqueness, then a Born/Hilbert
 representation becomes a conditional target.
 \end{quote}
+The list is included to orient the reader, not to smuggle in quantum mechanics.
+Convex states and separating effects encode preparation and measurement
+separation; symmetry, composition, and trace conditions are the kinds of
+regularity assumptions that distinguish Hilbert-like quantum theory from a
+generic probability calculus.  Tau Core would still have to derive or
+independently justify any such assumptions in a later quantum branch.
 The conditions listed in this sentence are not postulates of Foundation Paper
 I.  They are examples of the additional reconstruction structure that a later
 quantum branch would have to supply or replace.
@@ -1298,8 +1307,8 @@ framework always rescues itself by adding another projection, it fails as
 science.
 
 \paragraph{Objection 4: atemporal response sounds like a block universe.}
-The difference is Eq.~\eqref{eq:block-readout}.  A block universe treats a 4D
-history as the final object.  Tau Core treats a 4D history as one possible
+The difference is the block-readout relation \eqref{eq:block-readout}.  A block
+universe treats a 4D history as the final object.  Tau Core treats a 4D history as one possible
 readout.  The distinction matters only if other readouts impose additional
 source-frozen constraints.  If they do not, Tau Core collapses back into
 ordinary effective description.
