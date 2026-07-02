@@ -67,11 +67,12 @@ dinamikus fizika nem feltétlenül primitív téridőn zajló időfejlődés, ha
 egy mélyebb, időtlen válaszszerkezet effektív kiolvasása.  A minimális formai
 gerinc:
 \[
-  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)),
+  s \longmapsto \Rmap(s) \longmapsto U_i^{\Mta}(\Rmap(s)),
 \]
 ahol \(s\) parent-oldali forrásmag, \(\Rmap(s)\) endpoint-vak Tau-válasz, és
-\(U_i\) szektor-kiolvasás: például téridő-, megfigyelői idő-, kvantum-,
-gravitációs vagy tömeg/forrás-kiolvasás.  A központi állítás architekturális:
+\(\Mta\) a Tau-oldali morfológiai test, míg \(U_i^{\Mta}\)
+morfológia-kondicionált szektor-kiolvasás: például téridő-, megfigyelői idő-,
+kvantum-, gravitációs vagy tömeg/forrás-kiolvasás.  A központi állítás architekturális:
 a formalizmus nyelvet ad a definíciók, posztulátumok, feltételes
 következmények, toy mechanizmusok és későbbi empirikus tesztek
 szétválasztására.  A kézirat elhatárolja a keretet a blokk-univerzum
@@ -106,12 +107,14 @@ feltehetők anélkül, hogy a téridőbeli időfejlődést primitív szintnek ve
 
 A központi gondolat egy sorban:
 \begin{equation}
-  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)).
+  s \longmapsto \Rmap(s) \longmapsto U_i^{\Mta}(\Rmap(s)).
   \label{eq:core-spine-hu}
 \end{equation}
 Az első nyíl nem időfejlődés.  Parent-oldali válaszreláció.  A második nyíl
 kiolvasás.  Fizikai elmélet csak akkor jelenik meg, ha egy kiolvasás
 megadta a kodomént, a null-politikát, a closure-tesztet és a validációs határt.
+Ha \(\Mta\) a deklarált forrásosztály által rögzített, a felső indexet gyakran
+elhagyjuk, és \(U_i\)-t írunk \(U_i^{\Mta}\) helyett.
 
 \begin{figure}[t]
   \centering
@@ -226,7 +229,7 @@ Egy tömör blokk-univerzum állítás:
 \end{equation}
 A Tau Core ezzel szemben egy jó négydimenziós blokkot kiolvasásként kezel:
 \begin{equation}
-  M_{4D}=U_{4D}(\Rmap(s)).
+  M_{4D}=U_{4D}^{\Mta}(\Rmap(s)).
   \label{eq:block-readout-hu}
 \end{equation}
 A különbség nem kozmetikai.  A blokk-univerzumban a 4D objektum a végső színtér.
@@ -329,10 +332,40 @@ koordinátakülönbségként:
 \]
 \end{definition}
 
-Az \eqref{eq:obstruction-hu} egyenlet nem sötétanyag-képlet és nem
-kvantum-kollapszus képlet.  Absztrakt hiányossági rekord.  Egy fizikai ágnak később meg kell
-adnia a kodomént, a quotientet, az egységeket, az ismert limiteket és az
-empirikus tesztet.
+Az obstrukciós feltétel és chart-szintű reprezentánsa nem sötétanyag-képlet és
+nem kvantum-kollapszus képlet.  Absztrakt hiányossági rekord.  Egy fizikai
+ágnak később meg kell adnia a kodomént, a quotientet, az egységeket, az ismert
+limiteket és az empirikus tesztet.
+
+\section{A primitív objektumok státusza}
+
+Alapozó paper-ek gyakori hibája, hogy a definíció, feltételezés és levezetett
+állítás összemosódik.  Az alábbi ledger ezért rögzíti az itt bevezetett
+objektumok státuszát.  Ez nem plusz bizonyíték, hanem claim-boundary eszköz.
+
+\begin{center}
+\small
+\textbf{Primitív objektumok státusz-ledgere}\\[0.5em]
+\begin{tabular}{L{0.20\linewidth}L{0.30\linewidth}L{0.38\linewidth}}
+\toprule
+Objektum & Státusz ebben a paperben & Itt még nincs megadva\\
+\midrule
+\(\Ssrc\) & deklarált source/seed domén & minden forrás fizikai ontológiája\\
+\(\RTspace\) & parent-választér, formai doménként feltételezve & egyediség vagy fizikai létezés bizonyítása\\
+\(\Rmap\) & endpoint-vak válaszleképezés vagy reláció & dinamikai törvény vagy parent akció\\
+\(\Mta\) & morfológia-kondicionáló test & első elvekből való levezetés\\
+\(U_i^{\Mta}\) & szektor-readout definíció & kalibrált fizikai megfigyelhető modell\\
+\(N_i\) & deklarált null/quotient politika & automatikus gauge-elv\\
+\(J_i\) & opcionális relift eszköz & globális inverz readout\\
+\(\omega_i\) & obstrukciós rekord \(N_i\) modulo & sötétszektor- vagy kollapszusmechanizmus\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A paper csak akkor válik nemtriviálissá, ha későbbi ágak a harmadik oszlop
+elemeit source-oldali levezetésekkel, ismert-limit visszanyerésekkel vagy
+bukott kontrollokkal váltják ki.  Addig ezek az objektumok fegyelmezett
+nyelvet definiálnak, nem befejezett fizikai elméletet.
 
 \section{Minimális kiolvasási kalkulus}
 
@@ -409,6 +442,12 @@ parent-oldalról kikényszerítenie:
 \end{enumerate}
 Ha ez nem teljesül, az ág legfeljebb átírás, nem fizikai vagy matematikai
 előrelépés.
+
+Az ismert-limit visszanyerés önmagában nem elég.  Sok ártalmatlan átírás is
+képes visszaadni egy már ismert limitet.  Előléptetéshez ezért legalább egy
+endpoint-vak következmény is kell, amely elbukhatott volna: fagyasztott
+numerikus érték, tiltott család, null predikció, source-oldali reláció vagy
+kontroll-kizárás, mindez endpoint-inspekció előtt deklarálva.
 
 \section{Nullok, quotientek és védett identitás}
 
@@ -734,10 +773,19 @@ A gravitációs ág motiválja a hidden-defect szókészletet.  Egy gravitáció
 kiolvasás nem biztos, hogy minden forrásreleváns struktúrát vissza tud emelni
 Newtoni, relativisztikus vagy closure-kompatibilis leírásba:
 \begin{equation}
-  h_g=J_gU_g(\Rmap(s))-\Rmap(s).
+  \omega_g(r)=0
+  \quad\Longleftrightarrow\quad
+  J_gU_g(r)\,N_g\,r,
+  \qquad r=\Rmap(s).
 \end{equation}
-Ha \(h_g\) egy komponense túléli a deklarált null quotientet és mérhető 4D
-readoutja van, akkor residual-csatorna jelölt.  Ez még nem sötétanyag-helyettesítés.
+Ha \(\omega_g(r)\neq0\), és az obstrukciós osztály túléli a deklarált null
+quotientet mérhető 4D readouttal, akkor residual-csatorna jelölt.  A
+\[
+  h_g=J_gU_g(r)-r
+\]
+koordinátakülönbség csak akkor használható, ha már választottunk olyan
+linearizált gravitációs chartot, amelyben a kivonás értelmezett.  Ez még nem
+sötétanyag-helyettesítés.
 
 \section{Kozmológiai readout}
 
@@ -861,6 +909,21 @@ válik:
   helyett.
 \end{enumerate}
 
+A ``parent válaszlaw'' kifejezést ez az alapozó paper szándékosan nem köti
+egyetlen matematikai típushoz.  Lehetséges típusok:
+\[
+\begin{array}{ll}
+\text{variációs törvény} & \Rmap \text{ akcióból vagy extremális elvből választódik ki},\\
+\text{kényszertörvény} & \Rmap \text{ admisszibilitási vagy closure-egyenletekből jön},\\
+\text{algebrai closure} & \Rmap \text{ source/readout konzisztenciából rögzül},\\
+\text{probabilisztikus kernel} & \Rmap \text{ endpoint-vak átmeneti kernel},\\
+\text{fixpont} & \Rmap \text{ válaszoperátor stabil megoldása},\\
+\text{funktoriális szabály} & \Rmap \text{ struktúramegőrző source-térképekből indukált}.
+\end{array}
+\]
+Itt egyik út sincs kiválasztva.  Egy későbbi ágnak előre deklarálnia kell,
+melyik típust használja, mielőtt fizikai törvény levezetését állítaná.
+
 \section{Mi számítana bukásnak?}
 
 Egy reviewernek nem kellene kitalálnia a bukási feltételeket.  Foundation
@@ -889,13 +952,20 @@ Ezek nem puszta módszertani preferenciák.  Ezek azok a feltételek, amelyek
 alatt az alapnyelv nem válik fizikai kutatási programmá.  A negatív eredményt
 valódi visszaminősítésként kell megőrizni, nem terminológiai váltással elrejteni.
 
-Az elfogadott visszaminősítési státuszok:
-\[
-  \texttt{toy-only},\qquad
-  \texttt{phenomenological-only},\qquad
-  \texttt{blocked},\qquad
-  \texttt{rejected}.
-\]
+Az elfogadott visszaminősítési státuszok szigorú jelentése:
+\begin{center}
+\small
+\begin{tabular}{L{0.28\linewidth}L{0.60\linewidth}}
+\toprule
+Státusz & Szigorú jelentés\\
+\midrule
+\textsc{toy-only} & nincs fizikai kodomén, egység vagy operacionális megfigyelhető\\
+\textsc{phenomenological-only} & ismert adatot rendez vagy illeszt, de nincs parent-source deriváció\\
+\textsc{blocked} & hiányzik ismert-limit, quotient-safety vagy source-realizability\\
+\textsc{rejected} & fagyasztott predikció bukik holdouton/kontrollon, vagy leakage van\\
+\bottomrule
+\end{tabular}
+\end{center}
 Tiltott mentőműveletek: endpoint utáni kernelcsere, residualból választott
 morfológiai paraméter, utólag beillesztett path/projection faktor, illetve a
 kovariancia- vagy null-politika endpoint-inspekció utáni átírása.  Egy
@@ -1021,11 +1091,11 @@ támadhassa őket.
 
 A Tau Core itt időtlen morfológiai readout keretként jelenik meg.  Az alapjavaslat:
 \[
-  s\mapsto\Rmap(s)\mapsto U_i(\Rmap(s)).
+  s\mapsto\Rmap(s)\mapsto U_i^{\Mta}(\Rmap(s)).
 \]
 Ebben az olvasatban a 4D téridőblokk nem végső ontológia, hanem egy readout:
 \[
-  M_{4D}=U_{4D}(\Rmap(s)).
+  M_{4D}=U_{4D}^{\Mta}(\Rmap(s)).
 \]
 A fizikai idő ugyanígy readout-csatorna, nem maga a \(\tau\) jelentése.
 

@@ -65,10 +65,11 @@ ordinary dynamical physics is not fundamentally time evolution on a primitive
 spacetime, but an effective readout of a deeper atemporal response structure.
 The paper introduces the minimal formal spine
 \[
-  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)),
+  s \longmapsto \Rmap(s) \longmapsto U_i^{\Mta}(\Rmap(s)),
 \]
 where \(s\) is a parent-side seed, \(\Rmap(s)\) is an endpoint-blind Tau
-response, and \(U_i\) are sector readouts such as spacetime, observer-time,
+response, \(\Mta\) is the Tau-side morphological body, and \(U_i^{\Mta}\) are
+morphology-conditioned sector readouts such as spacetime, observer-time,
 quantum, gravitational, or mass/source readouts.  The central claim is
 architectural: the formalism gives a language for separating definitions,
 postulates, conditional implications, toy mechanisms, and future empirical
@@ -105,13 +106,15 @@ evolution is the primitive level.
 
 The central idea can be written in one line:
 \begin{equation}
-  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)).
+  s \longmapsto \Rmap(s) \longmapsto U_i^{\Mta}(\Rmap(s)).
   \label{eq:core-spine}
 \end{equation}
 The first arrow is not time evolution.  It is a parent-side response relation.
 The second arrow is a readout.  A physical theory appears only after a readout
 has supplied a codomain, a null policy, a closure test, and a validation
-boundary.
+boundary.  When \(\Mta\) is fixed by the declared source class, the
+superscript is often suppressed and \(U_i\) is written for
+\(U_i^{\Mta}\).
 
 \begin{figure}[t]
   \centering
@@ -248,7 +251,7 @@ In that setting one may summarize the block-universe reading as
 Tau Core instead treats a four-dimensional block, when such a block is a good
 description, as a readout:
 \begin{equation}
-  M_{4D} = U_{4D}(\Rmap(s)).
+  M_{4D} = U_{4D}^{\Mta}(\Rmap(s)).
   \label{eq:block-readout}
 \end{equation}
 The difference is not cosmetic.  In a block-universe view the four-dimensional
@@ -274,7 +277,7 @@ four-dimensional block from final ontology to sector output:
   represents the standard four-dimensional block reading, in which the
   spacetime history is the final object.  The right side represents the Tau
   Core position: the same effective 4D block may be a stable readout
-  \(M_{4D}=U_{4D}(\Rmap(s))\) of a deeper parent response.  The figure is a
+  \(M_{4D}=U_{4D}^{\Mta}(\Rmap(s))\) of a deeper parent response.  The figure is a
   conceptual distinction, not a proof against eternalism.}
   \label{fig:block-vs-tau}
 \end{figure}
@@ -379,6 +382,37 @@ dark-matter formulae or quantum-collapse formulae.  They are abstract
 incompleteness records.  A physical branch must later specify the codomain,
 quotient, units, known limits, and empirical test.
 
+\section{Status of the primitive objects}
+
+A common failure mode for foundation papers is to let definitions, assumptions,
+and derived claims blur into each other.  The following ledger records the
+status of the new objects used above.  It is not additional evidence; it is a
+claim-boundary device.
+
+\begin{center}
+\small
+\textbf{Primitive-object status ledger}\\[0.5em]
+\begin{tabular}{L{0.20\linewidth}L{0.30\linewidth}L{0.38\linewidth}}
+\toprule
+Object & Status in this paper & Not supplied here\\
+\midrule
+\(\Ssrc\) & declared source/seed domain & a physical ontology of all sources\\
+\(\RTspace\) & parent-response space, assumed as formal domain & uniqueness or physical existence proof\\
+\(\Rmap\) & endpoint-blind response map or relation & dynamical law or parent action\\
+\(\Mta\) & morphology-conditioning body & derivation from first principles\\
+\(U_i^{\Mta}\) & sector readout definition & a calibrated physical observable model\\
+\(N_i\) & declared null/quotient policy & automatic gauge principle\\
+\(J_i\) & optional relift device & globally defined inverse readout\\
+\(\omega_i\) & obstruction record modulo \(N_i\) & dark-sector or collapse mechanism\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The paper becomes nontrivial only if later branches replace entries in the
+third column by source-side derivations, known-limit recoveries, or failed
+controls.  Until then these objects define a disciplined language, not a
+completed physical theory.
+
 \section{Minimal readout calculus}
 
 The formalism above is intentionally weak.  A readout is not yet a functor, a
@@ -473,6 +507,12 @@ the endpoint is inspected: impose a quotient-safe null policy, relate two or
 more readouts through a shared source coordinate, recover a known physical
 limit, or exclude a wrong-family/control construction.  Otherwise the branch is
 only a relabeling of the endpoint theory.
+
+Known-limit recovery is not sufficient by itself.  Many harmless rewritings of
+an existing theory can reproduce an already-known limit.  Promotion therefore
+also requires at least one endpoint-blind consequence that could have failed:
+a frozen numerical value, a forbidden family, a null prediction, a source-side
+relation, or a control exclusion declared before endpoint inspection.
 
 \section{Nulls, quotients, and protected identity}
 
@@ -897,11 +937,20 @@ The gravity branch motivates the hidden-defect vocabulary.  A gravitational
 readout may fail to relift all source-relevant structure into a Newtonian,
 relativistic, or closure-compatible description.  In abstract notation:
 \begin{equation}
-  h_g = J_g U_g(\Rmap(s)) - \Rmap(s).
+  \omega_g(r)=0
+  \quad\Longleftrightarrow\quad
+  J_gU_g(r)\,N_g\,r,
+  \qquad r=\Rmap(s).
 \end{equation}
-If a component of \(h_g\) survives the declared null quotient and has a
-measurable 4D readout, it becomes a candidate residual channel.  This is still
-not a dark-matter replacement.  It is a source of possible residual structure.
+If \(\omega_g(r)\neq0\) and the obstruction class survives the declared null
+quotient with a measurable 4D readout, it becomes a candidate residual
+channel.  A coordinate difference
+\[
+  h_g=J_gU_g(r)-r
+\]
+may be used only after choosing a linearized gravitational chart in which the
+subtraction is meaningful.  This is still not a dark-matter replacement.  It
+is a source of possible residual structure.
 
 The same discipline applies to dark-sector language.  Tau Core may eventually
 ask whether some dark-sector phenomena are better understood as
@@ -1057,6 +1106,21 @@ exposed-face duality; finite contextual grammars may not force Hilbert space;
 and source stability may not force a unique source basis.  Such negative
 results help keep the framework honest.
 
+The phrase ``parent response law'' is intentionally not fixed to one
+mathematical type in this foundation paper.  Candidate types include:
+\[
+\begin{array}{ll}
+\text{variational law} & \Rmap \text{ selected by an action or extremal principle},\\
+\text{constraint law} & \Rmap \text{ selected by admissibility or closure equations},\\
+\text{algebraic closure} & \Rmap \text{ fixed by source/readout consistency},\\
+\text{probabilistic kernel} & \Rmap \text{ given by an endpoint-blind transition kernel},\\
+\text{fixed point} & \Rmap \text{ selected as a stable solution of a response operator},\\
+\text{functorial rule} & \Rmap \text{ induced by structure-preserving source maps}.
+\end{array}
+\]
+No choice among these is made here.  A later branch must declare which type it
+uses before claiming a derived physical law.
+
 \section{What would count as failure}
 
 A reviewer should not have to infer the failure conditions.  At the foundation
@@ -1087,15 +1151,20 @@ research program.  A negative result satisfying these conditions should be
 preserved as a real demotion, not hidden by changing terminology.
 
 For later branches, demotion should be recorded explicitly.  The minimal status
-labels are:
-\[
-\begin{array}{ll}
-\textsc{toy-only} & \text{mathematically illustrative but not physical},\\
-\textsc{phenomenological-only} & \text{useful fit language without parent-source derivation},\\
-\textsc{blocked} & \text{known-limit, quotient, or source-realizability failure},\\
-\textsc{rejected} & \text{endpoint leakage or uncontrolled rescue}.
-\end{array}
-\]
+labels have the following strict meanings:
+\begin{center}
+\small
+\begin{tabular}{L{0.28\linewidth}L{0.60\linewidth}}
+\toprule
+Status & Strict meaning\\
+\midrule
+\textsc{toy-only} & no physical codomain, units, or operational observable supplied\\
+\textsc{phenomenological-only} & fits or organizes known data but lacks parent-source derivation\\
+\textsc{blocked} & missing known-limit recovery, quotient-safety, or source-realizability\\
+\textsc{rejected} & frozen prediction fails holdout/control, or endpoint leakage is found\\
+\bottomrule
+\end{tabular}
+\end{center}
 Forbidden rescue operations include post-hoc kernel exchange, endpoint-selected
 morphological parameters, retrofitted path factors, and covariance or null
 policy changes made after endpoint inspection.  A promoted branch must provide
@@ -1253,12 +1322,12 @@ Tau Core is presented here as an atemporal morphological readout framework.
 The basic proposal is that observed physical dynamics may be sector readouts of
 an endpoint-blind parent response:
 \[
-  s \mapsto \Rmap(s) \mapsto U_i(\Rmap(s)).
+  s \mapsto \Rmap(s) \mapsto U_i^{\Mta}(\Rmap(s)).
 \]
 In this reading, a 4D spacetime block is not the final ontology; it is one
 readout:
 \[
-  M_{4D}=U_{4D}(\Rmap(s)).
+  M_{4D}=U_{4D}^{\Mta}(\Rmap(s)).
 \]
 Physical time is likewise a readout channel, not the meaning of \(\tau\)
 itself.
