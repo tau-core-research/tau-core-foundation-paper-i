@@ -248,7 +248,7 @@ amely source-frozen korlátozást ad, akkor a különbség inkább metafizikai
 A különbség nem kozmetikai.  A blokk-univerzumban a 4D objektum a végső színtér.
 A Tau Core-ban ez a színtér egy readout eredménye.  A parent-válaszban lehetnek
 olyan különbségek, amelyeket az egyik kiolvasás azonosít, a másik elfelejt, a
-harmadik pedig effektív dinamikává fordít.
+harmadik pedig effektív readout-változássá fordít.
 
 \begin{figure}[t]
   \centering
@@ -556,7 +556,7 @@ A minimális endpoint-vak rekord tartalmazza:
 Foundation Paper I nem futtat endpoint-tesztet.  Azt mondja ki, hogy a későbbi
 ágaknak miért van rá szükségük.
 
-\section{Hogyan jelenik meg effektív dinamika?}
+\section{Hogyan jelenik meg effektív readout-változás?}
 
 A Tau Core a primitív időfejlődést readout-paraméterezett változással váltja
 ki.  Legyen \(r=\Rmap(s)\) parent-szinten időtlen.  Tegyük fel, hogy egy
@@ -569,7 +569,9 @@ Ekkor
   \frac{do_i}{dt_i}
 \]
 a readouton belül értelmes.  Nem kell parent-idő szerinti deriváltnak lennie.
-Ez a minimális értelem, amelyben a dinamika emergens.
+Ez a minimális értelem, amelyben ez a paper az ``effektív dinamika'' kifejezést
+használja: readouton belüli paraméterezett változásként, nem levezetett fizikai
+mozgásegyenletként.
 
 Két readout ugyanarról a parent-válaszról eltérhet:
 \[
@@ -655,10 +657,11 @@ Az idő, téridő, kvantum-hozzáférés, gravitáció és tömeg/forrás leír�
 jelölt, nem primitív kategória.
 \end{postulate}
 
-\begin{postulate}[Effektív dinamika]
+\begin{postulate}[Effektív readout-változás]
 Időfejlődés csak akkor jelenik meg, ha egy readout stabil rendezést vagy
 óra-koordinátát enged meg.  Egy \(\frac{d}{dt}U_i(\Rmap(s))\) derivált
-effektív readout-derivált, nem primitív parent-idő derivált.
+effektív readout-derivált, nem primitív parent-idő derivált, és önmagában nem
+fizikai mozgástörvény.
 \end{postulate}
 
 \begin{postulate}[Rejtett defektus]
@@ -1108,6 +1111,13 @@ Javasolt következő tagok:
   \item \textbf{Foundation Paper V}: flavor és neutrino readout, Standard
   Model vagy neutrino-anomaly claim nélkül.
 \end{itemize}
+A következő foundation kéziratnak nem pusztán újabb általános framework-réteget
+kell hozzáadnia.  Legalább egy worked branch-et kell tartalmaznia:
+\[
+  \text{forrás}\to \Rmap \to U_i^{\Mta}
+  \to
+  \text{ismert limit vagy fagyasztott, cáfolható következmény}.
+\]
 
 \section{Kompakt formai összegzés}
 
