@@ -241,10 +241,10 @@ A Tau Core ezzel szemben egy jó négydimenziós blokkot kiolvasásként kezel:
   M_{4D}=U_{4D}^{\Mta}(\Rmap(s)).
   \label{eq:block-readout-hu}
 \end{equation}
-A különbségnek csak akkor van fizikai tartalma, ha a téridőblokkon túl
-független readout-kényszerek is megjelennek.  Ha nincs nem-téridő readout,
-amely source-frozen korlátozást ad, akkor a különbség inkább metafizikai
-átfogalmazás marad, nem fizikai ág.
+A különbségnek csak akkor van fizikai tartalma, ha a téridőblokkon túl további
+nem-téridő readout-kényszerek source-frozen módon rögzíthetők.  Ha nincs
+nem-téridő readout, amely ilyen korlátozást ad, akkor a különbség inkább
+metafizikai átfogalmazás marad, nem fizikai ág.
 A különbség nem kozmetikai.  A blokk-univerzumban a 4D objektum a végső színtér.
 A Tau Core-ban ez a színtér egy readout eredménye.  A parent-válaszban lehetnek
 olyan különbségek, amelyeket az egyik kiolvasás azonosít, a másik elfelejt, a
@@ -465,9 +465,32 @@ Ha \(r\sim_{ij}r'\), akkor \(U_i(r)=U_i(r')\) és \(U_j(r)=U_j(r')\).  Tehát
 \(r\sim_i r'\) és \(r\sim_j r'\).
 \end{proof}
 
-Ezért a több-kiolvasásos tesztek értékesek lehetnek, de veszélyesek is: ha két
-kiolvasás nem független, akkor ugyanazt a forráskoordinátát kétszer számolhatja.
-Érett Tau Core ágnak ezért source-overlap ledgerre van szüksége.
+Ezért a több-kiolvasásos tesztek értékesek lehetnek, de ezt nem szabad
+statisztikai függetlenséggel összekeverni.  Két readout lehet ugyanannak a
+parentnek korrelált testvér-readoutja.  Minimális megfigyelési modell:
+\[
+  R_i=O_i[P]+N_i,
+\]
+ahol \(P\) közös látens parent, \(O_i\) a szektor readout-operátora, \(N_i\)
+pedig zajt, szelekciót és pipeline-hatást gyűjt.  Kozmológiában például a
+galaxis-klaszterezés, weak lensing, gáztracerek és CMB-lencsézés mind
+ugyanarra az anyag/potenciál parentre reagálhatnak, miközben eltérő
+megfigyelési operátorokat használnak.
+
+Ezért a readoutok nyers egyezése önmagában nem Tau Core-jel.  Az erősebb kérdés
+az, hogy marad-e közös residual a megfelelő null parentre való kondicionálás
+után:
+\[
+  \Delta R_i=R_i-O_i[P_0].
+\]
+Kozmológiai ágban \(P_0\) lehet illesztett \(\Lambda\)CDM anyag/potenciál
+parent; más ágban az adott standard baseline.  Tau Core-kompatibilis többlet
+csak olyan residual cross-readout struktúra lehet, amely túléli a deklarált
+nullmodellt, kovarianciát és source-overlap ledgert.  Ezt residual
+cross-readout skeleton invariance néven, röviden \(R\)-CRSI-ként rögzítjük.
+Ez csak candidate-support fegyelem: nem validációs statisztika és nem
+függetlenségi állítás.  E fegyelem nélkül a közös readout egyszerűen ugyanazt
+a forráskoordinátát számolhatja kétszer.
 
 \section{Nemtriviális reprezentációs feltétel}
 

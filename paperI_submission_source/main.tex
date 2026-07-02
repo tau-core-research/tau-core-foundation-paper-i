@@ -265,10 +265,10 @@ description, as a readout:
   M_{4D} = U_{4D}^{\Mta}(\Rmap(s)).
   \label{eq:block-readout}
 \end{equation}
-This difference has physical content only if independent readout constraints
-exist beyond the spacetime block itself.  If no non-spacetime readout imposes
-source-frozen restrictions, the distinction remains a metaphysical
-rephrasing rather than a physical branch.
+This difference has physical content only if additional non-spacetime readout
+constraints can be source-frozen beyond the spacetime block itself.  If no
+non-spacetime readout imposes such restrictions, the distinction remains a
+metaphysical rephrasing rather than a physical branch.
 The difference is not cosmetic.  In a block-universe view the four-dimensional
 object is the final arena.  In Tau Core it is an arena produced by a readout.
 The parent response can in principle have distinctions that one readout
@@ -531,12 +531,33 @@ If \(r\sim_{ij}r'\), then \(U_i(r)=U_i(r')\) and \(U_j(r)=U_j(r')\).  Hence
 is contained in each component equivalence relation.
 \end{proof}
 
-This trivial observation is one reason multi-readout tests are valuable.  If
-two independent readout families point to the same parent-side distinction,
-the candidate source class becomes more constrained.  But this also introduces
-a warning: if the readouts are not independent, the joint readout may double
-count the same source coordinate.  A mature Tau Core branch therefore needs a
-source-overlap ledger.
+This trivial observation is one reason multi-readout tests are valuable, but
+it should not be confused with statistical independence.  Two readouts may be
+correlated sibling readouts of the same parent.  A minimal observation model is
+\[
+  R_i=O_i[P]+N_i,
+\]
+where \(P\) is a shared latent parent, \(O_i\) is the sector readout operator,
+and \(N_i\) collects noise, selection, and pipeline effects.  In cosmology, for
+example, galaxy clustering, weak lensing, gas tracers, and CMB lensing can all
+respond to the same matter/potential parent while using different observational
+operators.
+
+Therefore raw agreement between readouts is not, by itself, a Tau Core signal.
+The stronger question is whether a common residual remains after conditioning
+on the appropriate null parent \(P_0\):
+\[
+  \Delta R_i=R_i-O_i[P_0].
+\]
+For a cosmological branch \(P_0\) might be a matched \(\Lambda\)CDM
+matter/potential parent; for another branch it would be the relevant standard
+baseline.  A Tau Core-compatible excess would be residual cross-readout
+structure that survives the declared null model, covariance, and
+source-overlap ledger.  We call this residual cross-readout skeleton
+invariance, abbreviated \(R\)-CRSI.  The name is only a discipline for
+candidate support: it is not a validation statistic or an independence claim.
+Without this discipline, a joint readout may simply double count the same
+source coordinate.
 
 \section{Nontrivial representation condition}
 
@@ -1279,9 +1300,9 @@ science.
 \paragraph{Objection 4: atemporal response sounds like a block universe.}
 The difference is Eq.~\eqref{eq:block-readout}.  A block universe treats a 4D
 history as the final object.  Tau Core treats a 4D history as one possible
-readout.  The distinction matters only if other readouts impose independent
-constraints.  If they do not, Tau Core collapses back into ordinary effective
-description.
+readout.  The distinction matters only if other readouts impose additional
+source-frozen constraints.  If they do not, Tau Core collapses back into
+ordinary effective description.
 
 \paragraph{Objection 5: no physical law is derived.}
 Correct.  Foundation Paper I does not derive a physical law.  It defines the
