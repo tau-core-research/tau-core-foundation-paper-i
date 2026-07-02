@@ -7,6 +7,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{array}
 \setlength{\emergencystretch}{2em}
 
 \hypersetup{
@@ -33,6 +34,7 @@
 \newcommand{\Null}{\mathcal N}
 \newcommand{\Ker}{\operatorname{Ker}}
 \newcommand{\im}{\operatorname{im}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \title{\textbf{Tau Core: An Atemporal Morphological Readout Framework for Emergent Physical Dynamics}\\
 \large Foundation Paper I}
@@ -50,26 +52,24 @@ Tau Core is proposed here as a cautious foundation framework rather than a
 completed physical theory.  Its starting point is the possibility that
 ordinary dynamical physics is not fundamentally time evolution on a primitive
 spacetime, but an effective readout of a deeper atemporal response structure.
-The paper introduces a minimal formal spine
+The paper introduces the minimal formal spine
 \[
   s \longmapsto \Rtau(s) \longmapsto U_i(\Rtau(s)),
 \]
 where \(s\) is a parent-side seed, \(\Rtau(s)\) is an endpoint-blind Tau
 response, and \(U_i\) are sector readouts such as spacetime, observer-time,
-quantum, gravitational, or mass/source readouts.  The central claim is not that
-Tau Core is empirically validated, but that this readout architecture gives a
-precise language for separating definitions, postulates, conditional
-theorems, toy mechanisms, and future empirical tests.  We distinguish the
-framework from block-universe ontology and from ordinary spacetime field
-theory, define the Tau-side morphological body, formulate seven foundation
-postulates, introduce readout-relative hidden defects via relift failure, and
-give a finite toy model showing how one parent response can generate different
-effective descriptions under different readouts.  The manuscript also records
-the main blockers: the paper does not derive general relativity, quantum
-mechanics, the Born rule, quantum field theory, the Standard Model, dark
-matter, dark energy, or a physical parent action.  It is a position paper and
-formal conjecture scaffold intended to make the Tau Core research program
-discussable without promoting it to a completed theory.
+quantum, gravitational, or mass/source readouts.  The central claim is
+architectural: the formalism gives a language for separating definitions,
+postulates, conditional implications, toy mechanisms, and future empirical
+tests.  The manuscript distinguishes the framework from block-universe
+ontology and from ordinary spacetime field theory, defines the Tau-side
+morphological body, formulates seven foundation postulates, introduces
+readout-relative hidden defects via relift failure, and gives finite toy
+models for hiddenness and effective time.  It also records the main blockers:
+the paper does not derive general relativity, quantum mechanics, the Born
+rule, quantum field theory, the Standard Model, dark matter, dark energy, or a
+physical parent action.  It is a position paper and formal conjecture scaffold,
+not empirical evidence for a new physical law.
 \end{abstract}
 
 \tableofcontents
@@ -116,6 +116,40 @@ research program more falsifiable later.  A broad ontology that cannot be
 turned into frozen source rules, null tests, or endpoint-blind predictions is
 not useful as physics.  The framework below is written with that constraint in
 mind.
+
+\section{Reader roadmap}
+
+The paper has two jobs.  First, it fixes a vocabulary for later Tau Core work.
+Second, it states what that vocabulary does not yet prove.  The following
+roadmap is included to prevent the foundation language from being read as a
+completed physical model.
+
+\begin{center}
+\begin{tabular}{L{0.24\linewidth}L{0.42\linewidth}L{0.22\linewidth}}
+\toprule
+Part of the paper & Role & Claim level\\
+\midrule
+Sections 1--4 & Motivation, name, and relation to block-universe and
+spacetime-field views & Positioning\\
+Sections 5--8 & Core objects: parent response, morphological body, readout,
+relift, defect & Definitions\\
+Sections 9--13 & Minimal calculus, source discipline, effective time, and
+postulates & Framework postulates\\
+Sections 14--16 & Finite hidden-defect model and morphology/observer-time
+clarifications & Toy mechanisms\\
+Sections 17--22 & Quantum, gravity, cosmology, relation to earlier papers, and
+objections & Boundary setting\\
+Sections 23--26 & Maturity checklist, foundation sequence, compact summary,
+and non-results & Audit discipline\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Thus the paper should be read from weak to strong claim levels.  Definitions
+do not become assumptions; assumptions do not become derived laws; toy models
+do not become empirical validation.  Later papers may try to promote specific
+branches, but Foundation Paper I keeps those promotions outside its claim
+boundary.
 
 \section{Why a foundation paper is needed}
 
