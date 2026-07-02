@@ -35,7 +35,8 @@
 
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ssrc}{\mathcal S}
-\newcommand{\Rtau}{R_{\tau}}
+\newcommand{\RTspace}{\mathfrak R_{\tau}}
+\newcommand{\Rmap}{\rho_{\tau}}
 \newcommand{\Ui}{U_i}
 \newcommand{\Mta}{M_{\tau}}
 \newcommand{\Obs}{\mathcal O}
@@ -64,9 +65,9 @@ ordinary dynamical physics is not fundamentally time evolution on a primitive
 spacetime, but an effective readout of a deeper atemporal response structure.
 The paper introduces the minimal formal spine
 \[
-  s \longmapsto \Rtau(s) \longmapsto U_i(\Rtau(s)),
+  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)),
 \]
-where \(s\) is a parent-side seed, \(\Rtau(s)\) is an endpoint-blind Tau
+where \(s\) is a parent-side seed, \(\Rmap(s)\) is an endpoint-blind Tau
 response, and \(U_i\) are sector readouts such as spacetime, observer-time,
 quantum, gravitational, or mass/source readouts.  The central claim is
 architectural: the formalism gives a language for separating definitions,
@@ -104,7 +105,7 @@ evolution is the primitive level.
 
 The central idea can be written in one line:
 \begin{equation}
-  s \longmapsto \Rtau(s) \longmapsto U_i(\Rtau(s)).
+  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)).
   \label{eq:core-spine}
 \end{equation}
 The first arrow is not time evolution.  It is a parent-side response relation.
@@ -117,7 +118,7 @@ boundary.
   \includegraphics[width=0.95\linewidth]{figures/fig_core_spine.pdf}
   \caption{The minimal Tau Core spine used in Foundation Paper I.  A
   parent-side seed \(s\) induces an endpoint-blind Tau response
-  \(\Rtau(s)\).  A Tau-side morphological body \(\Mta\) conditions sector
+  \(\Rmap(s)\).  A Tau-side morphological body \(\Mta\) conditions sector
   readouts \(U_i\).  This is a formal architecture, not empirical validation.}
   \label{fig:core-spine}
 \end{figure}
@@ -217,7 +218,7 @@ Symbol or phrase & Meaning here & Not claimed here\\
 \midrule
 \(\tau\) & parent-state side & ordinary time itself\\
 \(X_{\tau}\) & parent Tau state & detected physical field\\
-\(\Rtau(s)\) & endpoint-blind response & time evolution\\
+\(\Rmap(s)\) & endpoint-blind response & time evolution\\
 \(U_{\rm time}\) & time readout & derived clock theory\\
 \(\Mta\) & morphological body & observed 4D shape\\
 \bottomrule
@@ -247,7 +248,7 @@ In that setting one may summarize the block-universe reading as
 Tau Core instead treats a four-dimensional block, when such a block is a good
 description, as a readout:
 \begin{equation}
-  M_{4D} = U_{4D}(\Rtau(s)).
+  M_{4D} = U_{4D}(\Rmap(s)).
   \label{eq:block-readout}
 \end{equation}
 The difference is not cosmetic.  In a block-universe view the four-dimensional
@@ -273,7 +274,7 @@ four-dimensional block from final ontology to sector output:
   represents the standard four-dimensional block reading, in which the
   spacetime history is the final object.  The right side represents the Tau
   Core position: the same effective 4D block may be a stable readout
-  \(M_{4D}=U_{4D}(\Rtau(s))\) of a deeper parent response.  The figure is a
+  \(M_{4D}=U_{4D}(\Rmap(s))\) of a deeper parent response.  The figure is a
   conceptual distinction, not a proof against eternalism.}
   \label{fig:block-vs-tau}
 \end{figure}
@@ -288,7 +289,7 @@ and then studies the dynamics of \(\phi(x,t)\).  Tau Core rewrites the order:
 \begin{equation}
   \phi_{\rm obs}(x,t)
   =
-  U_{\phi}(\Rtau(s)).
+  U_{\phi}(\Rmap(s)).
   \label{eq:field-readout}
 \end{equation}
 The observed field is a readout.  The spacetime coordinates are also part of
@@ -313,7 +314,7 @@ that a later readout is supposed to explain.
 \begin{definition}[Endpoint-blind Tau response]
 An endpoint-blind Tau response is a map or relation
 \[
-  \Rtau: \Ssrc \to \mathcal R_{\tau}
+  \Rmap: \Ssrc \to \RTspace
 \]
 whose input is the parent seed and admissible parent-side constraints, not the
 observational endpoint.  Endpoint blindness is a non-leakage rule, not a proof
@@ -329,40 +330,54 @@ handle on this deeper body.
 \end{definition}
 
 \begin{definition}[Readout]
-A readout is a sector map
+A readout is a morphology-conditioned sector map.  Equivalently, one may write
 \[
-  U_i : \mathcal R_{\tau} \to \Obs_i.
+  U_i^{\Mta}:\RTspace\to\Obs_i,
+  \qquad
+  \text{or}
+  \qquad
+  U_i:\mathcal M_{\tau}\times \RTspace\to\Obs_i.
 \]
 The codomain \(\Obs_i\) may be a spacetime description, a time ordering, a
 quantum access state, a gravitational response, a mass/source record, or a
 more specialized observable structure.  Each readout has its own null
-directions and validation boundary.
+directions and validation boundary.  When \(\Mta\) is fixed by the declared
+source class, we suppress it and write \(U_i(r)\).
 \end{definition}
 
 \begin{definition}[Relift]
 A relift for a readout \(U_i\) is a map or partial map
 \[
-  J_i : \Obs_i \to \mathcal R_{\tau}
+  J_i : \Obs_i \to \RTspace
 \]
 that attempts to reconstruct a parent-response representative from a readout
 record.  It need not exist globally and need not be unique.
 \end{definition}
 
-\begin{definition}[Readout defect]
-Given \(r=\Rtau(s)\), a readout defect is
+\begin{definition}[Readout obstruction]
+Given \(r=\Rmap(s)\), the primary defect object is not a subtraction but an
+obstruction class
 \[
-  h_i(r) = J_i(U_i(r)) - r,
+  \omega_i(r)=0
+  \quad\Longleftrightarrow\quad
+  J_iU_i(r)\,N_i\,r,
+  \label{eq:obstruction}
+\]
+whenever a relift and null relation have been declared.  Thus
+\(\omega_i(r)\neq 0\) records that the readout and its allowed relift fail to
+recover the parent-response representative modulo the declared null relation.
+Only in a chosen affine or linearized chart may this be represented by the
+coordinate expression
+\[
+  h_i(r)=J_i(U_i(r))-r.
   \label{eq:defect}
 \]
-whenever the subtraction is defined in a chosen linearized or quotient
-representation.  More generally, the defect is the equivalence class of
-failure of \(J_i U_i(r)\) to return the original parent-response
-representative.
 \end{definition}
 
-Equation~\eqref{eq:defect} is not a dark-matter formula or a quantum-collapse
-formula.  It is an abstract incompleteness record.  A physical branch must
-later specify the codomain, quotient, units, known limits, and empirical test.
+The obstruction condition and its chart-level representative are not
+dark-matter formulae or quantum-collapse formulae.  They are abstract
+incompleteness records.  A physical branch must later specify the codomain,
+quotient, units, known limits, and empirical test.
 
 \section{Minimal readout calculus}
 
@@ -371,7 +386,7 @@ field equation, a probability rule, or a variational principle.  Nevertheless,
 some minimal calculus is needed if the framework is to avoid being only
 language.
 
-Let \(\mathcal R_{\tau}\) be a parent-response space and let \(U_i\) be a
+Let \(\RTspace\) be a parent-response space and let \(U_i\) be a
 readout.  The first mathematical object induced by a readout is its
 indistinguishability relation:
 \begin{equation}
@@ -387,7 +402,7 @@ sector.
 
 \begin{definition}[Readout kernel]
 The readout kernel of \(U_i\) is the equivalence relation \(\sim_i\) defined
-by Eq.~\eqref{eq:readout-equivalence}.  If \(\mathcal R_{\tau}\) has a linear
+by Eq.~\eqref{eq:readout-equivalence}.  If \(\RTspace\) has a linear
 structure and \(U_i\) is linear, this reduces to the usual null space
 \(\Ker U_i\).  In general it is an equivalence relation, not necessarily a
 linear subspace.
@@ -435,6 +450,30 @@ a warning: if the readouts are not independent, the joint readout may double
 count the same source coordinate.  A mature Tau Core branch therefore needs a
 source-overlap ledger.
 
+\section{Nontrivial representation condition}
+
+The parent/readout notation is not allowed to count as a Tau Core result by
+itself.  Without an extra restriction, any effective theory could be written in
+the trivial form
+\[
+  \RTspace=\Obs,\qquad \Rmap(s)=O,\qquad U=\mathrm{id}_{\Obs}.
+\]
+Such a representation is formally possible but scientifically empty.
+
+Foundation Paper I therefore treats the following as a nontriviality
+requirement rather than as a theorem:
+\begin{quote}
+A promoted Tau Core branch must use a source-declared parent response and a
+readout family that cannot be reduced, without loss of the declared null,
+source, or known-limit structure, to the identity readout on the endpoint
+observable.
+\end{quote}
+Equivalently, the parent structure must do at least one of the following before
+the endpoint is inspected: impose a quotient-safe null policy, relate two or
+more readouts through a shared source coordinate, recover a known physical
+limit, or exclude a wrong-family/control construction.  Otherwise the branch is
+only a relabeling of the endpoint theory.
+
 \section{Nulls, quotients, and protected identity}
 
 Every physical readout has null directions: changes in the parent response
@@ -446,13 +485,22 @@ differences in a declared sector.
 Let \(N_i\) denote the null relation for readout \(U_i\).  The quotient object
 is written
 \[
-  [r]_i \in \mathcal R_{\tau}/N_i.
+  [r]_i \in \RTspace/N_i.
 \]
 The readout is quotient-safe only if
 \[
   r N_i r' \Longrightarrow U_i(r)=U_i(r').
   \label{eq:quotient-safe}
 \]
+Equivalently,
+\[
+  N_i\subseteq \sim_i,
+  \qquad
+  U_i=\bar U_i\circ q_i,
+  \qquad
+  q_i:\RTspace\to\RTspace/N_i,
+\]
+for an induced quotient readout \(\bar U_i:\RTspace/N_i\to\Obs_i\).
 If Eq.~\eqref{eq:quotient-safe} fails, the readout assigns different
 observables to parent states that it also declares physically equivalent.  Such
 a readout is internally inconsistent.
@@ -509,7 +557,7 @@ only when it produces source-frozen rules that can fail.
 \section{How effective dynamics appears}
 
 Tau Core replaces primitive time evolution by readout-parametrized variation.
-Let \(r=\Rtau(s)\) be atemporal at the parent-response level.  Suppose a
+Let \(r=\Rmap(s)\) be atemporal at the parent-response level.  Suppose a
 readout \(U_i\) produces a record that can be coordinatized by a parameter
 \(t_i\):
 \[
@@ -610,12 +658,12 @@ level, ordinary spacetime evolution.
 Physical configurations are represented at the parent level by endpoint-blind
 responses to seeds:
 \[
-  s \in \Ssrc, \qquad r=\Rtau(s)\in \mathcal R_{\tau}.
+  s \in \Ssrc, \qquad r=\Rmap(s)\in \RTspace.
 \]
 \end{postulate}
 
 \begin{postulate}[Endpoint blindness]
-The response \(\Rtau(s)\), and any source object used to select a readout
+The response \(\Rmap(s)\), and any source object used to select a readout
 kernel, must be specified without using the endpoint residual that the readout
 is later asked to explain.
 \end{postulate}
@@ -623,7 +671,7 @@ is later asked to explain.
 \begin{postulate}[Readout emergence]
 Observed physical descriptions are sector readouts:
 \[
-  O_i = U_i(\Rtau(s)).
+  O_i = U_i(\Rmap(s)).
 \]
 Time, spacetime, quantum access, gravity, and mass/source descriptions are
 readout candidates rather than primitive categories.
@@ -633,15 +681,17 @@ readout candidates rather than primitive categories.
 Time evolution appears only when a readout admits a stable ordering or clock
 coordinate.  A derivative such as
 \[
-  \frac{d}{dt} U_i(\Rtau(s))
+  \frac{d}{dt} U_i(\Rmap(s))
 \]
 is an effective readout derivative, not a primitive parent-time derivative.
 \end{postulate}
 
 \begin{postulate}[Hidden defect]
 If a readout and its allowed relift fail to recover the parent-response
-representative modulo the declared null relation, the non-reliftable component
-is recorded as a hidden defect of that readout.
+representative modulo the declared null relation, the obstruction
+\(\omega_i(r)\neq 0\) is recorded as a hidden defect of that readout.  A
+coordinate difference \(J_iU_i(r)-r\) is only a chart-level representative of
+that obstruction.
 \end{postulate}
 
 \begin{postulate}[Tension as readout failure]
@@ -699,7 +749,7 @@ machinery.
 
 Let the parent response space be
 \[
-  \mathcal R_{\tau} = \mathbb R^3,
+  \RTspace = \mathbb R^3,
   \qquad
   r=(a,b,c).
 \]
@@ -772,12 +822,13 @@ observer/path geometry, closure class, or null structure.
 
 For Foundation Paper I, the minimal role of \(\Mta\) is:
 \begin{equation}
-  O_i = U_i[\Mta](\Rtau(s)).
+  O_i = U_i^{\Mta}(\Rmap(s)).
   \label{eq:morph-conditioned}
 \end{equation}
-The bracket indicates that the readout map may depend on the morphological
-body.  It does not say that \(\Mta\) has been physically derived.  It says that
-readout selection is not source-free.
+The superscript indicates that the readout map is selected or conditioned by
+the morphological body.  Equivalently one may regard \(U_i\) as a map on
+\(\mathcal M_\tau\times\RTspace\).  This does not say that \(\Mta\) has been
+physically derived.  It says that readout selection is not source-free.
 
 This point also prevents double counting.  If two proposed correction terms
 use the same source coordinate, they should not be added independently unless
@@ -791,7 +842,7 @@ parent side.  The schematic form is
 \begin{equation}
   t_{\rm obs}^{S}
   =
-  U_{\rm time}^{S}(\Rtau(s),\Mta,\mathcal O_S,\gamma_S),
+  U_{\rm time}^{S}(\Rmap(s),\Mta,\mathcal O_S,\gamma_S),
   \label{eq:observer-time}
 \end{equation}
 where \(S\) is a sector, \(\mathcal O_S\) is observer-interface data, and
@@ -815,7 +866,7 @@ The quantum branch is one of the natural targets for the readout language, but
 it is also one of the most dangerous places to overclaim.  A minimal quantum
 readout might have the form
 \begin{equation}
-  q = U_q(\Rtau(s)),
+  q = U_q(\Rmap(s)),
 \end{equation}
 where \(q\) is an access-state or probability-assignment record.  But this is
 far below deriving Hilbert space or the Born rule.
@@ -846,7 +897,7 @@ The gravity branch motivates the hidden-defect vocabulary.  A gravitational
 readout may fail to relift all source-relevant structure into a Newtonian,
 relativistic, or closure-compatible description.  In abstract notation:
 \begin{equation}
-  h_g = J_g U_g(\Rtau(s)) - \Rtau(s).
+  h_g = J_g U_g(\Rmap(s)) - \Rmap(s).
 \end{equation}
 If a component of \(h_g\) survives the declared null quotient and has a
 measurable 4D readout, it becomes a candidate residual channel.  This is still
@@ -868,7 +919,7 @@ cosmological readout might be written
 \begin{equation}
   O_{\rm cosmo}
   =
-  U_{\rm cosmo}(\Rtau(s),\Mta^U,\gamma_{\rm path},\mathcal O_{\rm obs}),
+  U_{\rm cosmo}(\Rmap(s),\Mta^U,\gamma_{\rm path},\mathcal O_{\rm obs}),
 \end{equation}
 where \(\Mta^U\) is a universe-scale morphological body, \(\gamma_{\rm path}\)
 is path/environment data, and \(\mathcal O_{\rm obs}\) is observer-interface
@@ -989,7 +1040,7 @@ readout/reconstruction discipline, not as evidence for the Tau ontology.
 The framework becomes stronger only if abstract readout language is converted
 into bounded tasks.  Examples include:
 \begin{enumerate}[label=(\arabic*)]
-  \item deriving a non-circular parent response law \(\Rtau\);
+  \item deriving a non-circular parent response law \(\Rmap\);
   \item defining a source-realizable morphological body \(\Mta\);
   \item proving that a readout map has a quotient-safe null policy;
   \item deriving a known physical limit, such as proper time or Newtonian
@@ -1034,6 +1085,22 @@ These are not merely methodological preferences.  They are the conditions
 under which the present foundation language can fail to become a physical
 research program.  A negative result satisfying these conditions should be
 preserved as a real demotion, not hidden by changing terminology.
+
+For later branches, demotion should be recorded explicitly.  The minimal status
+labels are:
+\[
+\begin{array}{ll}
+\textsc{toy-only} & \text{mathematically illustrative but not physical},\\
+\textsc{phenomenological-only} & \text{useful fit language without parent-source derivation},\\
+\textsc{blocked} & \text{known-limit, quotient, or source-realizability failure},\\
+\textsc{rejected} & \text{endpoint leakage or uncontrolled rescue}.
+\end{array}
+\]
+Forbidden rescue operations include post-hoc kernel exchange, endpoint-selected
+morphological parameters, retrofitted path factors, and covariance or null
+policy changes made after endpoint inspection.  A promoted branch must provide
+at least one frozen numerical value, relation, exclusion, or null prediction
+that could have failed.
 
 \section{Likely objections}
 
@@ -1137,19 +1204,20 @@ The framework can be summarized as the following object package:
 \[
   \mathfrak T
   =
-  (\Ssrc,\mathcal R_{\tau},\Rtau,\Mta,\{U_i\},\{N_i\},\{J_i\}).
+  (\Ssrc,\RTspace,\Rmap,\Mta,\{U_i\},\{N_i\},\{J_i\}).
 \]
-Here \(\Ssrc\) is a seed/source domain, \(\mathcal R_{\tau}\) is a response
-domain, \(\Rtau\) is the endpoint-blind response map or relation, \(\Mta\) is
+Here \(\Ssrc\) is a seed/source domain, \(\RTspace\) is a response
+domain, \(\Rmap\) is the endpoint-blind response map or relation, \(\Mta\) is
 the morphological body, \(U_i\) are readouts, \(N_i\) are null policies, and
 \(J_i\) are optional relifts.
 
 The minimal consistency conditions are:
 \begin{align}
   &s \text{ is fixed without endpoint leakage},\\
-  &r=\Rtau(s) \text{ is defined on the declared source domain},\\
+  &r=\Rmap(s) \text{ is defined on the declared source domain},\\
   &r N_i r' \Rightarrow U_i(r)=U_i(r'),\\
-  &h_i(r)=J_iU_i(r)-r \text{ is interpreted only modulo } N_i,\\
+  &\omega_i(r)=0 \Longleftrightarrow J_iU_i(r)N_i r,\\
+  &h_i(r)=J_iU_i(r)-r \text{ is only a chart-level representative if defined},\\
   &\text{known physical limits are recovered before physical promotion}.
 \end{align}
 
@@ -1185,12 +1253,12 @@ Tau Core is presented here as an atemporal morphological readout framework.
 The basic proposal is that observed physical dynamics may be sector readouts of
 an endpoint-blind parent response:
 \[
-  s \mapsto \Rtau(s) \mapsto U_i(\Rtau(s)).
+  s \mapsto \Rmap(s) \mapsto U_i(\Rmap(s)).
 \]
 In this reading, a 4D spacetime block is not the final ontology; it is one
 readout:
 \[
-  M_{4D}=U_{4D}(\Rtau(s)).
+  M_{4D}=U_{4D}(\Rmap(s)).
 \]
 Physical time is likewise a readout channel, not the meaning of \(\tau\)
 itself.

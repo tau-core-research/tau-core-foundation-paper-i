@@ -37,7 +37,8 @@
 
 \newcommand{\T}{\mathcal T}
 \newcommand{\Ssrc}{\mathcal S}
-\newcommand{\Rtau}{R_{\tau}}
+\newcommand{\RTspace}{\mathfrak R_{\tau}}
+\newcommand{\Rmap}{\rho_{\tau}}
 \newcommand{\Ui}{U_i}
 \newcommand{\Mta}{M_{\tau}}
 \newcommand{\Obs}{\mathcal O}
@@ -66,9 +67,9 @@ dinamikus fizika nem feltétlenül primitív téridőn zajló időfejlődés, ha
 egy mélyebb, időtlen válaszszerkezet effektív kiolvasása.  A minimális formai
 gerinc:
 \[
-  s \longmapsto \Rtau(s) \longmapsto U_i(\Rtau(s)),
+  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)),
 \]
-ahol \(s\) parent-oldali forrásmag, \(\Rtau(s)\) endpoint-vak Tau-válasz, és
+ahol \(s\) parent-oldali forrásmag, \(\Rmap(s)\) endpoint-vak Tau-válasz, és
 \(U_i\) szektor-kiolvasás: például téridő-, megfigyelői idő-, kvantum-,
 gravitációs vagy tömeg/forrás-kiolvasás.  A központi állítás architekturális:
 a formalizmus nyelvet ad a definíciók, posztulátumok, feltételes
@@ -105,7 +106,7 @@ feltehetők anélkül, hogy a téridőbeli időfejlődést primitív szintnek ve
 
 A központi gondolat egy sorban:
 \begin{equation}
-  s \longmapsto \Rtau(s) \longmapsto U_i(\Rtau(s)).
+  s \longmapsto \Rmap(s) \longmapsto U_i(\Rmap(s)).
   \label{eq:core-spine-hu}
 \end{equation}
 Az első nyíl nem időfejlődés.  Parent-oldali válaszreláció.  A második nyíl
@@ -116,7 +117,7 @@ megadta a kodomént, a null-politikát, a closure-tesztet és a validációs hat
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_core_spine.pdf}
   \caption{A Foundation Paper I-ben használt minimális Tau Core gerinc.  A
-  parent-oldali forrásmag \(s\) endpoint-vak Tau-választ \(\Rtau(s)\) indukál.
+  parent-oldali forrásmag \(s\) endpoint-vak Tau-választ \(\Rmap(s)\) indukál.
   A Tau-oldali morfológiai test \(\Mta\) kondicionálja a szektor-kiolvasásokat
   \(U_i\).  Ez formai architektúra, nem empirikus validáció.}
   \label{fig:core-spine-hu}
@@ -196,7 +197,7 @@ Jel vagy kifejezés & Jelentés itt & Nem ezt állítjuk\\
 \midrule
 \(\tau\) & parent-state oldal & maga a közönséges idő\\
 \(X_{\tau}\) & parent Tau-állapot & detektált fizikai mező\\
-\(\Rtau(s)\) & endpoint-vak válasz & időfejlődés\\
+\(\Rmap(s)\) & endpoint-vak válasz & időfejlődés\\
 \(U_{\rm time}\) & idő-kiolvasás & levezetett óraelmélet\\
 \(\Mta\) & morfológiai test & megfigyelt 4D alak\\
 \bottomrule
@@ -225,7 +226,7 @@ Egy tömör blokk-univerzum állítás:
 \end{equation}
 A Tau Core ezzel szemben egy jó négydimenziós blokkot kiolvasásként kezel:
 \begin{equation}
-  M_{4D}=U_{4D}(\Rtau(s)).
+  M_{4D}=U_{4D}(\Rmap(s)).
   \label{eq:block-readout-hu}
 \end{equation}
 A különbség nem kozmetikai.  A blokk-univerzumban a 4D objektum a végső színtér.
@@ -251,7 +252,7 @@ Egy szokásos mezőelmélet téridőn adott mezővel indul:
 \end{equation}
 majd \(\phi(x,t)\) dinamikáját vizsgálja.  A Tau Core megfordítja a sorrendet:
 \begin{equation}
-  \phi_{\rm obs}(x,t)=U_{\phi}(\Rtau(s)).
+  \phi_{\rm obs}(x,t)=U_{\phi}(\Rmap(s)).
   \label{eq:field-readout-hu}
 \end{equation}
 A megfigyelt mező kiolvasás.  A téridő-koordináták is a kiolvasási struktúra
@@ -273,7 +274,7 @@ kiolvasás magyarázni akar.
 \begin{definition}[Endpoint-vak Tau-válasz]
 Endpoint-vak Tau-válasz egy
 \[
-  \Rtau:\Ssrc\to\mathcal R_{\tau}
+  \Rmap:\Ssrc\to\RTspace
 \]
 térkép vagy reláció, amelynek inputja a parent forrásmag és az admisszibilis
 parent-oldali kényszerek, nem pedig a megfigyelési endpoint.
@@ -288,42 +289,54 @@ readout-handle erre a mélyebb testre.
 \end{definition}
 
 \begin{definition}[Kiolvasás]
-Kiolvasás egy szektortérkép:
+Kiolvasás morfológia-kondicionált szektortérkép.  Ekvivalensen írható:
 \[
-  U_i:\mathcal R_{\tau}\to\Obs_i.
+  U_i^{\Mta}:\RTspace\to\Obs_i,
+  \qquad\text{vagy}\qquad
+  U_i:\mathcal M_\tau\times\RTspace\to\Obs_i.
 \]
 A kodomén lehet téridőleírás, időrend, kvantum-hozzáférési állapot,
 gravitációs válasz, tömeg/forrás rekord vagy speciálisabb megfigyelhető
-szerkezet.  Minden kiolvasásnak saját null-iránya és validációs határa van.
+szerkezet.  Ha \(\Mta\) a deklarált forrásosztály által rögzített, röviden
+\(U_i(r)\)-t írunk.  Minden kiolvasásnak saját null-iránya és validációs
+határa van.
 \end{definition}
 
 \begin{definition}[Relift]
 Egy \(U_i\) kiolvasáshoz tartozó relift olyan térkép vagy részleges térkép
 \[
-  J_i:\Obs_i\to\mathcal R_{\tau},
+  J_i:\Obs_i\to\RTspace,
 \]
 amely megpróbál parent-válasz reprezentánst rekonstruálni egy kiolvasott
 rekordból.  Nem kell globálisan léteznie és nem kell egyértelműnek lennie.
 \end{definition}
 
-\begin{definition}[Kiolvasási defektus]
-Ha \(r=\Rtau(s)\), akkor a kiolvasási defektus
+\begin{definition}[Kiolvasási obstrukció]
+Ha \(r=\Rmap(s)\), akkor az elsődleges defektusobjektum nem vektorkivonás,
+hanem obstrukciós osztály:
 \[
-  h_i(r)=J_i(U_i(r))-r,
+  \omega_i(r)=0
+  \quad\Longleftrightarrow\quad
+  J_iU_i(r)\,N_i\,r.
+  \label{eq:obstruction-hu}
+\]
+Vagyis nincs defektus, ha a relift ugyanabba a deklarált null-osztályba tér
+vissza.  Csak affin vagy linearizált chartban reprezentálható ez a defektus
+koordinátakülönbségként:
+\[
+  h_i(r)=J_i(U_i(r))-r.
   \label{eq:defect-hu}
 \]
-amikor a kivonás értelmezett.  Általánosabban: annak ekvivalenciaosztálya,
-hogy \(J_iU_i(r)\) nem tér vissza az eredeti parent-válasz reprezentánshoz.
 \end{definition}
 
-Az \eqref{eq:defect-hu} egyenlet nem sötétanyag-képlet és nem kvantum-kollapszus
-képlet.  Absztrakt hiányossági rekord.  Egy fizikai ágnak később meg kell
+Az \eqref{eq:obstruction-hu} egyenlet nem sötétanyag-képlet és nem
+kvantum-kollapszus képlet.  Absztrakt hiányossági rekord.  Egy fizikai ágnak később meg kell
 adnia a kodomént, a quotientet, az egységeket, az ismert limiteket és az
 empirikus tesztet.
 
 \section{Minimális kiolvasási kalkulus}
 
-Legyen \(\mathcal R_{\tau}\) parent-választér és \(U_i\) kiolvasás.  Az első
+Legyen \(\RTspace\) parent-választér és \(U_i\) kiolvasás.  Az első
 matematikai objektum az indisztingválhatósági reláció:
 \begin{equation}
   r\sim_i r' \quad\Longleftrightarrow\quad U_i(r)=U_i(r').
@@ -334,7 +347,7 @@ látható egy másikban.
 
 \begin{definition}[Kiolvasási kernel]
 \(U_i\) kiolvasási kernelje az \eqref{eq:readout-equivalence-hu} reláció.  Ha
-\(\mathcal R_{\tau}\) lineáris és \(U_i\) lineáris, ez a szokásos nulltérre
+\(\RTspace\) lineáris és \(U_i\) lineáris, ez a szokásos nulltérre
 egyszerűsödik.  Általában azonban ekvivalenciareláció, nem feltétlenül
 lineáris altér.
 \end{definition}
@@ -372,13 +385,38 @@ Ezért a több-kiolvasásos tesztek értékesek lehetnek, de veszélyesek is: ha
 kiolvasás nem független, akkor ugyanazt a forráskoordinátát kétszer számolhatja.
 Érett Tau Core ágnak ezért source-overlap ledgerre van szüksége.
 
+\section{Nemtriviális reprezentációs feltétel}
+
+A fenti nyelv önmagában túl általános.  Bármely megfigyelhető \(O\) triviálisan
+beágyazható lenne úgy, hogy
+\[
+  \RTspace=\Obs,\qquad \Rmap(s)=O,\qquad U=\mathrm{id}_{\Obs}.
+\]
+Ez nem Tau Core magyarázat, hanem endpoint-átnevezés.
+
+Ezért minden előléptetett ágnak teljesítenie kell egy nemtriviális
+reprezentációs feltételt: a parent-választér, a válaszleképezés, a
+morfológiai test, a null-politika és a readout nem redukálható veszteség nélkül
+az endpoint identitás-readoutjára.  Legalább az alábbiak egyikét kell
+parent-oldalról kikényszerítenie:
+\begin{enumerate}[label=(N\arabic*)]
+  \item quotient-safe null-struktúrát, amelyet az endpoint önmagában nem ad;
+  \item több readout közötti közös forrás- vagy source-overlap relációt;
+  \item ismert-limit visszanyerést;
+  \item rossz családot, kontrollt vagy tiltott mentőutat kizáró szabályt;
+  \item endpoint-vak módon fagyasztott numerikus értéket, relációt vagy null
+  predikciót.
+\end{enumerate}
+Ha ez nem teljesül, az ág legfeljebb átírás, nem fizikai vagy matematikai
+előrelépés.
+
 \section{Nullok, quotientek és védett identitás}
 
 Minden fizikai kiolvasásnak vannak null-irányaik: parent-változások, amelyeket
 az adott readout fizikailag irrelevánsnak tekint.  Jelölje \(N_i\) a
 null-relációt.  A quotient objektum:
 \[
-  [r]_i\in\mathcal R_{\tau}/N_i.
+  [r]_i\in\RTspace/N_i.
 \]
 A kiolvasás quotient-safe, ha
 \begin{equation}
@@ -387,6 +425,16 @@ A kiolvasás quotient-safe, ha
 \end{equation}
 Ha ez sérül, a readout különböző megfigyelhetőket rendel olyan parent
 állapotokhoz, amelyeket maga fizikailag ekvivalensnek deklarált.
+
+Ekvivalensen a readoutnak faktorizálnia kell a quotienten:
+\[
+  N_i\subseteq\sim_i,\qquad
+  U_i=\bar U_i\circ q_i,\qquad
+  q_i:\RTspace\to\RTspace/N_i.
+\]
+Itt \(\bar U_i\) a quotient-readout.  Ez formalizálja azt, hogy nullnak
+nyilvánított parent-különbséget nem szabad fizikai megfigyelhetőként
+visszaolvasni.
 
 \begin{definition}[Védett forrásidentitás]
 Védett forrásidentitás egy \(Q_{\rm src}\) ekvivalenciareláció a parent-oldali
@@ -423,7 +471,7 @@ Foundation Paper I nem futtat endpoint-tesztet.  Azt mondja ki, hogy a későbbi
 \section{Hogyan jelenik meg effektív dinamika?}
 
 A Tau Core a primitív időfejlődést readout-paraméterezett változással váltja
-ki.  Legyen \(r=\Rtau(s)\) parent-szinten időtlen.  Tegyük fel, hogy egy
+ki.  Legyen \(r=\Rmap(s)\) parent-szinten időtlen.  Tegyük fel, hogy egy
 \(U_i\) readout olyan rekordot ad, amely \(t_i\) paraméterrel koordinatizálható:
 \[
   U_i(r)=o_i(t_i).
@@ -501,19 +549,19 @@ közönséges téridőbeli evolúció.
 \begin{postulate}[Forrás-válasz]
 A fizikai konfigurációkat parent-szinten endpoint-vak válaszok reprezentálják:
 \[
-  s\in\Ssrc,\qquad r=\Rtau(s)\in\mathcal R_{\tau}.
+  s\in\Ssrc,\qquad r=\Rmap(s)\in\RTspace.
 \]
 \end{postulate}
 
 \begin{postulate}[Endpoint-vakság]
-\(\Rtau(s)\), illetve bármely source objektum, amely readout-kernelt választ,
+\(\Rmap(s)\), illetve bármely source objektum, amely readout-kernelt választ,
 nem használhatja azt az endpoint residualt, amelyet később magyarázni akar.
 \end{postulate}
 
 \begin{postulate}[Readout-emergencia]
 A megfigyelt fizikai leírások szektor-kiolvasások:
 \[
-  O_i=U_i(\Rtau(s)).
+  O_i=U_i^{\Mta}(\Rmap(s)).
 \]
 Az idő, téridő, kvantum-hozzáférés, gravitáció és tömeg/forrás leírás readout
 jelölt, nem primitív kategória.
@@ -521,14 +569,16 @@ jelölt, nem primitív kategória.
 
 \begin{postulate}[Effektív dinamika]
 Időfejlődés csak akkor jelenik meg, ha egy readout stabil rendezést vagy
-óra-koordinátát enged meg.  Egy \(\frac{d}{dt}U_i(\Rtau(s))\) derivált
+óra-koordinátát enged meg.  Egy \(\frac{d}{dt}U_i(\Rmap(s))\) derivált
 effektív readout-derivált, nem primitív parent-idő derivált.
 \end{postulate}
 
 \begin{postulate}[Rejtett defektus]
 Ha egy readout és megengedett reliftje nem állítja vissza a parent-válasz
-reprezentánst a deklarált null-reláció modulo, a nem reliftelhető komponens a
-readout rejtett defektusaként kerül rögzítésre.
+reprezentánst a deklarált null-reláció modulo, tehát
+\(\omega_i(r)\neq0\), az obstrukció a readout rejtett defektusaként kerül
+rögzítésre.  A \(J_iU_i(r)-r\) különbség csak akkor használható
+reprezentánsként, ha a választott chartban a kivonás értelmezett.
 \end{postulate}
 
 \begin{postulate}[Feszültség mint readout-kudarc]
@@ -573,7 +623,7 @@ vezeti le a Hilbert-teret.
 
 Legyen a parent-választér:
 \[
-  \mathcal R_{\tau}=\mathbb R^3,\qquad r=(a,b,c).
+  \RTspace=\mathbb R^3,\qquad r=(a,b,c).
 \]
 Két readout:
 \[
@@ -630,12 +680,16 @@ null-szerkezet.
 
 Minimális forma:
 \begin{equation}
-  O_i=U_i[\Mta](\Rtau(s)).
+  O_i=U_i^{\Mta}(\Rmap(s)).
   \label{eq:morph-conditioned-hu}
 \end{equation}
-A szögletes zárójel azt jelzi, hogy a readout-térkép függhet a morfológiai
-testtől.  Ez nem bizonyítja, hogy \(\Mta\) fizikailag le van vezetve; csak azt
-mondja, hogy a readout-választás nem forrásmentes.
+A felső index azt jelzi, hogy a readout-térkép a morfológiai test által
+kondicionált.  Ekvivalensen írható
+\[
+  U_i:\mathcal M_\tau\times\RTspace\to\Obs_i.
+\]
+Ez nem bizonyítja, hogy \(\Mta\) fizikailag le van vezetve; csak azt mondja,
+hogy a readout-választás nem forrásmentes.
 
 \section{Megfigyelői idő}
 
@@ -644,7 +698,7 @@ paraméterként:
 \begin{equation}
   t_{\rm obs}^{S}
   =
-  U_{\rm time}^{S}(\Rtau(s),\Mta,\mathcal O_S,\gamma_S),
+  U_{\rm time}^{S}(\Rmap(s),\Mta,\mathcal O_S,\gamma_S),
   \label{eq:observer-time-hu}
 \end{equation}
 ahol \(S\) szektor, \(\mathcal O_S\) megfigyelői interface-adat, \(\gamma_S\)
@@ -660,7 +714,7 @@ enged korrekciókat.
 A kvantumág természetes célpontja a readout-nyelvnek, de itt különösen veszélyes
 a túlállítás.  Minimálisan:
 \begin{equation}
-  q=U_q(\Rtau(s)),
+  q=U_q(\Rmap(s)),
 \end{equation}
 ahol \(q\) hozzáférési állapot vagy valószínűségi hozzárendelés rekordja lehet.
 Ez messze van a Hilbert-tér vagy Born-szabály levezetésétől.
@@ -680,7 +734,7 @@ A gravitációs ág motiválja a hidden-defect szókészletet.  Egy gravitáció
 kiolvasás nem biztos, hogy minden forrásreleváns struktúrát vissza tud emelni
 Newtoni, relativisztikus vagy closure-kompatibilis leírásba:
 \begin{equation}
-  h_g=J_gU_g(\Rtau(s))-\Rtau(s).
+  h_g=J_gU_g(\Rmap(s))-\Rmap(s).
 \end{equation}
 Ha \(h_g\) egy komponense túléli a deklarált null quotientet és mérhető 4D
 readoutja van, akkor residual-csatorna jelölt.  Ez még nem sötétanyag-helyettesítés.
@@ -693,7 +747,7 @@ modellfüggő readout-feltételezéseken keresztül tömörülnek.  Sémában:
 \begin{equation}
   O_{\rm cosmo}
   =
-  U_{\rm cosmo}(\Rtau(s),\Mta^U,\gamma_{\rm path},\mathcal O_{\rm obs}).
+  U_{\rm cosmo}(\Rmap(s),\Mta^U,\gamma_{\rm path},\mathcal O_{\rm obs}).
 \end{equation}
 Itt \(\Mta^U\) univerzumléptékű morfológiai test, \(\gamma_{\rm path}\)
 útvonal/környezet adat, \(\mathcal O_{\rm obs}\) pedig megfigyelői interface.
@@ -797,7 +851,7 @@ nem Tau-ontológiai bizonyíték.
 A keret akkor erősödik, ha az absztrakt readout-nyelv korlátos feladatokká
 válik:
 \begin{enumerate}[label=(\arabic*)]
-  \item nem körkörös parent válaszlaw \(\Rtau\) levezetése;
+  \item nem körkörös parent válaszlaw \(\Rmap\) levezetése;
   \item source-realizable morfológiai test \(\Mta\) definiálása;
   \item quotient-safe null-politika bizonyítása egy readoutnál;
   \item ismert fizikai limit, például sajátidő vagy Newtoni gravitáció
@@ -834,6 +888,19 @@ fennállnak:
 Ezek nem puszta módszertani preferenciák.  Ezek azok a feltételek, amelyek
 alatt az alapnyelv nem válik fizikai kutatási programmá.  A negatív eredményt
 valódi visszaminősítésként kell megőrizni, nem terminológiai váltással elrejteni.
+
+Az elfogadott visszaminősítési státuszok:
+\[
+  \texttt{toy-only},\qquad
+  \texttt{phenomenological-only},\qquad
+  \texttt{blocked},\qquad
+  \texttt{rejected}.
+\]
+Tiltott mentőműveletek: endpoint utáni kernelcsere, residualból választott
+morfológiai paraméter, utólag beillesztett path/projection faktor, illetve a
+kovariancia- vagy null-politika endpoint-inspekció utáni átírása.  Egy
+előléptetett ágnak legalább egy fagyasztott numerikus értéket, relációt,
+kizárást vagy null predikciót kell adnia az endpoint megtekintése előtt.
 
 \section{Várható ellenvetések}
 
@@ -911,18 +978,19 @@ A keret objektumcsomagként:
 \[
   \mathfrak T
   =
-  (\Ssrc,\mathcal R_{\tau},\Rtau,\Mta,\{U_i\},\{N_i\},\{J_i\}).
+  (\Ssrc,\RTspace,\Rmap,\Mta,\{U_i\},\{N_i\},\{J_i\}).
 \]
-Itt \(\Ssrc\) forrásdomén, \(\mathcal R_{\tau}\) válaszdomén, \(\Rtau\)
+Itt \(\Ssrc\) forrásdomén, \(\RTspace\) válaszdomén, \(\Rmap\)
 endpoint-vak válaszreláció, \(\Mta\) morfológiai test, \(U_i\) readout,
 \(N_i\) null-politika, \(J_i\) opcionális relift.
 
 Minimális konzisztenciafeltételek:
 \begin{align}
   &s \text{ endpoint leakage nélkül rögzített},\\
-  &r=\Rtau(s) \text{ definiált a deklarált forrásdoménen},\\
+  &r=\Rmap(s) \text{ definiált a deklarált forrásdoménen},\\
   &rN_i r'\Rightarrow U_i(r)=U_i(r'),\\
-  &h_i(r)=J_iU_i(r)-r \text{ csak } N_i \text{ modulo értelmezett},\\
+  &\omega_i(r)=0 \Longleftrightarrow J_iU_i(r)N_i r,\\
+  &h_i(r)=J_iU_i(r)-r \text{ csak chart-szintű reprezentáns, ha értelmezett},\\
   &\text{ismert fizikai limitek visszanyerése előléptetés előtt}.
 \end{align}
 
@@ -953,11 +1021,11 @@ támadhassa őket.
 
 A Tau Core itt időtlen morfológiai readout keretként jelenik meg.  Az alapjavaslat:
 \[
-  s\mapsto\Rtau(s)\mapsto U_i(\Rtau(s)).
+  s\mapsto\Rmap(s)\mapsto U_i(\Rmap(s)).
 \]
 Ebben az olvasatban a 4D téridőblokk nem végső ontológia, hanem egy readout:
 \[
-  M_{4D}=U_{4D}(\Rtau(s)).
+  M_{4D}=U_{4D}(\Rmap(s)).
 \]
 A fizikai idő ugyanígy readout-csatorna, nem maga a \(\tau\) jelentése.
 

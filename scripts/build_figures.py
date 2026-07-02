@@ -124,9 +124,9 @@ def figure_core_spine():
     y = 0.58
     nodes = [
         (0.055, 0.14, "source seed\n$s$", COL["warning"], COL["warning_edge"]),
-        (0.285, 0.18, "endpoint-blind\nresponse\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"]),
+        (0.285, 0.18, "endpoint-blind\nresponse\n$\\rho_\\tau(s)$", COL["parent"], COL["parent_edge"]),
         (0.535, 0.18, "morphological\nbody\n$M_\\tau$", COL["morph"], COL["morph_edge"]),
-        (0.785, 0.16, "sector readout\n$U_i[R_\\tau(s)]$", COL["readout"], COL["readout_edge"]),
+        (0.785, 0.16, "sector readout\n$U_i^{M_\\tau}(\\rho_\\tau(s))$", COL["readout"], COL["readout_edge"]),
     ]
     centers = []
     for x, w, text, fc, ec in nodes:
@@ -150,7 +150,7 @@ def figure_core_spine():
         "#777777",
         fs=9,
     )
-    label(ax, 0.50, 0.10, "$s \\mapsto R_\\tau(s) \\mapsto U_i(R_\\tau(s))$", fs=13, weight="bold")
+    label(ax, 0.50, 0.10, "$s \\mapsto \\rho_\\tau(s) \\mapsto U_i^{M_\\tau}(\\rho_\\tau(s))$", fs=12, weight="bold")
     save(fig, "fig_core_spine.pdf")
 
 
@@ -171,13 +171,13 @@ def figure_block_comparison():
     label(ax, 0.24, 0.10, "4D spacetime history is the final object", fs=8)
 
     # Right: parent response -> readout -> 4D block, vertically separated.
-    box(ax, 0.62, 0.62, 0.22, 0.13, "parent response\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"])
+    box(ax, 0.62, 0.62, 0.22, 0.13, "parent response\n$\\rho_\\tau(s)$", COL["parent"], COL["parent_edge"])
     box(ax, 0.62, 0.40, 0.22, 0.13, "4D readout\n$U_{4D}$", COL["readout"], COL["readout_edge"])
     box(ax, 0.62, 0.20, 0.22, 0.10, "$M_{4D}$", COL["neutral"], COL["neutral_edge"], fs=11)
     arrow(ax, (0.73, 0.62), (0.73, 0.53), color=COL["readout_edge"])
     arrow(ax, (0.73, 0.40), (0.73, 0.30), color=COL["readout_edge"])
     label(ax, 0.73, 0.82, "Tau Core reading", fs=11, weight="bold")
-    label(ax, 0.73, 0.13, "$M_{4D}=U_{4D}(R_\\tau(s))$", fs=12, weight="bold")
+    label(ax, 0.73, 0.13, "$M_{4D}=U_{4D}^{M_\\tau}(\\rho_\\tau(s))$", fs=11, weight="bold")
     label(ax, 0.73, 0.07, "4D block is a sector output, not final ontology", fs=8)
 
     line(ax, [0.50, 0.50], [0.10, 0.86], color="#bbbbbb", lw=1.0, z=1)
@@ -188,7 +188,7 @@ def figure_block_comparison():
 def figure_readout_atlas():
     fig, ax = setup(width=10.8, height=5.9)
     panel_label(ax, "C. Readout atlas with null and closure boundaries")
-    box(ax, 0.40, 0.79, 0.20, 0.11, "parent response\n$R_\\tau(s)$", COL["parent"], COL["parent_edge"])
+    box(ax, 0.40, 0.79, 0.20, 0.11, "parent response\n$\\rho_\\tau(s)$", COL["parent"], COL["parent_edge"])
 
     # A bus avoids arrows crossing node labels.
     bus_y = 0.71
