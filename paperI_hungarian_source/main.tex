@@ -85,7 +85,9 @@ empirikus tesztek szétválasztására.  A kézirat elhatárolja a keretet a
 blokk-univerzum ontológiától és a szokásos téridő-mezőelmélettől, definiálja a
 Tau-oldali morfológiai testet, hét alapozó posztulátumot fogalmaz meg, a
 relift-kudarc nyelvén bevezeti a kiolvasás-relatív rejtett defektust, és véges
-toy modelleket ad a rejtettségre és az effektív időre.
+toy modelleket ad a rejtettségre és az effektív readout-időre.
+Ezt a kéziratot alapnyelvi és állításihatár-paperként kell értékelni, nem
+fenomenológiai vagy empirikus eredménypaperként.
 
 \medskip
 \noindent\textbf{Határ.}
@@ -107,6 +109,9 @@ arab számozású Tau Core papersorozattól, amely szűkebb empirikus vagy
 protokoll-csomagokra szolgál.  Itt a cél alapvetőbb: a jelenlegi alapnyelvet
 olyan formában rögzíteni, amely kritizálható, összehasonlítható és finomítható.
 
+Beküldési megjegyzés: ezt a kéziratot alapnyelvi és állításihatár-paperként
+kell értékelni, nem fenomenológiai vagy empirikus eredménypaperként.
+
 Az állítási határ szándékosan szűk.  A paper formai architektúrát javasol.  Nem
 állít empirikus validációt.  Nem vezeti le az általános relativitáselméletet.
 Nem vezeti le a kvantummechanikát.  Nem váltja le a \(\Lambda\)CDM-et.  Nem
@@ -124,6 +129,21 @@ kiolvasás.  Fizikai elmélet csak akkor jelenik meg, ha egy kiolvasás
 megadta a kodomént, a null-politikát, a closure-tesztet és a validációs határt.
 Ha \(\Mta\) a deklarált forrásosztály által rögzített, a felső indexet gyakran
 elhagyjuk, és \(U_i\)-t írunk \(U_i^{\Mta}\) helyett.
+
+Determinisztikus ágban írható:
+\[
+  \Rmap:\Ssrc\to\RTspace.
+\]
+Relációs ágban ugyanez a jelölés relációt jelent:
+\[
+  \Rmap\subseteq\Ssrc\times\RTspace,
+\]
+vagy ekvivalensen halmazértékű válaszszabályt:
+\[
+  \Rmap:\Ssrc\to\mathcal P(\RTspace).
+\]
+Ilyenkor az ágnak deklarálnia kell, hogy a teljes admisszibilis válaszosztályt
+használja-e, vagy endpoint-vak source-freeze szabály választ reprezentánst.
 
 \begin{figure}[t]
   \centering
@@ -153,7 +173,7 @@ Rész & Szerep & Állítási szint\\
 \midrule
 Nyitó részek & Motiváció, név, viszony a blokk-univerzumhoz és a téridő-mezőképhez & Pozicionálás\\
 Alapszókészlet & Parent-válasz, morfológiai test, kiolvasás, relift, defektus & Definíciók\\
-Formai gerinc & Minimális kalkulus, forrásfegyelem, effektív idő, posztulátumok & Keretposztulátumok\\
+Formai gerinc & Minimális kalkulus, forrásfegyelem, effektív readout-idő, posztulátumok & Keretposztulátumok\\
 Toy réteg & Véges hidden-defect modell és morfológia/megfigyelői idő tisztázása & Toy mechanizmus\\
 Határréteg & Kvantum, gravitáció, kozmológia, korábbi paperek és ellenvetések & Határkijelölés\\
 Audit réteg & Érettségi checklist, alapozó sorozat, összegzés és nem-eredmények & Auditfegyelem\\
@@ -608,7 +628,7 @@ Két readout ugyanarról a parent-válaszról eltérhet:
 Az első időindexelt sorozatként, a második statikus korrelációként vagy
 kényszerként szervezi ugyanazt a parent-választ.  Nincs ellentmondás.
 
-\section{Toy modell effektív idővel}
+\section{Toy modell effektív readout-idővel}
 
 Legyen
 \[
@@ -618,7 +638,7 @@ Definiáljuk:
 \[
   U_{\rm seq}(r)=(a_0,a_1,\ldots,a_n).
 \]
-A \(k\) index effektív időkoordinátaként választható, és véges differencia
+A \(k\) index effektív readout-idő koordinátaként választható, és véges differencia
 írható:
 \[
   \Delta a_k=a_{k+1}-a_k.
@@ -637,7 +657,7 @@ számára például \(c\) marad rejtett.
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_effective_time_readout.pdf}
-  \caption{Véges toy modell effektív időre.  A parent rekord maga nem fejlődik.
+  \caption{Véges toy modell effektív readout-időre.  A parent rekord maga nem fejlődik.
   A sorozat-readout rendezett listát tár fel, ezért támogatja a \(\Delta a_k\)
   véges differenciákat.  Az aggregált readout más megfigyelhetőt ad, és elveszíti
   a belső sorrendet.}
@@ -733,7 +753,7 @@ vezeti le a Hilbert-teret.
   \includegraphics[width=0.95\linewidth]{figures/fig_status_matrix.pdf}
   \caption{Foundation Paper I claim-status mátrixa.  A paper definiál és
   posztulál egy parent-válasz/readout architektúrát, valamint toy mechanizmust
-  ad effektív időre és rejtett defektusokra.  Nem validál empirikusan, és nem
+  ad effektív readout-időre és rejtett defektusokra.  Nem validál empirikusan, és nem
   vezeti le GR-t, kvantummechanikát, QFT-t vagy fizikai parent akciót.}
   \label{fig:status-matrix-hu}
 \end{figure}
@@ -752,6 +772,9 @@ Ezek különböző koordinátákat felejtenek el.  Válasszunk kanonikus relifte
 \[
   J_A(x,y)=(x,y,0),\qquad J_B(x,z)=(x,0,z).
 \]
+Mivel ez a toy válasz-tér lineáris, \(\RTspace=\mathbb R^3\), az obstrukció
+koordinátakülönbségekkel reprezentálható.  Ez speciális toy-chart kényelem,
+nem \(\omega_i\) általános definíciója.
 Ekkor:
 \[
   h_A(r)=J_AU_A(r)-r=(0,0,-c),

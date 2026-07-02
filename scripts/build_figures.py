@@ -250,7 +250,7 @@ def figure_defect():
 
 def figure_effective_time():
     fig, ax = setup(width=10.4, height=5.1)
-    panel_label(ax, "E. Effective time as a readout ordering")
+    panel_label(ax, "E. Effective readout-time as an ordering")
     label(ax, 0.20, 0.80, "atemporal parent record", fs=9, weight="bold")
     x0 = 0.06
     for k in range(6):
@@ -265,7 +265,7 @@ def figure_effective_time():
     line(ax, [split[0], split[0]], [0.47, 0.72], color=COL["dark"], lw=1.0, z=1)
 
     box(ax, 0.56, 0.66, 0.16, 0.11, "$U_{seq}$\nordered sequence", COL["readout"], COL["readout_edge"], fs=8)
-    box(ax, 0.80, 0.66, 0.15, 0.11, "$\\Delta a_k$\neffective dynamics", COL["warning"], COL["warning_edge"], fs=8)
+    box(ax, 0.80, 0.66, 0.15, 0.11, "$\\Delta a_k$\nreadout variation", COL["warning"], COL["warning_edge"], fs=8)
     arrow(ax, (split[0], 0.72), (0.56, 0.715), color=COL["dark"])
     arrow(ax, (0.72, 0.715), (0.80, 0.715), color=COL["dark"])
 
@@ -314,7 +314,7 @@ def figure_status_matrix():
         "Seed-response map",
         "Morphological body",
         "Sector readouts",
-        "Effective time",
+        "Effective readout-time",
         "Hidden defect",
         "GR / quantum / QFT",
         "Empirical validation",

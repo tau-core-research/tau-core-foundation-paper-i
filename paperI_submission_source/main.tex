@@ -84,7 +84,9 @@ and future empirical tests.  The manuscript distinguishes the framework from
 block-universe ontology and from ordinary spacetime field theory, defines the
 Tau-side morphological body, formulates seven foundation postulates,
 introduces readout-relative hidden defects via relift failure, and gives
-finite toy models for hiddenness and effective time.
+finite toy models for hiddenness and effective readout-time.
+This manuscript should be evaluated as a foundation-language and
+claim-boundary paper, not as a phenomenological or empirical result paper.
 
 \medskip
 \noindent\textbf{Boundary.}
@@ -127,6 +129,21 @@ boundary.  When \(\Mta\) is fixed by the declared source class, the
 superscript is often suppressed and \(U_i\) is written for
 \(U_i^{\Mta}\).
 
+In a deterministic branch one may write
+\[
+  \Rmap:\Ssrc\to\RTspace.
+\]
+In a relational branch the same symbol denotes either a relation
+\[
+  \Rmap\subseteq \Ssrc\times\RTspace
+\]
+or, equivalently, a set-valued response rule
+\[
+  \Rmap:\Ssrc\to\mathcal P(\RTspace).
+\]
+Such a branch must declare whether it uses the whole admissible response class
+or an endpoint-blind source-freeze rule selecting a representative.
+
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_core_spine.pdf}
@@ -160,7 +177,7 @@ Opening sections & Motivation, name, and relation to block-universe and
 spacetime-field views & Positioning\\
 Core vocabulary & Parent response, morphological body, readout,
 relift, defect & Definitions\\
-Formal spine & Minimal calculus, source discipline, effective time, and
+Formal spine & Minimal calculus, source discipline, effective readout-time, and
 postulates & Framework postulates\\
 Toy layer & Finite hidden-defect model and morphology/observer-time
 clarifications & Toy mechanisms\\
@@ -708,9 +725,9 @@ distance analysis, and a quantum measurement protocol are not automatically
 the same parent object.  They may share a local proper-time limit, but that
 limit must be derived or justified inside the declared branch.
 
-\section{Toy model with effective time}
+\section{Toy model with effective readout-time}
 
-The finite model above can be extended to show effective time.  Let
+The finite model above can be extended to show effective readout-time.  Let
 \[
   r=(a_0,a_1,\ldots,a_n,c)\in \mathbb R^{n+2}.
 \]
@@ -718,7 +735,7 @@ Define a readout
 \[
   U_{\rm seq}(r) = (a_0,a_1,\ldots,a_n),
 \]
-and choose the index \(k\) as an effective time coordinate.  The readout sees
+and choose the index \(k\) as an effective readout-time coordinate.  The readout sees
 a sequence \(a_k\).  A finite-difference law can be defined:
 \[
   \Delta a_k = a_{k+1}-a_k.
@@ -743,7 +760,7 @@ introducing backward causation or a second physical clock.
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_effective_time_readout.pdf}
-  \caption{A finite toy model for effective time.  The parent record is not
+  \caption{A finite toy model for effective readout-time.  The parent record is not
   itself evolving.  The sequence readout \(U_{\rm seq}\) exposes an ordered
   list and therefore supports finite differences \(\Delta a_k\).  The
   aggregate readout \(U_{\rm sum}\) exposes a different observable and loses
@@ -857,7 +874,7 @@ is not to make the paper look complete; it is to make incompleteness visible.
   \includegraphics[width=0.95\linewidth]{figures/fig_status_matrix.pdf}
   \caption{Claim-status matrix for Foundation Paper I.  The paper defines and
   postulates a parent-response/readout architecture and supplies toy
-  mechanisms for effective time and hidden defects.  It does not validate the
+  mechanisms for effective readout-time and hidden defects.  It does not validate the
   framework empirically and does not derive GR, quantum mechanics, QFT, or a
   physical parent action.}
   \label{fig:status-matrix}
@@ -887,6 +904,9 @@ These readouts forget different coordinates.  Choose canonical relifts
   \qquad
   J_B(x,z)=(x,0,z).
 \]
+Since this toy response space is linear, \(\RTspace=\mathbb R^3\), the
+obstruction can be represented by coordinate differences.  This is a special
+toy-chart convenience, not the general definition of \(\omega_i\).
 Then the readout defects are
 \[
   h_A(r)=J_AU_A(r)-r=(0,0,-c),
