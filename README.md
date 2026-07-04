@@ -5,7 +5,7 @@ Private foundation-paper repository:
 **Tau Core: An Atemporal Morphological Readout Framework for Emergent Physical Dynamics**
 
 This is the first Roman-numbered Tau Core foundation paper.  It is deliberately
-separate from the Arabic-numbered Paper 1--14 empirical/protocol sequence.
+separate from the Arabic-numbered Paper 1--18 empirical/protocol sequence.
 
 ## Main Claim
 
@@ -25,7 +25,8 @@ rather than primitive inputs.
 - It does not claim empirical validation of Tau Core.
 - It does not derive physical time, GR, QFT, the Standard Model, or LCDM.
 - It does not replace dark matter, dark energy, or general relativity.
-- It does not claim that any Paper 1--14 numerical result proves the framework.
+- It does not claim that any Paper 1--18 numerical or synthetic protocol result
+  proves the framework.
 - It does not present a final parent action or a complete physical theory.
 
 ## Included Material
