@@ -51,8 +51,7 @@
 \title{\textbf{Tau Core: An Atemporal Morphological Readout Framework for Emergent Physical Descriptions}\\
 \large Foundation Paper I}
 \author{Jozsef Olcsak\\
-\small Independent researcher\\
-\small AI-assisted theoretical-physics research workflow}
+\small Independent researcher}
 \date{Draft v0.1 --- 2026}
 
 \begin{document}
@@ -118,6 +117,18 @@ sector, neutrino physics, or the Standard Model.  It gives a vocabulary in
 which those later questions can be stated without assuming that spacetime time
 evolution is the primitive level.
 
+\begin{center}
+\fbox{\begin{minipage}{0.90\linewidth}
+\textbf{Reviewer-facing claim box.}
+This paper claims a formal readout architecture and a failure discipline.
+It does not claim empirical validation, a new force, dark-matter replacement,
+or a derivation of GR/QM/Standard-Model physics.
+Promotion of any later branch requires source freeze, quotient safety,
+known-limit recovery, endpoint-blind prediction or exclusion, and survival
+under the relevant holdout/control test.
+\end{minipage}}
+\end{center}
+
 The central idea can be written in one line:
 \begin{equation}
   s \longmapsto \Rmap(s) \longmapsto U_i^{\Mta}(\Rmap(s)).
@@ -144,6 +155,23 @@ or, equivalently, a set-valued response rule
 \]
 Such a branch must declare whether it uses the whole admissible response class
 or an endpoint-blind source-freeze rule selecting a representative.
+
+Equivalently, the paper works with the following foundation package:
+\[
+  \mathfrak T
+  =
+  (\Ssrc,\RTspace,\Rmap,\Mta,\{U_i\},\{N_i\},\{J_i\}).
+\]
+Here \(\Ssrc\) is a seed/source domain, \(\RTspace\) is a formal response
+domain, \(\Rmap\) is a map, relation, or set-valued response rule, \(\Mta\)
+is the morphological body, \(U_i\) are sector readouts, \(N_i\) are null or
+quotient policies, and \(J_i\) are optional relifts.  This package is an
+organizing object for later branches, not a proof that Nature uses it.
+
+\paragraph{Method note.}
+The manuscript was developed in an AI-assisted theoretical-research workflow.
+The AI workflow is not used as evidence for any physics claim; it is only part
+of the drafting and audit process.
 
 \begin{figure}[t]
   \centering
@@ -993,7 +1021,8 @@ The lesson is small but important.  A hidden component is not necessarily a new
 substance.  It may be a component that a chosen readout cannot relift.  Whether
 this idea has anything to do with dark sectors, quantum measurement, or
 cosmology is a later physical question.  The toy model only licenses the
-logical grammar.
+logical grammar.  In particular, it does not force a dark-sector mechanism,
+quantum mechanism, or gravitational correction.
 
 \begin{figure}[t]
   \centering
@@ -1123,7 +1152,9 @@ matrix Hilbert/Born toy packet with
 \end{equation}
 This is a conditional finite toy recovery, not a derivation of full quantum
 mechanics, collapse, tensor-product uniqueness, QFT, or empirical quantum
-validation.
+validation.  If this route is promoted in a later quantum paper, it should be
+placed in a dedicated appendix or theorem section with all finite-domain,
+frame, trace, null-policy, and source-freeze assumptions stated explicitly.
 
 In this limited sense, the quantum readout is not a sealed sector.  A
 parent-side distinction with access, phase, contextual, or noncommuting
@@ -1329,6 +1360,16 @@ mathematical type in this foundation paper.  Candidate types include:
 No choice among these is made here.  A later branch must declare which type it
 uses before claiming a derived physical law.
 
+This is the largest remaining weakness of the foundation layer.  The abstract
+symbol \(\Rmap\) is useful only as bookkeeping until at least one branch fixes
+its mathematical type and carries a chain
+\[
+  \text{source}\to\Rmap\to U_i^{\Mta}
+  \to \text{known limit or frozen falsifiable consequence}
+\]
+without endpoint leakage.  Foundation Paper I intentionally stops before that
+choice; a subsequent worked branch cannot.
+
 \section{What would count as failure}
 
 A reviewer should not have to infer the failure conditions.  At the foundation
@@ -1378,6 +1419,21 @@ morphological parameters, retrofitted path factors, and covariance or null
 policy changes made after endpoint inspection.  A promoted branch must provide
 at least one frozen numerical value, relation, exclusion, or null prediction
 that could have failed.
+
+\paragraph{Minimal failed-branch example.}
+Let a toy branch declare a null policy \(n\sim n'\) and a readout
+\[
+  R(x,n)=x.
+\]
+If the branch later adds a correction \(A\,n\) to explain an endpoint residual,
+then it has used a declared null coordinate as a physical observable.  The
+branch fails quotient safety.  If \(A\) or the choice of \(n\)-dependence was
+selected after inspecting the endpoint residual, it also fails endpoint
+blindness.  Such a branch is not a Tau Core derivation; it is demoted to
+\textsc{rejected} or, if no endpoint was used, at best
+\textsc{phenomenological-only}.  This example is deliberately trivial: its
+purpose is to show that the framework can say ``no'' before any exotic physics
+is invoked.
 
 \section{Likely objections}
 

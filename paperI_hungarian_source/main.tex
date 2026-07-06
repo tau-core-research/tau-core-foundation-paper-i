@@ -53,8 +53,7 @@
 \title{\textbf{Tau Core: időtlen morfológiai kiolvasási keret az emergens fizikai leírásokhoz}\\
 \large Foundation Paper I -- magyar változat}
 \author{Olcsák József\\
-\small Független kutató\\
-\small AI-segített elméleti fizikai kutatási munkafolyamat}
+\small Független kutató}
 \date{Draft v0.1 -- 2026}
 
 \begin{document}
@@ -120,6 +119,18 @@ oldja meg a mérési problémát, a sötét szektort, a neutrínófizikát vagy 
 Standard Modellt.  Olyan szókészletet ad, amelyben ezek a későbbi kérdések
 feltehetők anélkül, hogy a téridőbeli időfejlődést primitív szintnek vennénk.
 
+\begin{center}
+\fbox{\begin{minipage}{0.90\linewidth}
+\textbf{Reviewer-facing claim box.}
+Ez a paper formai readout-architektúrát és bukási fegyelmet állít.
+Nem állít empirikus validációt, új erőt, sötétanyag-helyettesítést,
+GR/QM/Standard-Model levezetést.
+Bármely későbbi ág előléptetéséhez source-freeze, quotient safety,
+ismert-limit visszanyerés, endpoint-vak predikció vagy kizárás, valamint
+releváns holdout/kontroll túlélés kell.
+\end{minipage}}
+\end{center}
+
 A központi gondolat egy sorban:
 \begin{equation}
   s \longmapsto \Rmap(s) \longmapsto U_i^{\Mta}(\Rmap(s)).
@@ -145,6 +156,23 @@ vagy ekvivalensen halmazértékű válaszszabályt:
 \]
 Ilyenkor az ágnak deklarálnia kell, hogy a teljes admisszibilis válaszosztályt
 használja-e, vagy endpoint-vak source-freeze szabály választ reprezentánst.
+
+Ekvivalensen a paper a következő alapozó csomaggal dolgozik:
+\[
+  \mathfrak T
+  =
+  (\Ssrc,\RTspace,\Rmap,\Mta,\{U_i\},\{N_i\},\{J_i\}).
+\]
+Itt \(\Ssrc\) forrásdomén, \(\RTspace\) formai válaszdomén, \(\Rmap\)
+térkép, reláció vagy halmazértékű válaszszabály, \(\Mta\) morfológiai test,
+\(U_i\) szektor-readout, \(N_i\) null/quotient politika, \(J_i\) opcionális
+relift.  Ez a csomag későbbi ágak szervező objektuma, nem annak bizonyítása,
+hogy a természet ilyen csomagot használ.
+
+\paragraph{Módszertani megjegyzés.}
+A kézirat AI-segített elméleti kutatási munkafolyamatban készült.  Az
+AI-munkafolyamat nem bizonyíték semmilyen fizikai állításra; csak a drafting
+és audit folyamat része.
 
 \begin{figure}[t]
   \centering
@@ -857,6 +885,13 @@ lehet, és fordítva.
 alatt.
 \end{proof}
 
+A tanulság kicsi, de fontos.  Egy rejtett komponens nem szükségképpen új
+szubsztancia.  Lehet olyan komponens, amelyet a választott readout nem tud
+visszaemelni.  Hogy ennek van-e köze sötét szektorokhoz, kvantumméréshez vagy
+gravitációhoz, az későbbi fizikai kérdés.  A toy modell csak a logikai
+nyelvtant engedélyezi; nem kényszerít sötétszektor-, kvantum- vagy
+gravitációs mechanizmust.
+
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_hidden_defect.pdf}
@@ -971,6 +1006,9 @@ eléri a mátrixos Hilbert/Born toy csomagot:
 \end{equation}
 Ez feltételes finite toy recovery, nem a teljes kvantummechanika, collapse,
 tensor product egyértelműség, QFT vagy empirikus kvantumvalidáció levezetése.
+Ha ez az út későbbi kvantumpaperben előléptetésre kerül, külön appendixben
+vagy tételszakaszban kell rögzíteni minden finite-domain, frame, trace,
+null-policy és source-freeze feltételt.
 
 Ebben a korlátozott értelemben a kvantum-readout nem zárt sziget.  Egy
 parent-oldali különbség, amely hozzáférési, fázis-, kontextuális vagy nem
@@ -1140,6 +1178,16 @@ egyetlen matematikai típushoz.  Lehetséges típusok:
 Itt egyik út sincs kiválasztva.  Egy későbbi ágnak előre deklarálnia kell,
 melyik típust használja, mielőtt fizikai törvény levezetését állítaná.
 
+Ez az alapozó réteg legnagyobb megmaradt gyengesége.  Az absztrakt
+\(\Rmap\) jel csak könyvelés, amíg legalább egy ág nem rögzíti a matematikai
+típusát, és nem visz végig egy láncot:
+\[
+  \text{forrás}\to\Rmap\to U_i^{\Mta}
+  \to \text{ismert limit vagy fagyasztott, cáfolható következmény}
+\]
+endpoint leakage nélkül.  Foundation Paper I szándékosan megáll e választás
+előtt; egy későbbi worked branch már nem állhat meg itt.
+
 \section{Mi számítana bukásnak?}
 
 Egy reviewernek nem kellene kitalálnia a bukási feltételeket.  Foundation
@@ -1187,6 +1235,20 @@ morfológiai paraméter, utólag beillesztett path/projection faktor, illetve a
 kovariancia- vagy null-politika endpoint-inspekció utáni átírása.  Egy
 előléptetett ágnak legalább egy fagyasztott numerikus értéket, relációt,
 kizárást vagy null predikciót kell adnia az endpoint megtekintése előtt.
+
+\paragraph{Minimális bukott ág példa.}
+Legyen egy toy ágban a deklarált null-politika \(n\sim n'\), és a readout:
+\[
+  R(x,n)=x.
+\]
+Ha az ág később egy \(A\,n\) korrekciót ad hozzá egy endpoint residual
+magyarázatára, akkor deklarált null-koordinátát használt fizikai
+megfigyelhetőként.  Ez quotient-safety bukás.  Ha \(A\)-t vagy az
+\(n\)-függés alakját az endpoint residual megtekintése után választotta, akkor
+endpoint-vakságot is sért.  Ez nem Tau Core deriváció: \textsc{rejected}
+státuszba kerül, vagy endpoint nélküli esetben legfeljebb
+\textsc{phenomenological-only}.  A példa direkt triviális: azt mutatja, hogy
+a keret egzotikus fizika nélkül is tud nemet mondani.
 
 \section{Várható ellenvetések}
 
