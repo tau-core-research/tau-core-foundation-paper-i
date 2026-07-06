@@ -230,9 +230,17 @@ a lokális dinamika primitív legyen.  A kanonikus kvantumgravitációban ismert
 effektív dinamika \cite{WheelerDeWitt1967,Rovelli2004}.  A relációs idő
 konstrukciói azt mutatják, hogy dinamika korrelációkon keresztül is leírható
 \cite{PageWootters1983}.  Időtlen vagy konfigurációs-tér alapú nézetek is
-léteznek \cite{Barbour1999}.  A kvantumrekonstrukciós programok pedig azt
+léteznek \cite{Barbour1999}.  A thermal-time hipotézis különösen közeli
+összehasonlítási pont, mert az időt állapotfüggőnek kezeli, nem külső
+primitívumnak \cite{ConnesRovelli1994}.  A causal-set és generalizált
+kvantummechanikai programok szintén olyan példák, ahol a primitív leírási
+réteg változik meg, nem pusztán új tag kerül egy egyenletbe
+\cite{Bombelli1987,Hartle1991}.  A kvantumrekonstrukciós programok pedig azt
 mutatják, hogy a kvantumformalizmus nagy része operacionális elvekből
-szervezhető \cite{Hardy2001,Chiribella2011,MasanesMueller2011}.
+szervezhető \cite{Hardy2001,Chiribella2011,MasanesMueller2011}.  A constructor
+theory módszertani összehasonlításként hasznos, mert fizikai tartalmat
+lehetséges/lehetetlen transzformációkon keresztül próbál rögzíteni, nem egy
+konkrét dinamikai egyenleten keresztül \cite{Deutsch2013,DeutschMarletto2015}.
 
 A Tau Core nem állítja, hogy ezeket a programokat megoldja.  Más szervező
 kérdést használ:
@@ -363,6 +371,27 @@ megfigyelő/útvonal-releváns szerkezetet.  A vetített morfológia csak egy
 readout-handle erre a mélyebb testre.
 \end{definition}
 
+Foundation Paper I szintjén a minimális matematikai típus:
+\[
+  \Mta\in\mathcal M_\tau^{\rm adm},
+\]
+ahol \(\mathcal M_\tau^{\rm adm}\) admisszibilis morfológiai rekordok
+deklarált osztálya.  Egy konkrét ág sematikusan például így instanciálhatja:
+\[
+  \Mta=(S,B,W,N,H,A;\Theta),
+\]
+ahol \(S\) szektorfelbontást, \(B\) ág/support szerkezetet, \(W\) fal- vagy
+átmeneti szomszédságot, \(N\) null/protected struktúrát, \(H\)
+Hessian-válasz supportot, \(A\) admisszibilitási kényszereket, \(\Theta\) pedig
+opcionális interface/history/path adatot jelöl.  Ezért \(U_i^{\Mta}\) nem
+dekoratív felső index: azt jelenti, hogy a readout egy típusozott családból
+választódik:
+\[
+  U_i:\mathcal M_\tau^{\rm adm}\times\RTspace\to\Obs_i.
+\]
+Ez még mindig minimális típusdeklaráció, nem konstrukciós tétel
+\(\mathcal M_\tau^{\rm adm}\)-re.
+
 \begin{definition}[Kiolvasás]
 Kiolvasás morfológia-kondicionált szektortérkép.  Ekvivalensen írható:
 \[
@@ -400,7 +429,7 @@ Tömeg/forrás & sűrűség-, forrásmérték-, flavor- vagy részecsketartalom-
 konzervált forrásmérték vagy deklarált tömeg/forrás térkép\\
 Kozmológia & web-, void-, path-, clock- vagy expanziós rekordok &
 \(U_{\rm cosmo}^{\Mta}(r)\) &
-FLRW/LCDM-limit vagy fagyasztott residual-csatorna\\
+FLRW/\(\Lambda\)CDM-limit vagy fagyasztott residual-csatorna\\
 \bottomrule
 \end{tabular}
 \caption{Readout-családok és illusztratív parent/forrásosztályok.  A táblázat
@@ -424,7 +453,7 @@ rekordból.  Nem kell globálisan léteznie és nem kell egyértelműnek lennie.
 
 \begin{definition}[Kiolvasási obstrukció]
 Ha \(r=\Rmap(s)\), akkor az elsődleges defektusobjektum nem vektorkivonás,
-hanem obstrukciós osztály:
+hanem obstrukciós rekord:
 \[
   \omega_i(r)=0
   \quad\Longleftrightarrow\quad
@@ -476,6 +505,16 @@ bukott kontrollokkal váltják ki.  Addig ezek az objektumok fegyelmezett
 nyelvet definiálnak, nem befejezett fizikai elméletet.
 
 \section{Minimális kiolvasási kalkulus}
+
+Az ebben a szakaszban használt matematika standard.  Egy readout partíciót
+indukál a parent-választéren; a quotient-safety annak jól-definiáltsága a
+megfelelő quotienten; a finomítás pedig a partíciók szokásos finomítási
+rendje.  A Tau Core nem állít matematikai újdonságot ezekről a tényekről.
+Könyvelési fegyelemként használja őket, hogy későbbi fizikai ágak ne rejtsenek
+endpoint-szivárgást vagy double-countingot új terminológia mögé.  Ugyanez a
+fogalmi terület érintkezik coarse-graining, marginalizáció, consistent-history,
+decoherence-inspirált nyelvek és Jaynes-féle információelméleti statisztikus
+mechanika irányaival \cite{Griffiths1984,GellMannHartle1990,Jaynes1957a,Jaynes1957b}.
 
 Legyen \(\RTspace\) parent-választér és \(U_i\) kiolvasás.  Az első
 matematikai objektum az indisztingválhatósági reláció:
@@ -555,32 +594,15 @@ után:
 Kozmológiai ágban \(P_0\) lehet illesztett \(\Lambda\)CDM anyag/potenciál
 parent; más ágban az adott standard baseline.  Tau Core-kompatibilis többlet
 csak olyan residual cross-readout struktúra lehet, amely túléli a deklarált
-nullmodellt, kovarianciát és source-overlap ledgert.  Csak jelölt-névként ezt
-a fegyelmet residual cross-readout skeleton invariance néven, röviden
-\(R\)-CRSI-ként rögzítjük.  Ez nem validációs statisztika és nem
+nullmodellt, kovarianciát és source-overlap ledgert.  Ezt itt egyszerűen
+source-overlap fegyelemnek nevezzük.  Ez nem validációs statisztika és nem
 függetlenségi állítás.  E fegyelem nélkül a közös readout egyszerűen ugyanazt
 a forráskoordinátát számolhatja kétszer.
 
-A Weak-Signal Amplification Protocol (WSAP), amely az arab számozású paper
-sorozatban később jelenik meg, ennek a szabálynak operacionális példája.  A
-módszertani szlogen: a stabilitás elnyomhatja az egyedi szektor amplitúdóját,
-miközben a közös parent megőrizhet cross-readout koherenciát.  Foundation Paper
-I szintjén ez csak protokoll-nyelvtan.  Nem jelenti azt, hogy egy gyenge közös
-residual fizikai evidencia.  Egy előléptetett WSAP-szerű ágnak továbbra is
-source-frozen kernelekre, kovariancia- és nullkontrollokra, wrong-kernel
-kontrollokra, holdout predikcióra és bukási feltételekre van szüksége.
-
-A későbbi readout-kovariancia és photon-lensing MAR paperek ugyanezt az
-alapelvet a másik oldalról élesítik.  Egy morfológiai vagy orientációs sablon,
-például a photon-lensing MAR statisztika
-\(T_{\tau}=B_{\rm env}A_fM_{bf}\), illetve annak későbbi
-konvergencia/shear és toy Null--Matter Link kiterjesztései, hasznos
-source-side handle-ek lehetnek, de önmagukban még nem shared-parent
-evidenciák.  Foundation Paper I ezért az ilyen sablonokat readout-család
-példaként kezeli: fizikailag csak akkor válnak érdekessé, ha az adott ág
-megadja a source-freeze, null, kovariancia, systematics és bukási szabályokat.
-Ezért választja szét az alapozó nyelv a readout-családot és a validációs
-claimet.
+Publikálatlan Tau Core protokolljegyzetek ugyanezt a fegyelmet konkrétabb
+empirikus beállításokban is használják, de ezek a jegyzetek nem bizonyítékok
+ehhez az alapozó paperhez.  Foundation Paper I ezért nem támaszkodik rájuk
+eredményként; legfeljebb belső terminológiai provenance-ként kezeli őket.
 
 \section{Nemtriviális reprezentációs feltétel}
 
@@ -728,8 +750,8 @@ Jelölt eseménysorrendeket egyszerre lehet pontozni lokális szekvenciális
 út-költséggel és globális parent-konzisztencia költséggel. Ebben a toyban a
 lokális időtörténetként legtermészetesebb sorrend nem feltétlenül ugyanaz,
 mint az a sorrend, amely a parent-affinitásokat a legjobban őrzi. Ez csak az
-alapnyelvi állítást erősíti: delayed-choice vagy quantum-eraser jellegű
-narratívákat nem kell jövőből múltba ható okságként olvasni. Toy szinten
+alapnyelvi állítást erősíti: sorrendérzékeny narratívákat nem kell
+automatikusan jövőből múltba ható okságként olvasni. Toy szinten
 értelmezhetők egy globálisan kötött parent-rekord különböző
 időrend-readoutjaiként. Ebből nem következik fizikai óraelmélet,
 retrokausalitás, Born-szabály vagy kvantumdinamika.
@@ -1030,28 +1052,18 @@ Az itt felsorolt feltételek nem a Foundation Paper I posztulátumai.  Példák
 arra az extra rekonstrukciós struktúrára, amelyet egy későbbi kvantumágnak
 szállítania vagy helyettesítenie kellene.
 
-A későbbi Tau Core elméleti munka ezt a határt finite, source-strengthened toy
-szinten pontosította.  A jelenlegi finite út nem azt kéri a régebbi minimális
-Tau-grammatikától, hogy kényszerítse ki a kvantummechanikát.  Ehelyett egy
-source-oldali fázis/trace skeletont azonosít: védett primitív frame-et,
-kiválasztott párokon ciklikus fázistorzort, reverzibilis rank-2
-kontrasztmozgásokat, invariáns trace/effektus párosítást és egy közös null
-policyt.  Ha a triple loop holonomy
-\begin{equation}
-  H_{ijk}=\Gamma_{ij}+\Gamma_{jk}+\Gamma_{ki}
-  \quad \mathrm{mod}\;2\pi
-\end{equation}
-eltűnik a kiválasztott hármasokon, akkor a páronkénti fázisok globális komplex
-fázischarttá ragaszthatók.  Ebben a finite és source-frozen esetben az út
-eléri a mátrixos Hilbert/Born toy csomagot:
-\begin{equation}
-  p(E|\rho)=\mathrm{Tr}(\rho E).
-\end{equation}
-Ez feltételes finite toy recovery, nem a teljes kvantummechanika, collapse,
-tensor product egyértelműség, QFT vagy empirikus kvantumvalidáció levezetése.
-Ha ez az út későbbi kvantumpaperben előléptetésre kerül, külön appendixben
-vagy tételszakaszban kell rögzíteni minden finite-domain, frame, trace,
-null-policy és source-freeze feltételt.
+Egy lehetséges későbbi worked branch egy véges fázisragasztási toy modell
+lehetne.  Ebben egy branch deklarálna source-frozen primitív frame-et,
+kiválasztott párokon fázis- vagy kontextuskapcsolatot, reverzibilis rank-2
+kontrasztmozgásokat, invariáns trace/effektus párosítást és közös null
+policyt.  Ha a kiválasztott hármasokon a ciklikus fázisösszeg eltűnne, akkor
+a páronkénti fázisadatok globális komplex fázischarttá ragaszthatók lennének.
+Ez az ordinary mathematics of gluing local phase data irányába mutatna, nem
+önmagában Tau Core bizonyításra.  Foundation Paper I ezért nem állít
+Hilbert/Born recoveryt.  Egy ilyen későbbi kvantumágnak külön appendixben vagy
+tételszakaszban kellene rögzítenie minden finite-domain, frame, trace,
+null-policy és source-freeze feltételt, mielőtt a
+\(p(E|\rho)=\mathrm{Tr}(\rho E)\) alak akár toy-szinten is állítható lenne.
 
 Ebben a korlátozott értelemben a kvantum-readout nem zárt sziget.  Egy
 parent-oldali különbség, amely hozzáférési, fázis-, kontextuális vagy nem
@@ -1075,7 +1087,7 @@ Newtoni, relativisztikus vagy closure-kompatibilis leírásba:
   J_gU_g(r)\,N_g\,r,
   \qquad r=\Rmap(s).
 \end{equation}
-Ha \(\omega_g(r)\neq0\), és az obstrukciós osztály túléli a deklarált null
+Ha \(\omega_g(r)\neq0\), és az obstrukciós rekord túléli a deklarált null
 quotientet mérhető 4D readouttal, akkor residual-csatorna jelölt.  A
 \[
   h_g=J_gU_g(r)-r
@@ -1360,6 +1372,21 @@ van rögzítve endpoint-inspekció előtt.  Ha ugyanaz a struktúra azért kerü
 mert egy ismert baseline residualt hagy, akkor anomália-motivált korrekció,
 nem parent-morfológiai predikció.  Ez a paper a kritériumot adja meg; validált
 fizikai példát még nem.
+
+\paragraph{Konkrét kizárás framework-szinten.}
+A keret egy nemtriviális modellezési lépést már ezen a szinten is tilt.
+Tegyük fel, hogy két szektor-korrekció alakja:
+\[
+  \Delta O_i=A_i\,q,\qquad \Delta O_j=A_j\,q,
+\]
+ahol \(q\) ugyanaz a source-oldali koordináta vagy proxy.  Ha az ág endpoint
+inspekció előtt nem deklarál source-oldali felbontást \(q=(q_i,q_j)\),
+ortogonalitási/kovariancia szabályt, vagy shared-parent kovarianciamodellt,
+akkor a két tag nem kezelhető független evidenciaként és nem adható hozzá
+független korrekcióként.  Ugyanazt a source szabadsági fokot olvasná ki
+kétszer.  Így a Tau Core tiltja a ``same-source double counting'' használatát
+admisszibilis magyarázatként.  Ez nem új fizikai predikció, de strukturális
+kizárás, amely túlmegy a puszta átnevezésen.
 
 \section{Minimális matematikai érettségi checklist}
 

@@ -108,6 +108,8 @@ separate from the Arabic-numbered Tau Core paper sequence, where the latter is
 used for bounded empirical or protocol packages.  The purpose here is more
 basic: to state the current foundation language in a form that can be
 criticized, compared, and refined.
+Until the operational papers are public or archived, this manuscript treats
+them as internal provenance only and does not rely on them as evidence.
 
 The claim boundary is deliberately narrow.  The paper proposes a formal
 architecture and audit discipline, not a validated physics model.  It gives a
@@ -239,9 +241,18 @@ with effective dynamics \cite{WheelerDeWitt1967,Rovelli2004}.  Relational
 time constructions show how dynamics can be described through correlations
 rather than external evolution \cite{PageWootters1983}.  Timeless or
 configuration-space views have also been explored philosophically and
-mathematically \cite{Barbour1999}.  Quantum reconstruction programs show that
-large parts of quantum formalism can be organized by operational principles
-rather than simply postulated \cite{Hardy2001,Chiribella2011,MasanesMueller2011}.
+mathematically \cite{Barbour1999}.  The thermal-time hypothesis is especially
+close in spirit because it treats time as state-dependent rather than as an
+external primitive \cite{ConnesRovelli1994}.  Causal-set and generalized
+quantum-mechanics programs provide other examples of frameworks that change
+the primitive descriptive layer rather than merely adding a term to an
+equation \cite{Bombelli1987,Hartle1991}.  Quantum reconstruction programs show
+that large parts of quantum formalism can be organized by operational
+principles rather than simply postulated
+\cite{Hardy2001,Chiribella2011,MasanesMueller2011}.  Constructor theory is a
+useful methodological comparison because it also tries to state physical
+content through possible/impossible transformations rather than through one
+specific dynamical equation \cite{Deutsch2013,DeutschMarletto2015}.
 
 Tau Core does not claim to solve those programs.  It uses a different
 organizing question:
@@ -405,6 +416,27 @@ observer/path-relevant structure.  A projected morphology is only a readout
 handle on this deeper body.
 \end{definition}
 
+For Foundation Paper I the minimal mathematical type is:
+\[
+  \Mta\in\mathcal M_\tau^{\rm adm},
+\]
+where \(\mathcal M_\tau^{\rm adm}\) is a declared class of admissible
+morphological records.  A branch may instantiate such a record schematically as
+\[
+  \Mta=(S,B,W,N,H,A;\Theta),
+\]
+where \(S\) records sector decomposition, \(B\) branch/support structure,
+\(W\) wall or transition adjacency, \(N\) null/protected structure, \(H\)
+Hessian-response support, \(A\) admissibility constraints, and \(\Theta\)
+optional interface/history/path data.  Thus \(U_i^{\Mta}\) is not merely a
+decorative superscript: it means that the readout map is selected from a typed
+family
+\[
+  U_i:\mathcal M_\tau^{\rm adm}\times\RTspace\to\Obs_i.
+\]
+This is still a minimal type declaration, not a construction theorem for
+\(\mathcal M_\tau^{\rm adm}\).
+
 \begin{definition}[Readout]
 A readout is a morphology-conditioned sector map.  Equivalently, one may write
 \[
@@ -444,7 +476,7 @@ Mass/source & density, source-measure, flavor, or particle-content records &
 conserved source measure or declared mass/source map\\
 Cosmology & web, void, path, clock, or expansion records &
 \(U_{\rm cosmo}^{\Mta}(r)\) &
-FLRW/LCDM limit or frozen residual channel\\
+FLRW/\(\Lambda\)CDM limit or frozen residual channel\\
 \bottomrule
 \end{tabular}
 \caption{Readout families and illustrative parent/source classes.  The table
@@ -467,7 +499,7 @@ record.  It need not exist globally and need not be unique.
 
 \begin{definition}[Readout obstruction]
 Given \(r=\Rmap(s)\), the primary defect object is not a subtraction but an
-obstruction class
+obstruction record
 \[
   \omega_i(r)=0
   \quad\Longleftrightarrow\quad
@@ -527,6 +559,16 @@ The formalism above is intentionally weak.  A readout is not yet a functor, a
 field equation, a probability rule, or a variational principle.  Nevertheless,
 some minimal calculus is needed if the framework is to avoid being only
 language.
+
+The mathematics in this section is standard.  A readout induces a partition of
+the parent-response space; quotient safety is well-definedness on the
+corresponding quotient; refinement is the ordinary refinement order on
+partitions.  Tau Core does not claim novelty for these facts.  It uses them as
+bookkeeping discipline so that later physical branches cannot hide endpoint
+leakage or double counting behind new terminology.  The same conceptual
+territory overlaps with coarse-graining, marginalization, consistent-history
+and decoherence-inspired languages, and Jaynes-style information-theoretic
+statistical mechanics \cite{Griffiths1984,GellMannHartle1990,Jaynes1957a,Jaynes1957b}.
 
 Let \(\RTspace\) be a parent-response space and let \(U_i\) be a
 readout.  The first mathematical object induced by a readout is its
@@ -608,31 +650,14 @@ For a cosmological branch \(P_0\) might be a matched \(\Lambda\)CDM
 matter/potential parent; for another branch it would be the relevant standard
 baseline.  A Tau Core-compatible excess would be residual cross-readout
 structure that survives the declared null model, covariance, and
-source-overlap ledger.  As a candidate name only, this discipline may be
-called residual cross-readout skeleton invariance, abbreviated \(R\)-CRSI.
-The abbreviation is not a validation statistic and not an independence claim.
+source-overlap ledger.  Here this is simply called source-overlap discipline.
+It is not a validation statistic and not an independence claim.
 Without this discipline, a joint readout may simply double count the same
 source coordinate.
 
-The Weak-Signal Amplification Protocol (WSAP), developed in the Arabic-numbered
-paper sequence after this foundation paper, is an operational example of this
-same rule.  Its methodological slogan is: stability may suppress single-sector
-amplitude, while a shared parent may preserve cross-readout coherence.  At the
-foundation level this is only a protocol grammar.  It does not say that a weak
-joint residual is physical evidence.  A promoted WSAP-like branch would still
-need source-frozen kernels, covariance and null controls, wrong-kernel
-controls, held-out prediction, and failure conditions.
-
-The later readout-covariance and photon-lensing MAR papers sharpen the same
-foundation rule from the opposite direction.  A morphology or orientation
-template, for example a photon-lensing MAR statistic such as
-\(T_{\tau}=B_{\rm env}A_fM_{bf}\), or its later convergence/shear and toy
-Null--Matter Link extensions, may be a useful source-side handle, but it is not
-by itself shared-parent evidence.  Foundation Paper I therefore treats such
-templates as readout-family examples: they become physically interesting only
-after the branch supplies source-freeze, null, covariance, systematics, and
-failure rules.  This is why the foundation language separates the readout
-family from the validation claim.
+Unpublished Tau Core protocol notes use this same discipline in more specific
+empirical settings, but those notes are not evidence for this foundation
+paper.  They are therefore not used here as supporting results.
 
 \section{Nontrivial representation condition}
 
@@ -830,11 +855,11 @@ graph.  Candidate event orders can then be scored both by a local sequential
 path cost and by a global parent-consistency cost.  In that toy the order that
 looks best as a local time story need not be the same as the order that best
 preserves parent affinities.  This strengthens only the foundation-language
-point: delayed-choice-looking or quantum-eraser-looking narratives need not be
-read as future-to-past influence.  They can be treated, at toy level, as
-different time-order readouts of one globally constrained parent record.  No
-physical clock theory, retrocausality, Born rule, or quantum dynamics is
-derived from this observation.
+point: order-sensitive narratives need not automatically be read as
+future-to-past influence.  They can be treated, at toy level, as different
+time-order readouts of one globally constrained parent record.  No physical
+clock theory, retrocausality, Born rule, or quantum dynamics is derived from
+this observation.
 
 \begin{figure}[t]
   \centering
@@ -1175,28 +1200,18 @@ The conditions listed in this sentence are not postulates of Foundation Paper
 I.  They are examples of the additional reconstruction structure that a later
 quantum branch would have to supply or replace.
 
-Subsequent Tau Core theory work has sharpened this boundary in a finite
-source-strengthened toy setting.  The current finite route does not ask the
-older minimal Tau grammar to force quantum mechanics.  Instead, it identifies a
-source-side phase/trace skeleton: a protected primitive frame, a cyclic phase
-torsor on selected pairs, reversible rank-two contrast actions, an invariant
-trace/effect pairing, and one protected null policy.  When the triple loop
-holonomy
-\begin{equation}
-  H_{ijk}=\Gamma_{ij}+\Gamma_{jk}+\Gamma_{ki}
-  \quad \mathrm{mod}\;2\pi
-\end{equation}
-vanishes on selected triples, the pairwise phases glue to a global complex
-phase chart.  In that finite and source-frozen case, the route reaches a
-matrix Hilbert/Born toy packet with
-\begin{equation}
-  p(E|\rho)=\mathrm{Tr}(\rho E).
-\end{equation}
-This is a conditional finite toy recovery, not a derivation of full quantum
-mechanics, collapse, tensor-product uniqueness, QFT, or empirical quantum
-validation.  If this route is promoted in a later quantum paper, it should be
-placed in a dedicated appendix or theorem section with all finite-domain,
-frame, trace, null-policy, and source-freeze assumptions stated explicitly.
+One possible future worked branch is a finite phase-gluing toy model.  In such
+a model one would specify selected overlaps, transition phases \(\Gamma_{ij}\),
+and a cocycle-like consistency condition
+\[
+  \Gamma_{ij}+\Gamma_{jk}+\Gamma_{ki}=0\quad \mathrm{mod}\;2\pi
+\]
+on triples before claiming a global phase chart.  This resembles the ordinary
+mathematics of gluing local phase data; it is not a Tau Core proof.  Only after
+the finite domain, overlap cover, null policy, trace/effect pairing, and
+source-freeze rule are stated could such a toy branch be assessed.  Foundation
+Paper I therefore does not claim a Hilbert/Born recovery.  It only identifies
+what a later quantum branch would have to prove.
 
 In this limited sense, the quantum readout is not a sealed sector.  A
 parent-side distinction with access, phase, contextual, or noncommuting
@@ -1223,7 +1238,7 @@ relativistic, or closure-compatible description.  In abstract notation:
   J_gU_g(r)\,N_g\,r,
   \qquad r=\Rmap(s).
 \end{equation}
-If \(\omega_g(r)\neq0\) and the obstruction class survives the declared null
+If \(\omega_g(r)\neq0\) and the obstruction record survives the declared null
 quotient with a measurable 4D readout, it becomes a candidate residual
 channel.  A coordinate difference
 \[
@@ -1267,7 +1282,9 @@ foundation paper.  They are narrower, operational packages.  Some examine
 galaxy residuals, some define source-frozen morphology or projection kernels,
 some formulate dark-sector decision protocols, and some define cosmological or
 web-witness audit ladders.  They are evidence-seeking packages, not proofs of
-the parent ontology.
+the parent ontology.  Unless and until a given paper is public or otherwise
+archived, it should be read here only as internal provenance for terminology,
+not as a cited result.
 
 Foundation Paper I has the opposite role.  It defines the vocabulary that
 those operational papers can later use.  It should not borrow their numerical
@@ -1558,6 +1575,21 @@ rules before endpoint inspection.  If the same structure is chosen because a
 known baseline leaves a residual, it is an anomaly-motivated correction rather
 than a parent-morphological prediction.  This paper supplies the criterion; it
 does not yet supply a validated physical example.
+
+\paragraph{A concrete exclusion at framework level.}
+The framework does forbid one nontrivial modeling move.  Suppose two proposed
+sector corrections are written as
+\[
+  \Delta O_i=A_i\,q,\qquad \Delta O_j=A_j\,q,
+\]
+where \(q\) is the same source-side coordinate or proxy.  Unless the branch
+declares a source-side split \(q=(q_i,q_j)\), an orthogonality/covariance rule,
+or a shared-parent covariance model before endpoint inspection, the two terms
+cannot be treated as independent evidence or added as independent corrections.
+They are the same source degree of freedom read twice.  Thus Tau Core forbids
+``same-source double counting'' as an admissible explanation.  This is not a
+new physical prediction, but it is a structural exclusion that goes beyond
+renaming a residual.
 
 \section{Minimal mathematical maturity checklist}
 
