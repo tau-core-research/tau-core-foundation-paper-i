@@ -24,6 +24,9 @@ rather than primitive inputs.
 
 - It does not claim empirical validation of Tau Core.
 - It does not derive physical time, GR, QFT, the Standard Model, or LCDM.
+- It discusses only a conditional finite Hilbert/Born toy route for the
+  quantum branch, not full quantum mechanics, collapse, tensor-product
+  uniqueness, QFT, or empirical quantum validation.
 - It does not replace dark matter, dark energy, or general relativity.
 - It does not claim that any Paper 1--18 numerical or synthetic protocol result
   proves the framework.
