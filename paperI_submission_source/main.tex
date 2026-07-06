@@ -167,6 +167,13 @@ is the morphological body, \(U_i\) are sector readouts, \(N_i\) are null or
 quotient policies, and \(J_i\) are optional relifts.  This package is an
 organizing object for later branches, not a proof that Nature uses it.
 
+In informal Tau Core discussions, the phrase \emph{Tau Core base field} refers
+to this parent-side response substrate, represented here by
+\((\Ssrc,\RTspace,\Rmap)\), together with the morphological body \(\Mta\).
+The phrase is heuristic.  In this paper it does not denote a physical field
+with an action, equations of motion, units, stress-energy, or empirical
+calibration.
+
 \paragraph{Method note.}
 The manuscript was developed in an AI-assisted theoretical-research workflow.
 The AI workflow is not used as evidence for any physics claim; it is only part
@@ -1023,6 +1030,42 @@ cosmology is a later physical question.  The toy model only licenses the
 logical grammar.  In particular, it does not force a dark-sector mechanism,
 quantum mechanism, or gravitational correction.
 
+\paragraph{Quotient-safety in the toy model.}
+For \(U_A\), the natural null relation is
+\[
+  (a,b,c)\,N_A\,(a',b',c')
+  \quad\Longleftrightarrow\quad
+  a=a'\ \mathrm{and}\ b=b'.
+\]
+Then \(U_A\) is quotient-safe, because \(rN_A r'\) implies
+\[
+  U_A(r)=U_A(r').
+\]
+The coordinate \(c\) is invisible to \(U_A\), but it is not therefore a new
+force or a new substance.  It is simply a null coordinate for that readout.
+If one later modifies the same readout by adding
+\[
+  U_A^{\rm bad}(a,b,c)=(a,b+\alpha c),
+\]
+while keeping \(N_A\) as the declared null policy, quotient-safety fails:
+two \(N_A\)-equivalent parent representatives can now produce different
+observables.  A branch that wants to make \(c\) physically visible must change
+the readout and null policy before endpoint inspection; it cannot silently use
+a null coordinate as an endpoint-saving correction.
+
+\paragraph{Source-freeze in the toy model.}
+Suppose a branch proposes a source rule
+\[
+  s=(a,b,c),\qquad c=f_{\rm src}(a,b;\theta),
+\]
+where \(f_{\rm src}\) and \(\theta\) are fixed from source-side information
+before any endpoint residual is inspected.  Then \(U_A(s)\), \(U_B(s)\), and
+the corresponding defects are legitimate toy outputs of the frozen branch.
+If instead \(f_{\rm src}\), \(\theta\), or the decision to use \(c\) is chosen
+because \(U_A\) missed a target value, the branch has leaked endpoint
+information into the source definition.  It may still be a phenomenological
+fit, but it is no longer a Tau Core source-frozen derivation.
+
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_hidden_defect.pdf}
@@ -1473,6 +1516,48 @@ Correct.  Foundation Paper I does not derive a physical law.  It defines the
 objects a later derivation must use.  A future physical law would require a
 parent action or closure principle, a domain, a null policy, variation support,
 units, calibration, and known limits.
+
+\section{Structural predictions rather than anomaly corrections}
+
+The ontological question is whether the Tau Core language can ever yield a
+prediction that is not merely a correction to an anomaly in an existing
+framework such as MOND, \(\Lambda\)CDM, GR, or quantum theory.  The answer in
+Foundation Paper I is conditional.
+
+A Tau Core prediction is not counted as structurally original merely because it
+adds a residual term to a baseline equation.  It would count only if a
+source-frozen parent/morphology rule implies a constraint before the target
+endpoint is inspected.  The schematic form is
+\[
+  \mathrm{Struct}_{\tau}(s,\Mta)=0
+  \quad\Longrightarrow\quad
+  \mathrm{Constraint}(U_i^{\Mta},U_j^{\Mta},N_i,N_j),
+\]
+or an exclusion:
+\[
+  \mathrm{Struct}_{\tau}(s,\Mta)
+  \quad\Longrightarrow\quad
+  \text{readout pattern }P\text{ is inadmissible}.
+\]
+Examples of the relevant kind of constraint include:
+\begin{itemize}
+  \item a compatibility condition forcing two readouts to co-vary;
+  \item a null/quotient rule excluding an apparent correction as double
+  counting;
+  \item a basin-transition invariant restricting which readout transitions can
+  appear as stable 4D events;
+  \item a rank, connectivity, or frame-gluing condition that must hold before a
+  Hilbert-like or metric-like representation is allowed;
+  \item a frozen source rule that predicts a missing, forbidden, or correlated
+  feature in a holdout channel.
+\end{itemize}
+
+Such a prediction would be Tau Core-specific only if it is fixed from the
+parent source, morphological body, null policy, and readout compatibility
+rules before endpoint inspection.  If the same structure is chosen because a
+known baseline leaves a residual, it is an anomaly-motivated correction rather
+than a parent-morphological prediction.  This paper supplies the criterion; it
+does not yet supply a validated physical example.
 
 \section{Minimal mathematical maturity checklist}
 

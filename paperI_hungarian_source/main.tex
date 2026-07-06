@@ -169,6 +169,12 @@ térkép, reláció vagy halmazértékű válaszszabály, \(\Mta\) morfológiai 
 relift.  Ez a csomag későbbi ágak szervező objektuma, nem annak bizonyítása,
 hogy a természet ilyen csomagot használ.
 
+Informális Tau Core beszélgetésekben a \emph{Tau Core alapmező} kifejezés erre
+a parent-oldali válaszszubsztrátumra utal: ebben a paperben
+\((\Ssrc,\RTspace,\Rmap)\), a morfológiai testtel \(\Mta\) együtt.  A
+kifejezés heurisztikus.  Itt nem fizikai mezőt jelent akcióval,
+mozgásegyenlettel, egységekkel, stressz-energiával vagy empirikus kalibrációval.
+
 \paragraph{Módszertani megjegyzés.}
 A kézirat AI-segített elméleti kutatási munkafolyamatban készült.  Az
 AI-munkafolyamat nem bizonyíték semmilyen fizikai állításra; csak a drafting
@@ -893,6 +899,42 @@ gravitációhoz, az későbbi fizikai kérdés.  A toy modell csak a logikai
 nyelvtant engedélyezi; nem kényszerít sötétszektor-, kvantum- vagy
 gravitációs mechanizmust.
 
+\paragraph{Quotient-safety a toy modellben.}
+\(U_A\)-hoz a természetes null-reláció:
+\[
+  (a,b,c)\,N_A\,(a',b',c')
+  \quad\Longleftrightarrow\quad
+  a=a'\ \text{és}\ b=b'.
+\]
+Ekkor \(U_A\) quotient-safe, mert \(rN_A r'\) esetén:
+\[
+  U_A(r)=U_A(r').
+\]
+A \(c\) koordináta \(U_A\) számára láthatatlan, de ettől még nem új erő és
+nem új szubsztancia.  Csak null-koordináta ebben a readoutban.  Ha ugyanazt a
+readoutot később így módosítjuk:
+\[
+  U_A^{\rm bad}(a,b,c)=(a,b+\alpha c),
+\]
+miközben \(N_A\) marad a deklarált null-politika, quotient-safety sérül:
+két \(N_A\)-ekvivalens parent reprezentáns különböző megfigyelhetőt adhat.
+Ha egy ág fizikailag láthatóvá akarja tenni \(c\)-t, akkor a readoutot és a
+null-politikát endpoint-inspekció előtt kell megváltoztatnia; nem használhat
+csendben egy null-koordinátát endpoint-mentő korrekcióként.
+
+\paragraph{Source-freeze a toy modellben.}
+Tegyük fel, hogy egy ág source-szabályt javasol:
+\[
+  s=(a,b,c),\qquad c=f_{\rm src}(a,b;\theta),
+\]
+ahol \(f_{\rm src}\) és \(\theta\) source-oldali információból rögzített,
+mielőtt bármilyen endpoint residualt megnéznénk.  Ekkor \(U_A(s)\), \(U_B(s)\)
+és a megfelelő defektusok legitim toy-kimenetek a fagyasztott ágból.  Ha
+viszont \(f_{\rm src}\), \(\theta\), vagy a \(c\) használatának döntése azért
+születik, mert \(U_A\) elhibázott egy célértéket, akkor endpoint információ
+szivárgott vissza a forrásdefinícióba.  Ez lehet fenomenológiai illesztés, de
+nem Tau Core source-frozen deriváció.
+
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_hidden_defect.pdf}
@@ -1276,6 +1318,48 @@ nem végső ontológia.
 \paragraph{Nincs fizikai törvény levezetve.}
 Helyes.  Foundation Paper I nem vezet le fizikai törvényt.  Azokat az
 objektumokat definiálja, amelyekre egy későbbi levezetésnek szüksége lenne.
+
+\section{Strukturális predikciók, nem anomália-korrekciók}
+
+Az ontológiai kérdés az, hogy a Tau Core nyelve tud-e olyan predikciót adni,
+amely nem pusztán egy meglévő keret -- például MOND, \(\Lambda\)CDM, GR vagy
+kvantumelmélet -- anomáliájára adott korrekció.  Foundation Paper I válasza
+feltételes.
+
+Egy Tau Core predikció nem attól strukturálisan eredeti, hogy residual tagot
+ad egy baseline-egyenlethez.  Csak akkor számítana annak, ha egy
+source-frozen parent/morfológiai szabály endpoint-inspekció előtt kényszerít
+ki valamit.  Sematikusan:
+\[
+  \mathrm{Struct}_{\tau}(s,\Mta)=0
+  \quad\Longrightarrow\quad
+  \mathrm{Constraint}(U_i^{\Mta},U_j^{\Mta},N_i,N_j),
+\]
+vagy kizárásként:
+\[
+  \mathrm{Struct}_{\tau}(s,\Mta)
+  \quad\Longrightarrow\quad
+  \text{a }P\text{ readout-minta inadmisszibilis}.
+\]
+Ilyen típusú kényszer lehet:
+\begin{itemize}
+  \item kompatibilitási feltétel, amely két readout együttmozgását kényszeríti;
+  \item null/quotient szabály, amely egy látszólagos korrekciót double-counting
+  miatt kizár;
+  \item medence-átmeneti invariáns, amely korlátozza, mely readout-átmenetek
+  jelenhetnek meg stabil 4D eseményként;
+  \item rank-, kapcsoltsági vagy frame-gluing feltétel, amelynek teljesülnie
+  kell Hilbert-szerű vagy metrikus reprezentáció előtt;
+  \item fagyasztott source-szabály, amely holdout csatornában hiányzó, tiltott
+  vagy korrelált jellemzőt jósol.
+\end{itemize}
+
+Ez csak akkor Tau Core-specifikus predikció, ha a parent forrásból, a
+morfológiai testből, a null-politikából és a readout-kompatibilitási szabályból
+van rögzítve endpoint-inspekció előtt.  Ha ugyanaz a struktúra azért kerül be,
+mert egy ismert baseline residualt hagy, akkor anomália-motivált korrekció,
+nem parent-morfológiai predikció.  Ez a paper a kritériumot adja meg; validált
+fizikai példát még nem.
 
 \section{Minimális matematikai érettségi checklist}
 
