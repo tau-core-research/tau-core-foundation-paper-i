@@ -421,7 +421,12 @@ For Foundation Paper I the minimal mathematical type is:
   \Mta\in\mathcal M_\tau^{\rm adm},
 \]
 where \(\mathcal M_\tau^{\rm adm}\) is a declared class of admissible
-morphological records.  A branch may instantiate such a record schematically as
+morphological records.  The required part of such a record is deliberately
+small: it must specify the source domain, the readout family, the null policy,
+and the admissibility/freeze rule used by the branch.  Sector decompositions,
+walls, Hessian support, history, and observer/path structure are optional
+branch data unless the branch explicitly uses them in its readout rule.  A
+branch may instantiate such a record schematically as
 \[
   \Mta=(S,B,W,N,H,A;\Theta),
 \]
@@ -435,7 +440,10 @@ family
   U_i:\mathcal M_\tau^{\rm adm}\times\RTspace\to\Obs_i.
 \]
 This is still a minimal type declaration, not a construction theorem for
-\(\mathcal M_\tau^{\rm adm}\).
+\(\mathcal M_\tau^{\rm adm}\).  In particular, an observed galaxy morphology,
+a quantum access structure, and an observer-time structure may be different
+projected handles on different subrecords of \(\Mta\), not identical kinds of
+morphology.
 
 \begin{definition}[Readout]
 A readout is a morphology-conditioned sector map.  Equivalently, one may write
@@ -1427,6 +1435,16 @@ into bounded tasks.  Examples include:
   retuning them after endpoint inspection.
 \end{enumerate}
 
+For the next version, the requested progress should be narrower than another
+general foundation layer.  A single worked branch is the correct target:
+observer-time, finite readout-time, or another comparably small branch.  That
+branch must choose one mathematical type for \(\Rmap\), state why that type is
+admissible for the branch, recover at least one known limit, and freeze at least
+one exclusion rule before any endpoint inspection.  The purpose is not to solve
+dark matter, quantum mechanics, general relativity, and cosmology at once, but
+to demonstrate that the readout package can function as a disciplined calculus
+in one minimal case.
+
 The weakest useful form of progress is a toy model that exposes a blocker.  A
 failed theorem can be valuable if it shows which extra principle is needed.
 For example, local convexity or a positive Hessian may not force global
@@ -1663,8 +1681,10 @@ The proposed next papers are:
   \item \textbf{Foundation Paper I}: atemporal morphological readout;
   framework only, with no physical validation claim.
   \item \textbf{Foundation Paper II: A Finite Readout-Time Branch}: a worked
-  branch from source declaration to effective readout-time ordering, with a
-  known-limit or frozen-failure rule.
+  branch from source declaration to effective readout-time ordering.  It should
+  fix the mathematical type of \(\Rmap\), derive a proper-time or
+  readout-time known limit in a minimal case, and predeclare at least one
+  exclusion such as same-source double counting.
   \item \textbf{Foundation Paper III}: quantum readout; no unconditional
   Hilbert, Born-rule, or QFT derivation claim.
   \item \textbf{Foundation Paper IV}: hidden defects and dark sectors; no

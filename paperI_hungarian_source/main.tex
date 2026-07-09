@@ -1022,6 +1022,15 @@ kondicionált.  Ekvivalensen írható
 Ez nem bizonyítja, hogy \(\Mta\) fizikailag le van vezetve; csak azt mondja,
 hogy a readout-választás nem forrásmentes.
 
+A morfológiai test kötelező része szándékosan kicsi: meg kell adnia a
+forrásdomént, a readout-családot, a null-politikát és az adott ág
+admisszibilitási/fagyasztási szabályát.  Szektor-felbontás, falak,
+Hessian-támasz, history és observer/path szerkezet csak akkor kötelező, ha az
+ág readout-szabálya ténylegesen használja őket.  Így egy megfigyelt galaxis
+morfológiája, egy kvantum hozzáférési struktúra és egy observer-time struktúra
+nem ugyanaz a morfológiafajta, hanem a \(\Mta\) különböző alrekordjainak
+vetített handle-je lehet.
+
 Konkrét ágban \(\Mta\)-nak admisszibilisnek és fagyasztottnak is kell lennie.
 Ez azt jelenti, hogy a \(\Mta\)-t kiválasztó vetített handle-öket, a megengedett
 readout-kernelcsaládot és a csatornák közötti source-overlap döntéseket
@@ -1248,6 +1257,17 @@ válik:
   helyett.
 \end{enumerate}
 
+A következő verzióban a kért előrelépésnek szűkebbnek kell lennie, mint egy
+újabb általános foundation-réteg.  Egyetlen worked branch a helyes cél:
+observer-time, finite readout-time, vagy ehhez hasonlóan kicsi ág.  Ennek az
+ágnak választania kell egy konkrét matematikai típust \(\Rmap\)-ra, meg kell
+indokolnia, hogy ez a típus miért admisszibilis az adott ághoz, vissza kell
+adnia legalább egy ismert limitet, és endpoint-inspekció előtt fagyasztania
+kell legalább egy kizárási szabályt.  A cél nem az, hogy egyszerre oldja meg a
+sötét anyagot, kvantummechanikát, általános relativitást és kozmológiát, hanem
+az, hogy egy minimális esetben megmutassa: a readout-csomag fegyelmezett
+kalkulusként is működhet.
+
 A ``parent válaszlaw'' kifejezést ez az alapozó paper szándékosan nem köti
 egyetlen matematikai típushoz.  Lehetséges típusok:
 \[
@@ -1453,8 +1473,10 @@ Javasolt következő tagok:
   \item \textbf{Foundation Paper I}: időtlen morfológiai readout, fizikai
   validációs claim nélkül.
   \item \textbf{Foundation Paper II: A Finite Readout-Time Branch}: worked
-  branch forrásdeklarációtól effektív readout-idő sorrendig, ismert-limittel
-  vagy fagyasztott failure-szabállyal.
+  branch forrásdeklarációtól effektív readout-idő sorrendig.  Rögzítenie kell
+  \(\Rmap\) matematikai típusát, minimális esetben le kell vezetnie egy
+  sajátidő- vagy readout-idő ismert limitet, és előre deklarálnia kell legalább
+  egy kizárást, például same-source double counting tiltást.
   \item \textbf{Foundation Paper III}: kvantum-readout, feltétlen Hilbert-,
   Born- vagy QFT-levezetés nélkül.
   \item \textbf{Foundation Paper IV}: hidden defects és sötét szektorok,
