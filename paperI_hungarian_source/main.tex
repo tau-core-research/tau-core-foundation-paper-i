@@ -442,6 +442,35 @@ megfigyelhető mennyiségek.}
 \label{tab:readout-families-hu}
 \end{table}
 
+\begin{definition}[Kereszt-skálájú readout-kompozíció]
+A readout-családok ágszinten különbözők, de nem feltételezzük róluk, hogy
+függetlenek.  Egy \(K_i\) jelölt kernel csak akkor admissible, ha a szomszédos
+readout-családokhoz kötő source-, carrier-, quotient- és megfigyelhető
+függéseket ellenőriztük, vagy a deklarált feltételek mellett expliciten
+elhanyagolhatónak fagyasztottuk.  Másképp mondva: a Tau Core a fizikai
+readoutokat kompatibilitással összekapcsolt kompozíciós hipergráfként kezeli,
+nem izolált illesztési modulokként.
+\end{definition}
+
+Ez admissibility elv, nem unifikációs bizonyítás.  Nem vezet le kvantumgravitációt,
+részecskefizikát, általános relativitást vagy kozmológiát.  A szerepe az, hogy
+megtiltsa például egy galaxis-skálájú gravitációs kernel teljesen független
+kezelését akkor, ha a megfigyelt carrier durvaszemcsés részecske-, tömeg-,
+anyag-, sugárzási és path-readoutokból áll össze.  Double-counting ellen is
+véd: két source-átfedő readout tag nem adható hozzá egymáshoz független
+korrekcióként, hacsak a non-overlap és quotient-láthatóság nincs deklarálva.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_cross_scale_readout_composition.pdf}
+  \caption{Kereszt-skálájú readout-kompozíció.  A Tau Core readout-családjai
+  ágszinten különbözők, de ez nem jelent operacionális függetlenséget.  A
+  jelölt kerneleknek source-, carrier-, quotient- és cross-readout
+  kompatibilitási feltételeket kell teljesíteniük, mielőtt scaffold státusz
+  fölé emelhetők.  Az ábra architekturális: nem fizikai unifikációs bizonyítás.}
+  \label{fig:cross-scale-readout-composition-hu}
+\end{figure}
+
 \begin{definition}[Relift]
 Egy \(U_i\) kiolvasáshoz tartozó relift olyan térkép vagy részleges térkép
 \[

@@ -488,6 +488,35 @@ models, and failure rules; they are not yet calibrated observables.}
 \label{tab:readout-families}
 \end{table}
 
+\begin{definition}[Cross-scale readout composition]
+Readout families are branch-distinct but not assumed independent.  A candidate
+kernel \(K_i\) for one family is admissible only after the source, carrier,
+quotient, and observable dependencies that compositionally link it to neighboring
+readout families have been checked, or explicitly frozen as negligible under the
+declared assumptions.  Equivalently, Tau Core treats physical readouts as a
+compatibility-coupled composition hypergraph, not as isolated fit modules.
+\end{definition}
+
+This is an admissibility principle, not a proof of unification.  It does not
+derive quantum gravity, particle physics, general relativity, or cosmology.
+Rather, it forbids treating, for example, a galaxy-scale gravity kernel as
+independent of the coarse-grained particle, mass, material, radiation, and path
+readouts that compose the observed carrier.  It also prevents double counting:
+two source-overlapping readout terms cannot be added as independent corrections
+unless their non-overlap and quotient visibility have been declared.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig_cross_scale_readout_composition.pdf}
+  \caption{Cross-scale readout composition.  Tau Core readout families are
+  branch-distinct, but branch distinction does not imply operational
+  independence.  Candidate kernels must respect source, carrier, quotient, and
+  cross-readout compatibility constraints before they can be promoted beyond
+  scaffold status.  The figure is architectural: it is not a proof of physical
+  unification.}
+  \label{fig:cross-scale-readout-composition}
+\end{figure}
+
 \begin{definition}[Relift]
 A relift for a readout \(U_i\) is a map or partial map
 \[

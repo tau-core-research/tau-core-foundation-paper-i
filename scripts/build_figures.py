@@ -16,6 +16,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 FIG = ROOT / "figures"
 SRC_FIG = ROOT / "paperI_submission_source" / "figures"
+HU_FIG = ROOT / "paperI_hungarian_source" / "figures"
 
 mpl.rcParams.update(
     {
@@ -54,7 +55,7 @@ def setup(width=9.8, height=4.8):
 
 
 def save(fig, name):
-    for d in (FIG, SRC_FIG):
+    for d in (FIG, SRC_FIG, HU_FIG):
         d.mkdir(parents=True, exist_ok=True)
         fig.savefig(d / name, bbox_inches="tight")
     plt.close(fig)
@@ -215,9 +216,73 @@ def figure_readout_atlas():
     save(fig, "fig_readout_atlas.pdf")
 
 
+def figure_cross_scale_readout_composition():
+    fig, ax = setup(width=10.8, height=5.9)
+    panel_label(ax, "D. Cross-scale readout composition")
+
+    # Central parent / compatibility kernel.
+    box(
+        ax,
+        0.39,
+        0.43,
+        0.22,
+        0.14,
+        "Tau-side\ncompatibility\nhypergraph",
+        COL["parent"],
+        COL["parent_edge"],
+        fs=8.6,
+    )
+
+    nodes = [
+        ("quantum", "quantum\naccess", 0.08, 0.72, COL["morph"], COL["morph_edge"]),
+        ("particle", "particle /\nmass", 0.30, 0.76, COL["warning"], COL["warning_edge"]),
+        ("EM", "EM /\nphoton", 0.60, 0.76, COL["readout"], COL["readout_edge"]),
+        ("material", "material /\nplasma", 0.80, 0.70, COL["warning"], COL["warning_edge"]),
+        ("galaxy", "galaxy /\nrotation", 0.10, 0.18, COL["readout"], COL["readout_edge"]),
+        ("lensing", "lensing /\npath", 0.36, 0.12, COL["readout"], COL["readout_edge"]),
+        ("cosmology", "cosmology /\nFriedmann", 0.64, 0.13, COL["readout"], COL["readout_edge"]),
+        ("observer", "observer /\ntime", 0.80, 0.25, COL["neutral"], COL["neutral_edge"]),
+    ]
+
+    centers = {}
+    for key, text, x, y, fc, ec in nodes:
+        box(ax, x, y, 0.14, 0.10, text, fc, ec, fs=7.6)
+        centers[key] = (x + 0.07, y + 0.05)
+
+    center = (0.50, 0.50)
+    for key in centers.values():
+        line(ax, [center[0], key[0]], [center[1], key[1]], color="#b7b7b7", lw=0.8, z=1)
+
+    # Composition edges, drawn outside labels.
+    def edge(a, b, rad=0.0, color="#444444", lw=1.0):
+        arrow(ax, centers[a], centers[b], color=color, lw=lw, rad=rad, style="-", z=2)
+
+    edge("quantum", "particle", rad=0.10, color=COL["morph_edge"], lw=1.1)
+    edge("particle", "material", rad=-0.12, color=COL["warning_edge"], lw=1.1)
+    edge("material", "galaxy", rad=-0.16, color=COL["warning_edge"], lw=1.1)
+    edge("galaxy", "lensing", rad=0.08, color=COL["readout_edge"], lw=1.1)
+    edge("lensing", "cosmology", rad=-0.08, color=COL["readout_edge"], lw=1.1)
+    edge("EM", "lensing", rad=0.12, color=COL["readout_edge"], lw=1.0)
+    edge("observer", "lensing", rad=-0.12, color=COL["neutral_edge"], lw=1.0)
+    edge("observer", "cosmology", rad=0.08, color=COL["neutral_edge"], lw=1.0)
+
+    box(
+        ax,
+        0.18,
+        0.01,
+        0.64,
+        0.09,
+        "Branch-distinct does not mean independent: candidate kernels must pass\nsource, quotient, known-limit, and cross-readout compatibility checks.",
+        "#ffffff",
+        "#777777",
+        fs=8.2,
+    )
+    save(fig, "fig_cross_scale_readout_composition.pdf")
+
+
 def figure_defect():
     fig, ax = setup(width=10.4, height=5.4)
-    panel_label(ax, "D. Relift failure as a readout-relative hidden defect")
+    panel_label(ax, "E. Relift failure as a readout-relative hidden defect")
     box(ax, 0.04, 0.54, 0.16, 0.14, "$r=(a,b,c)$\nparent record", COL["parent"], COL["parent_edge"], fs=8.5)
 
     rows = [
@@ -250,7 +315,7 @@ def figure_defect():
 
 def figure_effective_time():
     fig, ax = setup(width=10.4, height=5.1)
-    panel_label(ax, "E. Effective readout-time as an ordering")
+    panel_label(ax, "F. Effective readout-time as an ordering")
     label(ax, 0.20, 0.80, "atemporal parent record", fs=9, weight="bold")
     x0 = 0.06
     for k in range(6):
@@ -279,7 +344,7 @@ def figure_effective_time():
 
 def figure_claim_ladder():
     fig, ax = setup(width=10.4, height=5.0)
-    panel_label(ax, "F. Claim-boundary ladder")
+    panel_label(ax, "G. Claim-boundary ladder")
     levels = [
         ("Definition", "symbols\nand objects", COL["neutral"], COL["neutral_edge"]),
         ("Postulate", "declared\nframework", COL["warning"], COL["warning_edge"]),
@@ -352,7 +417,7 @@ def figure_status_matrix():
         for j in range(data.shape[1]):
             if data[i, j]:
                 ax.text(j, i, labels[data[i, j]], ha="center", va="center", fontsize=7.6, color="#111111")
-    ax.set_title("G. Foundation Paper I claim-status matrix", loc="left", fontsize=10, weight="bold", pad=28)
+    ax.set_title("H. Foundation Paper I claim-status matrix", loc="left", fontsize=10, weight="bold", pad=28)
     ax.text(
         0.5,
         -0.16,
@@ -371,6 +436,7 @@ def main():
     figure_core_spine()
     figure_block_comparison()
     figure_readout_atlas()
+    figure_cross_scale_readout_composition()
     figure_defect()
     figure_effective_time()
     figure_claim_ladder()
