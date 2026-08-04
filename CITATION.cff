@@ -1,16 +1,20 @@
 cff-version: 1.2.0
-title: "Tau Core: An Atemporal Morphological Readout Framework for Emergent Physical Dynamics"
+title: "Tau Core: An Atemporal Morphological Readout Framework and a Conditional Minimum-Viable Physical Completion"
 message: "If you cite this foundation paper, please cite the repository release or manuscript version."
 type: article
 authors:
   - family-names: Olcsak
     given-names: Jozsef
 year: 2026
+version: "0.3"
 repository-code: "https://github.com/tau-core-research/tau-core-foundation-paper-i"
 keywords:
   - Tau Core
   - emergent time
   - readout framework
+  - conditional physical completion
+  - semiclassical gravity
+  - quantum foundations
   - foundations of physics
   - morphology
   - projection

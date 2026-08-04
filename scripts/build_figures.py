@@ -6,6 +6,7 @@ so the paper remains reproducible and arXiv-friendly.
 """
 
 from pathlib import Path
+from datetime import datetime, timezone
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -45,6 +46,14 @@ COL = {
     "grid": "#777777",
 }
 
+PDF_METADATA = {
+    "Title": "Tau Core Foundation Paper I scientific figure",
+    "Author": "Jozsef Olcsak",
+    "Creator": "scripts/build_figures.py",
+    "CreationDate": datetime(2026, 1, 1, tzinfo=timezone.utc),
+    "ModDate": datetime(2026, 1, 1, tzinfo=timezone.utc),
+}
+
 
 def setup(width=9.8, height=4.8):
     fig, ax = plt.subplots(figsize=(width, height))
@@ -57,7 +66,7 @@ def setup(width=9.8, height=4.8):
 def save(fig, name):
     for d in (FIG, SRC_FIG, HU_FIG):
         d.mkdir(parents=True, exist_ok=True)
-        fig.savefig(d / name, bbox_inches="tight")
+        fig.savefig(d / name, bbox_inches="tight", metadata=PDF_METADATA)
     plt.close(fig)
 
 
@@ -347,9 +356,9 @@ def figure_claim_ladder():
     panel_label(ax, "G. Claim-boundary ladder")
     levels = [
         ("Definition", "symbols\nand objects", COL["neutral"], COL["neutral_edge"]),
-        ("Postulate", "declared\nframework", COL["warning"], COL["warning_edge"]),
+        ("Assumption", "declared\ncompletion", COL["warning"], COL["warning_edge"]),
+        ("Toy / lemma", "mechanism\nor local check", COL["readout"], COL["readout_edge"]),
         ("Conditional\ntheorem", "if assumptions\npass", COL["parent"], COL["parent_edge"]),
-        ("Toy model", "mechanism\ncheck", COL["readout"], COL["readout_edge"]),
         ("Empirical\nvalidation", "held-out data\n+ controls", COL["defect"], COL["defect_edge"]),
     ]
     xs = [0.055, 0.245, 0.435, 0.625, 0.815]
@@ -364,7 +373,7 @@ def figure_claim_ladder():
         0.22,
         0.68,
         0.17,
-        "Foundation Paper I stops before empirical validation.\nLater branches must add units, known limits, covariance,\ncontrols, and failure rules.",
+        "Foundation Paper I reaches a conditional recovery theorem and a frozen prediction.\nNature-level source selection and empirical validation remain separate steps.",
         "#ffffff",
         "#777777",
         fs=8.8,
@@ -375,26 +384,22 @@ def figure_claim_ladder():
 def figure_status_matrix():
     fig, ax = plt.subplots(figsize=(10.4, 4.9))
     rows = [
-        "Tau substrate",
-        "Seed-response map",
-        "Morphological body",
-        "Sector readouts",
-        "Effective readout-time",
-        "Hidden defect",
-        "GR / quantum / QFT",
-        "Empirical validation",
+        "Weak Tau spine",
+        "Stabilized body",
+        "Observer descent",
+        "GR / quantum limits",
+        "QOR prediction",
+        "Nature-level theory",
     ]
-    cols = ["Defined", "Postulated", "Toy mechanism", "Validated", "Open blocker"]
+    cols = ["Defined here", "MVP assumption", "Conditional result", "Tau empirical test", "Source selection"]
     data = np.array(
         [
-            [1, 1, 0, 2, 3],
-            [1, 1, 0, 2, 3],
-            [1, 1, 0, 2, 3],
-            [1, 1, 1, 2, 3],
-            [1, 1, 1, 2, 3],
-            [1, 1, 1, 2, 3],
-            [0, 0, 0, 2, 3],
-            [0, 0, 0, 2, 3],
+            [1, 0, 0, 0, 3],
+            [1, 1, 2, 0, 3],
+            [1, 1, 2, 0, 3],
+            [1, 1, 2, 0, 3],
+            [1, 1, 2, 3, 3],
+            [0, 0, 0, 3, 3],
         ],
         dtype=int,
     )
@@ -412,7 +417,7 @@ def figure_status_matrix():
     ax.set_yticks(np.arange(-0.5, len(rows), 1), minor=True)
     ax.grid(which="minor", color=COL["grid"], linestyle="-", linewidth=0.7)
     ax.tick_params(which="minor", bottom=False, left=False)
-    labels = {1: "yes", 2: "not\nclaimed", 3: "open"}
+    labels = {1: "specified", 2: "conditional", 3: "open"}
     for i in range(data.shape[0]):
         for j in range(data.shape[1]):
             if data[i, j]:
@@ -421,7 +426,7 @@ def figure_status_matrix():
     ax.text(
         0.5,
         -0.16,
-        "Green cells mark framework content supplied here; orange/red cells mark explicit non-claims or blockers.",
+        "Green: specified inputs. Orange: conditional results. Red: open physical selection or empirical status.",
         transform=ax.transAxes,
         ha="center",
         va="center",
@@ -430,6 +435,92 @@ def figure_status_matrix():
     )
     fig.tight_layout(pad=1.6)
     save(fig, "fig_status_matrix.pdf")
+
+
+def figure_mvp_closure():
+    fig, ax = setup(width=11.2, height=5.4)
+    panel_label(ax, "I. Conditional minimum-viable theory chain")
+    nodes = [
+        (0.03, 0.15, "enriched base\n+ universal seed", COL["warning"], COL["warning_edge"]),
+        (0.23, 0.15, "stabilized body\n$M_*$, $K_M>0$", COL["morph"], COL["morph_edge"]),
+        (0.43, 0.16, "observer descent\n$\\operatorname{Desc}_O$", COL["parent"], COL["parent_edge"]),
+        (0.64, 0.16, "shared descriptor\n$\\Xi_O$", COL["readout"], COL["readout_edge"]),
+    ]
+    y = 0.65
+    for x, w, text, fc, ec in nodes:
+        box(ax, x, y, w, 0.14, text, fc, ec, fs=8.3)
+    for a, b in zip(nodes[:-1], nodes[1:]):
+        arrow(ax, (a[0] + a[1] + 0.008, y + 0.07), (b[0] - 0.008, y + 0.07), color=COL["dark"])
+    outputs = [
+        (0.13, "GR / optics\nstandard leaf"),
+        (0.42, "quantum / Born\nstandard leaf"),
+        (0.71, "QOR observer\nresolution law"),
+    ]
+    for x, text in outputs:
+        box(ax, x, 0.28, 0.17, 0.13, text, COL["readout"], COL["readout_edge"], fs=8.1)
+        arrow(ax, (0.72, y), (x + 0.085, 0.41), color=COL["readout_edge"], rad=0.08 if x < 0.4 else (-0.08 if x > 0.6 else 0.0))
+    box(ax, 0.82, 0.59, 0.15, 0.25, "OPEN\nnature-level\nselection\n$B_\\tau+s_U\\Rightarrow?$\nMVP", COL["defect"], COL["defect_edge"], fs=7.8)
+    arrow(ax, (0.79, 0.72), (0.82, 0.72), color=COL["defect_edge"])
+    label(ax, 0.50, 0.13, "Closed as one conditional completion; not selected or validated as Nature's completion.", fs=9, weight="bold")
+    save(fig, "fig_mvp_closure.pdf")
+
+
+def figure_common_functional():
+    fig, ax = setup(width=11.0, height=5.6)
+    panel_label(ax, "J. One once-counted functional, several terminal variations")
+    box(ax, 0.34, 0.72, 0.32, 0.14, "$\\Gamma_{MVP}[M_*;e,A,\\psi,\\vartheta,\\eta]$\none frozen body and action line", COL["parent"], COL["parent_edge"], fs=9.0)
+    terms = [
+        (0.03, "$\\delta/\\delta e$\ngravity + stress", COL["morph"], COL["morph_edge"]),
+        (0.235, "$\\delta/\\delta A$\ngauge + current", COL["readout"], COL["readout_edge"]),
+        (0.44, "$\\delta/\\delta\\eta_a$\nBorn probability", COL["warning"], COL["warning_edge"]),
+        (0.645, "$\\delta/\\delta\\vartheta$\nclock / energy", COL["neutral"], COL["neutral_edge"]),
+        (0.82, "metric second\nvariation\nnoise kernel", COL["defect"], COL["defect_edge"]),
+    ]
+    for x, text, fc, ec in terms:
+        box(ax, x, 0.39, 0.15, 0.14, text, fc, ec, fs=7.8)
+        arrow(ax, (0.50, 0.72), (x + 0.075, 0.53), color=ec, rad=0.06 if x < 0.4 else (-0.06 if x > 0.6 else 0.0))
+    box(ax, 0.16, 0.13, 0.68, 0.13, "Once-counting rule: the Green response, quantum stress, and observer probes\nare extractions of the same packet, not additional stress or fitted terminal actions.", "#ffffff", "#666666", fs=8.5)
+    save(fig, "fig_common_functional.pdf")
+
+
+def figure_standard_limits():
+    fig, ax = setup(width=10.8, height=5.5)
+    panel_label(ax, "K. Compatible standard-limit diagram")
+    box(ax, 0.35, 0.76, 0.30, 0.12, "conditional MVP functional\n$W_O[g,\\vartheta,\\eta]$", COL["parent"], COL["parent_edge"], fs=8.7)
+    box(ax, 0.08, 0.50, 0.25, 0.13, "coframe stationarity\nsemiclassical Einstein equation", COL["morph"], COL["morph_edge"], fs=8.0)
+    box(ax, 0.67, 0.50, 0.25, 0.13, "fixed descended metric\nstate + effects + Born rule", COL["warning"], COL["warning_edge"], fs=8.0)
+    box(ax, 0.08, 0.22, 0.25, 0.12, "weak field / slow motion\nNewton + geometric optics", COL["readout"], COL["readout_edge"], fs=8.0)
+    box(ax, 0.67, 0.22, 0.25, 0.12, "$\\hbar\\to0$ / suppressed stress noise\nclassical matter limit", COL["readout"], COL["readout_edge"], fs=8.0)
+    arrow(ax, (0.43, 0.76), (0.205, 0.63), color=COL["morph_edge"])
+    arrow(ax, (0.57, 0.76), (0.795, 0.63), color=COL["warning_edge"])
+    arrow(ax, (0.205, 0.50), (0.205, 0.34), color=COL["readout_edge"])
+    arrow(ax, (0.795, 0.50), (0.795, 0.34), color=COL["readout_edge"])
+    arrow(ax, (0.33, 0.28), (0.67, 0.28), color="#666666", style="<->")
+    label(ax, 0.50, 0.32, "same classical leaf", fs=8.2, bbox=True)
+    label(ax, 0.50, 0.10, "Compatibility holds under the frozen regularity and limit-interchange assumptions; uniqueness does not follow.", fs=8.7, weight="bold")
+    save(fig, "fig_standard_limits.pdf")
+
+
+def figure_qor_prediction():
+    fig, ax = plt.subplots(figsize=(10.4, 5.2))
+    x = np.linspace(0.12, 1.0, 250)
+    for eps, color, label_text in [
+        (0.25, COL["readout_edge"], "$\\epsilon_{O_1}=0.25$"),
+        (0.50, COL["morph_edge"], "$\\epsilon_{O_2}=0.50$"),
+        (0.75, COL["warning_edge"], "$\\epsilon_{O_3}=0.75$"),
+    ]:
+        ax.plot(x, 2.0 * np.arcsin(eps / 2.0) * x, lw=2.0, color=color, label=label_text)
+    ax.set_xlabel("inverse energy spread  $\\hbar/\\Delta H$  (common units)")
+    ax.set_ylabel("single-record lower bound  $\\delta t_{\\min,O}$")
+    ax.set_xlim(0.1, 1.02)
+    ax.set_ylim(0.0, 0.80)
+    ax.grid(True, color="#dddddd", lw=0.7)
+    ax.legend(frameon=False, loc="upper left")
+    ax.set_title("L. QOR lower-bound discriminator", loc="left", fontsize=10, weight="bold")
+    ax.text(0.48, 0.08, "$\\delta t_{\\min,O}\\geq2\\arcsin(\\epsilon_O/2)\\,\\hbar/\\Delta H$", transform=ax.transAxes, fontsize=12, weight="bold")
+    ax.text(0.56, 0.015, "Illustrative lower bounds; observed onset equality needs an extra saturation condition.", transform=ax.transAxes, fontsize=8.5, color="#444444")
+    fig.tight_layout(pad=1.4)
+    save(fig, "fig_qor_prediction.pdf")
 
 
 def main():
@@ -441,6 +532,10 @@ def main():
     figure_effective_time()
     figure_claim_ladder()
     figure_status_matrix()
+    figure_mvp_closure()
+    figure_common_functional()
+    figure_standard_limits()
+    figure_qor_prediction()
 
 
 if __name__ == "__main__":

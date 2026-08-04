@@ -1,7 +1,7 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage[a4paper,margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{float}
@@ -10,6 +10,7 @@
 \usepackage{xcolor}
 \usepackage{array}
 \usepackage{tocloft}
+\usepackage{microtype}
 \setlength{\emergencystretch}{2em}
 
 \setcounter{tocdepth}{1}
@@ -46,87 +47,106 @@
 \newcommand{\Null}{\mathcal N}
 \newcommand{\Ker}{\operatorname{Ker}}
 \newcommand{\im}{\operatorname{im}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\GMVP}{\Gamma_{\mathrm{MVP}}}
+\newcommand{\hbarred}{\hbar}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\title{\textbf{Tau Core: An Atemporal Morphological Readout Framework for Emergent Physical Descriptions}\\
+\title{\textbf{Tau Core: An Atemporal Morphological Readout Framework and a Conditional Minimum-Viable Physical Completion}\\
 \large Foundation Paper I}
 \author{Jozsef Olcsak\\
 \small Independent researcher}
-\date{Draft v0.2 --- 2026}
+\date{Draft v0.3 --- 2026}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-\noindent\textbf{Purpose.}
-Tau Core is proposed here as a cautious foundation framework rather than a
-completed physical theory.  Its starting point is the possibility that
-ordinary dynamical physics is not fundamentally time evolution on a primitive
-spacetime, but an effective readout of a deeper atemporal response structure.
-
-\medskip
-\noindent\textbf{Formal spine.}
-The paper introduces the minimal formal spine
+Tau Core asks whether observed four-dimensional physics can be represented as
+an observer-indexed, information-losing readout of a richer atemporal
+morphological object.  We first define the minimal architecture
+\(s\mapsto\rho_\tau(s)\mapsto M_\tau\mapsto\Desc_O(M_\tau)\), together with
+its source-freeze, null-quotient, and no-double-counting conditions.  We then
+go beyond a framework-only statement by fixing one minimum-viable completion
+at the level of a common variational packet.  In that completion a stabilized
+body \(M_*\) is
+solved before terminal variation, and a single once-counted generating
+functional supplies coframe, gauge/current, quantum-effect, and clock rows.
+Under stated Lorentzian, regularity, state/effect, and observer-carrier
+assumptions, the construction has compatible conditional limits: a
+semiclassical Einstein equation with renormalized quantum stress and the
+fixed-background Schr\"odinger--Born description.  The same frozen completion
+also yields a falsifiable observer-resolution inequality
 \[
-  s \longmapsto \Rmap(s) \longmapsto U_i^{\Mta}(\Rmap(s)),
+  \delta t_{\min,O}\geq
+  \frac{2\hbar}{\Delta H}\arcsin\frac{\epsilon_O}{2}
+  \geq\frac{\hbar\epsilon_O}{\Delta H},
 \]
-where \(s\) is a parent-side seed, \(\Rmap(s)\) is an endpoint-blind Tau
-response, \(\Mta\) is the Tau-side morphological body, and \(U_i^{\Mta}\) are
-morphology-conditioned sector readouts such as spacetime, observer-time,
-quantum, gravitational, or mass/source readouts.
-
-\medskip
-\noindent\textbf{Scope.}
-The central claim is architectural.  The formalism gives a language for
-separating definitions, postulates, conditional implications, toy mechanisms,
-and future empirical tests.  The manuscript distinguishes the framework from
-block-universe ontology and from ordinary spacetime field theory, defines the
-Tau-side morphological body, formulates seven foundation postulates,
-introduces readout-relative hidden defects via relift failure, and gives
-finite toy models for hiddenness and effective readout-time.
-This manuscript should be evaluated as a foundation-language and
-claim-boundary paper, not as a phenomenological or empirical result paper.
-
-\medskip
-\noindent\textbf{Boundary.}
-It also records the main blockers.  The paper does not derive general
-relativity, quantum mechanics, the Born rule, quantum field theory, the
-Standard Model, dark matter, dark energy, or a physical parent action.  It is
-a position paper and formal conjecture scaffold, not empirical evidence for a
-new physical law.
+where \(x_A=\epsilon_O^2\) is an independently reconstructed dimensionless
+body-action record-separation ratio.  In the adopted common-Gram
+minimum-lift completion, Uhlmann minimization proves
+\(x_A=x_Q=2(1-\sqrt F)\) and
+\(D_B=2\arcsin(\epsilon_O/2)\), so \(\epsilon_O\) lower-bounds the minimum
+Fubini--Study/Bures record angle.  The equality \(x_A=x_Q\), reconstructed by
+independent action-curvature and state-tomography protocols, is the primary
+Tau-specific discriminator.  Neither the inverse-energy dependence nor
+the standard chord-to-angle conversion is claimed as new.  The Tau-specific
+candidate is instead the source-frozen physical identification of the
+morphological Gram chord with the observer carrier's Uhlmann-amplitude
+distance.
+Relative to the present source axioms, physical record-edge occupation and
+this finite body--Uhlmann identity are proved logically independent: neither
+selects the other, although a realized test requires both together with an
+operational hold condition.
+For finite source algebras, we also derive an exact selection criterion:
+the multiplication/involution data, a faithful source state, and all
+source-owned distinguished roles determine one minimal cyclic completion up
+to typed unitary equivalence.  Complete sector marginals do not determine
+this joint packet; an explicit faithful two-sector countermodel isolates the
+missing cross-sector source moments.
+The inequality concerns one stable record, not a universal discrete time atom.
+The result is a conditional theory closure: the current base--seed reduct
+admits alternative positive completions, and nature-level selection,
+fundamental-constant prediction, ultraviolet and Standard-Model completion,
+and empirical confirmation remain open.  The manuscript therefore presents
+one auditable candidate with standard-limit checks, a hard claim ledger, and a
+predeclared discriminator, not a replacement for general relativity or quantum
+theory.
 \end{abstract}
 
 \clearpage
-\tableofcontents
+{\small\tableofcontents}
 \clearpage
 
 \section{Purpose and claim boundary}
 
-This manuscript is the first Roman-numbered Tau Core foundation paper.  It is
-separate from the Arabic-numbered Tau Core paper sequence, where the latter is
-used for bounded empirical or protocol packages.  The purpose here is more
-basic: to state the current foundation language in a form that can be
-criticized, compared, and refined.
-Until the operational papers are public or archived, this manuscript treats
-them as internal provenance only and does not rely on them as evidence.
+This manuscript states the Tau Core foundation language and the strongest
+currently frozen physical completion in a form that can be criticized,
+reproduced, and rejected.  It is self-contained: no result from another Tau
+Core manuscript, repository, or unpublished analysis is used as a premise or
+as evidence for any claim made here.
 
-The claim boundary is deliberately narrow.  The paper proposes a formal
-architecture and audit discipline, not a validated physics model.  It gives a
-vocabulary in which later questions about spacetime, quantum theory, gravity,
-and dark-sector language can be stated without assuming that spacetime time
-evolution is the primitive level.  The main exclusions are summarized below
-and itemized again near the end of the manuscript.
+The claim boundary has two levels.  At the foundational level, the paper
+defines an atemporal body/readout architecture and its audit discipline.  At
+the completion level, it fixes one common functional and proves consequences
+conditional on an explicit assumption ledger.  Neither level supplies
+empirical validation or a theorem that the physical base--seed source selects
+that completion.  The main exclusions are summarized below and itemized again
+near the end of the manuscript.
 
 \begin{center}
 \fbox{\begin{minipage}{0.90\linewidth}
 \textbf{Reviewer-facing claim box.}
-This paper claims a formal readout architecture and a failure discipline.
-It does not claim empirical validation, a new force, dark-matter replacement,
-or a derivation of GR/QM/Standard-Model physics.
-Promotion of any later branch requires source freeze, quotient safety,
-known-limit recovery, endpoint-blind prediction or exclusion, and survival
-under the relevant holdout/control test.
+This paper claims (i) a formal body/readout architecture and failure
+discipline, and (ii) one \emph{conditional} minimum-viable completion with
+compatible GR/optics and quantum/Born limits plus one frozen
+observer-resolution lower-bound discriminator.  It does not claim empirical validation,
+uniqueness, nature-level source selection, a new force, dark-matter or
+dark-energy replacement, ultraviolet quantum gravity, or full
+Standard-Model recovery.  Every conditional result below is void as a claim
+about Nature unless the common completion is independently selected or its
+predeclared discriminator survives testing.
 \end{minipage}}
 \end{center}
 
@@ -136,9 +156,12 @@ The central idea can be written in one line:
   \label{eq:core-spine}
 \end{equation}
 The first arrow is not time evolution.  It is a parent-side response relation.
-The second arrow is a readout.  A physical theory appears only after a readout
-has supplied a codomain, a null policy, a closure test, and a validation
-boundary.  When \(\Mta\) is fixed by the declared source class, the
+The second arrow is a body-conditioned readout.  The ``readout'' is not an
+extra physical substance or history store: in the completion developed below
+it is an observer-specific realization of ordering and compatibility already
+resident in the stabilized body.  A physical branch appears only after the
+descent has supplied a codomain, a null policy, a closure test, and a
+validation boundary.  When \(\Mta\) is fixed by the declared source class, the
 superscript is often suppressed and \(U_i\) is written for
 \(U_i^{\Mta}\).
 
@@ -167,7 +190,8 @@ Here \(\Ssrc\) is a seed/source domain, \(\RTspace\) is a formal response
 domain, \(\Rmap\) is a map, relation, or set-valued response rule, \(\Mta\)
 is the morphological body, \(U_i\) are sector readouts, \(N_i\) are null or
 quotient policies, and \(J_i\) are optional relifts.  This package is an
-organizing object for later branches, not a proof that Nature uses it.
+organizing object for later branches (Fig.~\ref{fig:core-spine}), not a proof
+that Nature uses it.
 
 In informal Tau Core discussions, the phrase \emph{Tau Core base field} refers
 to this parent-side response substrate, represented here by
@@ -187,23 +211,23 @@ of the drafting and audit process.
   \caption{The minimal Tau Core spine used in Foundation Paper I.  A
   parent-side seed \(s\) induces an endpoint-blind Tau response
   \(\Rmap(s)\).  A Tau-side morphological body \(\Mta\) conditions sector
-  readouts \(U_i\).  This is a formal architecture, not empirical validation.}
+  readouts \(U_i\).  The diagram is the weak foundation spine; the stronger
+  conditional completion is shown in Fig.~\ref{fig:mvp-closure}.}
   \label{fig:core-spine}
 \end{figure}
 
-This paper is therefore closer to a formal conjecture paper or a position
-paper than to a phenomenology paper.  It is useful only if it makes the
-research program more falsifiable later.  A broad ontology that cannot be
-turned into frozen source rules, null tests, or endpoint-blind predictions is
-not useful as physics.  The framework below is written with that constraint in
-mind.
+This paper is therefore neither a phenomenology paper nor only a position
+paper.  It is a foundation paper containing a conditional worked completion.
+It is useful only if that completion makes the program more falsifiable.  A
+broad ontology that cannot be turned into frozen source rules, null tests, or
+endpoint-blind predictions is not useful as physics.
 
 \section{Reader roadmap}
 
-The paper has two jobs.  First, it fixes a vocabulary for later Tau Core work.
-Second, it states what that vocabulary does not yet prove.  The following
-roadmap is included to prevent the foundation language from being read as a
-completed physical model.
+The paper has three jobs.  First, it fixes the body/readout vocabulary.
+Second, it gives one explicit conditional completion and its proof
+dependencies.  Third, it states exactly which physical-selection and empirical
+claims remain open.
 
 \begin{center}
 \begin{tabular}{L{0.24\linewidth}L{0.42\linewidth}L{0.22\linewidth}}
@@ -212,25 +236,25 @@ Part of the paper & Role & Claim level\\
 \midrule
 Opening sections & Motivation, name, and relation to block-universe and
 spacetime-field views & Positioning\\
-Core vocabulary & Parent response, morphological body, readout,
-relift, defect & Definitions\\
-Formal spine & Minimal calculus, source discipline, effective readout-time, and
-postulates & Framework postulates\\
-Toy layer & Finite hidden-defect model and morphology/observer-time
-clarifications & Toy mechanisms\\
-Boundary layer & Quantum, gravity, cosmology, relation to earlier papers, and
-objections & Boundary setting\\
-Audit layer & Maturity checklist, foundation sequence, compact summary,
-and non-results & Audit discipline\\
+Core vocabulary & Parent response, morphological body, observer descent,
+relift, and defect & Definitions\\
+Conditional MVP & Body-first stabilization, one common functional,
+GR/optics and quantum/Born limits, QOR discriminator & Conditional results\\
+Formal safeguards & Quotients, source discipline, effective readout-time,
+postulates, and finite examples & Lemmas and toy mechanisms\\
+Boundary layer & Gravity, quantum, cosmology, adjacent theories, objections,
+and failure conditions & Interpretation and non-claims\\
+Audit layer & Assumption/result ledger, dimensional checks, maturity checklist,
+and compact summary & Reviewer audit\\
 \bottomrule
 \end{tabular}
 \end{center}
 
 Thus the paper should be read from weak to strong claim levels.  Definitions
-do not become assumptions; assumptions do not become derived laws; toy models
-do not become empirical validation.  Later papers may try to promote specific
-branches, but Foundation Paper I keeps those promotions outside its claim
-boundary.
+do not become assumptions; conditional theorems do not establish physical
+selection; standard-limit recovery does not establish novelty; and a frozen
+prediction does not become empirical validation until it survives the declared
+test.
 
 \section{Why a foundation paper is needed}
 
@@ -297,16 +321,17 @@ Symbol or phrase & Meaning here & Not claimed here\\
 \(\tau\) & parent-state side & ordinary time itself\\
 \(X_{\tau}\) & parent Tau state & detected physical field\\
 \(\Rmap(s)\) & endpoint-blind response & time evolution\\
-\(U_{\rm time}\) & time readout & derived clock theory\\
+\(U_{\rm time}\) & observer-indexed clock descent & nature-selected universal clock\\
 \(\Mta\) & morphological body & observed 4D shape\\
 \bottomrule
 \end{tabular}
 \end{center}
 
 Thus the theory is time-motivated but not time-reductionist.  It does not say
-that everything is made of time.  It says that time belongs to the readout
-side, while \(\tau\) names the deeper side from which time and other physical
-sectors may be read.
+that everything is made of time.  In the completion used here, causal
+orientation and ordering belong to the body, while measurable elapsed time and
+its observer resolution arise in the observer descent.  The symbol \(\tau\)
+names the deeper side; it is not an additional parent clock.
 
 \section{Difference from a block universe}
 
@@ -339,11 +364,9 @@ The parent response can in principle have distinctions that one readout
 identifies, another ignores, and a third translates into effective
 readout-variation.
 
-This distinction also clarifies why Tau Core is not simply another form of
-eternalism.  It can be compatible with an effective 4D block where that
-description works, but it does not take the block as ontologically final.
-Nor does the paper refute the block-universe literature.  It relocates the
-four-dimensional block from final ontology to sector output:
+Tau Core can be compatible with an effective 4D block without taking it as
+ontologically final or refuting block-universe accounts.  It instead relocates
+the block from final ontology to sector output (Fig.~\ref{fig:block-vs-tau}):
 \[
   \text{block as final object}
   \quad \longrightarrow \quad
@@ -386,6 +409,14 @@ survive empirical controls.  If \(U_{\phi}\) is arbitrary, the framework is
 empty.  The research program therefore needs source-frozen readout rules,
 quotient-safe null policies, and explicit failure conditions.
 
+The MVP completion does not discard spacetime field theory.  It recovers an
+ordinary Lorentzian effective field theory on a selected descended leaf and
+uses its standard variational machinery.  The proposed difference lies
+upstream: the coframe, state/effect pair, and observer clock are jointly typed
+outputs of a frozen body rather than mutually independent primitives.  Whether
+that upstream organization is physically real is exactly the selection and
+QOR-test question left open here.
+
 \section{Core vocabulary}
 
 \begin{definition}[Parent seed]
@@ -411,7 +442,7 @@ representative.
 \begin{definition}[Morphological body]
 The Tau-side morphological body \(\Mta\) is the intrinsic structured body that
 conditions readouts.  It is not an observed 4D morphology label.  It may carry
-sector, branch, wall, null, Hessian-support, admissibility, history, and
+sector, branch, wall, null, Hessian-support, admissibility, global-order, and
 observer/path-relevant structure.  A projected morphology is only a readout
 handle on this deeper body.
 \end{definition}
@@ -424,7 +455,7 @@ where \(\mathcal M_\tau^{\rm adm}\) is a declared class of admissible
 morphological records.  The required part of such a record is deliberately
 small: it must specify the source domain, the readout family, the null policy,
 and the admissibility/freeze rule used by the branch.  Sector decompositions,
-walls, Hessian support, history, and observer/path structure are optional
+walls, Hessian support, global order, and observer/path structure are optional
 branch data unless the branch explicitly uses them in its readout rule.  A
 branch may instantiate such a record schematically as
 \[
@@ -433,7 +464,7 @@ branch may instantiate such a record schematically as
 where \(S\) records sector decomposition, \(B\) branch/support structure,
 \(W\) wall or transition adjacency, \(N\) null/protected structure, \(H\)
 Hessian-response support, \(A\) admissibility constraints, and \(\Theta\)
-optional interface/history/path data.  Thus \(U_i^{\Mta}\) is not merely a
+optional interface/order/path data.  Thus \(U_i^{\Mta}\) is not merely a
 decorative superscript: it means that the readout map is selected from a typed
 family
 \[
@@ -484,7 +515,7 @@ Mass/source & density, source-measure, flavor, or particle-content records &
 conserved source measure or declared mass/source map\\
 Cosmology & web, void, path, clock, or expansion records &
 \(U_{\rm cosmo}^{\Mta}(r)\) &
-FLRW/\(\Lambda\)CDM limit or frozen residual channel\\
+FLRW/\(\Lambda\)CDM limit or frozen residual descriptor\\
 \bottomrule
 \end{tabular}
 \caption{Readout families and illustrative parent/source classes.  The table
@@ -505,11 +536,10 @@ declared assumptions.  Equivalently, Tau Core treats physical readouts as a
 compatibility-coupled composition hypergraph, not as isolated fit modules.
 \end{definition}
 
-This is an admissibility principle, not a proof of unification.  It does not
-derive quantum gravity, particle physics, general relativity, or cosmology.
-Rather, it forbids treating, for example, a galaxy-scale gravity kernel as
-independent of the coarse-grained particle, mass, material, radiation, and path
-readouts that compose the observed carrier.  It also prevents double counting:
+This is an admissibility rule, not a derivation of unification.  It forbids
+treating a gravity kernel as independent of the particle, mass, material,
+radiation, and path readouts composing its carrier
+(Fig.~\ref{fig:cross-scale-readout-composition}).  It also prevents double counting:
 two source-overlapping readout terms cannot be added as independent corrections
 unless their non-overlap and quotient visibility have been declared.
 
@@ -571,24 +601,25 @@ claim-boundary device.
 \textbf{Primitive-object status ledger}\\[0.5em]
 \begin{tabular}{L{0.20\linewidth}L{0.30\linewidth}L{0.38\linewidth}}
 \toprule
-Object & Status in this paper & Not supplied here\\
+Object & Status in the weak spine & Additional MVP status\\
 \midrule
-\(\Ssrc\) & declared source/seed domain & a physical ontology of all sources\\
-\(\RTspace\) & parent-response space, assumed as formal domain & uniqueness or physical existence proof\\
-\(\Rmap\) & endpoint-blind response map or relation & dynamical law or parent action\\
-\(\Mta\) & morphology-conditioning body & derivation from first principles\\
-\(U_i^{\Mta}\) & sector readout definition & a calibrated physical observable model\\
-\(N_i\) & declared null/quotient policy & automatic gauge principle\\
-\(J_i\) & optional relift device & globally defined inverse readout\\
-\(\omega_i\) & obstruction record modulo \(N_i\) & dark-sector or collapse mechanism\\
+\(\Ssrc\) & declared source/seed domain & one universal-seed branch is adopted, not selected by Nature\\
+\(\RTspace\) & parent-response space, assumed as formal domain & one enriched variational completion is fixed\\
+\(\Rmap\) & endpoint-blind response map or relation & represented by a body action plus ordered descent\\
+\(\Mta\) & morphology-conditioning body & a stationary \(M_*\) with positive quotient Hessian is assumed\\
+\(U_i^{\Mta}\) & sector readout definition & gravity/optics, quantum/Born, and QOR leaves are constructed conditionally\\
+\(N_i\) & declared null/quotient policy & only common terminal nulls may be removed\\
+\(J_i\) & optional relift device & not required as a global inverse in the MVP\\
+\(\omega_i\) & obstruction record modulo \(N_i\) & remains diagnostic, not a dark-sector or collapse mechanism\\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The paper becomes nontrivial only if later branches replace entries in the
-third column by source-side derivations, known-limit recoveries, or failed
-controls.  Until then these objects define a disciplined language, not a
-completed physical theory.
+Section~\ref{sec:mvp} replaces part of the former third-column gap with one
+conditional worked completion.  The decisive remaining gap is no longer the
+absence of any common action or standard limit; it is nature-level selection
+of that particular completion and empirical testing of its nonstandard
+discriminator.
 
 \section{Minimal readout calculus}
 
@@ -692,9 +723,1374 @@ It is not a validation statistic and not an independence claim.
 Without this discipline, a joint readout may simply double count the same
 source coordinate.
 
-Unpublished Tau Core protocol notes use this same discipline in more specific
-empirical settings, but those notes are not evidence for this foundation
-paper.  They are therefore not used here as supporting results.
+\section{A conditional minimum-viable physical completion}
+\label{sec:mvp}
+
+The preceding architecture is deliberately weak: by itself it does not select
+a physical action, metric signature, quantum state, or observer.  This section
+fixes one minimum-viable physical (MVP) object so that the paper contains an
+auditable theory chain rather than an indefinitely extensible list of possible
+readouts.  The frozen
+chain includes a quantum observer-resolution (QOR) discriminator and is
+\begin{equation}
+  \boxed{
+  \begin{gathered}
+  \GMVP \longrightarrow M_* \longrightarrow \Desc_O(M_*)\\
+  \longrightarrow
+  \{\text{GR/optics},\text{quantum/Born},\text{QOR}\}.
+  \end{gathered}}
+  \label{eq:mvp-chain}
+\end{equation}
+Every arrow in Eq.~\eqref{eq:mvp-chain} is conditional.  The chain is internally
+composable and has a frozen discriminator, but upstream selection in Nature
+remains open (Fig.~\ref{fig:mvp-closure}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.98\linewidth]{figures/fig_mvp_closure.pdf}
+  \caption{The conditional minimum-viable chain.  A physically enriched base
+  and universal seed are assumed to stabilize a body before observer descent.
+  One shared descriptor then supplies the standard leaves and the QOR
+  discriminator.  The red box is the exact open step: nature-level selection
+  of this completion from the upstream base--seed source.}
+  \label{fig:mvp-closure}
+\end{figure}
+
+\subsection{Frozen assumption ledger}
+
+The completion uses the following assumptions.  They are deliberately
+separated from consequences.
+
+\begin{center}
+\small
+\begin{tabular}{L{0.10\linewidth}L{0.77\linewidth}}
+\toprule
+Label & Assumption used in the MVP completion\\
+\midrule
+A1 & A physically enriched base and one universal seed admit a stabilized
+body \(M_*\) with a twice-differentiable body action.\\
+A2 & After quotienting only directions annihilated by every claimed terminal,
+the body Hessian \(K_M\) is positive on the retained tangent space.\\
+A3 & The body is solved first and frozen; terminal variations do not
+re-stabilize it or feed endpoint information into its definition.\\
+A4 & Coframe, connection/gauge, occupied matter, clock, and effect probes are
+once-counted terms or sources of one post-body generating functional.\\
+A5 & The relevant descended leaf is orientable and Lorentzian; its
+gravitational term lies in the torsion-free Palatini/Einstein--Hilbert
+infrared class and is sufficiently regular for the variations used below.\\
+A6 & The quantum leaf admits positive normalized states and a complete effect
+family; the valuation on complete effects is additive and noncontextual.\\
+A7 & The field-theory leaf admits a locally covariant Hadamard prescription for
+the renormalized stress tensor and its local curvature ambiguities.\\
+A8a-OCC & The physical completion occupies a nonzero source-owned recovery
+support, at least one record incidence, and a CP record instrument on that
+support.  The finite pointer algebra and common Uhlmann amplitude bundle are
+then derived, not separately assumed.\\
+A8b & The same post-body source that owns
+\(x_O=\mathcal A_X^{PC}/\mathcal A_*\) selects a normalized amplitude
+connector whose horizontal Hilbert--Schmidt pullback equals the normalized
+body-action metric.  On the explicit mixed-state completion it selects
+\(V_{\rm phys}=V_{r(x_O)}\), with
+\(r(x_O)^2=x_O-x_O^2/4\) and \(0<x_O\leq2\).\\
+A9 & The quantum leaf uses the common action unit \(\mathcal A_*=\hbar\), and
+self-adjoint transport obeys the Fubini--Study/Bures quantum-speed-limit
+bound.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A1--A4 define the working completion.  A5--A9, including A8a-OCC and A8b,
+are standard-limit and
+prediction assumptions.  None is claimed to follow from the old minimal Tau
+skeleton alone.  In particular, positivity of a body Hessian does not select
+the Lorentzian leaf, the Born valuation, or a physical observer carrier.
+Section~\ref{sec:a8-source-selection} proves a sufficient algebraic source
+theorem for A8b: affiliation of the global Dirac operator with the recovery
+relation algebra.  The displayed parent functional has not been shown to
+satisfy that law, so A8b remains a physical completion assumption.
+
+\subsection{Body-first variational order}
+
+Let \(\mathcal A_{\rm body}\) denote the atemporal body action.  Stabilization
+means
+\begin{equation}
+  D_M\mathcal A_{\rm body}(M_*)=0,
+  \qquad
+  K_M=\left.D_M^2\mathcal A_{\rm body}\right|_{M_*}>0
+  \quad\text{on }T_{M_*}\mathcal M/\mathcal N_{\rm true}.
+  \label{eq:body-stationarity}
+\end{equation}
+Here \(\mathcal N_{\rm true}\) contains only directions annihilated by every
+terminal retained in the MVP.  A direction invisible to one terminal is not
+discarded if another terminal sees it.
+
+The order in Eq.~\eqref{eq:body-stationarity} matters.  If \(z\) denotes all
+post-body terminal variables, linear response is solved in the ordered form
+\begin{align}
+  K_M\,\delta M &=-j_M,\\
+  K_z\,\delta z &=-j_z-C\,\delta M,
+  \label{eq:ordered-response}
+\end{align}
+where \(C=D_zD_M\Gamma|_{M_*}\) is an allowed body-to-terminal coupling.
+Equations~\eqref{eq:ordered-response} define a lower-triangular response
+problem.  Placing \(M\) and \(z\) in an unconstrained simultaneous symmetric
+fit would reverse the generative direction and permit endpoint data to alter
+the body.  The completion therefore forbids that operation unless a separately
+sourced post-body copy of the body variable is introduced and justified.
+
+\subsection{One common post-body functional}
+
+Three differently typed objects must be kept separate: the pre-body action
+used to solve \(M_*\), the post-body microscopic functional before quantum or
+apparatus variables are integrated out, and the renormalized observer-indexed
+effective functional afterwards.  Their lawful order is
+\begin{equation}
+ \mathcal A_{\rm pre}[M;s,B]
+ \xrightarrow{\operatorname{stat}_M}M_*,
+ \qquad
+ \Gamma_{\rm micro,O}[\Phi;M_*,e,A,\eta],
+ \qquad
+ \GMVP\equiv\Gamma_{\rm eff,O}[M_*;e,A,\eta].
+ \label{eq:mvp-functional-order}
+\end{equation}
+The transferable body sector used in the first solve is not appended again
+downstream.  An admissible once-counted microscopic ownership ledger is
+\begin{align}
+ \Gamma_{\rm micro,O}={}&S_{\rm grav}^{\rm bare}[e]
+ +S_{\rm body}^{\rm ret}[M_*;e,\Phi_{\rm ret}]\nonumber\\
+ &+S_q^{\rm bare}[M_*;e,A,\Phi_q]
+ +S_{\rm src,O}[M_*;e,A,\Phi_q,\Phi_{\rm ret};\eta,\vartheta],
+ \label{eq:mvp-microscopic-ledger}
+\end{align}
+where every primitive monomial or incidence has exactly one owner.
+Integrating the declared quantum and apparatus variables once defines
+\begin{equation}
+ e^{iW_O^{\rm ren}[M_*;e,A,\Phi_{\rm ret},\eta,\vartheta]/\hbar}
+ =\left.\int_{\mathcal C_O}\!\mathcal D\Phi_q\,
+ e^{i(S_q^{\rm bare}+S_{\rm src,O})/\hbar}\right|_{\rm ren}
+ \label{eq:mvp-integrated-observer-functional}
+\end{equation}
+and the effective packet
+\begin{equation}
+ \boxed{
+ \GMVP=S_{\rm EH}[e]+S_{\rm loc}^{\rm ren}[e]
+ +S_{\rm body}^{\rm ret}[M_*;e,\Phi_{\rm ret}]
+ +W_O^{\rm ren}[M_*;e,A,\Phi_{\rm ret},\eta,\vartheta].}
+ \label{eq:mvp-functional}
+\end{equation}
+Here \(S_{\rm body}^{\rm ret}\) is the retained post-body representative; its
+role is to preserve the occupied body value and first variation without
+copying the already used pre-body envelope.  If observer degrees of freedom and their
+source insertions are already included in \(W_O^{\rm ren}\), there is no
+additional \(\Gamma_{\rm obs}\) summand at the effective level.  A separate
+observer term is admissible only when it owns a disjoint apparatus field
+domain.
+
+This gives an exact de-duplication rule at quadratic order.  For a Hessian
+block
+\begin{equation}
+ K=\begin{pmatrix}K_x&B\\B^\dagger&K_y\end{pmatrix},
+ \qquad
+ K_{\rm eff}=K_x-BK_y^{-1}B^\dagger,
+ \label{eq:mvp-schur-ledger}
+\end{equation}
+one may retain the full block or eliminate \(y\) and retain its Schur
+reduction, but not both.  Propagators and Green response operators are
+inverses of second variations of Eq.~\eqref{eq:mvp-functional}; they are not
+additional action or stress summands.  Likewise, for any allowed finite local
+covariant counterterm \(C_{\rm loc}[e]\), the relocation
+\begin{equation}
+ S_{\rm loc}^{\rm ren}\mapsto S_{\rm loc}^{\rm ren}+C_{\rm loc},
+ \qquad
+ W_O^{\rm ren}\mapsto W_O^{\rm ren}-C_{\rm loc}
+ \label{eq:mvp-counterterm-relocation}
+\end{equation}
+leaves \(\GMVP\) and its full variations unchanged.  Adding the same
+counterterm to both terms would change the equation and is double counting.
+Equations~\eqref{eq:mvp-microscopic-ledger}--\eqref{eq:mvp-counterterm-relocation}
+prove a once-counted effective and quadratic ledger once a microscopic
+ownership partition and renormalization prescription are supplied.  They do
+not construct the full nonlinear microscopic Tau action or its ultraviolet
+completion.
+
+For an occupied observer carrier \(O\), define the typed shared descriptor
+\begin{equation}
+  \Xi_O=\Desc_O
+  \left(M_*,K_M,e,A,\psi,\vartheta,\{F_{O,a}\}\right).
+  \label{eq:shared-descriptor}
+\end{equation}
+More formally, on the adopted leaf
+\[
+  \Desc_O:\mathcal D_{M_*}/\mathcal N_{\rm true}\longrightarrow
+  \mathcal X_O,
+\]
+where \(\mathcal D_{M_*}\) is the typed post-body data bundle and
+\(\mathcal X_O\) is the shared observer descriptor space.  Quotient safety
+requires \(\Desc_O(x)=\Desc_O(x')\) whenever \(x\sim_{\rm true}x'\) under the
+retained common-null relation.
+The descent is the observer-specific realization of the ordering and
+compatibility law resident in the body.  It is not a separate material layer,
+does not store a trajectory, and is not defined as a correction to a standard
+model.  Standard physics and any future nonstandard component belong to the
+same full descent.
+
+The terminal rows are generated by variations of the same packet:
+\begin{align}
+  \mathcal E_e&=\frac{\delta\GMVP}{\delta e}, &
+  \mathcal E_A&=\frac{\delta\GMVP}{\delta A},\label{eq:mvp-terminal-rows-a}\\
+  p(a|O,M_*)&=\left.\frac{\delta W_O}{\delta\eta_a}\right|_{\eta=0}, &
+  \mathcal E_{\vartheta}&=\frac{\delta\GMVP}{\delta\vartheta}.
+  \label{eq:mvp-terminal-rows-b}
+\end{align}
+Common ownership fixes cross-sector covariance and prevents duplicate matter
+or Green-response terms (Fig.~\ref{fig:common-functional}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.98\linewidth]{figures/fig_common_functional.pdf}
+  \caption{Terminal variations of one once-counted post-body functional.
+  The diagram is a dependency map, not a claim that every displayed sector is
+  already selected by the physical Tau parent.}
+  \label{fig:common-functional}
+\end{figure}
+
+\subsection{Conditional gravity and optical leaf}
+\label{sec:mvp-gravity}
+
+On A1--A5 and A7, the low-curvature gravitational part of the completion has
+the effective form
+\begin{equation}
+  \Gamma_g=\frac{1}{16\pi G_{\rm SHR}}
+  \int d^4x\,\sqrt{-g}\,(R-2\Lambda_{\rm ren})
+  +S_{\rm loc}^{\rm ren}[g]
+  +W_O^{\rm ren}[g,A,\Phi_{\rm ret},\eta,\vartheta;M_*],
+  \label{eq:gravity-effective-action}
+\end{equation}
+where \(S_{\rm loc}^{\rm ren}\) collects allowed local curvature counterterms
+and \(W_O^{\rm ren}\) is the once-integrated quantum/observer functional.
+Coframe or metric
+stationarity gives
+\begin{equation}
+  G_{\mu\nu}+\Lambda_{\rm ren}g_{\mu\nu}
+  +H_{\mu\nu}^{\rm loc,ren}
+  =8\pi G_{\rm SHR}
+\left(T_{\mu\nu}^{\rm body,ret}
+  +\langle T_{\mu\nu}^{q+O}\rangle_{\rm ren}\right).
+  \label{eq:semiclassical-einstein}
+\end{equation}
+Here \(T_{\mu\nu}^{\rm body,ret}\) is the metric derivative of the retained
+body replacement term and excludes every degree of freedom integrated into
+\(W_O^{\rm ren}\).  The second term is the metric derivative of that same
+effective functional and is not added as a separate microscopic action.
+Local covariance and diffeomorphism invariance give the corresponding Ward
+identity and conservation of the \emph{complete} right-hand-side packet.  The
+separate body and quantum pieces need not be conserved before their coupling
+and renormalization prescription are fixed.  The structure of
+Eq.~\eqref{eq:semiclassical-einstein} is the standard semiclassical-gravity
+structure, including finite local curvature ambiguities
+\cite{Wald1977,HollandsWald2001,HollandsWald2002,HuVerdaguer2008}; the Tau
+claim is its conditional common-source placement, not novelty of the equation.
+
+If quantum stress, stress fluctuations, and local higher-curvature terms are
+negligible, Eq.~\eqref{eq:semiclassical-einstein} reduces to the Einstein
+equation.  Its weak-field, slow-motion leaf gives the Poisson equation and
+Newtonian motion.  For a source-free Abelian radiation field, the same
+Lorentzian leaf gives the eikonal conditions
+\begin{equation}
+  k^\mu k_\mu=0,
+  \qquad k^\nu\nabla_\nu k^\mu=0,
+  \label{eq:geometric-optics}
+\end{equation}
+and the usual redshift and optical Jacobi equations.  No independent lensing
+gain is introduced.  These are conditional standard-limit recoveries; the
+completion does not predict numerical values of \(G_{\rm SHR}\) or
+\(\Lambda_{\rm ren}\).
+
+\subsection{Conditional quantum and Born leaf}
+\label{sec:mvp-quantum}
+
+At fixed descended metric, let \(\rho_O\) be a positive normalized state and
+\(\{F_{O,a}\}\) a positive complete effect family,
+\begin{equation}
+  \rho_O\geq0,\quad \operatorname{Tr}\rho_O=1,
+  \qquad F_{O,a}\geq0,\quad \sum_aF_{O,a}=I.
+  \label{eq:state-effects}
+\end{equation}
+Under A6, complete additive noncontextual valuation yields the trace form
+\begin{equation}
+  \boxed{p(a|O,M_*)=\operatorname{Tr}(\rho_OF_{O,a}).}
+  \label{eq:born-leaf}
+\end{equation}
+This is a Gleason-type representation result
+\cite{Gleason1957,Busch2003}.  Its precise domain assumptions matter:
+ordinary projective Gleason theory requires Hilbert dimension at least three,
+while generalized-effect versions use stronger measurement richness to cover
+the two-dimensional case.  Tau Core does not infer Eq.~\eqref{eq:born-leaf}
+from information loss alone; positivity, completeness, and valuation
+structure are indispensable assumptions of the frozen completion.
+
+At fixed background and in a regular positive-frequency sector, the same
+functional gives the Schr\"odinger description and locally covariant quantum
+field theory.  A Hadamard prescription supplies
+  \(\langle T_{\mu\nu}^{q+O}\rangle_{\rm ren}\) in
+Eq.~\eqref{eq:semiclassical-einstein}.  Microcausality together with local
+completely positive trace-preserving operations gives operational
+no-signalling; entanglement changes joint statistics without creating a
+controllable superluminal signal.  These are recovery conditions shared with
+standard algebraic QFT in curved spacetime
+\cite{BrunettiFredenhagenVerch2003,HollandsWald2001,HollandsWald2002}, not
+novel predictions of the Tau architecture.
+
+\subsection{Compatibility of the standard limits}
+
+The gravity and quantum leaves are not two separately fitted models.  They are
+limits of Eq.~\eqref{eq:mvp-functional}.  Holding the descended metric fixed
+gives the quantum/Born leaf.  Varying the coframe while retaining the
+renormalized quantum expectation gives Eq.~\eqref{eq:semiclassical-einstein}.
+Suppressing quantum stress fluctuations and then taking the classical matter
+limit reaches the same classical geometry as taking the classical limit first
+and varying the corresponding classical matter action.
+
+\begin{proposition}[Conditional compatibility of the standard leaves]
+Under A1--A7, a common renormalization convention, and the stated regularity
+and limit--variation interchange assumptions, the fixed-background quantum
+limit and the small-fluctuation Einstein limit are compatible at the displayed
+semiclassical order.  In the joint limit \(\hbar\to0\), suppressed stress
+noise, and negligible local higher-curvature terms, both routes reduce to
+classical matter on the same Einstein geometry.
+\end{proposition}
+
+\begin{proof}[Conditional argument]
+Both routes are first variations of the same once-counted functional.  The
+metric derivative of the renormalized matter term is the quantum stress in
+Eq.~\eqref{eq:semiclassical-einstein}; replacing the state by its classical
+limit turns that derivative into classical matter stress.  Because the body
+and renormalization convention are held fixed, no independent coefficient is
+introduced when the order of the two limits is exchanged.  The stated
+regularity assumptions justify interchange of the limit and first variation.
+\end{proof}
+
+This is a completion-internal consistency result, not a proof of
+nonperturbative quantum gravity, metric quantization, or uniqueness
+(Fig.~\ref{fig:standard-limits}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.96\linewidth]{figures/fig_standard_limits.pdf}
+  \caption{Compatible standard leaves of the frozen completion.  Correct
+  limiting behavior is necessary but not sufficient for physical selection or
+  novelty.}
+  \label{fig:standard-limits}
+\end{figure}
+
+\subsection{QOR: a frozen observer-resolution discriminator}
+\label{sec:qor}
+
+The MVP does not derive Lorentzian gravity or quantum state/effect structure
+from the weak Tau spine; it tests whether these adopted structures can be
+jointly organized as terminals of one frozen body-first completion.  To do
+more than rewrite known equations, A8a-OCC together with A8b
+provides two source-frozen stable record prototypes \(r_{O,0}\) and
+\(r_{O,1}\) in the occupied observer carrier \(\mathcal C_O\).  Let
+\(\iota_O:\mathcal C_O/N_O\to T_{M_*}\mathcal M/\mathcal N_{\rm true}\)
+be its source-declared linearized embedding into the retained body tangent space.  The
+pullback of the positive body Hessian is
+\begin{equation}
+  G_O=\iota_O^*K_M\iota_O,
+  \qquad
+  \mathcal A_X^{PC}
+  =\langle\Delta r_O,G_O\Delta r_O\rangle,
+  \qquad
+  \Delta r_O=r_{O,1}-r_{O,0}.
+  \label{eq:observer-pullback-metric}
+\end{equation}
+The expression is coordinate independent and quotient-safe when \(\iota_O\)
+descends to the displayed quotient.  It has units of action because \(K_M\)
+is the body action Hessian.  A8a-OCC and the support theorem below supply the
+common amplitude carrier, while A8b supplies the finite global completion of
+this local metric.  Here ``Gram amplitude'' means an Uhlmann
+amplitude \(W\) satisfying \(WW^\dagger=\rho\).  Let normalized amplitudes
+\(W_{O,i}\) satisfy \(W_{O,i}W_{O,i}^\dagger=\rho_{O,i}\) and
+\(\operatorname{Tr}\rho_{O,i}=1\).  The same inherited action metric is used
+on their right-unitary quotient, with no independent coefficient:
+\begin{equation}
+ \frac{\mathcal A_X^{PC}}{\mathcal A_*}
+ =\min_U\lVert W_{O,1}-W_{O,0}U\rVert_{\rm HS}^2,
+ \qquad U^\dagger U=UU^\dagger=I.
+ \label{eq:common-gram-minimum-lift}
+\end{equation}
+The amplitudes are taken in a common sufficiently large purification space, so
+the finite-dimensional optimization can be written over right unitaries.  If
+minimal purification spaces have unequal support, the equivalent
+partial-isometry formulation is understood; an infinite-dimensional extension
+would require separate domain and trace-class control.
+
+\begin{lemma}[Local metric of the common-Gram minimum lift]
+Assume constant rank in a neighborhood of \(q_0\) and choose a smooth local
+horizontal gauge.  Let \(W(q)\) be a twice-differentiable normalized amplitude
+curve through \(W(q_0)\),
+and let \(\dot W_h\) be its horizontal tangent after minimizing the vertical
+right-unitary direction.  Then
+\begin{equation}
+ \min_U\lVert W(q_0+\delta q)-W(q_0)U\rVert_{\rm HS}^2
+ =\delta q^2\lVert\dot W_h\rVert_{\rm HS}^2+O(|\delta q|^3).
+ \label{eq:minimum-lift-second-variation}
+\end{equation}
+Under A8b, the pullback of this quotient metric is
+\(G_O/\mathcal A_*\).
+\end{lemma}
+
+\begin{proof}
+Write a nearby gauge representative as
+\(W(q_0+\delta q)U(\delta q)^\dagger
+=W(q_0)+\delta q(\dot W-W(q_0)X)+O(\delta q^2)\), with
+\(X^\dagger=-X\).  Minimizing the quadratic coefficient over \(X\) removes the
+vertical tangent and leaves \(\dot W_h\).  Squaring the Hilbert--Schmidt norm
+gives Eq.~\eqref{eq:minimum-lift-second-variation}.  A8b identifies this
+horizontal quotient norm, with the common action unit restored, with the
+body-Hessian pullback in Eq.~\eqref{eq:observer-pullback-metric}.  The last
+identification is therefore explicit completion structure, not a consequence
+of Hessian positivity alone.
+\end{proof}
+
+A8b is the strongest physical identification in the QOR completion.  The
+lemma proves the local metric of the Uhlmann quotient; it does not prove that
+the Tau body Hessian owns that metric.  Body stationarity, Hessian positivity,
+endpoint blindness, and readout emergence do not by themselves imply A8b.
+
+Let \(\mathcal A_*>0\) be the common
+elementary action scale and define
+\begin{equation}
+  \epsilon_O^2
+  =\frac{\mathcal A_X^{PC}}{\mathcal A_*}>0.
+  \label{eq:epsilon-def}
+\end{equation}
+Both numerator and denominator have the same units, so \(\epsilon_O\) is
+dimensionless.  The completion identifies the common action unit with
+\(\hbar\) on the quantum leaf.  It then declares a dimensionless quantum-state
+angle
+\begin{equation}
+  D_Q(\rho_0,\rho_1)=
+  \begin{cases}
+    \arccos|\langle\psi_0|\psi_1\rangle|,
+      & \rho_i=|\psi_i\rangle\langle\psi_i|,\\[2pt]
+    \arccos\sqrt{F(\rho_0,\rho_1)},
+      & \text{mixed states},
+  \end{cases}
+  \label{eq:quantum-record-angle}
+\end{equation}
+where
+\[
+  F(\rho,\sigma)=
+  \left[\operatorname{Tr}\sqrt{\sqrt\rho\,\sigma\sqrt\rho}\right]^2
+\]
+is the Uhlmann fidelity.  Uhlmann's minimum-lift identity~\cite{Uhlmann1976} applied to
+Eq.~\eqref{eq:common-gram-minimum-lift} gives
+\begin{equation}
+ \epsilon_O^2
+ =2\left(1-\sqrt{F(\rho_{O,0},\rho_{O,1})}\right)
+ =4\sin^2\!\frac{D_Q(\rho_{O,0},\rho_{O,1})}{2}.
+ \label{eq:gram-bures-identity}
+\end{equation}
+Consequently
+\begin{equation}
+ D_Q(\rho_{O,0},\rho_{O,1})
+ =2\arcsin\frac{\epsilon_O}{2}
+ \geq\epsilon_O,
+ \qquad 0<\epsilon_O\leq\sqrt2.
+  \label{eq:record-distance-threshold}
+\end{equation}
+The final inequality uses \(2\sin(x/2)\leq x\) on
+\(0\leq x\leq\pi/2\).  It is therefore a theorem of the common-Gram
+completion, not a separate distance assumption.  Positivity of \(K_M\) alone
+would still be insufficient: the decisive input is the global quotient
+minimum-lift identity, which already includes all purification shortcuts.
+
+For self-adjoint unitary transport, the Fubini--Study/Bures path obeys
+\begin{equation}
+  D_Q(\rho(0),\rho(\delta t))
+  \leq\frac{1}{\hbar}\int_0^{\delta t}\!\Delta H(t)\,dt,
+  \qquad
+  \Delta H(t)^2=\operatorname{Tr}(\rho H^2)-
+  \operatorname{Tr}(\rho H)^2,
+  \label{eq:state-distance-speed-bound}
+\end{equation}
+with mixed-state extensions expressed through the corresponding quantum Fisher
+information \cite{MandelstamTamm1945,AnandanAharonov1990,Taddei2013}.
+Equation~\eqref{eq:state-distance-speed-bound} is restricted here to the
+declared self-adjoint unitary protocol.  Open or noisy evolution requires its
+own quantum-Fisher-information path-speed bound and cannot inherit the same
+\(\Delta H\) formula without an additional proof.
+For constant \(\Delta H\), combining Eqs.~\eqref{eq:record-distance-threshold}
+and \eqref{eq:state-distance-speed-bound} gives the exact common-Gram bound
+\begin{equation}
+  \boxed{
+  \delta t_{\min,O}\geq
+  \frac{2\hbar}{\Delta H}\arcsin\frac{\epsilon_O}{2}
+  \geq\frac{\hbar\epsilon_O}{\Delta H}.}
+  \label{eq:qor}
+\end{equation}
+
+The inverse-energy-spread form and the Uhlmann chord-to-angle identity are
+standard, not new Tau laws.  The distinct Tau statement is narrower: the
+source-frozen morphological Gram chord is physically identified with the
+observer carrier's Uhlmann-amplitude distance.  At the same
+\(\Delta H\), two independently reconstructed observer carriers with
+different source-frozen \(\epsilon_O\) have different forbidden
+single-record regions, provided the common-Gram carrier is physically
+occupied.  The numerical prefactor is fixed by the angle convention in
+Eqs.~\eqref{eq:quantum-record-angle}--\eqref{eq:state-distance-speed-bound}.
+An ordering of \emph{observed} onset thresholds follows
+only if the bound is saturated, or if independently controlled efficiencies
+establish the same slack above the bound.  No detector gain may be fitted to
+enforce either conclusion.
+
+For an empirical test, ``independent reconstruction'' therefore has a precise
+meaning: the carrier class, the two record prototypes, the embedding
+\(\iota_O\), and the pullback metric \(G_O\) must be fixed from source-side
+morphology and calibration data that exclude the timing endpoint.  If these
+objects cannot be operationalized independently, Eq.~\eqref{eq:qor} remains a
+conditional mathematical discriminator rather than a test-ready numerical
+prediction.
+
+Here a \emph{single stable record} means that one predeclared protocol run
+places a pointer variable in one of two disjoint decision regions with
+single-shot classification error at most \(\eta_{\rm rec}\), and that the
+assignment persists for a predeclared hold time \(\tau_{\rm hold}\).  No
+averaging across repeated preparations, tomographic reconstruction, or
+multi-shot parameter estimation is part of that record event.  Those methods
+may calibrate the carrier or estimate sub-threshold changes, but they test a
+different operational question.
+
+\paragraph{Finite carrier prototype and uncertainty ledger.}
+A two-level carrier makes the full mathematical chain explicit without
+claiming physical occupation.  The full qubit state carrier is the density-
+operator space \(\mathcal D(\mathbb C^2)\); \(\mathbb{CP}^1\) is only its pure-
+state projective submanifold.  Restrict the prototype records to
+\(\mathcal C_O^{\rm pure}=\mathbb{CP}^1\), choose
+\(\rho_{O,0}=|0\rangle\langle0|\), and set
+\[
+  |\psi_{O,1}\rangle
+  =\cos\theta_O|0\rangle+\sin\theta_O|1\rangle,
+  \qquad
+  \rho_{O,1}=|\psi_{O,1}\rangle\langle\psi_{O,1}|.
+\]
+Then \(D_Q(\rho_{O,0},\rho_{O,1})=|\theta_O|\) for
+\(0\leq|\theta_O|\leq\pi/2\).  The common-Gram identity gives the exact finite
+separation
+\begin{equation}
+  \epsilon_O=2\sin\frac{|\theta_O|}{2},
+  \qquad
+  |\theta_O|=2\arcsin\frac{\epsilon_O}{2}\geq\epsilon_O.
+  \label{eq:finite-carrier-epsilon}
+\end{equation}
+Thus the two-level example realizes the global theorem rather than assuming a
+second distance calibration.  If a source-declared carrier coordinate \(q\)
+has tangent image \(v_O=D\iota_O(\partial_q)\), set
+\(g_O=\langle v_O,K_Mv_O\rangle\).  In a normal neighborhood,
+\begin{equation}
+  \epsilon_O
+  =|\Delta q|\sqrt{\frac{g_O}{\mathcal A_*}}
+  +O(|\Delta q|^2).
+  \label{eq:local-carrier-epsilon}
+\end{equation}
+The local Hessian estimate is not substituted for the exact finite
+minimum-lift distance outside that neighborhood.
+
+To make ``phase-calibrated quasistatic response'' reproducible, choose before
+the timing experiment a closed calibration protocol \(\mathcal P_{\rm cal}\)
+and define its unwrapped action phase by
+\(\phi_{\rm cal}(q)=\mathcal A_{\rm cal}(q)/\hbar\).  Near the source-declared
+reference \(q_0\), the operational model is
+\begin{equation}
+  \mathcal A_{\rm cal}(q)
+  =\mathcal A_0+f_0(q-q_0)
+  +\frac12 g_O(q-q_0)^2+O((q-q_0)^3).
+  \label{eq:carrier-calibration-action}
+\end{equation}
+For a symmetric predeclared step \(h_q\), an endpoint-blind curvature estimator
+is
+\begin{equation}
+  \frac{\widehat g_O}{\hbar}
+  =\frac{\phi_{\rm cal}(q_0+h_q)-2\phi_{\rm cal}(q_0)
+  +\phi_{\rm cal}(q_0-h_q)}{h_q^2}+O(h_q^2).
+  \label{eq:g-operational-estimator}
+\end{equation}
+Equivalently, if \(f_q=\partial_q\mathcal A_{\rm cal}\) is measured, then
+\(g_O=\partial_q f_q|_{q_0}\).  This equality follows rather than being an
+independent calibration postulate when the protocol is the restriction of the
+same body action to a source-predeclared curve \(M(q)\), with
+\(M(q_0)=M_*\) and \(v_O=M'(q_0)\):
+\begin{equation}
+ \left.\frac{d^2}{dq^2}\mathcal A_{\rm body}(M(q))\right|_{q_0}
+ =K_M(v_O,v_O)
+ +D_M\mathcal A_{\rm body}(M_*)[M''(q_0)]
+ =g_O.
+ \label{eq:g-hessian-source-identity}
+\end{equation}
+The final equality uses body stationarity.  The neighboring calibration
+configurations are source-prepared before the timing experiment; this is not
+terminal backreaction on the already frozen body.  Failure of
+Eq.~\eqref{eq:g-hessian-source-identity} rejects the proposed common-source
+carrier realization rather than authorizing a refit.
+
+An endpoint-free calibration must therefore fix the carrier, \(q\), \(q_0\),
+\(h_q\), phase-unwrapping rule, and \(\mathcal P_{\rm cal}\) from non-timing
+device morphology; estimate \(g_O/\mathcal A_*\) with
+Eq.~\eqref{eq:g-operational-estimator}; determine \(D_Q\) by state tomography;
+and determine \(\Delta H\) by independent energy statistics.  The common-Gram
+identity and Eq.~\eqref{eq:g-hessian-source-identity} can then be tested before
+the timing endpoint is opened, avoiding conditional circularity.  For a local
+reconstruction with independent \(\Delta q\), \(g_O\), and \(\mathcal A_*\)
+estimates, first-order uncertainty propagation gives
+\begin{equation}
+  \left(\frac{\sigma_{\epsilon}}{\epsilon_O}\right)^2
+  =\left(\frac{\sigma_{\Delta q}}{\Delta q}\right)^2
+  +\frac14\left(\frac{\sigma_g}{g_O}\right)^2
+  +\frac14\left(\frac{\sigma_{\mathcal A_*}}{\mathcal A_*}\right)^2,
+  \label{eq:epsilon-uncertainty}
+\end{equation}
+or \(\sigma_\epsilon^2=J\Sigma J^T\) with the full calibration covariance.
+Metrologically \(\hbar\) is exact in SI, while its identification with the
+parent action unit remains a physical assumption of the completion.  Two
+carriers are comparable only under the same Hamiltonian generator and matched
+\(\Delta H\) protocol; otherwise the predeclared comparison variable is
+\(\Delta H\,\delta t/\hbar\), not raw time.
+
+This prototype closes the type, normalization, distance bridge, and uncertainty
+bookkeeping.  It also reduces pullback-stiffness reconstruction to the same-body
+action identity \eqref{eq:g-hessian-source-identity}.  It does not prove that
+the physical Tau source occupies this common-Gram carrier or supplies a
+laboratory realization of \(\mathcal C_O\) and \(\iota_O\).
+
+Equation~\eqref{eq:qor} is not a universal time atom and permits continuous
+parameters.  Aggregation may resolve sub-record changes.  A test must therefore
+predeclare the carrier, record criterion, \(\Delta H\), aggregation rule, and
+estimator.  Figure~\ref{fig:qor} shows bounds, not predicted onsets.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.94\linewidth]{figures/fig_qor_prediction.pdf}
+  \caption{Illustration of Eq.~\eqref{eq:qor}.  The slopes are not fitted or
+  predicted numerical values.  They show the ordering and ratio of
+  \emph{lower-bound} slopes after \(\epsilon_O\) has been reconstructed
+  independently.  Equality of these lines with observed onset thresholds
+  requires an additional saturation or controlled-efficiency condition.}
+  \label{fig:qor}
+\end{figure}
+
+\paragraph{Minimal falsification protocol.}
+The test is staged so that a failed carrier is rejected before timing data are
+used.  On one predeclared carrier coordinate and record pair, define
+\begin{equation}
+ \widehat x_A={\widehat{\mathcal A_X^{PC}}\over\mathcal A_*},
+ \qquad
+ \widehat x_Q=2\left(1-\sqrt{\widehat F(\rho_{O,0},\rho_{O,1})}\right).
+ \label{eq:pre-timing-estimators}
+\end{equation}
+Stage 1 reconstructs \(\widehat x_A\) from the closed same-action
+curvature/work protocol and checks Eq.~\eqref{eq:g-hessian-source-identity},
+without tomography or endpoint timing.  Stage 2 reconstructs
+\(\widehat x_Q\) by independent state tomography and tests the Tau-specific
+identity
+\begin{equation}
+ \boxed{\widehat x_A\stackrel{?}{=}\widehat x_Q.}
+ \label{eq:pre-timing-gram-test}
+\end{equation}
+For independent estimates, a minimal discrepancy statistic is
+\begin{equation}
+ Z_A={\widehat x_Q-\widehat x_A\over
+ \sqrt{\sigma_{x_Q}^2+\sigma_{x_A}^2}},
+ \label{eq:pre-timing-discrepancy}
+\end{equation}
+with the full declared covariance used when systematic errors are correlated.
+Defining either estimator from the other makes the test circular.
+Only a carrier passing both pre-timing tests proceeds to Stage 3, the QOR
+timing test.  Thus failure of the common-Gram realization cannot be hidden by
+a timing fit.
+
+Choose at least two observer carriers with independently reconstructed
+\(\epsilon_{O_1}\neq\epsilon_{O_2}\), hold the Hamiltonian-spread and record
+protocol fixed, and estimate the single-record onset without using the timing
+endpoint in carrier selection.  A reproducible stable record at
+\(\delta t<2\hbar\arcsin(\epsilon_O/2)/\Delta H\), after demonstrating that
+the one-record, common-Gram minimum-lift, source-freeze, and self-adjoint
+unitary-protocol conditions hold, rejects the completion.  A
+cross-carrier onset ordering is an additional test only after saturation or
+equal-slack conditions have been independently justified.  Failure of this
+completion does not by itself reject every possible Tau-style readout
+architecture.
+
+\subsection{Finite source criterion and carrier decision}
+\label{sec:a8-source-carrier}
+
+The two parts of A8 can be reduced to finite source conditions rather than
+left as an undifferentiated bridge assumption.  Let \(K_*>0\) be the body
+Hessian after the true-null quotient and let
+\[
+ R_{\rm rec}^{\rm dedup}:N_*^{\rm phys}\longrightarrow
+ P_{\rm rec}\mathcal H_{\rm rec}
+\]
+be the de-duplicated primitive recovery incidence.  Define
+\begin{equation}
+ G_*^{\rm rec}
+ =R_{\rm rec}^{\rm dedup}K_*^{-1}
+ (R_{\rm rec}^{\rm dedup})^\dagger,
+ \qquad
+ \rho_*^{\rm rec}
+ ={G_*^{\rm rec}\over\operatorname{Tr}G_*^{\rm rec}}.
+ \label{eq:a8-faithful-source-state}
+\end{equation}
+
+\begin{proposition}[Support-restricted common-amplitude theorem]
+Let \(K_*>0\) on a finite retained source tangent space and let
+\(R_{\rm rec}^{\rm dedup}\ne0\).  Set
+\begin{equation}
+ P_*=\operatorname{supp}G_*^{\rm rec}.
+ \label{eq:a8-occupied-support}
+\end{equation}
+Then \(\rho_*^{\rm rec}\) is faithful on
+\(P_*\mathcal H_{\rm rec}\), whether or not the recovery incidence is onto a
+larger declared ambient space.  If one source-owned CP record instrument
+\(\{\mathcal I_i\}\) acts on this occupied support and
+\begin{equation}
+ \rho_i={\mathcal I_i(\rho_*^{\rm rec})\over
+ \operatorname{Tr}\mathcal I_i(\rho_*^{\rm rec})}\ne0,
+ \label{eq:a8-record-instrument}
+\end{equation}
+then all \(\rho_i\) admit Uhlmann amplitudes in the same
+Hilbert--Schmidt carrier.  A smooth local amplitude bundle exists on every
+constant-rank stratum.
+\end{proposition}
+
+\begin{proof}
+For every \(y\),
+\[
+ \langle y,G_*^{\rm rec}y\rangle
+ =\left\|K_*^{-1/2}(R_{\rm rec}^{\rm dedup})^\dagger y\right\|^2,
+\]
+so \(G_*^{\rm rec}\succeq0\) and
+\(\ker G_*^{\rm rec}=\ker(R_{\rm rec}^{\rm dedup})^\dagger\).  Restriction
+to \(P_*\mathcal H_{\rm rec}\) is therefore strictly positive.  Functional
+calculus gives the canonical amplitude \(W_*=\sqrt{\rho_*^{\rm rec}}\), and
+polar decomposition gives every minimal presentation as \(W_*U\) up to the
+usual partial-isometry extension.  A CP map has positive output in the same
+support algebra, so every nonzero conditional state in
+Eq.~\eqref{eq:a8-record-instrument} has a square-root amplitude in the same
+Hilbert--Schmidt carrier.  Smooth functional calculus and a smooth horizontal
+gauge give the local bundle at constant rank.
+\end{proof}
+
+Thus common-amplitude existence is kinematic once the occupied support and
+record instrument are supplied.  Ambient surjectivity and uniqueness among
+all stationary parent branches are not needed for this theorem; they would be
+stronger nature-selection claims.  What remains open in A8a-OCC is precisely
+whether the physical Tau parent occupies this support/instrument packet.
+
+\paragraph{Record-domain and occurrence boundary.}
+No additional apparatus ontology is needed to type one finite record once a
+positive effect is supplied.  For any \(0\preceq E_O\preceq I\), introduce a
+two-state pointer initialized in \(\lvert0\rangle_P\) and set
+\begin{equation}
+ \alpha_O=\arcsin\sqrt{E_O},
+ \qquad
+ U_{E_O}=\exp(-i\alpha_O\otimes\sigma_y).
+ \label{eq:minimal-naimark-pointer}
+\end{equation}
+Projection onto the pointer basis gives
+\begin{equation}
+ K_1={}_P\!\langle1|U_{E_O}|0\rangle_P=\sqrt{E_O},
+ \qquad
+ K_0={}_P\!\langle0|U_{E_O}|0\rangle_P=\sqrt{I-E_O},
+ \label{eq:minimal-square-root-instrument}
+\end{equation}
+up to an irrelevant branch phase.  Thus one supplied occurrence produces the
+canonical square-root CP instrument without a fitted probability gain.
+Likewise, for any finite orthogonal pointer algebra and supplied record
+incidences \(T_j\), the positive matching functional
+\begin{equation}
+ \mathcal A_{\rm rec}(r_1,\ldots,r_m\mid p)
+ ={1\over2}\sum_{j=1}^m\kappa_j\lVert r_j-T_jp\rVert^2,
+ \qquad \kappa_j>0,
+ \label{eq:positive-record-matching}
+\end{equation}
+has Hessian \(\bigoplus_j\kappa_j I>0\) and the unique structural minimum
+\(r_j=T_jp\).  The construction is natural in the finite pointer dimension;
+it adds neither a Born weight nor a new stiffness law.
+
+Equations~\eqref{eq:minimal-naimark-pointer}--
+\eqref{eq:positive-record-matching} prove availability and stability
+\emph{conditional on an occurrence}.  They do not select whether an
+observer--record edge is physically occupied.  The same static carrier,
+effect, clock, and conserved current admit a zero-occurrence model and a
+one-occurrence model.  Effect normalization fixes probability conditional on
+an interrogation, while carrier flux counts occupation rather than
+interrogations.  A finite observer-time persistence interval is also stronger
+than positivity of the record Hessian: it requires a descended retention
+generator or direct operational verification.  Hence A8a-OCC is reduced to a
+physical incidence statement, not a missing record-domain type.
+
+A8b has two logically distinct defects.  Let
+\(\mathcal C:(N_*^{\rm phys},K_*)\to(\mathcal E_*,h_*)\) be the proposed
+body-to-amplitude differential and let \(P_O\) be the
+\(h_*\)-orthogonal observer-access projector.  Define
+\begin{equation}
+ E_{\rm src}=\mathcal C^\dagger h_*\mathcal C-K_*,
+ \qquad
+ \Delta_O=\mathcal C^\dagger h_*(I-P_O)\mathcal C\succeq0.
+ \label{eq:a8-two-defects}
+\end{equation}
+The actually descended metric is therefore
+\begin{equation}
+ G_O=(P_O\mathcal C)^\dagger h_*(P_O\mathcal C)
+ =K_*+E_{\rm src}-\Delta_O.
+ \label{eq:a8-gram-loss}
+\end{equation}
+The no-loss statement
+\begin{equation}
+ \Delta_O=0
+ \quad\Longleftrightarrow\quad
+ \operatorname{im}\mathcal C\subseteq\operatorname{im}P_O
+ \label{eq:a8-zero-defect}
+\end{equation}
+does not prove \(E_{\rm src}=0\).  A8b follows without a fitted scale only if
+one and the same parent action supplies the normalized connector identities
+\begin{equation}
+ \boxed{
+ \mathcal C^\dagger h_*\mathcal C=K_*,
+ \qquad P_O\mathcal C=\mathcal C.}
+ \label{eq:a8-source-isometry}
+\end{equation}
+The first identity is source isometry; the second is complete access only on
+the selected record tangent, not on the whole parent body.  Under both
+identities, quotienting the right-unitary vertical directions gives the
+Hilbert--Schmidt/Uhlmann metric with coefficient exactly
+\(K_*/\mathcal A_*\).  Multiplying \(\mathcal C\) by a positive constant would
+change the first identity and is a different physical source incidence, not a
+coordinate convention.
+
+Neither common support nor injective conformal descent selects this identity.
+Indeed, \(\mathcal C_c=\sqrt c\,U\), with \(U\) an isometry and \(c>0\), has
+the same rank, complex structure, conformal cone, and normalized clock-line
+transport for every \(c\), while its pullback metric changes by \(c\).
+Consequently A8a-OCC and Hessian positivity do not imply A8b.
+
+The consistency of A8b can nevertheless be exhibited without a fitted
+coefficient.  Write
+\begin{equation}
+ x_O={\mathcal A_X^{PC}\over\mathcal A_*}.
+ \label{eq:a8-action-ratio}
+\end{equation}
+For every \(0\leq x_O\leq2\), define
+\begin{equation}
+ r(x_O)=\sqrt{x_O-{x_O^2\over4}},
+ \qquad
+ \rho_\pm(x_O)={1\over2}\left(I\pm r(x_O)\sigma_z\right).
+ \label{eq:a8-mixed-state-realization}
+\end{equation}
+These are normalized positive qubit states and obey
+\begin{equation}
+ 2\left(1-\sqrt{F(\rho_+,\rho_-)}\right)=x_O.
+ \label{eq:a8-mixed-state-chord}
+\end{equation}
+Thus A8b has a normalized mixed-state realization exactly on
+\(0\leq x_O\leq2\); distinct records require \(0<x_O\leq2\).  It is also a
+valid CP observer restriction: the depolarizing map
+\(\mathcal E_r(\rho)=r\rho+(1-r)I/2\) sends an orthogonal qubit pair to
+Eq.~\eqref{eq:a8-mixed-state-realization} and admits a standard Stinespring
+isometry \(V_r\).
+
+This proves non-emptiness, not nature-level selection.  The current
+body/Gibbs and CP-descent laws admit every \(r\in[0,1]\) and contain no term
+that chooses its value.  The remaining physical statement is therefore the
+finite source identity
+\begin{equation}
+ \boxed{
+ V_{\rm phys}=V_{r(x_O)},
+ \qquad r(x_O)^2=x_O-{x_O^2\over4},
+ \qquad0<x_O\leq2.}
+ \label{eq:a8-physical-loss-law}
+\end{equation}
+It must be a second restriction of the same post-body functional that owns
+\(x_O\).  Choosing \(r\) from the timing endpoint or measured record overlap
+would be terminal fitting.  Hence A8b is a mathematically closed conditional
+completion, while its physical source selection remains open.
+
+\begin{proposition}[Record occurrence and finite A8b are independent]
+\label{prop:a8-occurrence-independence}
+Relative to assumptions A1--A9 without an additional law coupling occurrence
+degree to the amplitude connector, physical record occurrence and the finite
+A8b identity are logically independent.
+\end{proposition}
+
+\begin{proof}
+Fix \(x_O\in(0,2]\) and define two propositions
+\begin{equation}
+ \mathsf{O}:\ n_{\rm rec,O}\geq1,
+ \qquad
+ \mathsf{B}:\
+ 2\bigl(1-\sqrt{F(\rho_+,\rho_-)}\bigr)=x_O,
+ \label{eq:a8-occurrence-predicates}
+\end{equation}
+where \(n_{\rm rec,O}\) counts source-owned record incidences in the declared
+observer support.  The depolarizing Stinespring family used above is valid for
+every \(r\in[0,1]\), and its symmetric output pair has squared Uhlmann chord
+\begin{equation}
+ y(r)=2\left(1-\sqrt{1-r^2}\right).
+ \label{eq:a8-occurrence-chord-family}
+\end{equation}
+The value \(r_*(x_O)\) in Eq.~\eqref{eq:a8-mixed-state-realization} satisfies
+\(y(r_*)=x_O\).  Choose any \(r_0\in(0,1]\) with \(r_0\neq r_*\) and
+\(y(r_0)\neq x_O\).  The models
+\((n_{\rm rec,O},r)=(1,r_*)\) and \((1,r_0)\) have the same body ratio,
+finite pointer type, occurrence degree, and positive record-matching Hessian,
+but only the first satisfies \(\mathsf{B}\).  Therefore
+\(\mathsf{O}\not\Rightarrow\mathsf{B}\).
+
+Conversely, hold the carrier geometry fixed at \(r=r_*\) and compare
+\((n_{\rm rec,O},r)=(1,r_*)\) with \((0,r_*)\).  The finite metric identity
+holds in both admissible carrier completions, while only the first contains a
+physical record event.  Thus \(\mathsf{B}\not\Rightarrow\mathsf{O}\).
+Repeating the zero/one occurrence choice at \(r_0\) realizes all four truth
+assignments of \((\mathsf{O},\mathsf{B})\), proving independence.  The
+zero-occurrence A8b
+case is a structural law on an available carrier, not a measured record.
+\end{proof}
+
+The proposition is relative to the current source axioms, not a prohibition
+on deeper unification.  A richer post-body source law may select occurrence
+and the connector jointly.  In the present completion, however, a realized
+QOR trial requires the conjunction
+\begin{equation}
+ \boxed{
+ n_{\rm rec,O}\geq1
+ \quad\wedge\quad
+ x_A=x_Q
+ \quad\wedge\quad
+ \mathsf{H}_{\rm hold}.}
+ \label{eq:qor-three-condition-conjunction}
+\end{equation}
+Here \(\mathsf{H}_{\rm hold}\) denotes the independently predeclared
+single-record retention condition.  Occupation supplies an event, A8b
+supplies its finite morphology/Bures calibration, and the hold condition makes
+the event operationally readable; none substitutes for another.
+
+\subsection{A finite source theorem for A8b}
+\label{sec:a8-source-selection}
+
+Let
+\begin{equation}
+ \mathfrak A_{\rm rec}\subseteq\operatorname{End}(\mathcal H_{\rm rec})
+ \label{eq:recovery-algebra}
+\end{equation}
+be the finite unital star algebra generated by the source-owned primitive
+recovery relations of the stabilized body, and let
+\(Z_\alpha\in Z(\mathfrak A_{\rm rec}'')\) be mutually orthogonal central
+recovery projectors with \(\sum_\alpha Z_\alpha=P_{\rm rec}\).
+
+Central recovery support and faithful occupation do not make these projectors
+reducing for an independently supplied Dirac operator.  On \(\mathbb C^2\),
+keep the diagonal recovery algebra, its two rank-one central projectors, and
+the faithful state \(I/2\) fixed.  The pair
+\begin{equation}
+ D_0=\begin{pmatrix}d_1&0\\0&d_2\end{pmatrix},
+ \qquad
+ D_a=\begin{pmatrix}d_1&a\\a&d_2\end{pmatrix},
+ \qquad a\ne0,
+ \label{eq:recovery-dirac-counterpair}
+\end{equation}
+has identical recovery-algebra and occupation data, whereas only \(D_0\)
+commutes with the central projectors.  Recovery cyclicity and central support
+therefore do not imply a Dirac direct sum.
+
+\begin{proposition}[Recovery--Dirac affiliation implies finite A8b]
+\label{prop:recovery-dirac-affiliation}
+Assume A8a-OCC and the common-action recovery construction.  If a
+self-adjoint global Dirac operator \(D\) is affiliated with
+\(\mathfrak A_{\rm rec}''\), and the parent action uses one fixed spectral
+profile, spectral scale, and trace normalization on the occupied recovery
+support, then the central recovery projectors reduce \(D\), the spectral
+action is additive over the recovery blocks, and finite A8b follows without
+an additional gain.
+\end{proposition}
+
+\begin{proof}
+Affiliation means that every spectral projector of \(D\) belongs to
+\(\mathfrak A_{\rm rec}''\).  Every central \(Z_\alpha\) therefore strongly
+commutes with \(D\), and
+\begin{equation}
+ P_{\rm rec}DP_{\rm rec}
+ =\bigoplus_\alpha D_\alpha,
+ \qquad D_\alpha=Z_\alpha D Z_\alpha.
+ \label{eq:affiliated-dirac-sum}
+\end{equation}
+For one fixed profile \(F\) and scale \(\Lambda\), functional calculus and
+trace additivity give
+\begin{equation}
+ \operatorname{Tr}F(D^2/\Lambda^2)
+ =\sum_\alpha\operatorname{Tr}F(D_\alpha^2/\Lambda^2).
+ \label{eq:spectral-recovery-additivity}
+\end{equation}
+This is the exclusive orthogonal direct-sum composition required by the
+same-action recovery theorem.  Squared Hilbert--Schmidt/Uhlmann chords then
+add in the common action unit, giving finite A8b.
+\end{proof}
+
+This is a sufficient source theorem, not a proof that the physical parent
+occupies its premises.  In general the body Hessian and \(D\) act on different
+spaces, so a bare commutator \([K_M,D]\) is not the source condition.  The
+body Hessian is a pullback of the spectral Hessian through the body-to-Dirac
+derivative, including its second-derivative chain-rule term.  A spectral trace
+can therefore retain cross-block body terms unless the incidence is
+source-compatible.  Affiliation resolves this issue for central recovery
+blocks because the operator and the recovery decomposition are generated by
+the same algebra.
+
+The remaining question is one physical ownership statement: does the
+enriched base--seed parent construct its global Dirac operator as an operator
+affiliated with \(\mathfrak A_{\rm rec}''\)?  Equation
+\eqref{eq:recovery-dirac-counterpair} proves that the current source axioms do
+not answer it.
+
+At quadratic response order the once-counted microscopic source ledger is
+explicit:
+\begin{equation}
+ \Gamma_{\rm src}^{(2)}[x;J]
+ =\Gamma_*+\frac12\langle x,K_*x\rangle
+ -\operatorname{Re}\langle J,R_{\rm rec}^{\rm dedup}x\rangle .
+ \label{eq:microscopic-quadratic-ledger}
+\end{equation}
+Eliminating \(x\) gives \(G_*^{\rm rec}\) as the connected source
+two-point response.  In a finite inner-product realization, overlap removal
+can be written
+\begin{equation}
+ R_{\rm rec}^{\rm dedup}
+ =\begin{pmatrix}
+ R_{P1}\\
+ R_Q(I-R_{P1}^{+}R_{P1})
+ \end{pmatrix},
+ \label{eq:deduplicated-recovery-stack}
+\end{equation}
+so a quantum row already represented by the common
+gravity--time--radiation--matter packet is not counted again.  Equations
+\eqref{eq:microscopic-quadratic-ledger}--\eqref{eq:deduplicated-recovery-stack}
+close a finite second-variation ledger, not the full interacting continuum
+\(\GMVP\).  The latter still requires a microscopic nonlinear base--seed
+action, interacting matter and gauge spectrum, and a controlled renormalized
+continuum limit.
+
+\paragraph{Dynamic and quantized metrics.}
+For a classical dynamic metric, locally covariant QFT assigns an observable
+algebra, positive normalized state, and effects to each admissible geometry;
+covariant unital star-morphisms preserve the state/effect probability form
+\cite{BrunettiFredenhagenVerch2003}.  The state, effect, and propagator may all
+depend on the metric, and no preferred particle splitting is implied, but the
+Born form itself survives.  A classical probability mixture over geometries
+also preserves positivity and normalization, but the branchwise Born laws do
+not determine the mixing measure.
+
+If the metric is quantized, the corresponding
+statement requires a constrained joint geometry--matter algebra or physical
+Hilbert space with a positive normalized joint state and joint effects.
+Matter-only probabilities are then restrictions or conditional
+probabilities.  This is compatible with Born structure, but Tau Core does not
+yet provide the metric measure, gauge/BRST--BV quotient, physical inner
+product, coherent inter-geometry phases, or positive unitary descent needed to
+construct it.  This gap cannot be filled by applying a fixed-fiber
+Gleason/Busch theorem branch by branch: two coherent joint states may have the
+same block-diagonal geometry and matter data but different relative phases,
+which a joint off-diagonal effect distinguishes.  The present Born recovery
+therefore covers fixed or classical-dynamic descended geometry.  Quantized
+geometry remains a conditional joint-algebra completion, not a result of this
+paper.
+
+\paragraph{A non-genericity control for candidate carriers.}
+Quantum geometry is measurable in superconducting circuits and spin
+platforms \cite{Tan2019,Yu2021}, so these systems are plausible worked-model
+platforms.  They do not automatically satisfy A8b.  For a nondegenerate
+ground state of \(H(q)\), standard perturbation theory gives
+\begin{align}
+ g_{qq}^{\rm FS}
+ &=\sum_{n\ne0}{|\langle n|\partial_qH|0\rangle|^2\over(E_n-E_0)^2},
+ \label{eq:fs-spectral-metric}\\
+ \partial_q^2E_0
+ &=\langle0|\partial_q^2H|0\rangle
+ +2\sum_{n\ne0}{|\langle n|\partial_qH|0\rangle|^2\over E_0-E_n}.
+ \label{eq:energy-curvature-control}
+\end{align}
+The denominators and contact term differ; fidelity susceptibility and energy
+curvature are related probes but are not generally identical
+\cite{Albuquerque2010}.  For
+\[
+ H(q)={\Delta\over2}(\cos q\,\sigma_z+\sin q\,\sigma_x),
+\]
+the ground-state Fubini--Study metric is \(1/4\), whereas the ground energy is
+constant and its curvature vanishes.  Thus an ordinary energy-Hessian
+calibration fails A8b even in this elementary carrier.  A physical Tau
+carrier must instead demonstrate that an independently specified closed
+\emph{action} protocol obeys Eqs.~\eqref{eq:a8-source-isometry} and
+\eqref{eq:a8-physical-loss-law}.  No currently
+identified platform has passed the curvature, Gram/Bures, and QOR timing
+tests together.
+
+\paragraph{Effect-size boundary.}
+For a resonant qubit with \(\Delta H=\hbar\Omega/2\),
+Eq.~\eqref{eq:qor} becomes
+\begin{equation}
+ \tau_{\rm QOR}={4\over\Omega}\arcsin{\epsilon_O\over2},
+ \qquad
+ {\tau_{\rm QOR}\over t_\pi}
+ ={4\over\pi}\arcsin{\epsilon_O\over2}.
+ \label{eq:qor-rabi-scale}
+\end{equation}
+It ranges from zero to one \(\pi\)-pulse for
+\(0\leq\epsilon_O\leq\sqrt2\).  Detectability requires at least
+\(\sigma_t\ll\tau_{\rm QOR}\ll T_2\), record persistence below the relevant
+relaxation scale, and the declared single-shot error ceiling.  However,
+Tau Core currently predicts no physical source-side value of \(\epsilon_O\).
+For an ideal timing resolution \(\sigma_t\), inversion of
+Eq.~\eqref{eq:qor-rabi-scale} gives only the instrumental sensitivity floor
+\begin{equation}
+ x_{\min}^{(t)}=4\sin^2\!\left({\Omega\sigma_t\over4}\right)
+ \simeq{\Omega^2\sigma_t^2\over4},
+ \label{eq:qor-timing-sensitivity}
+\end{equation}
+not a predicted Tau effect size.
+Moreover, after A8 has identified \(\epsilon_O\) with the Uhlmann chord,
+Eq.~\eqref{eq:qor} is the standard Bures-angle quantum speed limit, not an
+additional delay.  The Tau-specific test is therefore the independently
+predicted equality between body-action curvature and quantum-state distance.
+Without that source-side prediction, the timing stage is a conditional
+consistency or falsification check, not a distinctive positive signal that
+can yet be compared numerically with decoherence.
+
+\subsection{Exact open step: physical selection}
+
+The internal chain ends at Eq.~\eqref{eq:qor}; the physical chain fails one
+step earlier.  In present notation,
+\begin{equation}
+  B_\tau^{\rm phys}+s_U
+  \quad\not\Longrightarrow_{\rm current\ derivation}\quad
+  \GMVP+\text{state/effect completion}+\text{QOR carrier}.
+  \label{eq:mvp-nonselection}
+\end{equation}
+
+\begin{proposition}[Upstream non-uniqueness within the admitted class]
+\label{prop:mvp-upstream-nonuniqueness}
+The current base--seed--body reduct does not uniquely select the frozen MVP
+completion.
+\end{proposition}
+
+\begin{proof}[Countermodel sketch]
+Keep the same stabilized body, quotient metric, Lorentzian infrared leaf, and
+classical coframe response.  On a three-dimensional internal Hilbert factor,
+choose two orthogonal density matrices with matched classical stress but
+different probabilities for a fixed separating effect.  Both are positive,
+normalized, and obey the same trace-form valuation, while the upstream body
+data do not select between them.  Independently, two positive observer
+completions may use different nonzero record separations without changing the
+same classical coframe leaf.  The resulting completions disagree on
+Eq.~\eqref{eq:born-leaf} or \(\epsilon_O\) while preserving the admitted
+upstream reduct and standard classical limit.  Hence identical upstream data
+have inequivalent terminal completions.  Unique physical selection is
+therefore not established, which is precisely the non-implication recorded in
+Eq.~\eqref{eq:mvp-nonselection}.
+\end{proof}
+
+This negative result is central.  It prevents the conditional completion from
+being advertised as a first-principles theory of Nature.  The remaining
+binary question is whether a deeper source law physically occupies the frozen
+completion.  That question may be answered by a source theorem or by the
+source-frozen test of Eq.~\eqref{eq:qor}, but not by adding another fitted
+terminal.
+
+\subsection{Finite source-signature selection theorem}
+
+The non-uniqueness result identifies what the current upstream reduct lacks,
+but it does not require an arbitrary list of additional terminal parameters.
+Suppose the enriched source supplies a finite-dimensional unital
+\(C^*\)-algebra
+\(\mathcal A_s\subseteq\operatorname{End}(\mathcal H_s)\), generated by its
+typed relation incidences after the true source-null quotient.  On its
+occupied recovery ideal let
+\begin{equation}
+ G_s=R_s^{\rm dedup}K_*^{-1}(R_s^{\rm dedup})^\dagger,
+ \qquad
+ \rho_s={G_s\over\operatorname{Tr}G_s},
+ \qquad
+ \omega_s(a)=\operatorname{Tr}(\rho_sa).
+ \label{eq:finite-source-state}
+\end{equation}
+If \(R_s^{\rm dedup}\) is onto that ideal, then \(G_s>0\) and \(\omega_s\)
+is faithful there.
+
+Let \(\mathbf z_s\) be the finite tuple of all source-owned distinguished
+coframe, gauge, matter, clock, effect, record, hold, A8, and ownership
+elements or CP maps.  In a source-orthonormal basis \(e_1,\ldots,e_d\), define
+the structured signature
+\begin{equation}
+ \Sigma_s^{\rm GNS}
+ =
+ \left(
+ c_{ab}{}^c,\ j_a{}^b,\ \omega_s(e_a),\
+ [z_\alpha]_a,\ [\mathcal I_\beta]_{ab}
+ \right),
+ \quad
+ e_ae_b=c_{ab}{}^ce_c,\quad e_a^*=j_a{}^be_b.
+ \label{eq:finite-gns-signature}
+\end{equation}
+Simultaneous basis changes are quotiented as typed source isometries.
+
+\begin{proposition}[Finite source-signature uniqueness]
+\label{prop:finite-source-signature-uniqueness}
+Two minimal cyclic finite completions carrying the same
+\(\Sigma_s^{\rm GNS}\) are unitarily equivalent by the unique unitary that
+maps one cyclic vector to the other.  The unitary intertwines every
+distinguished source element and CP map.
+\end{proposition}
+
+\begin{proof}
+Faithfulness gives
+\(\mathcal N_{\omega_s}=\{a:\omega_s(a^*a)=0\}=\{0\}\).
+The GNS space is therefore the completion of \(\mathcal A_s\) under
+\(\langle a,b\rangle_s=\omega_s(a^*b)\), with cyclic vector \([1]\) and
+left representation \(\pi_s(a)[b]=[ab]\).  For two minimal cyclic
+realizations define
+\[
+ U\pi_1(a)\Omega_1=\pi_2(a)\Omega_2.
+\]
+Equality of the source state makes \(U\) isometric; cyclic minimality makes
+its range dense and hence \(U\) unitary.  It intertwines the algebra
+representations, and Eq.~\eqref{eq:finite-gns-signature} then makes it
+intertwine every distinguished element and CP map.  Fixing the cyclic vector
+makes \(U\) unique on the cyclic span.
+\end{proof}
+
+This proposition supplies an exact positive selection criterion.  If the
+parent source law itself requires a completion \(C\) to realize one
+source-frozen signature \(\Sigma_s\), and the induced signature map
+\(\Phi_s\) is faithful modulo typed source isometry, then
+\begin{equation}
+ \mathcal D_s(C)=\|\Phi_s(C)-\Sigma_s\|^2
+ \label{eq:source-signature-defect}
+\end{equation}
+has exactly one zero completion class, provided an occupied zero exists and
+the source metric is positive definite after its declared null quotient.
+This proves uniqueness after complete source ownership; it does not prove
+that the current parent owns the required tuple.
+
+\begin{proposition}[Sector marginals do not select the joint source]
+\label{prop:marginal-joint-nogo}
+Complete faithful source states on the separate terminal sectors do not, in
+general, determine their joint source state.
+\end{proposition}
+
+\begin{proof}
+Take two two-level sectors with marginal states \(I_2/2\).  The faithful
+joint states
+\begin{equation}
+ \rho_0={I_4\over4},
+ \qquad
+ \rho_\varepsilon
+ ={1\over4}\left(I_4+\varepsilon\,\sigma_z\otimes\sigma_z\right),
+ \qquad 0<|\varepsilon|<1,
+ \label{eq:joint-marginal-countermodel}
+\end{equation}
+have eigenvalues \(1/4\) and \((1\pm\varepsilon)/4\), respectively.  Both
+partial traces equal \(I_2/2\), while
+\[
+ \operatorname{Tr}\!\left[
+ \rho_0(\sigma_z\otimes\sigma_z)\right]=0,
+ \qquad
+ \operatorname{Tr}\!\left[
+ \rho_\varepsilon(\sigma_z\otimes\sigma_z)\right]=\varepsilon.
+\]
+Thus identical complete marginals admit inequivalent faithful joint states.
+\end{proof}
+
+Consequently the gravity--time--radiation, quantum--matter, and gauge
+assemblies cannot be promoted to one physically selected source merely by
+placing their marginal packets side by side.  In finite dimension, a
+separating source signature must additionally fix cross-sector moments whose
+observables, together with all one-sector observables, span the self-adjoint
+joint source algebra modulo declared nulls.  This is a finite information-rank
+condition.  The current common action line and once-counted stress ledger
+establish compatibility and bookkeeping, but do not yet supply that
+full-rank cross-sector source family.
+
+\paragraph{No-creation boundary.}
+The GNS theorem represents every source-owned role but creates none.  If
+record occurrence, hold ownership, the finite A8 connector, or microscopic
+continuum ownership is absent from \((\mathcal A_s,\omega_s,\mathbf z_s)\),
+representation uniqueness cannot supply it.  Hence this section narrows the
+nature-selection blocker to one joint source-ownership and rank problem; it
+does not close that physical blocker.
+
+\subsection{Dimensional and claim-status audit}
+
+The principal quantities used by the completion have the following roles.
+
+\begin{center}
+\small
+\begin{tabular}{L{0.20\linewidth}L{0.26\linewidth}L{0.42\linewidth}}
+\toprule
+Quantity & Dimensions & Status\\
+\midrule
+\(M_*\), \(K_M\) & branch-dependent body coordinate and action Hessian &
+assumed stabilized; positive after true-null quotient\\
+\(G_{\rm SHR}\) & \(L^3M^{-1}T^{-2}\) in SI & not numerically predicted\\
+\(\Lambda_{\rm ren}\) & \(L^{-2}\) & renormalized infrared parameter; not predicted\\
+\(\mathcal A_X^{PC},\mathcal A_*\) & action & common units required\\
+\(x_O=\mathcal A_X^{PC}/\mathcal A_*\) & dimensionless &
+body-action record ratio; A8b requires \(0<x_O\leq2\) for distinct records\\
+\(D_Q\) & dimensionless angle & adopted Fubini--Study/Bures distinguishability metric\\
+\(\epsilon_O\) & dimensionless & source-frozen Gram chord; \(D_Q=2\arcsin(\epsilon_O/2)\)\\
+\(\Delta H\) & energy & protocol-frozen energy spread\\
+\(\delta t_{\min,O}\) & time & conditional single-record lower bound\\
+\(\eta_{\rm rec},\tau_{\rm hold}\) & dimensionless probability, time &
+predeclared single-shot error ceiling and record-persistence interval\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The resulting claim ledger is finite:
+\begin{center}
+\small
+\begin{tabular}{L{0.34\linewidth}L{0.48\linewidth}}
+\toprule
+Statement & Status in this paper\\
+\midrule
+Support-restricted common Uhlmann-amplitude bundle & derived once the occupied
+support and CP record instrument are supplied; physical occupation open\\
+A8b mixed-state realization and \(0<x_O\leq2\) range & derived consistency
+result; selection of \(V_{r(x_O)}\) remains an explicit completion assumption\\
+Record occurrence versus finite A8b & logically independent relative to the
+current source axioms; a physical QOR trial requires occurrence, A8b, and
+operational hold jointly\\
+Finite GNS source signature & unique minimal cyclic finite completion up to
+typed unitary equivalence once the complete occupied source tuple is supplied\\
+Separate terminal-sector marginals & insufficient to select the joint source;
+full-rank source-owned cross-sector moments remain open\\
+Once-counted effective and quadratic ledger & derived once microscopic
+ownership and renormalization prescription are supplied; full microscopic
+Tau action open\\
+Semiclassical Einstein/optics leaf & conditional standard-limit recovery\\
+Trace-form Born leaf on fixed or classical-dynamic geometry & conditional on
+the state/effect valuation and covariant-transport assumptions\\
+Born structure on a quantized metric & compatible only on a supplied
+constrained joint geometry--matter algebra; current construction open\\
+Compatibility of classical limits & conditional consistency result\\
+Pre-timing identity \(x_A=x_Q\) & Tau-specific conditional discriminator;
+physical source value and carrier occupation open\\
+QOR inequality \eqref{eq:qor} & standard Bures-angle quantum speed limit after
+A8b; downstream consistency/falsification stage, not an extra Tau delay\\
+Unique selection from the physical base and seed & exact finite criterion
+derived; current complete source tuple and cross-sector ownership not proved\\
+Numerical constants, UV completion, full Standard Model & open\\
+Empirical support for the Tau-specific common-source identification & open\\
+\bottomrule
+\end{tabular}
+\end{center}
 
 \section{Nontrivial representation condition}
 
@@ -809,7 +2205,7 @@ The minimal endpoint-blind record contains:
   \item a source object or source proxy;
   \item a declared readout family \(U_i\);
   \item a null and quotient policy;
-  \item a source-overlap decision for all channels used together;
+  \item a source-overlap decision for all terminal readouts used together;
   \item a freeze artifact or equivalent timestamped declaration;
   \item forbidden endpoint fields;
   \item controls and failure conditions.
@@ -883,21 +2279,8 @@ relative to \(U_{\rm sum}\) is the loss of ordered information.  The hidden
 component relative to \(U_{\rm seq}\) includes \(c\).  Again, hiddenness is
 readout-relative.
 
-This toy model is deliberately too simple to be physics.  It only shows that
-the sentence ``time is a readout'' can be made mathematically literal without
-introducing backward causation or a second physical clock.
-
-A slightly richer finite time-readout toy, developed in the later Tau Core
-time-readout module, replaces the indexed vector by a small parent morphology
-graph.  Candidate event orders can then be scored both by a local sequential
-path cost and by a global parent-consistency cost.  In that toy the order that
-looks best as a local time story need not be the same as the order that best
-preserves parent affinities.  This strengthens only the foundation-language
-point: order-sensitive narratives need not automatically be read as
-future-to-past influence.  They can be treated, at toy level, as different
-time-order readouts of one globally constrained parent record.  No physical
-clock theory, retrocausality, Born rule, or quantum dynamics is derived from
-this observation.
+This nonphysical toy only makes ``time is a readout'' mathematically literal
+without backward causation or a second clock (Fig.~\ref{fig:effective-time}).
 
 \begin{figure}[t]
   \centering
@@ -924,6 +2307,8 @@ this observation.
   \label{fig:readout-atlas}
 \end{figure}
 
+Figure~\ref{fig:readout-atlas} locates the toy among the typed readout families.
+
 \section{Seven foundation postulates}
 
 The postulates below are not proved in this paper.  They define the candidate
@@ -934,12 +2319,15 @@ There exists a parent-level structure \(\T\) that is not, at the foundation
 level, ordinary spacetime evolution.
 \end{postulate}
 
-\begin{postulate}[Seed-response]
+\begin{postulate}[Seed--body response]
 Physical configurations are represented at the parent level by endpoint-blind
-responses to seeds:
+responses to seeds, stabilized as a morphology-conditioned body:
 \[
-  s \in \Ssrc, \qquad r=\Rmap(s)\in \RTspace.
+  s \in \Ssrc, \qquad r=\Rmap(s)\in \RTspace,
+  \qquad r\longrightarrow\Mta.
 \]
+The generative direction is seed/base to body; the body is not constructed
+from a terminal residual or observer readout.
 \end{postulate}
 
 \begin{postulate}[Endpoint blindness]
@@ -951,10 +2339,12 @@ is later asked to explain.
 \begin{postulate}[Readout emergence]
 Observed physical descriptions are sector readouts:
 \[
-  O_i = U_i(\Rmap(s)).
+  O_i = U_i^{\Mta}(\Rmap(s)).
 \]
 Time, spacetime, quantum access, gravity, and mass/source descriptions are
-readout candidates rather than primitive categories.
+readout candidates rather than primitive categories.  The readout mediates
+the complete physical description, not merely a discrepancy relative to a
+chosen standard model.
 \end{postulate}
 
 \begin{postulate}[Effective readout variation]
@@ -984,160 +2374,65 @@ tests are supplied.
 
 \section{The claim ladder}
 
-A central discipline of Tau Core is to separate claim levels.  The framework
-contains definitions, postulates, conjectures, conditional theorems, toy
-models, numerical evidence, and empirical validation.  These are not
-interchangeable.
+Tau Core separates definitions, postulates, conjectures, conditional theorems,
+toy models, numerical evidence, and validation; they are not interchangeable
+(Fig.~\ref{fig:claim-ladder}).
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_claim_ladder.pdf}
   \caption{The claim ladder for Foundation Paper I.  The present manuscript
-  stops at definitions, postulates, conditional implications, and toy
-  mechanisms.  It does not claim empirical validation.}
+  reaches conditional standard-limit results and one frozen discriminator,
+  but not nature-level source selection or empirical validation.}
   \label{fig:claim-ladder}
 \end{figure}
 
 The most common failure mode for broad foundation programs is promotion by
 language: a metaphor becomes a mechanism, a mechanism becomes evidence, and
 evidence becomes validation.  This paper avoids that promotion.  For example,
-saying that observer-time is a readout does not derive a physical clock.
-Saying that dark-sector language may be a hidden-defect language does not
-remove dark matter.  Saying that quantum state may be a readout does not
-derive Hilbert space.
+the conditional clock and Born constructions do not prove their physical
+source occupation.  Saying that dark-sector language may be a hidden-defect
+language does not remove dark matter or dark energy.
 
-A later Tau Core methodology note, the Tau Core Readout Eligibility Protocol
-v0.1 (TC-REP-0.1), packages this discipline as a pre-formal
-readout-eligibility audit.  It asks whether a
-candidate branch excludes the target ontology from its parent assumptions,
-records primitive debt, passes through readout mediation, extracts a
-constraint, lands mathematically and operationally, separates from rivals, and
-preserves explicit failure modes.  It is not a new mathematics or a proof by
-notation; it is a claim-boundary checklist for deciding whether a branch is
-more than renamed known physics.
-The protocol also admits a compact symbolic chain for audit cards, but this
-paper deliberately uses the prose checklist rather than treating that chain as
-derivation notation.
-
-Figure~\ref{fig:status-matrix} gives the same discipline in a more compact
-form.  Green entries indicate what this paper supplies as framework content.
-Orange and red entries indicate explicit non-claims and blockers.  The point
-is not to make the paper look complete; it is to make incompleteness visible.
+Figure~\ref{fig:status-matrix} gives the same discipline in compact form.
+Green entries indicate definitions or conditional results supplied here;
+orange and red entries indicate explicit non-claims and blockers.  The point
+is not to make the paper look complete, but to make incompleteness visible.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.95\linewidth]{figures/fig_status_matrix.pdf}
   \caption{Claim-status matrix for Foundation Paper I.  The paper defines and
-  postulates a parent-response/readout architecture and supplies toy
-  mechanisms for effective readout-time and hidden defects.  Orange and red
-  entries mark the non-claims: no empirical validation and no GR/QM/QFT or
-  parent-action derivation.}
+  postulates a parent/body/readout architecture, adopts one conditional
+  completion, recovers standard leaves under explicit assumptions, and states
+  the QOR discriminator.  Nature-level selection and empirical validation
+  remain open.}
   \label{fig:status-matrix}
 \end{figure}
 
-\section{A finite toy model}
+\section{A compact finite toy witness}
 
-The following model is intentionally small.  Its role is not to reproduce
-physics.  Its role is to show the readout logic without infinite formal
-machinery.
+This deliberately nonphysical witness records only the quotient logic.  Let
+\(\RTspace=\mathbb R^3\), \(r=(a,b,c)\), and
+\[
+ U_A(r)=(a,b),\quad U_B(r)=(a,c),\qquad
+ J_A(x,y)=(x,y,0),\quad J_B(x,z)=(x,0,z).
+\]
+In this linear chart,
+\[
+ h_A(r)=(0,0,-c),\qquad h_B(r)=(0,-b,0).
+\]
+Thus a coordinate hidden under one readout can be visible under another.  For
+\(U_A\), the quotient-safe null relation fixes \(a,b\) and ignores \(c\).
+Changing the readout afterwards to
+\(U_A^{\rm bad}(a,b,c)=(a,b+\alpha c)\) while retaining that null relation is
+inconsistent: equivalent representatives would yield different observables.
+Likewise, a source rule \(c=f_{\rm src}(a,b;\theta)\) is admissible only when
+\(f_{\rm src}\) and \(\theta\) are frozen before endpoint inspection.
 
-Let the parent response space be
-\[
-  \RTspace = \mathbb R^3,
-  \qquad
-  r=(a,b,c).
-\]
-Let two readouts be
-\[
-  U_A(a,b,c)=(a,b),
-  \qquad
-  U_B(a,b,c)=(a,c).
-\]
-These readouts forget different coordinates.  Choose canonical relifts
-\[
-  J_A(x,y)=(x,y,0),
-  \qquad
-  J_B(x,z)=(x,0,z).
-\]
-Since this toy response space is linear, \(\RTspace=\mathbb R^3\), the
-obstruction can be represented by coordinate differences.  This is a special
-toy-chart convenience, not the general definition of \(\omega_i\).
-Then the readout defects are
-\[
-  h_A(r)=J_AU_A(r)-r=(0,0,-c),
-\]
-and
-\[
-  h_B(r)=J_BU_B(r)-r=(0,-b,0).
-\]
-The same parent response therefore has different hidden components under
-different readouts.  There is no contradiction: each readout has a different
-null policy.
-
-\begin{proposition}[Readout-relative hidden component]
-In the toy model above, a component hidden under readout \(U_A\) can be visible
-under readout \(U_B\), and conversely.
-\end{proposition}
-
-\begin{proof}
-The coordinate \(c\) is absent from \(U_A(a,b,c)\) and appears as the defect
-\((0,0,-c)\) under the canonical relift \(J_A\).  The same coordinate is
-present in \(U_B(a,b,c)\).  Similarly, \(b\) is visible under \(U_A\) and hidden
-under \(U_B\).  Thus hiddenness is readout-relative.
-\end{proof}
-
-The lesson is small but important.  A hidden component is not necessarily a new
-substance.  It may be a component that a chosen readout cannot relift.  Whether
-this idea has anything to do with dark sectors, quantum measurement, or
-cosmology is a later physical question.  The toy model only licenses the
-logical grammar.  In particular, it does not force a dark-sector mechanism,
-quantum mechanism, or gravitational correction.
-
-\paragraph{Quotient-safety in the toy model.}
-For \(U_A\), the natural null relation is
-\[
-  (a,b,c)\,N_A\,(a',b',c')
-  \quad\Longleftrightarrow\quad
-  a=a'\ \mathrm{and}\ b=b'.
-\]
-Then \(U_A\) is quotient-safe, because \(rN_A r'\) implies
-\[
-  U_A(r)=U_A(r').
-\]
-The coordinate \(c\) is invisible to \(U_A\), but it is not therefore a new
-force or a new substance.  It is simply a null coordinate for that readout.
-If one later modifies the same readout by adding
-\[
-  U_A^{\rm bad}(a,b,c)=(a,b+\alpha c),
-\]
-while keeping \(N_A\) as the declared null policy, quotient-safety fails:
-two \(N_A\)-equivalent parent representatives can now produce different
-observables.  A branch that wants to make \(c\) physically visible must change
-the readout and null policy before endpoint inspection; it cannot silently use
-a null coordinate as an endpoint-saving correction.
-
-\paragraph{Source-freeze in the toy model.}
-Suppose a branch proposes a source rule
-\[
-  s=(a,b,c),\qquad c=f_{\rm src}(a,b;\theta),
-\]
-where \(f_{\rm src}\) and \(\theta\) are fixed from source-side information
-before any endpoint residual is inspected.  Then \(U_A(s)\), \(U_B(s)\), and
-the corresponding defects are legitimate toy outputs of the frozen branch.
-If instead \(f_{\rm src}\), \(\theta\), or the decision to use \(c\) is chosen
-because \(U_A\) missed a target value, the branch has leaked endpoint
-information into the source definition.  It may still be a phenomenological
-fit, but it is no longer a Tau Core source-frozen derivation.
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.95\linewidth]{figures/fig_hidden_defect.pdf}
-  \caption{Readout-relative hidden defects.  Two readouts of the same parent
-  response can have different relift failures.  A hidden component is not
-  automatically a new force or substance; it is first an incompleteness record
-  relative to a declared readout.}
-  \label{fig:hidden-defect}
-\end{figure}
+The witness proves no dark-sector, quantum, or gravitational mechanism.  It
+only shows that hiddenness is readout-relative and that null policies and
+source rules cannot be changed to rescue an endpoint.
 
 \section{Morphological body versus projected morphology}
 
@@ -1151,8 +2446,8 @@ readouts.  A galaxy image, a rotation curve, a cosmic-web tensor, a lensing
 map, or a quantum measurement context can be a projected handle on the body,
 but not the whole body.  This distinction became necessary because a single 4D
 appearance can underdetermine the readout-relevant source.  For example, a
-present projected shape may not contain enough information about history,
-observer/path geometry, closure class, or null structure.
+present projected shape may not contain enough information about global
+incidence/order, observer/path geometry, closure class, or null structure.
 
 For Foundation Paper I, the minimal role of \(\Mta\) is:
 \begin{equation}
@@ -1166,7 +2461,7 @@ physically derived.  It says that readout selection is not source-free.
 
 For a concrete branch, \(\Mta\) must also be admissible and frozen.  This means
 that the projected handles used to select \(\Mta\), the allowed family of
-readout kernels, and any source-overlap decisions between channels must be
+readout kernels, and any source-overlap decisions between terminal readouts must be
 declared before endpoint scoring.  If \(\Mta\) is changed after seeing the
 endpoint residual, the branch is phenomenological-only unless an independent
 source review reopens the selection.
@@ -1189,11 +2484,12 @@ parent side.  The schematic form is
 where \(S\) is a sector, \(\mathcal O_S\) is observer-interface data, and
 \(\gamma_S\) denotes path or section data relevant to that sector.
 
-Equation~\eqref{eq:observer-time} is not a derived clock theory.  It is a
-discipline rule.  It says that an observer's time belongs to the observer's
-readout bundle.  A later physical theory must explain when
-\(t_{\rm obs}^{S}\) reduces to proper time, when it admits corrections, and
-how those corrections can be measured without circularity.
+Equation~\eqref{eq:observer-time} is the weak-spine discipline rule.  The MVP
+completion adds an oriented clock descent and the conditional resolution law
+\eqref{eq:qor}; it still does not derive physical occupation of that clock
+carrier.  Proper-time recovery, any non-relativistic observer correction, and
+the operational measurement of such a correction must be checked without
+circularity in the relevant branch.
 
 This also clarifies why future-directed or history-like terms in Tau Core
 should not be read as backward causation.  They are components of a deeper
@@ -1203,73 +2499,37 @@ observed ordering is created inside the readout.
 
 \section{Quantum readout}
 
-The quantum branch is one of the natural targets for the readout language, but
-it is also one of the most dangerous places to overclaim.  A minimal quantum
-readout might have the form
-\begin{equation}
-  q = U_q(\Rmap(s)),
-\end{equation}
-where \(q\) is an access-state or probability-assignment record.  But this is
-far below deriving Hilbert space or the Born rule.
+The weak-spine statement is simply
+\(q=U_q^{\Mta}(\Rmap(s))\), where \(q\) is an access-state or
+probability-assignment record.  That notation alone does not imply Hilbert
+space, interference, or the Born rule.  Existing reconstruction programs show
+how much operational, convex, symmetry, and composition structure is normally
+required \cite{Hardy2001,Chiribella2011,MasanesMueller2011,BarnumWilce2014}.
 
-Existing reconstruction programs show that quantum theory can be approached
-from information-theoretic or operational axioms.  Examples include
-Hardy-style, purification-style, and local/reversible reconstruction routes
-\cite{Hardy2001,Chiribella2011,MasanesMueller2011}.  Generalized
-probabilistic and Jordan-algebraic routes clarify how much structure is needed
-before Hilbert-space quantum theory is forced \cite{BarnumWilce2014}.  Tau
-Core can use these results as boundary discipline.  It must not claim that a
-finite contextual readout grammar already implies complex Hilbert space.
+The MVP branch makes a finite stronger commitment: it adopts the positive
+state/effect completion A6 and therefore obtains the trace rule
+\eqref{eq:born-leaf}.  The mathematical implication from the valuation
+assumptions to trace form is a conditional representation result.  What is not
+derived is the physical Tau-parent selection of those valuation assumptions.
+This distinction is essential: information loss or finite readout capacity by
+itself gives a coarse graining, not specifically complex quantum mechanics.
 
-The current safe statement is:
-\begin{quote}
-If Tau Core supplies an ordered convex access-state space, separating effects,
-an appropriate self-dualizing pairing, continuous homogeneous reversible
-symmetry, composition rigidity, and trace uniqueness, then a Born/Hilbert
-representation becomes a conditional target.
-\end{quote}
-The list is included to orient the reader, not to smuggle in quantum mechanics.
-Convex states and separating effects encode preparation and measurement
-separation; symmetry, composition, and trace conditions are the kinds of
-regularity assumptions that distinguish Hilbert-like quantum theory from a
-generic probability calculus.  Tau Core would still have to derive or
-independently justify any such assumptions in a later quantum branch.
-The conditions listed in this sentence are not postulates of Foundation Paper
-I.  They are examples of the additional reconstruction structure that a later
-quantum branch would have to supply or replace.
-
-One possible future worked branch is a finite phase-gluing toy model.  In such
-a model one would specify selected overlaps, transition phases \(\Gamma_{ij}\),
-and a cocycle-like consistency condition
-\[
-  \Gamma_{ij}+\Gamma_{jk}+\Gamma_{ki}=0\quad \mathrm{mod}\;2\pi
-\]
-on triples before claiming a global phase chart.  This resembles the ordinary
-mathematics of gluing local phase data; it is not a Tau Core proof.  Only after
-the finite domain, overlap cover, null policy, trace/effect pairing, and
-source-freeze rule are stated could such a toy branch be assessed.  Foundation
-Paper I therefore does not claim a Hilbert/Born recovery.  It only identifies
-what a later quantum branch would have to prove.
-
-In this limited sense, the quantum readout is not a sealed sector.  A
-parent-side distinction with access, phase, contextual, or noncommuting
-structure may have quantum-facing and non-quantum-facing projections.  If such
-a distinction survives the null quotient of a gravity, mass/source,
-observer-time, or cosmological readout, a quantum-like signature could appear
-inside that sector's residual structure.  This is not the claim that quantum
-mechanics acts directly on every other readout.  It is the weaker claim that
-several readouts may expose different aspects of the same parent-side
-structure, and that any shared use must be controlled by source-overlap and
-double-counting rules.
-This is a conditional reconstruction route, not a derivation.  The present
-paper includes quantum readout only to show where it sits in the common
-architecture.
+Quantum and gravity are coupled in the MVP because
+\(\langle T_{\mu\nu}^{q}\rangle_{\rm ren}\) is the metric derivative of the
+same matter functional that defines quantum probabilities.  The metric may be
+kept classical at the semiclassical leaf, while its second variation defines a
+stress-noise kernel and a stochastic-gravity refinement.  The paper does not
+claim a nonperturbative metric-quantization theorem, a unique tensor-product
+structure, interacting ultraviolet QFT, or a complete measurement ontology.
+It claims the narrower common-functional and compatible-limit results of
+Sec.~\ref{sec:mvp}.
 
 \section{Gravity and dark-sector readouts}
 
-The gravity branch motivates the hidden-defect vocabulary.  A gravitational
-readout may fail to relift all source-relevant structure into a Newtonian,
-relativistic, or closure-compatible description.  In abstract notation:
+The weak gravity branch motivates the hidden-defect vocabulary.  A
+gravitational readout may fail to relift all source-relevant structure into a
+Newtonian, relativistic, or closure-compatible description.  In abstract
+notation:
 \begin{equation}
   \omega_g(r)=0
   \quad\Longleftrightarrow\quad
@@ -1278,20 +2538,25 @@ relativistic, or closure-compatible description.  In abstract notation:
 \end{equation}
 If \(\omega_g(r)\neq0\) and the obstruction record survives the declared null
 quotient with a measurable 4D readout, it becomes a candidate residual
-channel.  A coordinate difference
+diagnostic.  A coordinate difference
 \[
   h_g=J_gU_g(r)-r
 \]
 may be used only after choosing a linearized gravitational chart in which the
-subtraction is meaningful.  This is still not a dark-matter replacement.  It
-is a source of possible residual structure.
+subtraction is meaningful.  This is not the basis of the MVP gravitational
+law: the full gravitational readout is instead generated by the common
+functional and has the conditional Einstein leaf
+\eqref{eq:semiclassical-einstein}.  Empirical residuals are downstream model
+comparisons and must not be used to choose the body or completion.
 
-The same discipline applies to dark-sector language.  Tau Core may eventually
-ask whether some dark-sector phenomena are better understood as
-readout-relative hidden defects.  Foundation Paper I does not answer that
-question.  It only defines the level at which the question becomes meaningful.
-To make a dark-sector claim, one would need source-frozen kernels, conventional
-baseline comparisons, covariance/systematics treatment, and failure criteria.
+The same discipline applies to dark-sector language.  Dark-matter- or
+dark-energy-like inference could, in principle, contain body morphology,
+observer descent, omitted conventional sources, calibration, or genuinely new
+degrees of freedom.  Foundation Paper I does not choose among them.  To make a
+dark-sector claim one would need a source-frozen forward construction,
+conventional baseline comparisons, covariance and systematics treatment, and
+an outcome that distinguishes these alternatives.  The recovery of Einstein
+gravity does not, by itself, explain the dark sector.
 
 \section{Cosmological readout}
 
@@ -1308,33 +2573,12 @@ where \(\Mta^U\) is a universe-scale morphological body, \(\gamma_{\rm path}\)
 is path/environment data, and \(\mathcal O_{\rm obs}\) is observer-interface
 data.
 
-Again, the notation is not a result.  It is a warning against compressing all
-cosmological tensions into a single function of the scale factor.  A real
-cosmological Tau Core branch would need multi-probe covariance, source-native
-void/web/path/time channels, and a clear relation to \(\Lambda\)CDM limits.
-
-\section{Relationship to the existing paper sequence}
-
-The Arabic-numbered Tau Core papers are not required for the logic of this
-foundation paper.  They are narrower, operational packages.  Some examine
-galaxy residuals, some define source-frozen morphology or projection kernels,
-some formulate dark-sector decision protocols, and some define cosmological or
-web-witness audit ladders.  They are evidence-seeking packages, not proofs of
-the parent ontology.  Unless and until a given paper is public or otherwise
-archived, it should be read here only as internal provenance for terminology,
-not as a cited result.
-
-Foundation Paper I has the opposite role.  It defines the vocabulary that
-those operational papers can later use.  It should not borrow their numerical
-outcomes as proof.  A positive empirical audit in a later branch can motivate
-the framework, but it does not validate the parent theory unless the path from
-parent source to readout rule is itself frozen, non-circular, and tested.
-
-This separation is important for scientific criticism.  A critic should be
-able to reject a galaxy-kernel result without thereby rejecting the formal
-readout architecture.  Conversely, a critic can reject the foundation
-architecture while still accepting that a particular empirical paper performed
-a reproducible audit.
+Again, the notation is not a cosmological result.  It is a warning against
+compressing all cosmological tensions into a single function of the scale
+factor.  A real cosmological Tau Core branch would need multi-probe covariance,
+source-native void/web/path/time descriptors, and a clear relation to
+\(\Lambda\)CDM limits.  Neither \(\Lambda_{\rm ren}\) in
+Eq.~\eqref{eq:semiclassical-einstein} nor its numerical value is derived here.
 
 \section{Position relative to MOND and dark-matter programs}
 
@@ -1375,7 +2619,7 @@ would have to ask a more decomposed question:
   \end{aligned}
 \]
 where the equality is schematic, not a model equation.  The scientific task is
-to determine which components are present in which readout channel, and which
+to determine which components are present in which terminal readout, and which
 component, if any, behaves like collisionless matter.
 
 Thus the intended public framing is:
@@ -1412,7 +2656,33 @@ import shape dynamics as a proof.
 Quantum reconstruction programs provide a model for turning operational
 principles into formal structure.  Tau Core's quantum branch must meet a
 similar standard.  It cannot derive Hilbert space merely by naming a quantum
-readout.
+readout.  The adopted effect valuation in Sec.~\ref{sec:mvp-quantum} is an
+explicit conditional completion of that gap, not a derivation from the weak
+Tau spine.
+
+\paragraph{Semiclassical and stochastic gravity.}
+The coupled equation \eqref{eq:semiclassical-einstein} belongs to the standard
+semiclassical-gravity family, and its metric second variation is naturally
+related to stress fluctuations and stochastic gravity
+\cite{HuVerdaguer2008}.  Tau Core does not claim those equations as new.  Its
+candidate contribution is the body-first common ownership of gravity, quantum
+effects, and observer records.
+
+\paragraph{Locally covariant quantum field theory.}
+Local covariance, microlocal/Hadamard regularity, and renormalized local
+observables provide the appropriate standard for a QFT readout on curved
+spacetime \cite{BrunettiFredenhagenVerch2003,HollandsWald2001,HollandsWald2002}.
+The MVP assumes this infrared structure.  It does not reconstruct the full
+local net or interacting theory from parent morphology.
+
+\paragraph{Quantum speed limits.}
+The QOR inequality has the same inverse-energy-spread dimension as
+Mandelstam--Tamm and geometric quantum-speed-limit relations
+\cite{MandelstamTamm1945,AnandanAharonov1990,Taddei2013}.  The proposed
+discriminator is therefore not the inverse-energy bound or the standard
+Gram-chord/Bures-angle conversion.  It is the source-frozen physical
+identification of the morphological factor \(\epsilon_O\) with the occupied
+observer carrier's Uhlmann-amplitude distance.
 
 \paragraph{Holography and error correction.}
 Holographic quantum error correction shows that bulk-like structure can be
@@ -1435,15 +2705,13 @@ into bounded tasks.  Examples include:
   retuning them after endpoint inspection.
 \end{enumerate}
 
-The next foundation-stage milestone should be narrower than another general
-framework layer.  A single worked branch is the appropriate target:
-observer-time, finite readout-time, or another comparably small branch.  Such a
-branch must choose one mathematical type for \(\Rmap\), state why that type is
-admissible for the branch, recover at least one known limit, and freeze at least
-one exclusion rule before any endpoint inspection.  The purpose is not to solve
-dark matter, quantum mechanics, general relativity, and cosmology at once, but
-to demonstrate that the readout package can function as a disciplined calculus
-in one minimal case.
+The framework has now passed the earlier milestone of constructing one worked
+completion: Sec.~\ref{sec:mvp} fixes a variational response type, recovers two
+standard leaves, and freezes one discriminator.  The next milestone is not
+another general layer or another terminal.  It is to decide the physical
+selection question in Eq.~\eqref{eq:mvp-nonselection}, preferably by deriving
+the occupied completion from a deeper source law and independently by testing
+Eq.~\eqref{eq:qor}.
 
 The weakest useful form of progress is a toy model that exposes a blocker.  A
 failed theorem can be valuable if it shows which extra principle is needed.
@@ -1452,8 +2720,8 @@ exposed-face duality; finite contextual grammars may not force Hilbert space;
 and source stability may not force a unique source basis.  Such negative
 results help keep the framework honest.
 
-The phrase ``parent response law'' is intentionally not fixed to one
-mathematical type in this foundation paper.  Candidate types include:
+The weak Tau spine still permits several mathematical types for a parent
+response law.  Candidate types include:
 \[
 \begin{array}{ll}
 \text{variational law} & \Rmap \text{ selected by an action or extremal principle},\\
@@ -1464,18 +2732,19 @@ mathematical type in this foundation paper.  Candidate types include:
 \text{functorial rule} & \Rmap \text{ induced by structure-preserving source maps}.
 \end{array}
 \]
-No choice among these is made here.  A later branch must declare which type it
-uses before claiming a derived physical law.
+The MVP makes one finite choice---an ordered variational completion---without
+claiming that all Tau branches must use it.  Any alternative branch must still
+declare its type before claiming a physical law.
 
-This is the largest remaining weakness of the foundation layer.  The abstract
-symbol \(\Rmap\) is useful only as bookkeeping until at least one branch fixes
-its mathematical type and carries a chain
+The largest remaining weakness is therefore not the absence of every worked
+chain.  It is the missing implication from the physical source to the chosen
+completion.  The relevant standard is now
 \[
   \text{source}\to\Rmap\to U_i^{\Mta}
   \to \text{known limit or frozen falsifiable consequence}
 \]
-without endpoint leakage.  Foundation Paper I intentionally stops before that
-choice; a subsequent worked branch cannot.
+without endpoint leakage, together with a proof that the physical source
+actually occupies the response law used in that chain.
 
 \section{What would count as failure}
 
@@ -1497,7 +2766,7 @@ persist after reasonable attempts to repair definitions:
   amplitude rule is selected using the residual it later explains, the result
   is a fit, not a Tau Core derivation.
   \item \textbf{Uncontrolled rescue.}  If every failure is repaired by adding
-  an unconstrained projection channel after endpoint inspection, the framework
+  an unconstrained terminal after endpoint inspection, the framework
   loses scientific content.
 \end{enumerate}
 
@@ -1576,11 +2845,54 @@ readout.  The distinction matters only if other readouts impose additional
 source-frozen constraints.  If they do not, Tau Core collapses back into
 ordinary effective description.
 
-\paragraph{Objection 5: no physical law is derived.}
-Correct.  Foundation Paper I does not derive a physical law.  It defines the
-objects a later derivation must use.  A future physical law would require a
-parent action or closure principle, a domain, a null policy, variation support,
-units, calibration, and known limits.
+\paragraph{Objection 5: the displayed physical laws are assumed rather than
+derived from the Tau parent.}
+Partly correct.  Within the frozen completion, the terminal equations follow
+from one variational packet and their compatibility is nontrivial.  But the
+completion contains explicit Lorentzian, state/effect, and observer-carrier
+assumptions, and the physical base--seed source has not been proved to select
+them.  The manuscript therefore claims conditional recovery, not a
+first-principles derivation of GR or quantum theory from the minimal Tau base.
+
+\paragraph{Objection 6: the QOR inequality is only a quantum speed limit.}
+The \(1/\Delta H\) dependence is indeed not new.  The only proposed new
+content is the independently reconstructed same-source identity
+\(x_A=x_Q\), equivalently the identification of the body ratio with the
+Uhlmann chord.  The conversion from that chord to the Fubini--Study/Bures
+record angle is standard and is proved inside the common-Gram completion, not
+by positivity of the weak Tau spine alone.  The finite carrier prototype
+closes the mathematical and uncertainty bookkeeping but does not yet supply a
+physically occupied common-Gram carrier.  If \(\epsilon_O\) is fitted from the timing
+endpoint, the prediction is circular.  A stable one-shot record below
+the bound falsifies the completion; absence of a threshold ordering is
+decisive only when bound saturation or equal slack has been established
+independently.
+
+\paragraph{Objection 7: the common functional may hide double counting.}
+Equations~\eqref{eq:mvp-microscopic-ledger}--\eqref{eq:mvp-counterterm-relocation}
+now supply the term-by-term effective ledger.  Retained body stress is varied
+only from \(S_{\rm body}^{\rm ret}\); integrated quantum/apparatus stress and
+effect responses come only from \(W_O^{\rm ren}\); local counterterms occupy
+one side of the renormalization convention; and Green responses are inverse
+second variations, not extra summands.  Mixed blocks are handled by the exact
+Schur reduction \eqref{eq:mvp-schur-ledger}.  This closes the effective and
+quadratic bookkeeping objection once microscopic ownership is supplied.  It
+does not derive that ownership partition or a full nonlinear microscopic Tau
+action.
+
+\paragraph{Objection 8: fluctuating geometry may invalidate the Born leaf.}
+Correct.  Equation~\eqref{eq:born-leaf} is established only on the fixed
+descended metric under A6.  If effects or the carrier Hilbert structure vary
+with unresolved body/metric fluctuations, positivity, completeness, and
+noncontextual additivity must be proved on the joint algebra.  The present
+paper supplies no such nonperturbative theorem.
+
+\paragraph{Objection 9: semiclassical recovery may fail in extreme regimes.}
+The displayed gravity leaf does not establish stability through black-hole
+evaporation, Page-curve regimes, topology change, or large stress
+fluctuations.  Such failures would delimit or reject this MVP completion; they
+cannot be counted as evidence for a hidden Tau correction without a separate
+source-frozen derivation.
 
 \section{Structural predictions rather than anomaly corrections}
 
@@ -1614,15 +2926,19 @@ Examples of the relevant kind of constraint include:
   \item a rank, connectivity, or frame-gluing condition that must hold before a
   Hilbert-like or metric-like representation is allowed;
   \item a frozen source rule that predicts a missing, forbidden, or correlated
-  feature in a holdout channel.
+  feature in a holdout readout.
 \end{itemize}
 
-Such a prediction would be Tau Core-specific only if it is fixed from the
-parent source, morphological body, null policy, and readout compatibility
-rules before endpoint inspection.  If the same structure is chosen because a
-known baseline leaves a residual, it is an anomaly-motivated correction rather
-than a parent-morphological prediction.  This paper supplies the criterion; it
-does not yet supply a validated physical example.
+Such a prediction is Tau Core-specific only if it is fixed from the parent
+source, morphological body, null policy, and readout compatibility rules
+before endpoint inspection.  If the same structure is chosen because a known
+baseline leaves a residual, it is an anomaly-motivated correction rather than
+a parent-morphological prediction.  Equation~\eqref{eq:qor} is the first
+conditional example in this paper: its morphology-dependent factor is frozen
+upstream, while its role in quantum-state record distance is derived from the
+explicit common-Gram completion identity.  It is not yet a validated physical
+example because common-Gram carrier occupation, laboratory realization, and the
+empirical test remain open.
 
 \paragraph{A concrete exclusion at framework level.}
 The framework does forbid one nontrivial modeling move.  Suppose two proposed
@@ -1650,11 +2966,15 @@ should satisfy at least the following checklist.
 Requirement & Meaning\\
 \midrule
 Source declaration & The parent-side source or proxy is declared before endpoint scoring.\\
+Body-first order & The stabilized body is solved and frozen before terminal variation.\\
+Common ownership & Shared stresses, currents, and probes are varied from one once-counted functional.\\
 Readout codomain & The observable space \(\Obs_i\) is specified.\\
 Null policy & Gauge, redundancy, and protected-null directions are declared.\\
 Quotient safety & Equivalent parent representatives give the same readout.\\
 Relift policy & The branch states whether and how \(J_i\) is defined.\\
 Known limit & The readout recovers a standard limit where required.\\
+Dimensional audit & Common units and dimensionless ratios are identified without hidden calibration.\\
+New discriminator & At least one upstream-frozen consequence could differ from standard recovery alone.\\
 Failure rule & Failed controls cause demotion, not post-hoc retuning.\\
 \bottomrule
 \end{tabular}
@@ -1664,52 +2984,50 @@ This checklist is intentionally weaker than a full physical theory.  It is
 also stronger than a metaphor.  A branch that cannot fill these rows should not
 be advertised as a physical result.
 
-\section{The Roman foundation sequence}
+\section{Next decisive work}
 
-This paper is the first member of a separate Roman-numbered foundation series.
-It should not be confused with the Arabic-numbered empirical/protocol sequence.
-The intended division is:
+The next foundation-stage calculation should not add another general
+framework layer or another unconstrained terminal.  It should close or sharply
+reject the open first arrow in
 \[
-\begin{array}{ll}
-\text{Paper 1--18} & \text{bounded empirical or protocol packages},\\
-\text{Foundation Paper I, II, ...} & \text{conceptual and mathematical foundation papers}.
-\end{array}
+  B_\tau^{\rm phys}+s_U
+  \longrightarrow
+  \GMVP+\text{state/effect completion}+\text{observer carrier}.
 \]
+This requires either a source theorem selecting the full occupied completion
+or a source-frozen test that rejects it.  The source theorem now has a finite
+target: a source-owned finite algebra/state/role packet whose mixed
+cross-sector moments have full joint information rank, including occupation
+of the support/record instrument in A8a-OCC, selection of the same-action
+connector \(V_{r(x_O)}\) in A8b, affiliation of the global Dirac operator
+with the recovery algebra as in
+Proposition~\ref{prop:recovery-dirac-affiliation}, and one microscopic ownership partition whose
+integration yields Eq.~\eqref{eq:mvp-functional}.
+Proposition~\ref{prop:finite-source-signature-uniqueness} would then make the finite
+completion unique automatically.  Deeper quantum composition,
+interacting QFT, dark-sector interpretation, cosmological realization, and
+particle-sector structure remain downstream tasks; none is imported here as
+support for the present completion.
 
-The proposed next papers are:
-\begin{itemize}
-  \item \textbf{Foundation Paper I}: atemporal morphological readout;
-  framework only, with no physical validation claim.
-  \item \textbf{Foundation Paper II: A Finite Readout-Time Branch}: a worked
-  branch from source declaration to effective readout-time ordering.  It should
-  fix the mathematical type of \(\Rmap\), derive a proper-time or
-  readout-time known limit in a minimal case, and predeclare at least one
-  exclusion such as same-source double counting.
-  \item \textbf{Foundation Paper III}: quantum readout; no unconditional
-  Hilbert, Born-rule, or QFT derivation claim.
-  \item \textbf{Foundation Paper IV}: hidden defects and dark sectors; no
-  dark-matter or dark-energy replacement claim.
-  \item \textbf{Foundation Paper V}: observer-time and cosmology; no
-  Hubble-tension or \(\Lambda\)CDM replacement claim.
-  \item \textbf{Foundation Paper VI}: flavor and neutrino readout; no
-  neutrino-anomaly or Standard Model claim.
-\end{itemize}
-The next foundation manuscript should not merely add another general
-framework layer.  It should contain at least one worked branch of the form
-\[
-  \text{source}\to \Rmap \to U_i^{\Mta}
-  \to
-  \text{known limit or frozen falsifiable consequence}.
-\]
+Proposition~\ref{prop:a8-occurrence-independence} prevents either of the first
+two targets from being used as proof of the other.  A successful source
+theorem may select them jointly, but must contain an explicit coupling law
+rather than infer occurrence from metric agreement or metric agreement from a
+record event.  It must also supply, or leave independently testable, the
+single-record retention condition.
 
-The purpose of this split is defensive in the good sense.  A foundation paper
-can state a formal conjecture without pretending to be a data paper.  A data
-paper can test a narrow rule without requiring acceptance of the full
-ontology.  This separation makes both kinds of work easier to criticize.
+A first laboratory worked model should be chosen from a carrier with an
+independently controllable two-record manifold, state tomography, calibrated
+energy spread, and a quasistatic work or phase response.  Superconducting
+qubits, trapped-ion or spin-\(1/2\) controls, two metastable atomic levels, and
+photon-polarization records are candidate platforms, not asserted Tau
+carriers.  Promotion of any one candidate requires source-side definitions of
+\(q\), \(M(q)\), \(\mathcal A_{\rm cal}\), \(\rho_{O,0}\),
+\(\rho_{O,1}\), and \(\Delta H\), followed by the two pre-timing tests above.
 
 \section{A compact formal summary}
 
-The framework can be summarized as the following object package:
+The weak framework is the object package
 \[
   \mathfrak T
   =
@@ -1720,36 +3038,64 @@ domain, \(\Rmap\) is the endpoint-blind response map or relation, \(\Mta\) is
 the morphological body, \(U_i\) are readouts, \(N_i\) are null policies, and
 \(J_i\) are optional relifts.
 
-The minimal consistency conditions are:
+The minimum-viable completion augments it to
+\begin{equation}
+  \mathfrak T_{\rm MVP}
+  =\left(\mathfrak T,M_*,K_M,\GMVP,\Desc_O,
+  \rho_O,\{F_{O,a}\},\epsilon_O\right).
+  \label{eq:compact-mvp}
+\end{equation}
+The minimal consistency conditions are
 \begin{align}
   &s \text{ is fixed without endpoint leakage},\\
-  &r=\Rmap(s) \text{ is defined on the declared source domain},\\
+  &r=\Rmap(s) \text{ and }M_*\text{ are defined on the declared source domain},\\
+  &D_M\mathcal A_{\rm body}(M_*)=0,
+    \quad K_M>0\text{ after the true-null quotient},\\
+  &\text{the body is frozen before terminal variations},\\
   &r N_i r' \Rightarrow U_i(r)=U_i(r'),\\
   &\omega_i(r)=0 \Longleftrightarrow J_iU_i(r)N_i r,\\
   &h_i(r)=J_iU_i(r)-r \text{ is only a chart-level representative if defined},\\
-  &\text{known physical limits are recovered before physical promotion}.
+  &\text{shared terminals are extracted once from }\GMVP,\\
+  &\text{known limits and the QOR test are frozen before physical promotion}.
 \end{align}
 
-The strongest claim of this paper is that \(\mathfrak T\) is an internally
-organized starting package for a readout-based research program.  This is not
-a formal consistency proof of all possible Tau Core branches, and it is not a
-proof that Nature uses such a package.
+The strongest positive claim is that \(\mathfrak T_{\rm MVP}\) is an
+internally composable conditional theory with the standard leaves
+\eqref{eq:semiclassical-einstein} and \eqref{eq:born-leaf} and the discriminator
+\eqref{eq:qor}.  The strongest negative claim is
+Eq.~\eqref{eq:mvp-nonselection}: the current physical source reduct does not
+uniquely select that completion.
 
 \section{What is not proved}
 
 For clarity, we list the main non-results.
 
 \begin{itemize}
-  \item The paper does not prove that the Tau substrate exists physically.
-  \item The paper does not provide a parent action.
-  \item The paper does not derive physical time.
-  \item The paper does not derive general relativity.
-  \item The paper does not derive quantum mechanics, the Born rule, collapse,
-  or QFT.
-  \item The paper does not derive the Standard Model.
-  \item The paper does not explain neutrino physics.
-  \item The paper does not eliminate dark matter or dark energy.
-  \item The paper does not validate any empirical Tau Core claim.
+  \item The paper does not prove that the Tau substrate, universal seed, or
+  complete universe-scale morphological body exists physically.
+  \item It does not derive the adopted enriched body action and completion
+  uniquely from the physical base--seed source.
+  \item It does not derive the microscopic ownership partition or full
+  nonlinear action whose integration yields the once-counted effective
+  functional in Eq.~\eqref{eq:mvp-functional}.
+  \item It does not predict \(G\), \(\Lambda\), \(\hbar\), gauge couplings,
+  particle masses, or other constants numerically from parent data.
+  \item Conditional Einstein and Born recovery is not an unconditional
+  derivation of GR or quantum mechanics from the minimal Tau base.
+  \item It does not provide ultraviolet quantum gravity, nonperturbative
+  interacting QFT, a complete measurement ontology, or a metric-quantization
+  theorem.
+  \item It does not derive the full Standard Model, its spectrum, generations,
+  mixing, or neutrino sector.
+  \item The QOR inequality is not a universal time atom or an extra delay.
+  The support theorem and mixed-state realization prove that the common-Gram
+  completion is mathematically nonempty, but the physical parent has not been
+  shown to occupy the record instrument or select
+  \(V_{\rm phys}=V_{r(x_O)}\).  No laboratory carrier has validated the
+  same-source identity \(x_A=x_Q\).
+  \item It does not eliminate or explain dark matter or dark energy.
+  \item No empirical result presented in this manuscript validates the Tau
+  ontology.
 \end{itemize}
 
 These limitations are not footnotes.  They are part of the claim.  A
@@ -1758,9 +3104,10 @@ the blockers visible enough that later work can attack them one at a time.
 
 \section{Conclusion}
 
-Tau Core is presented here as an atemporal morphological readout framework.
-The basic proposal is that observed physical dynamics may be sector readouts of
-an endpoint-blind parent response:
+Tau Core is presented as an atemporal morphological readout framework with one
+frozen conditional completion.  The weak proposal is that observed physical
+descriptions are body-conditioned readouts of an endpoint-blind parent
+response:
 \[
   s \mapsto \Rmap(s) \mapsto U_i^{\Mta}(\Rmap(s)).
 \]
@@ -1769,30 +3116,104 @@ readout:
 \[
   M_{4D}=U_{4D}^{\Mta}(\Rmap(s)).
 \]
-Physical time is likewise a readout channel, not the meaning of \(\tau\)
-itself.
+Physical time is an oriented observer descent of body-resident order, not the
+meaning of \(\tau\) itself and not a separate substance between parent and
+observer.
 
-The paper's contribution is therefore not a new empirical result.  It is a
-bounded vocabulary: parent seed, endpoint-blind response, morphological body,
-sector readout, relift, hidden defect, observer-time readout, and claim ladder.
-This vocabulary lets later work ask sharper questions.  Which readouts are
-source-realizable?  Which defects survive the quotient?  Which known limits
-are recovered?  Which source-frozen kernels survive held-out data?  Which
-candidate branches fail?
+The paper's main advance over a framework-only statement is the finite chain
+\eqref{eq:mvp-chain}.  A body is stabilized first; one once-counted functional
+then supplies gravity, matter/gauge, quantum-effect, and clock variations.
+Under explicit assumptions this gives compatible semiclassical-Einstein and
+Schr\"odinger--Born leaves.  It also gives the conditional QOR inequality
+\eqref{eq:qor}.  The known inverse-energy dependence is not the proposed
+novelty.  The proposed new content is the independently testable same-source
+identity \(x_A=x_Q\).  The common-Gram minimum-lift identity then proves how
+this factor determines the required Fubini--Study/Bures record angle.  The
+QOR timing inequality is the resulting standard quantum speed limit, not an
+additional Tau delay.  Physical record occurrence, selection of the
+\(V_{r(x_O)}\) connector, and operational retention are three jointly
+necessary conditions.  Proposition~\ref{prop:a8-occurrence-independence}
+proves, relative to the present source axioms, that occurrence and finite A8b
+do not select one another.  A deeper source law may still select both, but
+that common physical selection remains part of the completion problem.
+Proposition~\ref{prop:recovery-dirac-affiliation} supplies an exact sufficient
+route: an affiliated global Dirac operator is reduced by the central recovery
+blocks, making the finite spectral action additive.  The current parent has
+not yet selected that affiliation law.
+Proposition~\ref{prop:finite-source-signature-uniqueness} now proves that one
+complete occupied finite source algebra/state/role packet would select the
+finite completion up to typed unitary equivalence.
+Proposition~\ref{prop:marginal-joint-nogo} proves why the currently assembled sector
+marginals are insufficient: source-owned cross-sector moments of full joint
+information rank are still required.
 
-The strongest honest summary is:
+The strongest honest summary is therefore:
 \begin{quote}
-Tau Core is not offered here as a completed theory.  It is offered as a
-formal research program in which time evolution, spacetime fields, quantum
-state, gravity, and dark-sector language can be re-expressed as readout
-problems over a deeper atemporal morphological response.
+Tau Core now has one auditable conditional route from an atemporal
+morphological body to compatible gravity and quantum standard limits plus a
+candidate observer-resolution discriminator.  It does not yet have a proof
+that the physical parent owns the complete joint source signature selecting
+and occupying this common-Gram route.
 \end{quote}
 
-If that re-expression leads only to flexible terminology, it should be
-discarded.  If it leads to frozen source rules, recovered limits, and failed
-or successful held-out tests, then the framework becomes a scientific program.
-This paper is the first step: it states the program in a form that can be
-criticized.
+This distinction supplies a clean decision point.  A deeper source theorem or
+a successful source-frozen QOR test would promote the completion.  Failure of
+a reliable single-record event below its source-frozen QOR bound would reject
+this completion.  Adding unconstrained terminals after such a failure would
+not be a repair; it would abandon the minimum-viable theory tested here.
+
+\appendix
+\section{Mixed-state distance and QFI conventions}
+\label{app:bures-qfi}
+
+To avoid the common squared-versus-root fidelity ambiguity, this manuscript
+uses the \emph{squared} Uhlmann fidelity
+\begin{equation}
+  F(\rho,\sigma)
+  =\left[\operatorname{Tr}
+  \sqrt{\sqrt\rho\,\sigma\sqrt\rho}\right]^2,
+  \qquad 0\leq F\leq1.
+  \label{eq:appendix-squared-fidelity}
+\end{equation}
+The root fidelity is
+\(f(\rho,\sigma)=\sqrt{F(\rho,\sigma)}\).  The Bures angle used in
+Eq.~\eqref{eq:quantum-record-angle} is therefore
+\begin{equation}
+  D_B(\rho,\sigma)=\arccos f(\rho,\sigma)
+  =\arccos\sqrt{F(\rho,\sigma)}.
+  \label{eq:appendix-bures-angle}
+\end{equation}
+For pure states, \(F=|\langle\psi|\varphi\rangle|^2\), so
+\(D_B=\arccos|\langle\psi|\varphi\rangle|\), the Fubini--Study angle.
+
+For a differentiable one-parameter mixed-state path, the infinitesimal Bures
+line element and quantum Fisher information \(\mathcal F_Q\) satisfy
+\begin{equation}
+  ds_B^2=\frac14\mathcal F_Q(t)\,dt^2.
+  \label{eq:appendix-bures-qfi}
+\end{equation}
+For unitary evolution generated by a self-adjoint \(H\),
+\begin{equation}
+  \mathcal F_Q(t)\leq\frac{4\Delta H(t)^2}{\hbar^2},
+  \qquad
+  \frac{ds_B}{dt}\leq\frac{\Delta H(t)}{\hbar},
+  \label{eq:appendix-unitary-qfi-bound}
+\end{equation}
+which integrates to Eq.~\eqref{eq:state-distance-speed-bound}
+\cite{Taddei2013}.  A nonunitary channel must instead use its actual QFI path
+speed; Eq.~\eqref{eq:appendix-unitary-qfi-bound} is not assumed for it.
+
+The common-Gram completion fixes the notation
+\[
+ x_O={\mathcal A_X^{PC}\over\mathcal A_*}
+ =\epsilon_O^2=2(1-\sqrt F),
+ \qquad
+ D_Q=2\arcsin(\epsilon_O/2).
+\]
+Hence the linear inequality
+\(D_Q\geq\epsilon_O\) is a conservative corollary, with equality only in the
+zero-separation limit.  The exact state-distance quantum speed limit is the
+first inequality in Eq.~\eqref{eq:qor}.
 
 \bibliographystyle{plain}
 \bibliography{refs}

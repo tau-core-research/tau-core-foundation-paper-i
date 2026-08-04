@@ -9,6 +9,7 @@ TEX = ROOT / "paperI_submission_source" / "main.tex"
 def test_required_files_exist():
     required = [
         ROOT / "README.md",
+        ROOT / "REVIEWER_READINESS.md",
         ROOT / "CITATION.cff",
         ROOT / "DATA_NOTICE.md",
         ROOT / "paperI_submission_source" / "main.tex",
@@ -24,9 +25,16 @@ def test_claim_boundary_markers():
     text = TEX.read_text()
     assert "Foundation Paper I" in text
     assert "Atemporal Morphological Readout Framework" in text
+    assert "conditional minimum-viable physical completion" in text
     assert "does not claim empirical validation" in text
-    assert "does not derive general relativity" in text
-    assert "does not derive quantum mechanics" in text
+    assert "nature-level selection" in text
+    assert "conditional standard-limit recovery" in text
+    assert "not a universal time atom" in text
+    assert "Record occurrence and finite A8b are independent" in text
+    assert "qor-three-condition-conjunction" in text
+    assert "Finite source-signature selection theorem" in text
+    assert "prop:finite-source-signature-uniqueness" in text
+    assert "prop:marginal-joint-nogo" in text
     forbidden = [
         "we prove Tau Core",
         "dark matter is explained",
@@ -46,10 +54,13 @@ def test_figures_included():
         "fig_block_vs_tau.pdf",
         "fig_readout_atlas.pdf",
         "fig_cross_scale_readout_composition.pdf",
-        "fig_hidden_defect.pdf",
         "fig_effective_time_readout.pdf",
         "fig_claim_ladder.pdf",
         "fig_status_matrix.pdf",
+        "fig_mvp_closure.pdf",
+        "fig_common_functional.pdf",
+        "fig_standard_limits.pdf",
+        "fig_qor_prediction.pdf",
     ]:
         assert fig in text
         assert (ROOT / "paperI_submission_source" / "figures" / fig).exists()
@@ -71,6 +82,10 @@ def test_arxiv_zip_source_only():
         "figures/fig_effective_time_readout.pdf",
         "figures/fig_claim_ladder.pdf",
         "figures/fig_status_matrix.pdf",
+        "figures/fig_mvp_closure.pdf",
+        "figures/fig_common_functional.pdf",
+        "figures/fig_standard_limits.pdf",
+        "figures/fig_qor_prediction.pdf",
     ]:
         assert fig in names
     assert all(not name.endswith(".aux") for name in names)
