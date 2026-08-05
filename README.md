@@ -190,3 +190,10 @@ Under universal-seed order completeness, decoder-vertical chain mismatch is
 removed only when it is a true action/terminal null, and the affiliated
 Hodge--Dirac/A8b construction extends to faithful rich bodies without requiring
 minimum body dimension.
+
+The current hub backport also distinguishes internal construction from physical
+selection. An enriched ROOT packet conditionally supplies occupied complete
+record edges, a traced two-leg dagger--Frobenius unfolding and a structurally
+once-counted ledger. Nature-level occupation and microscopic filling remain
+open, while unique selection from the current narrow source reduct is ruled out
+by an inequivalent energy-sharing completion with the same reduct.

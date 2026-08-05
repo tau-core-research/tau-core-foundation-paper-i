@@ -49,6 +49,9 @@ def test_claim_boundary_markers():
     assert "commuting records alone cannot identify reversibility" in text
     assert "coherent off-diagonal witness" in text
     assert "FOC-7" in text
+    assert "energy-sharing same-reduct completion" in normalized
+    assert "traced two-leg source and source-irredundant branch" in normalized
+    assert "physical filling by one full microscopic Tau action remains open" in normalized
     forbidden = [
         "we prove Tau Core",
         "dark matter is explained",
