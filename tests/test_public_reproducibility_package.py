@@ -23,6 +23,7 @@ def test_required_files_exist():
 
 def test_claim_boundary_markers():
     text = TEX.read_text()
+    normalized = " ".join(text.split())
     assert "Foundation Paper I" in text
     assert "Atemporal Morphological Readout Framework" in text
     assert "conditional minimum-viable physical completion" in text
@@ -40,6 +41,14 @@ def test_claim_boundary_markers():
     assert "A4-SRCMIN" in text
     assert "prop:finite-source-signature-uniqueness" in text
     assert "prop:marginal-joint-nogo" in text
+    assert "Sufficient internal realization of finite A8b" in text
+    assert "Pathwise A8b and the holonomy boundary" in text
+    assert "unchanged narrow parent does not contain or select this two-leg carrier" in normalized
+    assert "source-frozen claim-complete descriptor" in text
+    assert "irreversible CPTP relation" in text
+    assert "commuting records alone cannot identify reversibility" in text
+    assert "coherent off-diagonal witness" in text
+    assert "FOC-7" in text
     forbidden = [
         "we prove Tau Core",
         "dark matter is explained",
@@ -50,6 +59,20 @@ def test_claim_boundary_markers():
     lower = text.lower()
     for phrase in forbidden:
         assert phrase not in lower
+
+
+def test_finite_response_countermodel_and_exact_branch():
+    y1, y2, lam = 0.2, 0.3, 0.7
+
+    def response(y):
+        return y + lam * y**2
+
+    defect = response(y1 + y2) - response(y1) - response(y2)
+    assert abs(defect - 2 * lam * y1 * y2) < 1e-12
+    assert defect != 0
+
+    exact_defect = (y1 + y2) - y1 - y2
+    assert abs(exact_defect) < 1e-12
 
 
 def test_figures_included():

@@ -141,17 +141,35 @@ that class. This moves the open question upstream to physical occupation of
 the common finite source law; it does not turn the result into an unconditional
 nature-level derivation.
 The remaining occupation question is also finite rather than an unrestricted
-connector search. The manuscript proves that one represented normalized trace
+connector search. The manuscript proves that one separately selected
+represented normalized trace
 plus a quotient-basic squared Hilbert--Schmidt Trace--Gram parent response is
 necessary and sufficient within the declared continuous, chord-only,
 orthogonally compositional, common-unit class. A `Y+lambda Y^2` counterfamily
 retains the same algebra, state, local Hessian and unit while breaking finite
 composition. Thus the exact unresolved physical claim is occupation of the
 Trace--Gram law, not mathematical availability or uniqueness of the connector.
+The represented trace is explicitly an additional physical completion input:
+inner automorphisms fix traciality within simple blocks but do not fix central
+weights. The Cauchy argument is restricted to an explicitly defined
+admissible chord domain closed under the relevant nonnegative partial sums.
+Finite recovery completeness is separately defined as exact factorization of
+finite action through the minimum-lift chord with no positive hidden-stiffness
+functional. A4-SRCMIN-J is an optional Occam-type MVP rule, while special
+dagger-Frobenius normalization is a strong enriched input; neither is
+presented as first-principles nature-level selection.
+The manuscript now carries the complete-edge result only at foundation-paper
+summary depth. It states the strong sufficient hypotheses, exact finite A8b
+consequence, descriptor-frozen holonomy boundary, irreversible fork and
+commuting-record no-go. The extended proof, three-vertex control,
+recovery-correctable CP theorem and three-qubit toy are separated from Paper I.
+This keeps the principal manuscript focused on the common architecture while
+preserving the nature-level occupation blocker.
+
 The terminal nature-level statement is also an identifiability boundary:
 current evidence is equally compatible with occupied and nonoccupied parent
 models sharing the displayed standard limits and local data. The explicit
-`FOC-6` certificate states what must be reconstructed independently on one
+`FOC-7` certificate states what must be reconstructed independently on one
 carrier before physical occupation can be promoted. No candidate platform in
 the outlook has yet passed that certificate.
 An explicit two-block counterpair shows that recovery cyclicity, central support, and
@@ -218,6 +236,12 @@ fixed algebra identification. This is representation uniqueness after the
 source packet is supplied, not a theorem that the current Tau parent selects
 the packet. Unquotiented source-algebra automorphisms are not silently counted
 as physical equivalences.
+
+Paper I now retains these source-signature results only at foundation-summary
+depth. The complete GNS uniqueness proof, bipartite and all-proper-marginal
+no-go arguments, Pauli-dimension audit, onto-incidence theorem and
+`Pi_phys` reduction are isolated in Foundation Paper III. This separation does
+not change their claim status or use another Tau manuscript as evidence.
 
 A separate source theorem sharpens A8a-OCC. In an enriched metric
 dagger-Frobenius base, the copy map `Delta=mu^dagger` is fixed by primitive
@@ -300,7 +324,9 @@ source archive, and runs the public package tests.
 
 Current checks:
 
-- 49 A4 pages;
+- 30 A4 pages after lossless deduplication; the exact pre-rebalance source is
+  archived and `CONTENT_MIGRATION_MAP.md` records the visible destination of
+  every unique scientific content class;
 - all PDF fonts embedded;
 - no missing citation keys;
 - no duplicate BibTeX keys;
@@ -308,11 +334,11 @@ Current checks:
 - no citations to another Tau Core paper, repository, or unpublished result;
 - deterministic figure PDFs across repeated builds;
 - arXiv source ZIP integrity passes;
-- public package tests: 4 passed;
-- `git diff --check`: clean.
+- public package tests: 5 passed;
+- `git diff --check`: clean after the final editorial pass.
 
-The remaining TeX warning is a harmless underfull bibliography line. It does
-not indicate overflow, missing text, or a broken reference.
+The current build has no overfull box, missing-text, or unresolved-reference
+warning.
 
 ## Translation Status
 

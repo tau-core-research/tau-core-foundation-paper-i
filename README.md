@@ -65,8 +65,9 @@ action law to `c_alpha d_U,alpha^2`; the inherited common action unit fixes
 `Phi_alpha=[sqrt(rho_alpha)]`, unique up to right-unitary gauge. The physical
 parent's occupation of this common finite source law remains open.
 
-That occupation question is now reduced to one exact finite law. A single
-represented normalized trace fixes the faithful central weights. If the
+That occupation question is now reduced to one exact finite law. A separately
+declared represented-trace selection principle fixes the faithful central
+weights; inner-automorphism invariance alone does not. If the
 parent response is the quotient-basic squared Hilbert--Schmidt Trace--Gram
 distance, the full connector packet follows; conversely this response is
 unique among continuous, chord-only, orthogonally additive laws with the
@@ -74,23 +75,48 @@ inherited unit. The explicit control `Y+lambda Y^2` preserves the same local
 Hessian and source data but violates finite composition, so physical
 Trace--Gram occupation is not claimed.
 
-The final nature-level claim is explicitly non-identifiable from the evidence
-currently assembled in the paper. The manuscript defines a six-part `FOC-6`
-certificate requiring a held single-shot record, independent same-carrier
-action and Uhlmann reconstructions at multiple nonzero separations, downstream
-timing, and standard/nonlinear controls. No candidate platform has completed
-this certificate; internal closure is not presented as empirical occupation.
+The finite-source argument now defines its admissible additive chord domain
+and finite recovery completeness explicitly. The restricted Cauchy step is
+used only for physically realizable nonnegative partial sums inside the chord
+bound. Blockwise common-unit normalization fixes slopes after linearity; it
+does not by itself identify arbitrary nonlinear laws across blocks.
+A4-SRCMIN-J is an optional Occam-type MVP selector, not a theorem of Nature.
+Likewise, special dagger-Frobenius normalization is an enriched completion
+input; a normalizable algebra with a nontrivial central loop factor retains
+additional normalization data.
+The manuscript now closes the remaining internal connector step on a sharper
+scope.  In the joint enriched record completion, an occupied complete record
+edge transports the special dagger-Frobenius trace and common action unit,
+thereby inducing a faithful trace-preserving standard-form map.  Existing
+primitive-defect extensivity then forces the exact finite Trace--Gram/A8b law
+on that edge and on its composable path closure.  Endpoint-only descent is
+permitted only when relative holonomy is Uhlmann-gauge or descriptor-null;
+visible holonomy remains path/phase information.  This does not establish
+Nature-level or laboratory occupation, nor arbitrary-state coverage.
+The main manuscript now retains only a concise complete-edge theorem summary.
+On the declared enriched occupied support, a reversible complete edge gives a
+faithful trace-preserving standard-form map and exact finite Trace--Gram law;
+descriptor-visible holonomy remains physical path information. Generic
+irreversible record formation is not covered by that theorem. Commuting data
+cannot identify reversibility, so physical selection requires a coherent
+witness or independently certified recovery. The detailed edge, holonomy,
+recovery-correctable CP and toy-model analysis is maintained in Foundation
+Paper II.
 
-For finite source algebras, the manuscript also gives an exact conditional
-selection theorem. A complete source-owned algebra, faithful state, and typed
-role packet determine the minimal cyclic completion up to typed unitary
-equivalence by the GNS construction. A separate countermodel proves that even
-complete terminal-sector marginals do not determine that joint packet: the
-new four-sector theorem shows that even all proper marginals leave 81 genuine
-joint directions unresolved. One onto source incidence with positive
-stiffness is sufficient for a faithful joint Gram state, and the remaining
-finite selection problem compresses to one coherent physical
-`*-homomorphism`, not an arbitrary list of cross-sector gains.
+The final nature-level claim is explicitly non-identifiable from the evidence
+currently assembled in the paper. The manuscript defines a seven-part `FOC-7`
+certificate requiring a held single-shot record, independent same-carrier
+action and Uhlmann reconstructions at multiple nonzero separations, a coherent
+witness or certified recovery, downstream timing, and standard/nonlinear
+controls. No candidate platform has completed this certificate; internal
+closure is not presented as empirical occupation.
+
+For finite source algebras, the manuscript retains the foundation-level
+source-signature theorem: typed cyclic representation is unique once the
+complete source packet is supplied, marginals do not select that packet, and
+one onto joint incidence is sufficient for a faithful joint Gram state. The
+complete GNS, marginal no-go, Pauli-dimension and incidence proofs are
+maintained in Foundation Paper III. Nature-level occupation remains open.
 
 The record-occurrence side is also sharper. In an enriched dagger-Frobenius
 base completion, the record-copy map is the metric adjoint of primitive

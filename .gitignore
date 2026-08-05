@@ -12,3 +12,5 @@ __pycache__/
 *.run.xml
 *.bcf
 *.xdv
+.DS_Store
+tmp/

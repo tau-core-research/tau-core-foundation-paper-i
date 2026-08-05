@@ -214,7 +214,6 @@ It is useful only if that completion makes the program more falsifiable.  A
 broad ontology that cannot be turned into frozen source rules, null tests, or
 endpoint-blind predictions is not useful as physics.
 
-\iffalse
 \section{Reader roadmap}
 
 The paper has three jobs.  First, it fixes the body/readout vocabulary.
@@ -715,98 +714,6 @@ source-overlap ledger.  Here this is simply called source-overlap discipline.
 It is not a validation statistic and not an independence claim.
 Without this discipline, a joint readout may simply double count the same
 source coordinate.
-\fi
-
-\section{Foundation architecture and formal discipline}
-
-The paper has three jobs: define the body/readout architecture, exhibit one
-conditional physical completion, and state the exact physical-selection and
-empirical boundaries.  The motivating question is whether time, spacetime,
-quantum state and other terminal descriptions can be observer-indexed readouts
-of a deeper response rather than mutually independent primitives.  Related
-timeless, relational-time, reconstruction and constructor-theoretic programs
-show why this question is legitimate, but none is imported as evidence for
-Tau Core \cite{WheelerDeWitt1967,PageWootters1983,ConnesRovelli1994,
-Hardy2001,Chiribella2011,Deutsch2013}.
-
-The historical symbol \(\tau\) names the parent side, not an additional parent
-clock.  A stable four-dimensional block is therefore typed as
-\begin{equation}
- M_{4D}=U_{4D}^{\Mta}(\Rmap(s)),
- \label{eq:block-readout}
-\end{equation}
-rather than assumed to be the final ontology.  Ordinary spacetime field theory
-remains the effective theory on that descended leaf.  This distinction has
-physical content only when another source-frozen readout imposes a constraint
-that is not already contained in the 4D endpoint.
-
-\begin{figure}[t]
- \centering
- \includegraphics[width=0.94\linewidth]{figures/fig_block_vs_tau.pdf}
- \caption{A four-dimensional block may be an effective final description for
- one readout while remaining a descended sector of the Tau parent.  This is a
- positioning distinction, not a refutation of block-universe accounts.}
- \label{fig:block-vs-tau}
-\end{figure}
-
-The primitive vocabulary is finite.  A seed \(s\in\Ssrc\) is selected without
-endpoint leakage.  The endpoint-blind response \(\Rmap\) may be a map, relation
-or set-valued rule.  Candidate realizations include a variational extremum,
-constraint solution, algebraic closure, probabilistic kernel, fixed point, or
-functorial construction; this paper does not identify those mathematically
-different mechanisms.  The morphological body \(\Mta\) is the intrinsic
-structured object conditioning the readouts, not an observed 4D morphology
-label.  A readout is a typed map
-\[
- U_i:\mathcal M_\tau^{\rm adm}\times\RTspace\to\Obs_i
-\]
-with a declared codomain, null policy and validation boundary.  A relift
-\(J_i:\Obs_i\dashrightarrow\RTspace\) is optional and need not be unique.  If
-it is supplied, the coordinate-free obstruction is
-\begin{equation}
- \omega_i(r)=0\quad\Longleftrightarrow\quad J_iU_i(r)\,N_i\,r,
- \label{eq:obstruction}
-\end{equation}
-while \(J_iU_i(r)-r\) is only a chart-level representative.  These definitions
-do not themselves construct the physical body or explain a dark sector.
-
-Every readout induces the equivalence relation
-\begin{equation}
- r\sim_i r'\quad\Longleftrightarrow\quad U_i(r)=U_i(r').
- \label{eq:readout-equivalence}
-\end{equation}
-A joint readout has equivalence relation \(\sim_i\cap\sim_j\) and therefore
-refines each component.  Refinement is not statistical independence: several
-readouts may transmit the same parent degree of freedom.  Tau Core accordingly
-requires a source-overlap ledger and forbids counting source-overlapping
-terminal terms as independent corrections unless their split or covariance is
-fixed upstream.
-
-\begin{figure}[t]
- \centering
- \includegraphics[width=0.94\linewidth]{figures/fig_cross_scale_readout_composition.pdf}
- \caption{Readout families are branch-distinct but not presumed independent.
- Source, carrier, quotient and compatibility relations must be audited before
- separate terminal names are counted as separate information.}
- \label{fig:cross-scale-readout-composition}
-\end{figure}
-
-The weak-spine status is correspondingly strict: \(\Ssrc\), \(\RTspace\),
-\(\Rmap\), \(\Mta\), \(U_i\), \(N_i\), \(J_i\) and \(\omega_i\) are typed
-definitions or declared domains.  The MVP below adds one stationary body,
-positive quotient Hessian and gravity/optics, quantum/Born and QOR leaves, but
-does not prove that Nature selects or occupies them.
-
-The terminal inventory is likewise explicit rather than unlimited.  The
-spacetime/gravity family must recover metric, causal and lensing structure;
-observer-time must specify ordering, clock normalization and observer
-dependence; quantum access must recover state, effect, Born and no-signalling
-structure; matter/source must identify occupied modes and stress-energy; and
-the cosmological family must recover expansion, redshift and early-universe
-limits.  Electromagnetic, gauge and composite astrophysical observables are
-later typed descendants of this common packet, not permission to introduce an
-independent correction for every anomaly.  None of these names counts as a
-separate information source until overlap and factorization have been proved.
 
 \section{A conditional minimum-viable physical completion}
 \label{sec:mvp}
@@ -846,16 +753,12 @@ remains open (Fig.~\ref{fig:mvp-closure}).
 The completion uses the following assumptions.  They are deliberately
 separated from consequences.
 
+\begin{center}
 \small
-\begin{longtable}{L{0.10\linewidth}L{0.77\linewidth}}
+\begin{tabular}{L{0.10\linewidth}L{0.77\linewidth}}
 \toprule
 Label & Assumption used in the MVP completion\\
 \midrule
-\endfirsthead
-\toprule
-Label & Assumption used in the MVP completion (continued)\\
-\midrule
-\endhead
 A1 & A physically enriched base and one universal seed admit a stabilized
 body \(M_*\) with a twice-differentiable body action.\\
 A1-SHR & On the primary finite SHR branch, the seed owns a separating
@@ -900,8 +803,8 @@ A9 & The quantum leaf uses the common action unit \(\mathcal A_*=\hbar\), and
 self-adjoint transport obeys the Fubini--Study/Bures quantum-speed-limit
 bound.\\
 \bottomrule
-\end{longtable}
-\normalsize
+\end{tabular}
+\end{center}
 
 A1--A4-SRCMIN, including A1-USC, define the working completion.  A5--A9, including A8a-OCC,
 are standard-limit and
@@ -2033,7 +1936,6 @@ Empirical support for the Tau-specific common-source identification & open\\
 \end{longtable}
 \normalsize
 
-\iffalse
 \section{Nontrivial representation condition}
 
 The parent/readout notation is not allowed to count as a Tau Core result by
@@ -2631,193 +2533,7 @@ Holographic quantum error correction shows that bulk-like structure can be
 encoded and recovered nontrivially from boundary data
 \cite{AlmheiriDongHarlow2015}.  Tau Core treats this as an analogy for
 readout/reconstruction discipline, not as evidence for the Tau ontology.
-\fi
 
-\section{Formal safeguards, postulates, and finite controls}
-
-The parent/readout notation is scientifically empty if it can be reduced to
-\(\RTspace=\Obs\), \(\Rmap(s)=O\), and \(U=\mathrm{id}\).  A promoted branch
-must therefore impose, before endpoint inspection, at least one nontrivial
-source relation, quotient-safe null, shared-source constraint, known-limit
-recovery, wrong-family exclusion, or other consequence that could fail.
-Known-limit recovery alone is not enough because an existing endpoint theory
-can always be harmlessly relabelled.
-
-For readout \(U_i\), let \(N_i\) be its declared null relation.  Quotient
-safety means
-\begin{equation}
- rN_ir'\Longrightarrow U_i(r)=U_i(r'),
- \qquad
- U_i=\bar U_i\circ q_i,
- \quad q_i:\RTspace\to\RTspace/N_i.
- \label{eq:quotient-safe}
-\end{equation}
-The converse need not hold: additional identifications constitute readout
-loss.  A stable observed object class may be represented by a basin
-\(\mathcal B_O=\{r:R_{4D}(r)\simeq O\}\); this is a persistence scaffold, not
-a particle-stability or decay theorem.  Protected source identity must not be
-collapsed unless that loss was declared as null structure.
-
-Endpoint blindness operationalizes the same rule.  Before scoring a target,
-one must freeze the source or proxy, readout family, null/quotient and overlap
-policies, forbidden endpoint fields, controls, failure conditions, and a dated
-freeze artifact.  A residual used to choose the source class that later
-``explains'' it is endpoint leakage, not a Tau prediction.
-
-The seven unproved foundation postulates are: (P1) an atemporal Tau substrate;
-(P2) endpoint-blind seed/base response stabilizing a body; (P3) endpoint-blind
-source and kernel selection; (P4) complete physical descriptions as typed
-readouts, not residual-only corrections; (P5) effective variation only after
-a stable readout ordering or clock is available; (P6) a hidden defect only
-when relift fails modulo the declared null; and (P7) observational tensions as
-possible readout/closure defects only after controls and held-out tests.  These
-postulates define the candidate framework; the MVP realizes one conditional
-branch but does not derive the postulates from the physical base--seed law.
-
-A finite control makes the quotient discipline explicit.  Let
-\(r=(a,b,c)\in\mathbb R^3\),
-\[
- U_A(r)=(a,b),\quad U_B(r)=(a,c),\qquad
- J_A(x,y)=(x,y,0),\quad J_B(x,z)=(x,0,z).
-\]
-Then \(h_A=(0,0,-c)\) and \(h_B=(0,-b,0)\): hiddenness is readout-relative.
-Replacing \(U_A\) after inspection by
-\(U_A^{\rm bad}(a,b,c)=(a,b+\alpha c)\) while retaining the old null is
-inconsistent.  Likewise, a source rule \(c=f_{\rm src}(a,b;\theta)\) is
-admissible only if \(f_{\rm src}\) and \(\theta\) were frozen upstream.
-
-\begin{figure}[t]
- \centering
- \begin{minipage}{.48\linewidth}
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig_claim_ladder.pdf}
- \end{minipage}\hfill
- \begin{minipage}{.48\linewidth}
-  \centering
-  \includegraphics[width=\linewidth]{figures/fig_status_matrix.pdf}
- \end{minipage}
- \caption{The claim ladder and status matrix.  Definitions, postulates,
- conditional theorems, toys, numerical evidence and validation are distinct;
- the present paper reaches conditional standard leaves and a discriminator,
- not nature selection or empirical validation.}
- \label{fig:claim-status-combined}
-\end{figure}
-
-\section{Atemporal body and effective readout-time}
-
-Let \(r=\Rmap(s)\) be atemporal and suppose
-\(U_i(r)=o_i(t_i)\).  The derivative \(do_i/dt_i\) is meaningful inside that
-readout without being a parent-time derivative.  Another readout of the same
-response may return a static constraint.  There is no contradiction: time is
-the stable ordering used by one terminal description, not an external clock
-that evolves the parent.
-
-For a finite witness, take
-\(r=(a_0,\ldots,a_n,c)\),
-\(U_{\rm seq}(r)=(a_0,\ldots,a_n)\), and
-\(U_{\rm sum}(r)=\sum_ka_k\).  The first supports the ordered difference
-\(\Delta a_k=a_{k+1}-a_k\); the second loses that order.  The parent record has
-not evolved.  The readout has exposed an ordering.
-
-\begin{figure}[t]
- \centering
- \includegraphics[width=.88\linewidth]{figures/fig_effective_time_readout.pdf}
- \caption{Effective readout-time in a finite toy.  A sequence readout exposes
- ordering and finite differences; an aggregate readout of the same parent
- record does not.}
- \label{fig:effective-time}
-\end{figure}
-
-The morphological body \(\Mta\) is the structured source object conditioning
-these readouts, not a visible galaxy shape or catalogue label:
-\begin{equation}
- O_i=U_i^{\Mta}(\Rmap(s)).
- \label{eq:morph-conditioned}
-\end{equation}
-Images, rotation curves, lensing maps, cosmic-web descriptors and measurement
-contexts are projected handles only.  They can underdetermine global
-incidence, order, path geometry, closure and null structure.  Body selection,
-kernel family and source overlaps must therefore be frozen before endpoint
-scoring, and two terminals using the same source coordinate may not be counted
-independently without an upstream split.
-
-Observer time is correspondingly sector-typed:
-\begin{equation}
- t_{\rm obs}^{S}
- =U_{\rm time}^{S}(\Rmap(s),\Mta,\mathcal O_S,\gamma_S).
- \label{eq:observer-time}
-\end{equation}
-The MVP adds an oriented clock descent and the conditional QOR law, but does
-not prove occupation of that clock carrier.  Proper-time recovery and any
-nonrelativistic observer correction require a noncircular branch test.
-Future-labelled components of the parent record do not imply backward
-causation; the temporal order belongs to the descended readout.
-
-\section{Primitive readout families}
-
-\begin{figure}[t]
- \centering
- \includegraphics[width=.9\linewidth]{figures/fig_readout_atlas.pdf}
- \caption{A shared parent response can support several typed readout families.
- Their codomains, nulls, closure tests and ownership must be audited before
- they are counted as independent information.}
- \label{fig:readout-atlas}
-\end{figure}
-
-The weak quantum notation \(q=U_q^{\Mta}(\Rmap(s))\) does not imply Hilbert
-space, interference or the Born rule.  The MVP obtains trace form only after
-the positive state/effect assumptions A6; information loss or finite capacity
-alone gives coarse graining, not complex quantum mechanics
-\cite{Hardy2001,Chiribella2011,MasanesMueller2011,BarnumWilce2014}.  Quantum
-stress and semiclassical gravity share the common functional, but metric
-quantization, interacting UV QFT and a complete measurement ontology remain
-open.
-
-For gravity, an obstruction is meaningful only as
-\(\omega_g(r)=0\Leftrightarrow J_gU_g(r)N_gr\).  A chart difference
-\(J_gU_g(r)-r\) is secondary, and an empirical residual may not select the
-body.  Dark-sector inference can mix gravitating content, baryonic remnants,
-modified response, morphology, path, observer and calibration effects.  The
-conditional Einstein leaf does not choose among them or explain dark matter
-or dark energy.
-
-A cosmological readout may be typed as
-\[
- O_{\rm cosmo}=U_{\rm cosmo}
- (\Rmap(s),\Mta^U,\gamma_{\rm path},\mathcal O_{\rm obs}).
-\]
-This warns against compressing expansion, distance, growth, lensing and CMB
-tensions into one unconstrained correction.  A physical branch requires
-multi-probe covariance, source-native descriptors and controlled
-\(\Lambda\)CDM limits.  Neither \(\Lambda_{\rm ren}\) nor its numerical value
-is derived here.
-
-\section{Physical positioning and adjacent programs}
-
-Tau Core is neither anti-MOND nor anti-dark-matter.  MOND-like acceleration
-laws may be effective readout limits, but their scale and known limits still
-require derivation.  Lensing, CMB, BAO, clusters and structure growth support
-extra gravitational structure in standard inference; Tau Core may only ask
-whether gravitating content, modified response and observer/path/morphology
-effects can be separated by source-frozen cross-readout tests.  It does not
-claim that collisionless matter is illusory.
-
-Relational-time programs motivate correlation-based clocks
-\cite{PageWootters1983,ConnesRovelli1994}; shape dynamics illustrates that
-different primitive/recovered structures must be declared
-\cite{GomesKoslowski2012}; and operational reconstructions show how much
-composition and symmetry are needed before quantum theory follows.  The
-semiclassical Einstein equation and stress-noise refinement belong to standard
-semiclassical/stochastic gravity \cite{HuVerdaguer2008}.  Locally covariant QFT
-supplies the appropriate curved-spacetime regularity target
-\cite{BrunettiFredenhagenVerch2003,HollandsWald2001,HollandsWald2002}.
-The QOR inverse-energy form is a standard quantum-speed-limit structure
-\cite{MandelstamTamm1945,AnandanAharonov1990,Taddei2013}; only the independent
-same-source body--Uhlmann identity is Tau-specific.  Holographic error
-correction is an analogy for nontrivial reconstruction, not evidence for Tau
-ontology \cite{AlmheiriDongHarlow2015}.
-
-\iffalse
 \section{What would count as progress}
 
 The framework becomes stronger only if abstract readout language is converted
@@ -3162,71 +2878,6 @@ photon-polarization records are candidate platforms, not asserted Tau
 carriers.  Promotion of any one candidate requires source-side definitions of
 \(q\), \(M(q)\), \(\mathcal A_{\rm cal}\), \(\rho_{O,0}\),
 \(\rho_{O,1}\), and \(\Delta H\), followed by the two pre-timing tests above.
-
-\fi
-
-\section{Falsifiability, objections, and next work}
-
-Tau Core becomes physics only through bounded source-first tasks.  A branch
-must declare a noncircular response law and source-realizable body, descend
-through a quotient-safe readout, recover the appropriate known limit, and
-freeze at least one consequence that could fail before inspecting the
-endpoint.  Negative results must demote a branch rather than authorize a new
-terminal or retuned kernel.
-
-The principal failure modes are: no source-realizable parent object; a readout
-that is not well defined on its declared quotient; failure of the relevant GR,
-Newtonian, Born or cosmological limit; endpoint leakage; and rescue by an
-unconstrained post-hoc terminal.  The corresponding status labels are
-\emph{toy-only}, \emph{phenomenological-only}, \emph{blocked} and
-\emph{rejected}.  Toy-only means that a construction is internally
-consistent but not physically selected; phenomenological-only means that an
-effective fit exists without a parent derivation; blocked means that a named
-missing theorem or datum prevents promotion; rejected means that a frozen
-prediction, quotient condition, or known limit has failed.  In particular, a
-coordinate declared null cannot later be
-used as an endpoint-selected correction without failing quotient safety.
-
-The strongest reviewer objections are therefore legitimate tests, not matters
-of terminology.  Without source-frozen constraints the parent is only a
-relabeling; without a physical selection law it is unobservable scaffolding;
-without preserved negative results the framework could explain anything.  The
-displayed Einstein and Born leaves are conditional standard recovery, not
-first-principles derivations from the weak Tau spine.  The QOR inverse-energy
-dependence is standard; only the independently reconstructed same-source
-identity \(x_A=x_Q\) is Tau-specific.  The once-counted ledger removes formal
-double counting only after microscopic ownership is supplied.  Quantized or
-strongly fluctuating geometry and extreme semiclassical regimes remain outside
-the current theorem.
-
-Structural novelty must take the form
-\[
- \operatorname{Struct}_\tau(s,\Mta)=0
- \Longrightarrow
- \operatorname{Constraint}(U_i^{\Mta},U_j^{\Mta},N_i,N_j),
-\]
-or an upstream exclusion of a readout pattern.  Merely adding a residual term
-to MOND, \(\Lambda\)CDM, GR or quantum theory does not qualify.  At minimum a
-promoted branch must provide source declaration, body-first order, common
-ownership, readout codomain, null and relift policies, quotient safety, known
-limit, dimensional audit, a new discriminator and an explicit failure rule.
-
-The next decisive task is the first open arrow
-\[
- B_\tau^{\rm phys}+s_U
- \longrightarrow
- \GMVP+\text{state/effect completion}+\text{observer carrier}.
-\]
-It requires physical selection of the coherent \(\Pi_{\rm phys}\) packet,
-occupied record support, the same-action A8b connector, universal-seed order
-compatibility, microscopic once-counting and record hold.  A laboratory route
-must independently reconstruct body action, state distance, coherent/recovery
-evidence, energy spread and timing on one frozen carrier.  No platform is
-claimed to have completed that certificate.  Superconducting qubits,
-trapped-ion or spin systems, metastable atomic levels and photon polarization
-are candidate carriers only, not asserted Tau realizations.  Likewise,
-cross-readout residuals are diagnostics only after matched null, covariance
-and source-freeze controls; they are not by themselves validation statistics.
 
 \section{A compact formal summary}
 
