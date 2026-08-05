@@ -15,8 +15,8 @@ the three final PDFs.
 | Candidate response-law classes and terminal readout inventory | Paper I, `Foundation architecture and formal discipline` | Retained as compact explicit inventories. |
 | Body-first order, once-counted functional, conditional gravity/optics, quantum/Born and QOR chain | Paper I, MVP section | Retained in full theorem-bearing form. |
 | Finite source closure needed to state A8b and the nature-selection blocker | Paper I, MVP summary and non-results | Retained at foundation level. |
-| Complete record edges, holonomy, irreversible CP/recovery extension, coherent witness and FOC-7 details | Paper II | Full technical statements live in Paper II; Paper I retains their role, result boundary and open physical-selection claim. |
-| Source signatures, GNS uniqueness, marginal no-go, joint incidence and `Pi_phys` typing | Paper III | Full technical statements live in Paper III; Paper I retains their consequence and nature-selection blocker. |
+| Source signatures, GNS uniqueness, marginal no-go, joint incidence and `Pi_phys` typing | Paper II | Full technical statements live in Paper II; Paper I retains their consequence and nature-selection blocker. |
+| Complete record edges, holonomy, irreversible CP/recovery extension, coherent witness and FOC-7 details | Paper III | Full technical statements live in Paper III; Paper I retains their role, result boundary and open physical-selection claim. |
 | Representation condition, nulls, endpoint blindness, seven postulates and toy witness | Paper I, `Formal safeguards, postulates, and finite controls` | Consolidated into one visible audit spine. |
 | Effective variation, morphological body and observer-time interpretation | Paper I, `Atemporal body and effective readout-time` | Equations, toy sequence and physical boundary retained. |
 | Quantum, gravity/dark-sector and cosmological readout interpretations | Paper I, `Primitive readout families` | Retained as one typed foundation section; no empirical validation is implied. |

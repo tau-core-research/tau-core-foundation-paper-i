@@ -1,6 +1,6 @@
 # Tau Core Foundation Paper I
 
-Private foundation-paper repository:
+Public foundation-paper repository:
 
 **Tau Core: An Atemporal Morphological Readout Framework and a Conditional
 Minimum-Viable Physical Completion**
@@ -101,7 +101,7 @@ irreversible record formation is not covered by that theorem. Commuting data
 cannot identify reversibility, so physical selection requires a coherent
 witness or independently certified recovery. The detailed edge, holonomy,
 recovery-correctable CP and toy-model analysis is maintained in Foundation
-Paper II.
+Paper III.
 
 The final nature-level claim is explicitly non-identifiable from the evidence
 currently assembled in the paper. The manuscript defines a seven-part `FOC-7`
@@ -116,7 +116,7 @@ source-signature theorem: typed cyclic representation is unique once the
 complete source packet is supplied, marginals do not select that packet, and
 one onto joint incidence is sufficient for a faithful joint Gram state. The
 complete GNS, marginal no-go, Pauli-dimension and incidence proofs are
-maintained in Foundation Paper III. Nature-level occupation remains open.
+maintained in Foundation Paper II. Nature-level occupation remains open.
 
 The record-occurrence side is also sharper. In an enriched dagger-Frobenius
 base completion, the record-copy map is the metric adjoint of primitive

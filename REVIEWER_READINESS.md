@@ -240,7 +240,7 @@ as physical equivalences.
 Paper I now retains these source-signature results only at foundation-summary
 depth. The complete GNS uniqueness proof, bipartite and all-proper-marginal
 no-go arguments, Pauli-dimension audit, onto-incidence theorem and
-`Pi_phys` reduction are isolated in Foundation Paper III. This separation does
+`Pi_phys` reduction are isolated in Foundation Paper II. This separation does
 not change their claim status or use another Tau manuscript as evidence.
 
 A separate source theorem sharpens A8a-OCC. In an enriched metric
