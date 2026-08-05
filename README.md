@@ -7,6 +7,9 @@ Minimum-Viable Physical Completion**
 
 The manuscript is self-contained and does not use another Tau Core paper,
 repository, or unpublished analysis as evidence for its claims.
+It is the 30-page architectural entry point of the three-paper foundation
+sequence; the shared series map is navigational and does not weaken this
+self-contained claim boundary.
 
 ## Main Claim
 

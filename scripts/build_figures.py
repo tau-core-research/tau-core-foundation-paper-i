@@ -523,6 +523,27 @@ def figure_qor_prediction():
     save(fig, "fig_qor_prediction.pdf")
 
 
+def figure_foundation_series_map():
+    fig, ax = setup(width=10.4, height=3.8)
+    panel_label(ax, "Foundation sequence and dependency direction")
+    items = [
+        (0.055, "Paper I\narchitecture + conditional completion", COL["parent"], COL["parent_edge"]),
+        (0.365, "Paper II\nfinite source sufficiency + incidence", COL["morph"], COL["morph_edge"]),
+        (0.675, "Paper III\nrecord transport + recovery", COL["readout"], COL["readout_edge"]),
+    ]
+    for x, text_, fc, ec in items:
+        box(ax, x, 0.52, 0.27, 0.19, text_, fc, ec, fs=8.6)
+    arrow(ax, (0.325, 0.615), (0.355, 0.615), color=COL["dark"])
+    arrow(ax, (0.635, 0.615), (0.665, 0.615), color=COL["dark"])
+    box(ax, 0.19, 0.18, 0.62, 0.14,
+        "Shared open arrow: physical base--seed selection and occupation",
+        COL["defect"], COL["defect_edge"], fs=8.8)
+    label(ax, 0.50, 0.08,
+          "Later papers refine sufficient internal conditions; they are not evidence for nature-level selection.",
+          fs=8.2, color=COL["dark"])
+    save(fig, "fig_foundation_series_map.pdf")
+
+
 def main():
     figure_core_spine()
     figure_block_comparison()
@@ -536,6 +557,7 @@ def main():
     figure_common_functional()
     figure_standard_limits()
     figure_qor_prediction()
+    figure_foundation_series_map()
 
 
 if __name__ == "__main__":
