@@ -7,7 +7,9 @@ authors:
     given-names: Jozsef
 year: 2026
 version: "0.3"
+date-released: 2026-08-05
 repository-code: "https://github.com/tau-core-research/tau-core-foundation-paper-i"
+license: MIT
 keywords:
   - Tau Core
   - emergent time
