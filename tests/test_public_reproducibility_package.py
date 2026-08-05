@@ -32,7 +32,12 @@ def test_claim_boundary_markers():
     assert "not a universal time atom" in text
     assert "Record occurrence and finite A8b are independent" in text
     assert "qor-three-condition-conjunction" in text
-    assert "Finite source-signature selection theorem" in text
+    assert "Finite source-signature representation uniqueness" in text
+    assert "Primary-SHR recovery differential generates affiliation" in text
+    assert "Blockwise spectral-to-amplitude transfer" in text
+    assert "Universal-seed rich-body recovery" in text
+    assert "complete-body realization defect" in text
+    assert "A4-SRCMIN" in text
     assert "prop:finite-source-signature-uniqueness" in text
     assert "prop:marginal-joint-nogo" in text
     forbidden = [
