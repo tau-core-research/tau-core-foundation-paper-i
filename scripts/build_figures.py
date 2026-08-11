@@ -195,7 +195,7 @@ def figure_block_comparison():
     save(fig, "fig_block_vs_tau.pdf")
 
 
-def figure_readout_atlas():
+def _figure_readout_atlas_legacy():
     fig, ax = setup(width=10.8, height=5.9)
     panel_label(ax, "C. Readout atlas with null and closure boundaries")
     box(ax, 0.40, 0.79, 0.20, 0.11, "parent response\n$\\rho_\\tau(s)$", COL["parent"], COL["parent_edge"])
@@ -222,6 +222,52 @@ def figure_readout_atlas():
         box(ax, x, 0.23, 0.14, 0.09, "closure test\n$C_i$", "#ffffff", "#777777", fs=7.6)
     label(ax, 0.50, 0.13, "Each sector needs its own codomain, null quotient, closure test, and validation boundary.", fs=9)
     label(ax, 0.50, 0.07, "A shared parent response does not imply automatic additivity of readout components.", fs=9)
+    save(fig, "fig_readout_atlas.pdf")
+
+
+def figure_readout_atlas():
+    fig, ax = setup(width=10.8, height=5.9)
+    panel_label(ax, "C. Morphology-conditioned primitive-readout atlas")
+    box(ax, 0.40, 0.83, 0.20, 0.09, "morphological body\n$M_\\tau$",
+        COL["parent"], COL["parent_edge"])
+    box(ax, 0.39, 0.70, 0.22, 0.08, "observer access $A_O$",
+        "#eef6ee", COL["parent_edge"], fs=8)
+
+    bus_y = 0.65
+    line(ax, [0.08, 0.92], [bus_y, bus_y],
+         color=COL["readout_edge"], lw=1.0, z=1)
+    arrow(ax, (0.50, 0.83), (0.50, 0.78),
+          color=COL["readout_edge"], lw=1.0)
+    arrow(ax, (0.50, 0.70), (0.50, bus_y),
+          color=COL["readout_edge"], lw=1.0)
+
+    nodes = [
+        ("$U_T$\ntime", 0.015),
+        ("$U_Q$\nquantum", 0.155),
+        ("$U_G$\ngravity", 0.295),
+        ("$U_M$\nmatter", 0.435),
+        ("$U_R$\nradiation", 0.575),
+        ("$U_A$\ngauge/EM", 0.715),
+        ("$U_E$\nenergy/stress", 0.855),
+    ]
+    for text, x in nodes:
+        cx = x + 0.065
+        arrow(ax, (cx, bus_y), (cx, 0.58),
+              color=COL["readout_edge"], lw=1.0)
+        box(ax, x, 0.49, 0.13, 0.09, text,
+            COL["readout"], COL["readout_edge"], fs=7.2)
+        arrow(ax, (cx, 0.49), (cx, 0.43), color="#777777", lw=0.8)
+        box(ax, x, 0.34, 0.13, 0.09, "stable class\n$Q_O^{(a)}$",
+            "#ffffff", "#777777", fs=6.8)
+        arrow(ax, (cx, 0.34), (cx, 0.28), color="#777777", lw=0.8)
+        box(ax, x, 0.19, 0.13, 0.09, "closure/null\n$C_a,N_a$",
+            "#ffffff", "#777777", fs=6.8)
+    label(ax, 0.50, 0.10,
+          "Each typed precursor needs stable classes, nulls, closure tests, and validation boundaries.",
+          fs=8.4)
+    label(ax, 0.50, 0.05,
+          "Stacked terminal rank cannot exceed the information exposed by the common access map.",
+          fs=8.4)
     save(fig, "fig_readout_atlas.pdf")
 
 
@@ -373,7 +419,7 @@ def figure_claim_ladder():
         0.22,
         0.68,
         0.17,
-        "Foundation Paper I reaches a conditional recovery theorem and a frozen prediction.\nNature-level source selection and empirical validation remain separate steps.",
+        "Foundation Paper I reaches a conditional recovery theorem and a frozen prediction.\nUnrestricted parent-law realization and empirical validation remain separate steps.",
         "#ffffff",
         "#777777",
         fs=8.8,
@@ -389,7 +435,7 @@ def figure_status_matrix():
         "Observer descent",
         "GR / quantum limits",
         "QOR prediction",
-        "Nature-level theory",
+        "Physical parent-law",
     ]
     cols = ["Defined here", "MVP assumption", "Conditional result", "Tau empirical test", "Source selection"]
     data = np.array(
@@ -426,7 +472,7 @@ def figure_status_matrix():
     ax.text(
         0.5,
         -0.16,
-        "Green: specified inputs. Orange: conditional results. Red: open physical selection or empirical status.",
+        "Green: specified inputs. Orange: conditional results. Red: open parent-law realization, occupation, or empirical status.",
         transform=ax.transAxes,
         ha="center",
         va="center",
@@ -459,7 +505,7 @@ def figure_mvp_closure():
     for x, text in outputs:
         box(ax, x, 0.28, 0.17, 0.13, text, COL["readout"], COL["readout_edge"], fs=8.1)
         arrow(ax, (0.72, y), (x + 0.085, 0.41), color=COL["readout_edge"], rad=0.08 if x < 0.4 else (-0.08 if x > 0.6 else 0.0))
-    box(ax, 0.82, 0.59, 0.15, 0.25, "OPEN\nnature-level\nselection\n$B_\\tau+s_U\\Rightarrow?$\nMVP", COL["defect"], COL["defect_edge"], fs=7.8)
+    box(ax, 0.82, 0.59, 0.15, 0.25, "OPEN\nparent-law\nrealization\n$B_\\tau+s_U\\Rightarrow?$\nMVP", COL["defect"], COL["defect_edge"], fs=7.8)
     arrow(ax, (0.79, 0.72), (0.82, 0.72), color=COL["defect_edge"])
     label(ax, 0.50, 0.13, "Closed as one conditional completion; not selected or validated as Nature's completion.", fs=9, weight="bold")
     save(fig, "fig_mvp_closure.pdf")
@@ -539,7 +585,7 @@ def figure_foundation_series_map():
         "Shared open arrow: physical base--seed selection and occupation",
         COL["defect"], COL["defect_edge"], fs=8.8)
     label(ax, 0.50, 0.08,
-          "Later papers refine sufficient internal conditions; they are not evidence for nature-level selection.",
+          "Later papers refine sufficient internal conditions; they do not prove unrestricted parent-law realization.",
           fs=8.2, color=COL["dark"])
     save(fig, "fig_foundation_series_map.pdf")
 

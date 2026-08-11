@@ -7,11 +7,35 @@ Minimum-Viable Physical Completion**
 
 The manuscript is self-contained and does not use another Tau Core paper,
 repository, or unpublished analysis as evidence for its claims.
-It is the 30-page architectural entry point of the three-paper foundation
+It is the architectural entry point of the five-paper foundation
 sequence; the shared series map is navigational and does not weaken this
 self-contained claim boundary.
 
+## Atemporal Parent-Realization Terminology
+
+Because the Tau parent is atemporal, “Nature selects” does not mean an
+external agent or a later decision. It is legacy shorthand for the internal
+physical implication
+
+\[
+(B_\tau^{\mathrm{phys}},s_U,\mathcal L_{\mathrm{parent}})
+\Longrightarrow \mathfrak P,
+\]
+
+together with physical occupation of the support of \(\mathfrak P\). A theorem
+inside a declared completion proves only class-relative realization; it does
+not prove this unrestricted base–seed arrow. Agreement of finitely many
+terminal readouts also cannot establish ambient-source exhaustivity. The
+current terminology is therefore **parent-law realization** and **physical
+occupation**.
+
+
 ## Main Claim
+
+The upstream parent analysis now also proves a finite-local occupied-support
+criterion: positive seed-unloaded split sectors stabilize at zero, while
+stable loaded or cross-coupled sectors are part of the generated body. This
+does not establish ambient exhaustivity or unrestricted MVP occupation.
 
 The paper defines a body/readout architecture in which observed physical
 descriptions are observer-indexed descents of an endpoint-blind parent
@@ -20,6 +44,26 @@ response:
 ```text
 s -> R_tau(s) -> M_tau -> Desc_O(M_tau).
 ```
+
+Its common primitive-readout law is:
+
+```text
+Y_O^(a) = Q_O^(a) o T^(a) o A_O[M_tau].
+```
+
+Observer position, extent and relational access act before typed time,
+quantum, gravity, matter, radiation and gauge terminals. Stable
+sector-specific resolution then determines operational classes. Morphological
+``unfolding'' means accessible rank, response spectrum, closure, redundancy,
+null and retained-holonomy structure, not hidden parent-time evolution.
+
+The temporal specialization is now sharper downstream. On the adopted common
+P3 handoff the time terminal factors through the shared grade-one descriptor,
+but a protected temporal covector and positive contact response still select
+the clock. The neutral regular branch reproduces local GR proper time exactly.
+Observer-relative rate and conditional morphological clock curvature do not
+by themselves establish a Tau-over-GR anomaly; the latter remains a
+source-frozen path-pair measurement claim with complete standard controls.
 
 It then freezes one conditional minimum-viable completion:
 
@@ -34,7 +78,7 @@ Fubini--Study/Bures state angle; inside the adopted common-Gram completion,
 Uhlmann minimum lift proves the morphology-to-distance conversion. The
 Tau-specific discriminator is the independently reconstructed same-source
 identity between the body-action ratio and the Uhlmann chord, not an extra
-timing delay. Nature-level occupation, laboratory realization and empirical
+timing delay. Unrestricted physical occupation, laboratory realization and empirical
 validation remain open. Relative to the current source axioms, physical record
 occurrence and the finite body--Uhlmann identity are proved logically
 independent; an operational QOR trial requires both together with a separately
@@ -56,7 +100,7 @@ occupation alone do not imply affiliation. Inside the declared source-minimal
 primary-SHR completion, however, the reconstructed seed boundary and pure
 Hodge-isometric realization generate the affiliated Hodge--Dirac operator.
 Any non-isometric alternative requires additional primitive base-work rank and
-is outside the MVP. Nature-level occupation of the primary-SHR/source-minimal
+is outside the MVP. Unrestricted physical occupation of the primary-SHR/source-minimal
 premises remains open.
 
 The connector itself is now derived conditionally rather than left as an
@@ -83,7 +127,8 @@ and finite recovery completeness explicitly. The restricted Cauchy step is
 used only for physically realizable nonnegative partial sums inside the chord
 bound. Blockwise common-unit normalization fixes slopes after linearity; it
 does not by itself identify arbitrary nonlinear laws across blocks.
-A4-SRCMIN-J is an optional Occam-type MVP selector, not a theorem of Nature.
+A4-SRCMIN-J is an optional Occam-type MVP selector, not an unrestricted
+physical parent-law theorem.
 Likewise, special dagger-Frobenius normalization is an enriched completion
 input; a normalizable algebra with a nontrivial central loop factor retains
 additional normalization data.
@@ -95,18 +140,18 @@ primitive-defect extensivity then forces the exact finite Trace--Gram/A8b law
 on that edge and on its composable path closure.  Endpoint-only descent is
 permitted only when relative holonomy is Uhlmann-gauge or descriptor-null;
 visible holonomy remains path/phase information.  This does not establish
-Nature-level or laboratory occupation, nor arbitrary-state coverage.
+unrestricted physical or laboratory occupation, nor arbitrary-state coverage.
 The main manuscript now retains only a concise complete-edge theorem summary.
 On the declared enriched occupied support, a reversible complete edge gives a
 faithful trace-preserving standard-form map and exact finite Trace--Gram law;
 descriptor-visible holonomy remains physical path information. Generic
 irreversible record formation is not covered by that theorem. Commuting data
-cannot identify reversibility, so physical selection requires a coherent
+cannot identify reversibility, so physical realization requires a coherent
 witness or independently certified recovery. The detailed edge, holonomy,
 recovery-correctable CP and toy-model analysis is maintained in Foundation
 Paper III.
 
-The final nature-level claim is explicitly non-identifiable from the evidence
+The final unrestricted parent-realization claim is explicitly non-identifiable from the evidence
 currently assembled in the paper. The manuscript defines a seven-part `FOC-7`
 certificate requiring a held single-shot record, independent same-carrier
 action and Uhlmann reconstructions at multiple nonzero separations, a coherent
@@ -119,7 +164,7 @@ source-signature theorem: typed cyclic representation is unique once the
 complete source packet is supplied, marginals do not select that packet, and
 one onto joint incidence is sufficient for a faithful joint Gram state. The
 complete GNS, marginal no-go, Pauli-dimension and incidence proofs are
-maintained in Foundation Paper II. Nature-level occupation remains open.
+maintained in Foundation Paper II. Unrestricted physical occupation remains open.
 
 The record-occurrence side is also sharper. In an enriched dagger-Frobenius
 base completion, the record-copy map is the metric adjoint of primitive
@@ -140,7 +185,8 @@ open.
 - It does not replace dark matter, dark energy, or general relativity.
 - It does not import numerical or synthetic results from other Tau Core work as
   evidence for the framework.
-- It does not present a nature-selected final parent action or a complete
+- It does not present an unrestrictedly realized and physically occupied final
+  parent action or a complete
   validated physical theory.
 - It does not claim that any candidate laboratory platform is already a Tau
   carrier or that the parent predicts a nonzero carrier effect size.
@@ -182,7 +228,7 @@ claim-equivalent to the English v0.3 paper.
 This repository is a foundation-paper / conditional-completion package.  Its
 job is to make the Tau Core parent/body/readout architecture and its strongest
 finite completion discussable without smuggling conditional recovery into a
-claim of physical selection.
+claim of physical realization.
 The current manuscript further proves that physically occupied base--seed
 response stabilized before observer descent belongs to the complete
 morphological body. A partial-body defect is therefore a truncation diagnostic.
@@ -194,6 +240,10 @@ minimum body dimension.
 The current hub backport also distinguishes internal construction from physical
 selection. An enriched ROOT packet conditionally supplies occupied complete
 record edges, a traced two-leg dagger--Frobenius unfolding and a structurally
-once-counted ledger. Nature-level occupation and microscopic filling remain
+once-counted ledger. Unrestricted physical occupation and microscopic filling remain
 open, while unique selection from the current narrow source reduct is ruled out
 by an inequivalent energy-sharing completion with the same reduct.
+The current series-wide boundary is sharper: disjoint-source valuation
+conditionally yields isolated quantum protection, but lifting observed
+factorization to the parent requires a jointly faithful primitive-readout
+family. That global physical stacked readout is not yet complete.

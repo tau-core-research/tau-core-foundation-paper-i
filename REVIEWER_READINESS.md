@@ -157,16 +157,17 @@ Finite recovery completeness is separately defined as exact factorization of
 finite action through the minimum-lift chord with no positive hidden-stiffness
 functional. A4-SRCMIN-J is an optional Occam-type MVP rule, while special
 dagger-Frobenius normalization is a strong enriched input; neither is
-presented as first-principles nature-level selection.
+presented as first-principles unrestricted parent-law realization and
+physical occupation.
 The manuscript now carries the complete-edge result only at foundation-paper
 summary depth. It states the strong sufficient hypotheses, exact finite A8b
 consequence, descriptor-frozen holonomy boundary, irreversible fork and
 commuting-record no-go. The extended proof, three-vertex control,
 recovery-correctable CP theorem and three-qubit toy are separated from Paper I.
 This keeps the principal manuscript focused on the common architecture while
-preserving the nature-level occupation blocker.
+preserving the unrestricted physical-occupation blocker.
 
-The terminal nature-level statement is also an identifiability boundary:
+The terminal unrestricted-realization statement is also an identifiability boundary:
 current evidence is equally compatible with occupied and nonoccupied parent
 models sharing the displayed standard limits and local data. The explicit
 `FOC-7` certificate states what must be reconstructed independently on one
@@ -175,7 +176,7 @@ the outlook has yet passed that certificate.
 An explicit two-block counterpair shows that recovery cyclicity, central support, and
 faithful occupation alone do not imply affiliation. The current parent has
 not yet been shown to construct its Dirac operator from this algebra, so the
-result is conditional rather than nature-level selection. The new primary-SHR
+result is conditional rather than unrestricted parent-law realization. The new primary-SHR
 proposition constructs the affiliated operator instead of assuming it, but
 only in the declared minimum-source completion.
 
@@ -225,8 +226,8 @@ arbitrary four-sector models. Conversely, one
 source-owned onto incidence with positive stiffness produces a faithful joint
 Gram state and fixes all mixed moments. For the once-owned P1--P4 role ledger,
 the remaining ideal/representation choice reduces to one coherent unital
-`*-homomorphism` from the primitive role colimit. Its physical selection is
-open.
+`*-homomorphism` from the primitive role colimit. Its unrestricted parent-law
+realization and physical occupation are open.
 
 The finite GNS statement is correspondingly restricted. It compares two
 minimal cyclic realizations of the same fixed abstract source algebra, faithful
@@ -282,7 +283,8 @@ black-hole evaporation regimes.
 
 The manuscript does not claim:
 
-- nature-level selection of the completion from the physical base and seed;
+- unrestricted parent-law realization and physical occupation of the
+  completion from the physical base and seed;
 - an unconditional derivation of GR or quantum mechanics from minimal Tau;
 - ultraviolet or nonperturbative quantum gravity;
 - a complete interacting QFT or measurement ontology;
@@ -295,13 +297,13 @@ The manuscript does not claim:
 
 | Objection | Manuscript response | Remaining risk |
 |---|---|---|
-| The framework is only a relabeling. | Nontriviality, quotient, source-freeze, and frozen-discriminator requirements are explicit. | Physical source selection is still open. |
-| The parent permits many inequivalent MVP completions. | Proposition 5 gives an explicit upstream non-uniqueness countermodel; the manuscript therefore treats the displayed MVP as one frozen conditional completion, not as Nature-selected. | This is the principal foundation-level blocker: a deeper source law must select the occupied completion or a source-frozen test must reject it. |
-| The manuscript does not state what would suffice for finite completion uniqueness. | The finite source-signature proposition applies GNS uniqueness to a complete source-owned algebra, faithful state, and typed role/CP-map packet. It gives uniqueness up to typed unitary equivalence once that packet is supplied. | The current parent has not yet been shown to own or occupy the complete packet. The theorem is a selection criterion, not a nature-selection proof. |
+| The framework is only a relabeling. | Nontriviality, quotient, source-freeze, and frozen-discriminator requirements are explicit. | Unrestricted parent-law realization and physical occupation are still open. |
+| The parent permits many inequivalent MVP completions. | Proposition 5 gives an explicit upstream non-uniqueness countermodel; the manuscript therefore treats the displayed MVP as one frozen conditional completion, not as an unrestrictedly realized packet. | This is the principal foundation-level blocker: a deeper source law must realize and occupy the completion or a source-frozen test must reject it. |
+| The manuscript does not state what would suffice for finite completion uniqueness. | The finite source-signature proposition applies GNS uniqueness to a complete source-owned algebra, faithful state, and typed role/CP-map packet. It gives uniqueness up to typed unitary equivalence once that packet is supplied. | The current parent has not yet been shown to own or occupy the complete packet. The theorem is an internal selector criterion, not an unrestricted physical-realization proof. |
 | Separately successful terminal packets might already determine their common source. | The marginal-to-joint proposition gives faithful joint states with identical complete one-sector marginals and different cross moments. Side-by-side sector assembly is therefore insufficient. | A source-owned cross-sector observable family with full joint information rank remains to be derived. |
 | The common functional is not microscopic. | It is explicitly presented as an infrared typed variational packet, not a UV Lagrangian. | Higher-order and UV completion are unspecified. |
-| Einstein recovery is assumed. | The Palatini/Einstein--Hilbert infrared class is listed as assumption A5. | Tau-parent selection of A5 is open. |
-| Born recovery is assumed. | Positivity, completeness, additivity, and noncontextuality are listed as A6 and compared with Gleason-type results. | Tau-parent selection of A6 is open. |
+| Einstein recovery is assumed. | The Palatini/Einstein--Hilbert infrared class is listed as assumption A5. | Parent-law realization and occupation of A5 are open. |
+| Born recovery is assumed. | Positivity, completeness, additivity, and noncontextuality are listed as A6 and compared with Gleason-type results. | Parent-law realization and occupation of A6 are open. |
 | The common functional double counts stress or response. | The effective ledger assigns retained body stress, integrated quantum/observer stress, counterterms, and Green responses exactly once; mixed blocks use the exact Schur reduction. | The microscopic ownership partition and full nonlinear parent action remain open. |
 | A fluctuating or quantized metric invalidates Born recovery. | The positive state/effect form is stable on fixed and classical-dynamic geometries. Quantized geometry is explicitly excluded from the present recovery claim unless a constrained joint algebra/state/effect packet is supplied. | Tau Core has not constructed that joint physical algebra. |
 | QOR is only a quantum speed limit. | The manuscript now agrees that the timing law is standard after A8. The Tau-specific test is the independently predicted body-action/Bures identification. | No physical source-side `epsilon_O`, validated carrier, or distinctive effect size is yet available. |

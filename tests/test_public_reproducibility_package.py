@@ -28,7 +28,8 @@ def test_claim_boundary_markers():
     assert "Atemporal Morphological Readout Framework" in text
     assert "conditional minimum-viable physical completion" in text
     assert "does not claim empirical validation" in text
-    assert "nature-level selection" in text
+    assert "Atemporal parent-realization terminology" in text
+    assert "unrestricted parent-law realization" in text
     assert "conditional standard-limit recovery" in text
     assert "not a universal time atom" in text
     assert "Record occurrence and finite A8b are independent" in text
