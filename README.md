@@ -29,6 +29,15 @@ terminal readouts also cannot establish ambient-source exhaustivity. The
 current terminology is therefore **parent-law realization** and **physical
 occupation**.
 
+## Observer Co-Descent
+
+`O` initially labels an occupied body-side carrier candidate. It becomes an
+operational observer only together with a regular local rank-four Lorentzian
+descent, a stable observer--source quantizer and a nonzero record/effect. The
+observer and its accessible 4D world are co-readouts of one body-conditioned
+solution. A 4D chart or carrier support alone is insufficient; no independent
+channel layer or parent collapse is asserted.
+
 
 ## Main Claim
 
@@ -36,6 +45,13 @@ The upstream parent analysis now also proves a finite-local occupied-support
 criterion: positive seed-unloaded split sectors stabilize at zero, while
 stable loaded or cross-coupled sectors are part of the generated body. This
 does not establish ambient exhaustivity or unrestricted MVP occupation.
+
+A concrete enriched realization is now known: one full-rank oriented seed
+incidence induces a common `Lambda^2 + Lambda^3` pair/top closure packet with
+ranks `3 + 1`, one Hodge metric and one action unit. Source fidelity occupies
+both degrees for a pointed exterior seed. This is a conditional
+enriched-class theorem owned in detail by Technical Paper VII-B; the narrow
+base--seed reduct still does not force the pointed exterior grammar.
 
 The paper defines a body/readout architecture in which observed physical
 descriptions are observer-indexed descents of an endpoint-blind parent
