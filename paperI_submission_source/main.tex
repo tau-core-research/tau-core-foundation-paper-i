@@ -58,7 +58,7 @@
 \large Foundation Paper I}
 \author{Jozsef Olcsak\\
 \small Independent researcher}
-\date{Draft v0.3 --- Last revised: 14 August 2026}
+\date{Draft v0.3 --- Last revised: 24 August 2026}
 
 \begin{document}
 
@@ -162,6 +162,13 @@ quantum proofs are owned by the later papers.  The Paper-VII triptych separates
 joint terminal assembly, the P3 parent packet and the scalar-15/type-II
 functional-RG specialization.  Those downstream results are not additional
 results owned by Paper I.
+
+Paper II further proves that the mixed relation ideal, separator multiplicity
+matching, relative gluing and faithful retained-block occupation are not
+independent switches once one coherent source representation/state datum
+$\mathfrak J_*=(\Pi_*,\varphi_*)$ is supplied.  The enriched MVP adopts this
+joint datum only as a working completion.  Its unrestricted parent-law
+realization and the completeness of the future terminal family remain open.
 \end{minipage}}
 \end{center}
 
@@ -545,10 +552,42 @@ QOR-test question left open here.
 
 \section{Core vocabulary}
 
+\paragraph{Joint-law-first formation basis.}
+The minimal formation datum is
+\begin{equation}
+ \mathfrak F_{\min}=
+ (\mathcal Q_B,\mathsf S_B,0_B,[\mathcal A],
+ \operatorname{Sel}_B,\operatorname{Stab}_B),
+ \label{eq:minimal-formation-datum}
+\end{equation}
+where $\mathcal Q_B$ is the protected body quotient, $\mathsf S_B$ is one
+source family with a physically distinguished zero-source member, and
+$[\mathcal A(s,\cdot)]$ is a frozen source-indexed body law modulo
+body-independent source constants.  The final two entries declare which
+stationary classes are selected and stable.  The minimal base is the
+zero-source response structure
+\begin{equation}
+ B_{\min}=(\mathcal Q_B,[\mathcal A(0_B,\cdot)],[M_0],
+ \operatorname{Sel}_B,\operatorname{Stab}_B),
+ \qquad \operatorname{Sel}_B(0_B)=\{[M_0]\}.
+ \label{eq:minimal-base}
+\end{equation}
+This ``base'' is not assumed to be an ordinary field on a prior spacetime.
+Locality, Hodge structure, units and smooth carriers are enrichments rather
+than prerequisites of the minimal formation concept.
+
 \begin{definition}[Parent seed]
-A parent seed \(s \in \Ssrc\) is a Tau-side source datum.  It is not an
-observed endpoint and must not be chosen by looking at the endpoint residual
-that a later readout is supposed to explain.
+A parent seed is a base-relative source class $[s]_B$ defined by
+\begin{equation}
+ \mathcal I_B(s;M)=\mathcal A(0_B,M)-\mathcal A(s,M),\qquad
+ s\sim_Bt\iff \mathcal I_B(s;M)-\mathcal I_B(t;M)
+ \text{ is independent of }M.
+ \label{eq:base-relative-seed}
+\end{equation}
+An occupied universal morphology seed is one response-distinct class
+$[s_U]_B\ne[0_B]_B$ in the declared source family.  It is not an observed
+endpoint, an initial condition in parent time, or a label chosen by looking at
+the residual that a later readout is supposed to explain.
 \end{definition}
 
 \begin{definition}[Endpoint-blind Tau response]
@@ -567,11 +606,33 @@ representative.
 
 \begin{definition}[Morphological body]
 The Tau-side morphological body \(\Mta\) is the intrinsic structured body that
-conditions readouts.  It is not an observed 4D morphology label.  It may carry
+conditions readouts.  Minimally it is a stable selected source response
+$[M_s]\in\operatorname{Sel}_B(s)$ with $[M_s]\ne[M_0]$ on the protected
+quotient.  It is not an observed 4D morphology label.  It may carry
 sector, branch, wall, null, Hessian-support, admissibility, global-order, and
 observer/path-relevant structure.  A projected morphology is only a readout
 handle on this deeper body.
 \end{definition}
+
+\begin{proposition}[Zero-source factorization and formation certificates]
+Once the physical zero-source member is fixed, the split
+\begin{equation}
+ \mathcal A(s,M)=\mathcal A_B^0(M)-\mathcal I_B(s;M),\qquad
+ \mathcal A_B^0(M)=\mathcal A(0_B,M),
+ \label{eq:zero-source-factorization}
+\end{equation}
+is unique modulo body-independent source constants.  Without a distinguished
+zero source, the common refactorization
+$\mathcal A_B^0\mapsto\mathcal A_B^0+J(M)$,
+$\mathcal I_B\mapsto\mathcal I_B+J(M)$ leaves the joint law unchanged, so
+base and seed are not separately identifiable.  Given a stable selected
+nonneutral branch, any of three conditions is sufficient for formation:
+nonzero first variation at $M_0$, loss of neutral stability, or a lower-action
+global competitor under a global-minimum selector.
+\end{proposition}
+The proposition controls the mathematical roles.  It does not prove that the
+physical joint law, its zero-source comparison, selector, or occupied
+universal seed exists in nature.
 
 For Foundation Paper I the minimal mathematical type is:
 \[
@@ -1257,6 +1318,64 @@ and the usual redshift and optical Jacobi equations.  No independent lensing
 gain is introduced.  These are conditional standard-limit recoveries; the
 completion does not predict numerical values of \(G_{\rm SHR}\) or
 \(\Lambda_{\rm ren}\).
+
+\paragraph{M4 metrological quotient.}
+The occupied regular rank-four packet and the common P1 unit identities must
+be distinguished from a prediction of dimensionful decimal constants. With
+dimensionless local coframe coordinates, write
+\begin{equation}
+ g_O=L_H^2\widehat g_O,
+ \qquad d\tau_O=T_H\,d\widehat\tau_O,
+ \qquad c=\frac{L_H}{T_H}.
+ \label{eq:m4-metrological-frame}
+\end{equation}
+The common cone, gravity--action and action-period identities leave the single
+positive orbit
+\begin{equation}
+ (L_H,T_H,\mathcal A_*)
+ \longmapsto
+ (\sigma L_H,\sigma T_H,\sigma^2\mathcal A_*),
+ \qquad \sigma>0.
+ \label{eq:m4-metrological-orbit}
+\end{equation}
+It changes the metric only conformally and preserves the cone, causal order,
+rapidities, proper-time ratios and all dimensionless clock--ruler terminals.
+One measured dimension-bearing anchor chooses an SI representative of this
+orbit without adding a terminal-specific gain. Conversely, the full
+\(\sigma\)-family is an identical-dimensionless-output counterfamily, so
+normalized morphology cannot predict the decimal SI value of that anchor.
+This conditional calibration closure does not fix dimensionless gauge or
+matter couplings and does not prove physical parent realization of the packet.
+
+\paragraph{Source-arrow boundary for optical transport.}
+A smooth optical family requires more than the pointwise metric and endpoint
+support.  Two coefficient-free mechanisms are available once their source
+data are independently supplied.  A body-owned connection \(\omega_M\) gives
+holonomy
+\begin{equation}
+ U_H=\mathcal P\exp\!\left(-\int_\gamma\rho_*(\omega_M)\right),
+ \label{eq:body-optical-holonomy}
+\end{equation}
+whereas a smooth constant-rank source-owned access projector gives canonical
+Kato transport
+\begin{equation}
+ G_K=[\partial_xP_O,P_O],\qquad \partial_xU_K=G_KU_K.
+ \label{eq:kato-optical-transport}
+\end{equation}
+Either mechanism yields the required optical naturality only when it
+represents the same occupied source arrows and transports both endpoint
+embeddings.  A scalar \(U(1)\) generator does not determine non-scalar
+projective mode transport, since
+\begin{equation}
+ q_{\rm pu}(iaI_n)
+ :=iaI_n-\frac{\operatorname{tr}(iaI_n)}{n}I_n=0.
+ \label{eq:scalar-projective-null}
+\end{equation}
+Likewise, direct full-support access \(P_O=I_n\) has \(G_K=0\).  These are
+source-typing controls, not evidence for an additional optical effect.  The
+current physical base--seed law has not been shown to realize either
+nontrivial source transport, and a terminal transfer path may not be inverted
+to define it.
 
 \subsection{Conditional quantum and Born leaf}
 \label{sec:mvp-quantum}
@@ -2596,6 +2715,28 @@ such observable is currently derived.  Metric external parent time is
 therefore an unsupported additional completion, not an ingredient of
 Eq.~\eqref{eq:observer-time}.
 
+The downstream temporal analysis sharpens this architecture without replacing
+it.  Temporalizable carriers form a subset of the atemporal carrier class,
+while their admissible proto-orders form a generally nontrivial fibre over
+each such carrier.  On a finite connected relation complex, one scalar
+proto-time exists exactly when the prescribed occurrence-increment cochain
+has vanishing signed periods after physical-null descent.  In the declared
+enriched occurrence--action completion,
+$\omega_{\rm occ}=-d\mathcal A_{\rm occ}$ is exact and EOCC evaluates it
+positively away from equilibrium.  This is a conditional internal actuality
+theorem, not a proof that the unrestricted base--seed source or Nature owns
+that completion.
+
+The ontology boundary is stronger than endpoint underdetermination.  Every
+finite source-frozen acyclic local process in the present temporal class,
+including predeclared and adaptive interventions, stochastic kernels and
+shared-exogenous counterfactual copies, has an operationally identical
+atemporal simultaneous factor-graph realization.  Therefore such finite
+internal experiments cannot establish literal parent traversal.  This does
+not prove that Nature is atemporal; it means that a Nature-level temporal
+claim requires either a source principle excluding the simultaneous
+realization or physics outside that finite acyclic factor class.
+
 \section{Quantum readout}
 
 The weak-spine statement is simply
@@ -2992,6 +3133,26 @@ exactly. Observer-relative rate, conditional morphological clock curvature
 and an observed Tau-over-GR anomaly remain three distinct claims. The last is
 tested, not assumed, by a source-frozen path-pair ratio against a complete GR
 and propagation control.
+It also identifies the temporal branch as a fibre of integrable order
+enhancements over temporalizable atemporal carriers.  The exact occurrence
+covector and its positive EOCC evaluation are class-relative source results;
+finite acyclic interventions still admit a simultaneous atemporal
+factorization and hence do not prove ontic parent evolution.
+
+The same downstream audit sharpens the rank-four handoff without promoting it
+into a measure identity.  The retained CCOC connector is rank three on the
+relative observer--source sector, while OGAS places its contact row and the
+occurrence row on one signed local rank-four section.  These data do not entail
+a full connector from
+$T(\mathbb{CP}^{1}_{s}\times\mathbb{CP}^{1}_{b})$ to the body split
+$E_T\oplus E_S$, nor equality of their projective and body volume measures.
+If such a source-owned connector is additionally required to preserve the
+declared split and product measures, its common-line Jacobian is uniquely
+fixed to $g_{FFL}^{-3}$; there is then no extra temporal gain.  Existence and
+physical occupation of that connector remain open.  The common M4 SI scale is
+instead the metrological quotient of
+Eq.~\eqref{eq:m4-metrological-orbit}: one measured anchor selects a
+representative, but normalized morphology does not predict its decimal value.
 
 \section{Primitive readout families}
 
@@ -3686,6 +3847,16 @@ finite \(C^2\) local occupied-support completeness in the declared working
 class. It does not prove ambient global, topological or infinite-dimensional
 exhaustivity, or unrestricted realization of the MVP packet.
 
+The upstream parent-realization result supplies one precise operational
+convention. After quotienting directions annihilated by every physically
+owned action, coupling and terminal, the enriched one-source premise
+identifies the occupied physical parent with the universal-seed-generated
+closure. An inert ambient direct summand is then only presentation surplus; a
+physically non-null direction at fixed complete base--seed key is a second
+source and falsifies the one-seed architecture. Paper IV owns the proof. This
+paper adopts the result only conditionally and does not claim that old-bare
+Tau, 4D recovery or observation establishes the one-source premise.
+
 \section{Conclusion}
 
 Tau Core is presented as an atemporal morphological readout framework with one
@@ -3743,6 +3914,16 @@ and conditional physical packet; Paper II asks which finite source data can
 identify one joint realization; Paper III asks whether that identified
 information survives reversible or recoverable record transport.  Neither
 handoff closes the shared parent-realization arrow.
+
+The atemporal--temporal relation is therefore no longer posed as two rival
+fundamental theories.  The atemporal carrier architecture is the encompassing
+kinematical layer; a temporal completion adds an integrable order/actuality
+structure on a temporalizable carrier.  EOCC conditionally actualizes that
+structure inside one enriched source class, while the finite interventional
+simulation theorem prevents its operational success from being promoted into
+a proof of literal Parent traversal.  Nature-level temporal occupation,
+absolute proto-time calibration and observer-clock recovery remain distinct
+open claims.
 
 \appendix
 \section{Mixed-state distance and QFI conventions}

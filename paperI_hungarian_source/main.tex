@@ -54,7 +54,7 @@
 \large Foundation Paper I -- magyar változat}
 \author{Olcsák József\\
 \small Független kutató}
-\date{Draft v0.2 -- Legutóbb módosítva: 2026. augusztus 11.}
+\date{Draft v0.2 -- Legutóbb módosítva: 2026. augusztus 24.}
 
 \begin{document}
 
@@ -383,9 +383,26 @@ empirikus kontrollokat.
 \section{Alapszókészlet}
 
 \begin{definition}[Parent forrásmag]
-A parent forrásmag \(s\in\Ssrc\) Tau-oldali forrásadat.  Nem megfigyelt
-endpoint, és nem választható ki abból a residualból, amelyet egy későbbi
-kiolvasás magyarázni akar.
+A minimális képződési adat
+\[
+ \mathfrak F_{\min}=(\mathcal Q_B,\mathsf S_B,0_B,[\mathcal A],
+ \operatorname{Sel}_B,\operatorname{Stab}_B),
+\]
+ahol $\mathcal Q_B$ a védett testhányados, $0_B$ a fizikailag kijelölt
+nulla-forrás, $[\mathcal A]$ pedig a közös forrás--test törvény.  A minimális
+alap a nulla-forrású válaszstruktúra
+\[
+ B_{\min}=(\mathcal Q_B,[\mathcal A(0_B,\cdot)],[M_0],
+ \operatorname{Sel}_B,\operatorname{Stab}_B).
+\]
+Ez az alap nem feltételez előzetes téridőt vagy közönséges fizikai mezőt.
+A parent forrásmag az
+\[
+ \mathcal I_B(s;M)=\mathcal A(0_B,M)-\mathcal A(s,M)
+\]
+kölcsönhatás által meghatározott alaprelatív $[s]_B$ forrásosztály.  Nem
+megfigyelt endpoint vagy parent-időbeli kezdeti feltétel, és nem választható ki
+abból a residualból, amelyet egy későbbi kiolvasás magyarázni akar.
 \end{definition}
 
 \begin{definition}[Endpoint-vak Tau-válasz]
@@ -403,11 +420,28 @@ reprezentáns kiválasztására.
 
 \begin{definition}[Morfológiai test]
 A Tau-oldali morfológiai test \(\Mta\) az intrinsic strukturált test, amely a
-kiolvasásokat kondicionálja.  Nem megfigyelt 4D morfológiai címke.  Tartalmazhat
+kiolvasásokat kondicionálja.  Minimálisan stabilan kiválasztott, a semleges
+$[M_0]$ osztálytól különböző forrásválasz.  Nem megfigyelt 4D morfológiai
+címke.  Tartalmazhat
 szektor-, ág-, fal-, null-, Hessian-support-, admisszibilitási-, history- és
 megfigyelő/útvonal-releváns szerkezetet.  A vetített morfológia csak egy
 readout-handle erre a mélyebb testre.
 \end{definition}
+
+\begin{proposition}[Nulla-forrású faktorálás és testképződés]
+Fizikailag rögzített nulla-forrás mellett
+\[
+ \mathcal A(s,M)=\mathcal A_B^0(M)-\mathcal I_B(s;M),\qquad
+ \mathcal A_B^0(M)=\mathcal A(0_B,M)
+\]
+egyértelmű a testfüggetlen forráskonstansok erejéig.  Nulla-forrás nélkül egy
+közös $J(M)$ tag áttehető az alap és a kölcsönhatás között, ezért a kettő nem
+azonosítható külön.  Stabil nemsemleges ág esetén három külön elégséges
+aktivációs út van: nemzérus első variáció, a semleges ág stabilitásvesztése,
+vagy globális ágváltás.  A tétel nem bizonyítja a fizikai közös törvény, a
+nulla-forrás, a szelekciós szabály vagy az elfoglalt univerzális csíra
+természetbeli létezését.
+\end{proposition}
 
 Foundation Paper I szintjén a minimális matematikai típus:
 \[
@@ -1107,6 +1141,50 @@ nem rekonstruálható a teljes testből és a hozzáférhető tartományból. Je
 nincs ilyen mennyiség. A metrikus külső parent-idő ezért nem a
 \eqref{eq:observer-time-hu} összetevője, hanem egy nem kiválasztott többletmodell.
 
+A későbbi temporális elemzés ezt úgy pontosítja, hogy a temporális ág nem
+rivális fundamentális ontológia, hanem a temporalizálható atemporális hordozók
+fölötti integrálható rendstruktúrák tere. Véges összefüggő relációs komplexen
+akkor létezik egyetlen skalár proto-idő, ha az előírt előfordulási növekmények
+minden előjeles körösszege eltűnik a fizikai nullok leválasztása után. Az
+enriched előfordulás--hatás modellben
+$\omega_{\rm occ}=-d\mathcal A_{\rm occ}$ és az EOCC feltételesen pozitív
+aktualitási tanúsítványt ad az egyensúlytól távol. Ez nem bizonyítja, hogy a
+korlátlan fizikai parent vagy a természet ezt a komplementumot realizálja.
+
+A későbbi forrásaudit a négyes rangú átadást is pontosítja. A megtartott CCOC
+összekötő csak a háromdimenziós relatív observer--source szektoron hat, míg az
+OGAS a kontakt-sort és az előfordulási sort egy közös, előjeles lokális
+négyes rangú szelvényre helyezi. Ebből még nem következik teljes leképezés a
+$T(\mathbb{CP}^{1}_{s}\times\mathbb{CP}^{1}_{b})$ projektív érintőtér és az
+$E_T\oplus E_S$ testfelbontás között, sem a két térfogatmérték azonossága. Ha
+egy ilyen, forrás által birtokolt, felbontást és mértéket megőrző összekötőt
+külön feltételezünk, akkor a közös irány Jacobi-tényezője egyértelműen
+$g_{FFL}^{-3}$; ezen a feltételes szinten nincs új illeszthető idő-gain. Az
+összekötő fizikai létezése és elfoglalása továbbra is nyitott.
+
+Az M4 hossz--idő--akció kalibráció ettől külön kérdés. A közös kúp-,
+gravitáció--akció- és akcióperiódus-azonosságok a fennmaradó szabadságot az
+egyetlen pozitív
+\[
+ (L_H,T_H,\mathcal A_*)
+ \longmapsto
+ (\sigma L_H,\sigma T_H,\sigma^2\mathcal A_*),
+ \qquad \sigma>0
+\]
+metrológiai pályára redukálják. Ez megőrzi a fénykúpot, az oksági rendet, a
+sajátidőarányokat és minden dimenziótlan óra--vonalzó megfigyelhetőt. Egy
+mért, dimenzióhordozó referencia kiválaszt egy SI-reprezentánst, de a
+normalizált morfológia nem jósolja meg annak decimális SI-értékét, és ebből a
+dimenziótlan csatolások sem következnek.
+
+Az ontológiai korlát ennél erősebb: a jelenlegi temporális osztály minden
+véges, aciklikus, forrásfagyasztott lokális folyamata --- az előre rögzített és
+adaptív beavatkozásokkal, sztochasztikus kernelekkel és közös külső zajjal
+csatolt kontrafaktuális másolatokkal együtt --- operacionálisan azonos
+atemporális, szimultán faktorgráfként is felírható. Ez nem az atemporalitás
+bizonyítása, hanem annak tétele, hogy ezek a véges belső kísérletek önmagukban
+nem bizonyítják a szó szerinti parent-bejárást.
+
 \section{Kvantum-readout}
 
 A kvantumág természetes célpontja a readout-nyelvnek, de itt különösen veszélyes
@@ -1165,6 +1243,17 @@ hogy a kvantummechanika közvetlenül hat minden más readoutra.  Csak azt az
 óvatosabb állítást teszi, hogy több readout ugyanannak a parent-oldali
 szerkezetnek különböző aspektusait teheti láthatóvá, és ezt source-overlap és
 double-counting szabályokkal kell kontrollálni.
+
+Az optikai specializáció ezt tovább pontosítja. A jelenlegi korpusz két
+illesztésmentes transzportmechanizmust tartalmaz: a teljes testkapcsolat
+holonómiáját, illetve egy változó, forrásbirtokolt hozzáférési projektor
+Kato-transzportját. Egy pusztán skaláris $U(1)$ fázis nem határozza meg egy
+többmódusú normalizált Choi-folyamat nemskaláris projektív orientációját,
+miközben teljes, állandó hozzáférésnél $P_O=I_n$, ezért
+$[dP_O,P_O]=0$. Ez nem Tau-hatás hiányát bizonyítja, hanem azt, hogy a
+nemtriviális optikai transzporthoz a teljes testkapcsolatot vagy a ténylegesen
+változó hozzáférési alteret függetlenül kell forrásolni; a terminális
+átviteli görbéből ezeket nem szabad visszafelé definiálni.
 
 \section{Gravitációs és sötétszektor-readoutok}
 
@@ -1528,6 +1617,15 @@ Javasolt következő tagok:
   \item \textbf{Foundation Paper III}: complete record edge-ek, út-holonómia,
   irreverzibilis CP-mapek és recovery-correctable readoutok.
 \end{itemize}
+
+A Paper II új közösforrás-kompressziós tétele szerint egy koherens
+\(\mathfrak J_*=(\Pi_*,\varphi_*)\) reprezentáció--állapot adat egyszerre
+rögzíti a kevert relációideált, a separator-multiplicitást, a relatív
+\(P3\)--\(P4\) ragasztást és a megtartott blokkok hű foglaltságát. Ezek tehát
+az enriched MVP-ben nem független kapcsolók. A jelenlegi szűk forrás azonban
+nem választja ki \(\mathfrak J_*\)-ot; a korlátlan parent-törvényi realizáció
+és a globális terminálcsalád teljessége nyitott marad.
+
 A következő foundation kéziratnak nem pusztán újabb általános framework-réteget
 kell hozzáadnia.  Legalább egy worked branch-et kell tartalmaznia:
 \[
@@ -1610,6 +1708,13 @@ Ebben az olvasatban a 4D téridőblokk nem végső ontológia, hanem egy readout
   M_{4D}=U_{4D}^{\Mta}(\Rmap(s)).
 \]
 A fizikai idő ugyanígy readout-csatorna, nem maga a \(\tau\) jelentése.
+
+Az atemporális--temporális viszony ezért réteges: az atemporális hordozó a
+tágabb kinematikai alap, a temporális komplementum pedig integrálható
+rend/aktualitási szerkezetet ad egy temporalizálható hordozóhoz. Az EOCC ezt
+egy deklarált enriched forrásosztályban aktualizálja, de a véges intervenciós
+szimulációs no-go megakadályozza, hogy az operacionális sikerből szó szerinti
+Parent-evolúciót következtessünk.
 
 A paper hozzájárulása nem új empirikus eredmény, hanem korlátos szókészlet:
 parent forrásmag, endpoint-vak válasz, morfológiai test, szektor-readout,

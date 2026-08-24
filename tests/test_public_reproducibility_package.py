@@ -50,9 +50,14 @@ def test_claim_boundary_markers():
     assert "commuting records alone cannot identify reversibility" in text
     assert "coherent off-diagonal witness" in text
     assert "FOC-7" in text
+    assert "rank-four handoff without promoting it into a measure identity" in normalized
+    assert "g_{FFL}^{-3}" in text
     assert "energy-sharing same-reduct completion" in normalized
     assert "traced two-leg source and source-irredundant branch" in normalized
     assert "physical filling by one full microscopic Tau action remains open" in normalized
+    assert "M4 metrological quotient" in text
+    assert "eq:m4-metrological-orbit" in text
+    assert "normalized morphology cannot predict the decimal SI value" in normalized
     forbidden = [
         "we prove Tau Core",
         "dark matter is explained",

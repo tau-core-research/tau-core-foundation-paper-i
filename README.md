@@ -7,9 +7,17 @@ Minimum-Viable Physical Completion**
 
 The manuscript is self-contained and does not use another Tau Core paper,
 repository, or unpublished analysis as evidence for its claims.
-It is the architectural entry point of the five-paper foundation
+It is the architectural entry point of the seven-stage foundation
 sequence; the shared series map is navigational and does not weaken this
 self-contained claim boundary.
+
+## Joint Source Integration
+
+Paper I now records, without re-proving, Paper II's joint-source compression:
+one coherent representation/state datum fixes the mixed ideal, separator
+multiplicity, relative gluing and faithful retained-block occupation inside
+the enriched MVP. Its unrestricted parent-law realization and global terminal
+completeness remain open.
 
 ## Atemporal Parent-Realization Terminology
 
@@ -29,6 +37,19 @@ terminal readouts also cannot establish ambient-source exhaustivity. The
 current terminology is therefore **parent-law realization** and **physical
 occupation**.
 
+## Minimal Formation Basis
+
+Paper I now defines the base, universal morphology seed and body from one
+joint source-indexed body law. The base is the protected zero-source response
+structure, the seed is a response-distinct base-relative source class, and a
+formed body is a stable selected response distinct from the neutral class.
+The split is canonical modulo body-independent source constants only after a
+physical zero source is fixed; without it, a common body-dependent
+refactorization proves nonidentifiability. Formation may be certified by
+direct force, neutral-branch instability or global branch exchange. Physical
+ownership of the joint law, zero source, selector and occupied universal seed
+remains open.
+
 ## Observer Co-Descent
 
 `O` initially labels an occupied body-side carrier candidate. It becomes an
@@ -38,6 +59,13 @@ observer and its accessible 4D world are co-readouts of one body-conditioned
 solution. A 4D chart or carrier support alone is insufficient; no independent
 channel layer or parent collapse is asserted.
 
+The occupied M4 geometry also inherits one common metrological quotient. The
+rescaling `(L_H,T_H,A_*) -> (sigma L_H,sigma T_H,sigma^2 A_*)` preserves the
+causal cone and all dimensionless clock--ruler observables. One measured
+dimension-bearing anchor chooses an SI representative; the framework does not
+predict that anchor's decimal SI value or dimensionless gauge/matter
+couplings.
+
 
 ## Main Claim
 
@@ -45,6 +73,14 @@ The upstream parent analysis now also proves a finite-local occupied-support
 criterion: positive seed-unloaded split sectors stabilize at zero, while
 stable loaded or cross-coupled sectors are part of the generated body. This
 does not establish ambient exhaustivity or unrestricted MVP occupation.
+
+Paper IV now sharpens the architecture's physical-parent convention. Modulo
+true physical nulls, the enriched one-source premise makes the occupied parent
+the universal-seed-generated closure. A wholly inert ambient extension is not
+new physical content; any non-null extra at fixed complete seed key is a
+second source and falsifies the one-seed completion. Paper I inherits this as
+a conditional source-ontology result, not as proof that Nature owns the
+premise.
 
 A concrete enriched realization is now known: one full-rank oriented seed
 incidence induces a common `Lambda^2 + Lambda^3` pair/top closure packet with
@@ -80,6 +116,25 @@ the clock. The neutral regular branch reproduces local GR proper time exactly.
 Observer-relative rate and conditional morphological clock curvature do not
 by themselves establish a Tau-over-GR anomaly; the latter remains a
 source-frozen path-pair measurement claim with complete standard controls.
+
+The temporal branch is now typed as an integrable enhancement over the
+temporalizable subset of atemporal carriers, not as a rival fundamental
+ontology. A finite scalar proto-time exists exactly when the prescribed
+occurrence increments have zero signed cycle periods after null descent. In
+the declared enriched action completion, `omega_occ=-dA_occ` and EOCC give a
+positive actuality certificate away from equilibrium. This is conditional
+class-relative realization. Every finite acyclic interventional process in
+the present class still has an operationally identical atemporal simultaneous
+factor-graph representation, so finite internal experiments do not prove
+literal Parent traversal or Nature-level temporality.
+
+The local rank-four interface is now separated from the projective/body
+measure question. CCOC is a rank-three relative connector and OGAS supplies
+the common signed line, but together they do not construct a full
+`T(CP1_s x CP1_b) -> E_T + E_S` measure connector. Conditional on a
+source-owned split-preserving connector and exact product-measure matching,
+the common-line Jacobian is uniquely `g_FFL^-3`; this removes a possible free
+gain without deriving the connector or an absolute SI unit.
 
 It then freezes one conditional minimum-viable completion:
 
@@ -166,6 +221,13 @@ cannot identify reversibility, so physical realization requires a coherent
 witness or independently certified recovery. The detailed edge, holonomy,
 recovery-correctable CP and toy-model analysis is maintained in Foundation
 Paper III.
+
+The optical standard-leaf boundary is now explicit. The present corpus has
+two coefficient-free transport mechanisms: full body-connection holonomy and
+Kato transport of a varying source-owned access projector. Scalar `U(1)`
+transport is null for non-scalar projective Choi orientation, while constant
+full-support access has zero Kato generator. The physical base--seed law has
+not yet been shown to activate either nontrivial route.
 
 The final unrestricted parent-realization claim is explicitly non-identifiable from the evidence
 currently assembled in the paper. The manuscript defines a seven-part `FOC-7`
