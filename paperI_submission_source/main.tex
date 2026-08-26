@@ -58,7 +58,7 @@
 \large Foundation Paper I}
 \author{Jozsef Olcsak\\
 \small Independent researcher}
-\date{Draft v0.3 --- Last revised: 24 August 2026}
+\date{Draft v0.3 --- Last revised: 26 August 2026}
 
 \begin{document}
 
@@ -634,6 +634,51 @@ The proposition controls the mathematical roles.  It does not prove that the
 physical joint law, its zero-source comparison, selector, or occupied
 universal seed exists in nature.
 
+\begin{proposition}[Complementary role reconstruction and local response]
+\label{prop:seed-base-role-reconstruction}
+Assume that the zero-source member is physically distinguished, that one
+source-independent stationarity, stability and selection law is used over the
+whole family, and that a stable sourced response $[M_s]$ differs from the
+neutral response $[M_0]$.  Then
+\[
+ [\mathcal I_B(s;\cdot)]\ne 0
+\]
+modulo body-independent constants.  Thus the frozen family contains two
+noninterchangeable response roles: the zero-source law supplies the base role
+and the nonconstant contrast supplies the seed role.  On a smooth regular
+fixed-base branch with
+$K_B=D_M^2\mathcal A(0_B,M_0)\succ0$ and source path $s(\lambda)$, the first
+response obeys
+\begin{equation}
+ K_B\dot M_0=j_s,
+ \qquad
+ j_s=-\left.
+ D_\lambda D_M\mathcal A(s(\lambda),M_0)
+ \right|_{\lambda=0}.
+ \label{eq:seed-base-local-response}
+\end{equation}
+If the base also varies, the right-hand side becomes $j_s+j_B$; the observed
+response cannot then be assigned to the seed without independently freezing
+or reconstructing $j_B$.
+\end{proposition}
+
+The result is a role theorem, not a two-substance theorem.  Indeed, let
+$K\succ0$, $d\ne0$ and $\alpha\in\mathbb R$.  The family
+\[
+ \mathcal A_0^{(\alpha)}(M)
+ =\tfrac12\langle M-\alpha d,K(M-\alpha d)\rangle,
+ \qquad
+ \mathcal I_1^{(\alpha)}(M)
+ =(1-\alpha)\langle Kd,M\rangle
+\]
+has, after source occupation, the same minimizer $M=d$ and the same Hessian
+$K$ for every $\alpha$, while its zero-source minimizer is $\alpha d$.
+Consequently an occupied body and its Hessian do not identify how much
+structure belongs to the base and how much to the seed.  That physical
+ownership requires an independently meaningful zero-source comparison or an
+equivalent intervention.  Ontic separateness, physical occupation of one
+universal seed, and the homogeneity class of either role remain open.
+
 For Foundation Paper I the minimal mathematical type is:
 \[
   \Mta\in\mathcal M_\tau^{\rm adm},
@@ -678,6 +723,71 @@ more specialized observable structure.  Each readout has its own null
 directions and validation boundary.  When \(\Mta\) is fixed by the declared
 source class, we suppress it and write \(U_i(r)\).
 \end{definition}
+
+\begin{proposition}[Unified terminal atlas and common-ancestor criterion]
+\label{prop:mopr-ancestor}
+Fix an occupied body and observer--source context, and let
+\(\Xi_{OS}:\mathcal X_{OS}\to\mathcal Z_{OS}\) be the source-owned shared
+preterminal descriptor supplied by the body-conditioned full channel.  For the
+declared terminal-role set \(\mathcal A_{\rm term}\), the unified readout is the
+typed product map
+\begin{equation}
+ \mathfrak R_{OS}
+ =
+ \left\langle
+   Q_{OS}^{(a)}\circ T_{OS}^{(a)}
+ \right\rangle_{a\in\mathcal A_{\rm term}}
+ \circ\Xi_{OS}\circ A_{OS}[M_\tau],
+ \qquad
+ M_\tau=\operatorname{Stab}_{B_\tau^{\rm base}}(\Sigma_\tau).
+ \label{eq:unified-terminal-atlas}
+\end{equation}
+The last equality is the adopted source-class stabilization law, not an
+unrestricted Nature-level theorem.  A candidate terminal
+\(R:\mathcal X_{OS}\to\mathcal Y\) descends through the same immediate ancestor
+if and only if it is constant on its fibres:
+\begin{equation}
+ \Xi_{OS}(x)=\Xi_{OS}(x')
+ \Longrightarrow R(x)=R(x').
+ \label{eq:mopr-fibre-criterion}
+\end{equation}
+Equivalently, there is a unique
+\(\bar R:\operatorname{im}\Xi_{OS}\to\mathcal Y\) with
+\(R=\bar R\circ\Xi_{OS}\).  On a regular smooth branch with connected fibres,
+the local criterion is
+\begin{equation}
+ \ker D\Xi_{OS}\subseteq\ker DR.
+ \label{eq:mopr-kernel-criterion}
+\end{equation}
+The declared terminal stack recovers the same local quotient as the ancestor
+exactly when
+\begin{equation}
+ \ker D\Xi_{OS}
+ =
+ \ker
+ \begin{bmatrix}
+  DR^{(1)}\\ \vdots\\ DR^{(n)}
+ \end{bmatrix}.
+ \label{eq:mopr-stack-completeness}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+If \(R=\bar R\circ\Xi_{OS}\), equality of descriptor values implies equality
+of terminal values.  Conversely, Eq.~\eqref{eq:mopr-fibre-criterion} makes
+\(\bar R(\Xi_{OS}(x)):=R(x)\) well defined and unique on the image.  The
+differential statement follows from the constant-rank theorem on connected
+local fibres.  Equality in Eq.~\eqref{eq:mopr-stack-completeness} says that
+the stack erases exactly, rather than strictly more than, the tangent
+directions erased by the ancestor.
+\end{proof}
+
+This theorem owns only the conditional common ancestry of the declared,
+physically occupied atlas.  It does not prove ambient terminal exhaustivity.
+The control \(\Xi(x,y)=x\), \(R_1(x,y)=x\), \(R_2(x,y)=y\) shows why:
+\(R_1\) factors and \(R_2\) does not.  A physically occupied terminal with
+\(D\Xi_{OS}v=0\) but \(DRv\neq0\) would therefore falsify completeness of the
+proposed common ancestor rather than authorize a fitted repair.
 
 \begin{table}[H]
 \centering
@@ -1026,7 +1136,7 @@ composable and has a frozen discriminator, but unrestricted upstream
 parent-law realization and physical occupation remain open
 (Fig.~\ref{fig:mvp-closure}).
 
-\begin{figure}[t]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.98\linewidth]{figures/fig_mvp_closure.pdf}
   \caption{The conditional minimum-viable chain.  A physically enriched base
@@ -1150,6 +1260,140 @@ problem.  Placing \(M\) and \(z\) in an unconstrained simultaneous symmetric
 fit would reverse the generative direction and permit endpoint data to alter
 the body.  The completion therefore forbids that operation unless a separately
 sourced post-body copy of the body variable is introduced and justified.
+
+\begin{proposition}[Complementary role reconstruction and local response]
+\label{prop:seed-base-role-reconstruction-active}
+Suppose that the source family has a physically distinguished zero member,
+uses one source-independent stationarity, stability and selection law, and
+contains a stable sourced response $[M_s]\ne[M_0]$.  Then the source contrast
+$[\mathcal I_B(s;\cdot)]$ is nonzero modulo body-independent constants.  The
+frozen family therefore requires two noninterchangeable response roles: the
+zero-source law is the base role and the nonconstant contrast is the seed
+role.  On a smooth regular fixed-base branch,
+\begin{equation}
+ K_B\dot M_0=j_s,
+ \qquad
+ K_B=D_M^2\mathcal A(0_B,M_0)\succ0,
+ \qquad
+ j_s=-\left.D_\lambda D_M\mathcal A(s(\lambda),M_0)\right|_{\lambda=0}.
+ \label{eq:seed-base-local-response-active}
+\end{equation}
+If the base varies as well, the right-hand side is $j_s+j_B$, so seed
+ownership cannot be inferred without an independent base freeze or
+reconstruction.
+\end{proposition}
+
+This is a role theorem, not a two-substance theorem.  The exact family
+\begin{equation}
+ \mathcal A_0^{(\alpha)}(M)
+ =\frac12\langle M-\alpha d,K(M-\alpha d)\rangle,
+ \qquad
+ \mathcal I_1^{(\alpha)}(M)
+ =(1-\alpha)\langle Kd,M\rangle,
+ \label{eq:seed-base-ownership-counterfamily}
+\end{equation}
+with $K\succ0$ and $d\ne0$ has the same occupied minimizer $M=d$ and Hessian
+$K$ for every $\alpha$, but zero-source minimizer $\alpha d$.  Hence the
+occupied body and its Hessian do not identify the base/seed allocation.  A
+physical zero-source comparison or equivalent intervention is indispensable;
+ontic separateness, universal-seed occupation and the homogeneity class of
+either role remain open.
+
+\subsection{Exact localization of seed-induced inhomogeneity}
+
+This subsection studies one declared branch; it does not settle the physical
+homogeneity class of either the base or the seed. The alternatives
+homogeneous-base/structured-seed, inhomogeneous base, mixed base--seed origin
+and spontaneous nonunique breaking are all admissible before the following
+premises are independently established.
+
+The base--seed ownership split has one exact consequence in the quadratic
+unique-response branch. Let $P_0$ project onto the occurrence-homogeneous
+sector and set $Q=I-P_0$. Write the source-first body action as
+\begin{equation}
+ \mathcal A(m;s)=\frac12\langle m,K_Bm\rangle
+ -\langle b_0+J_U(s),m\rangle,
+ \label{eq:seed-localization-action}
+\end{equation}
+where $b_0$ is the seed-independent base load. Assume
+\begin{equation}
+ K_B>0,\qquad [K_B,Q]=0,\qquad Qb_0=0.
+ \label{eq:seed-localization-premises}
+\end{equation}
+The last two conditions state operationally that the base is homogeneous and
+equivariant in this sector: it owns no transverse load and its response does
+not mix homogeneous and transverse representations.
+
+The unique stationary solution and the base-only solution are
+\begin{equation}
+ m_*(s)=K_B^{-1}\bigl(b_0+J_U(s)\bigr),
+ \qquad m_B=K_B^{-1}b_0.
+\end{equation}
+Since $K_B^{-1}$ commutes with $Q$,
+\begin{equation}
+ \boxed{Qm_*(s)=Q\bigl(m_*(s)-m_B\bigr)=K_B^{-1}QJ_U(s).}
+ \label{eq:seed-localization}
+\end{equation}
+Invertibility on $\operatorname{ran}Q$ therefore gives
+\begin{equation}
+ Qm_*(s)\neq0\quad\Longleftrightarrow\quad QJ_U(s)\neq0.
+\end{equation}
+Thus, under Eq.~\eqref{eq:seed-localization-premises}, the seed load owns the
+entire transverse mode while the base owns its susceptibility, smoothing and
+scale. The inhomogeneity originates in the seed load and is realized in the
+stabilized body; it is not already a four-dimensional density perturbation.
+
+This attribution is conditional and its assumptions are necessary. Without
+$Qb_0=0$, the same nonconstant body can be generated by an inhomogeneous base
+load with $J_U=0$. Without $[K_B,Q]=0$, a positive stiffness can mix a
+homogeneous base load into a transverse response. Without uniqueness, a
+homogeneous invariant double-well action can select a nonconstant branch with
+zero seed load. Consequently a final body or terminal inhomogeneity alone
+does not prove the ownership premises or their physical realization by
+Nature.
+
+Accordingly, Paper I does not claim that the universal seed owns all initial
+inhomogeneity or that the physical Tau base is homogeneous. Equation
+\eqref{eq:seed-localization} is an exact conditional localization theorem,
+not a resolution of this origin fork.
+
+\subsubsection{Body-borne and readout-borne four-dimensional structure}
+
+Equation~\eqref{eq:seed-localization} localizes a transverse \emph{body}
+mode; it does not by itself localize every contrast in an individual 4D
+readout. Let $a_O$ denote any irreducible observer--source access datum
+retained after body stabilization and write the complete local 4D exit as
+\begin{equation}
+ Y_{4,O}=\mathcal R_{4,O}(m_*,a_O).
+ \label{eq:four-d-readout-map}
+\end{equation}
+For a readout-contrast projector $Q_{4,O}$, linearize about the base-only
+solution and set $\Delta m_*=K_B^{-1}QJ_U(s)$. The contrast separates as
+\begin{equation}
+ \boxed{
+ Q_{4,O}\Delta Y_{4,O}
+ =Q_{4,O}D_m\mathcal R_{4,O}\,K_B^{-1}QJ_U(s)
+ +Q_{4,O}D_a\mathcal R_{4,O}\,\Delta a_O.}
+ \label{eq:four-d-inhomogeneity-ledger}
+\end{equation}
+The first term is body-borne. It depends jointly on the seed forcing and the
+base susceptibility: removing the transverse seed load removes this term,
+whereas changing $K_B$ changes its amplitude and profile. Thus the base is a
+constitutive or shaping cause even when it is not an independent
+symmetry-breaking source. The second term is readout-borne and must be
+derived from the source-frozen observer--source channel and stable resolution
+map; it is not another morphology seed.
+
+A unique deterministic, observer-independent equivariant descent maps a
+homogeneous body to a homogeneous readout. An observer-relative correlated
+quantized descent can instead produce an inhomogeneous individual realization
+from a homogeneous body while preserving covariance of the observer family.
+That alternative is architecture-compatible, but its physical kernel,
+correlations, closure and cross-observer consistency are not derived here.
+Consequently the claim-safe causal ledger is: seed as transverse forcing,
+base as susceptibility and stabilization, and readout as downstream
+realization or additional observer-relative contrast. The observed 4D field
+alone does not identify their separate shares.
 
 \subsection{One common post-body functional}
 
@@ -3768,6 +4012,58 @@ Paper VII-B owns the detailed theorem and controls.  Paper I imports only the
 architectural consequence and retains unrestricted physical base--seed
 ownership as open.
 
+\subsection{Hodge--Clifford root freedom inside the occupied class}
+
+The same global completion also removes one apparently independent terminal
+choice.  Let the charged carrier factor as
+\(\mathcal A_{\rm ch}=M_4(\mathbb C)\otimes\mathcal A_{\mathcal M}\), and let
+the charged restriction \(K_s\geq0\) of the complete source Hodge operator
+commute with the full geometric Clifford factor:
+\[
+ [K_s,X\otimes I]=0\qquad\forall X\in M_4(\mathbb C).
+\]
+The matrix-factor commutant then gives \(K_s=I_4\otimes K_{\mathcal M}\).
+For the standard full-support spectral occupation,
+\[
+ \rho_s=\frac{e^{-K_s/\mathcal A_*}}
+ {\operatorname{Tr}e^{-K_s/\mathcal A_*}}
+ =\frac{I_4}{4}\otimes\rho_{\mathcal M}.
+\]
+Hence the geometric functional is tracial, no marked spin root survives, and
+the photon and observer sectors inherit one cone without an added cone gain.
+This is an exact consequence inside the seed-fixed Hodge-generated completion
+class, not a proof that the unrestricted physical base--seed law occupies that
+class.  A faithful exponential state alone is insufficient: a rooted faithful
+state is also exponential, but its logarithmic generator fails the stated
+Clifford naturality.  Likewise, componentwise source zero-jets can preserve the
+entire local Hodge packet while changing global occupation.  The remaining
+obligation is therefore class membership or a source-frozen cone-split test,
+not another root-deletion postulate.
+
+\subsection{Inherited full-4D standard-excess compiler}
+
+The observer-specific full-coframe branch now supplies a finite downstream
+compiler without changing the parent ontology of this paper.  On one frozen
+visible--unresolved split, the same positive parent two-jet has blocks
+\(K_{HH},C,K_{VV}\), and minimum-lift descent gives
+\[
+ K_O^{\rm quot}=K_{HH}-CK_{VV}^{-1}C^\dagger.
+\]
+The object that can be compared with a standard physical leaf is not the
+positive Schur term alone but
+\begin{equation}
+ E_K=(K_{HH}-K_{\rm std})-CK_{VV}^{-1}C^\dagger .
+ \label{eq:paperi-g4d-standard-excess}
+\end{equation}
+A graph-normal auxiliary completion can have \(C\neq0\) while
+\(E_K=0\).  Hence a shared parent mixed Hessian is an internal coupling datum,
+not by itself a Tau-over-standard anomaly.  After one regular coframe pushes
+\(E_K\) to the 4D metric excess, frozen terminal maps may be stacked only with
+their full cross-terminal covariance and after exact duplicate directions are
+quotiented.  This is an inherited scoring-compiler theorem.  Paper I does not
+claim that the physical parent occupies a nonzero packet or that any existing
+endpoint has produced such an excess.
+
 \section{What is not proved}
 
 For clarity, we list the main non-results.
@@ -3779,6 +4075,9 @@ For clarity, we list the main non-results.
   uniquely from the physical base--seed source. The current narrow source
   reduct provably admits both the primary source-irredundant completion and an
   inequivalent energy-sharing ownership completion.
+  \item The Hodge--Clifford argument proves root freedom and a common cone only
+  inside the seed-fixed Hodge-generated completion class.  It does not prove
+  that the actual physical base--seed system belongs to that class.
   \item It does not derive the microscopic ownership partition or full
   nonlinear action whose integration yields the once-counted effective
   functional in Eq.~\eqref{eq:mvp-functional}.

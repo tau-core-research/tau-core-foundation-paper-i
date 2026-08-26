@@ -58,6 +58,14 @@ def test_claim_boundary_markers():
     assert "M4 metrological quotient" in text
     assert "eq:m4-metrological-orbit" in text
     assert "normalized morphology cannot predict the decimal SI value" in normalized
+    assert "Hodge--Clifford root freedom inside the occupied class" in text
+    assert "not another root-deletion postulate" in normalized
+    assert "does not settle the physical homogeneity class" in normalized
+    assert "not a resolution of this origin fork" in normalized
+    assert "Complementary role reconstruction and local response" in text
+    assert "eq:seed-base-local-response" in text
+    assert "eq:seed-base-local-response-active" in text
+    assert "not a two-substance theorem" in normalized
     forbidden = [
         "we prove Tau Core",
         "dark matter is explained",

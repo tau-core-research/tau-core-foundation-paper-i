@@ -11,6 +11,26 @@ It is the architectural entry point of the seven-stage foundation
 sequence; the shared series map is navigational and does not weaken this
 self-contained claim boundary.
 
+## Unified Readout Atlas
+
+Paper I now owns the common-ancestor factorization theorem for the declared
+occupied terminal atlas:
+
+\[
+\mathfrak R_{OS}
+=
+\left\langle Q_{OS}^{(a)}\circ T_{OS}^{(a)}\right\rangle_a
+\circ\Xi_{OS}\circ A_{OS}[M_\tau].
+\]
+
+A proposed terminal descends through the same immediate parent-readout
+ancestor exactly when it is constant on \(\Xi_{OS}\)-fibres; locally this
+requires \(\ker D\Xi_{OS}\subseteq\ker DR\). Equality with the kernel of the
+stacked terminal Jacobian is the local reconstruction criterion. This is a
+conditional theorem for the declared occupied atlas, not proof that every
+possible physical terminal in Nature is included. A terminal that varies
+along a \(\Xi_{OS}\)-fibre is the explicit bypass falsifier.
+
 ## Joint Source Integration
 
 Paper I now records, without re-proving, Paper II's joint-source compression:
@@ -50,6 +70,36 @@ direct force, neutral-branch instability or global branch exchange. Physical
 ownership of the joint law, zero source, selector and occupied universal seed
 remains open.
 
+With one physically distinguished zero source and one common law-generated
+selection rule, a stable nonneutral response now forces complementary base and
+seed roles. On a regular fixed-base branch their local relation is
+`K_B dot(M_0) = j_s`: the base supplies the susceptibility and the seed the
+source contrast. This is a role theorem, not a two-substance theorem. An exact
+continuous counterfamily shows that the same occupied body and Hessian can be
+assigned to different base/seed shares unless the zero-source response or an
+equivalent intervention is fixed independently.
+
+Inside the homogeneous equivariant unique-response branch, Paper I now also
+localizes inhomogeneity exactly. After subtracting the base-only solution,
+`Q m_* = K_B^{-1} Q J_U(s)`: the seed load owns the full transverse mode and
+the base owns its susceptibility and stabilization. This is conditional on a
+homogeneous base load, no homogeneous/transverse mode mixing and uniqueness.
+An inhomogeneous base, a mixing stiffness or spontaneous nonunique breaking
+is an explicit countermodel to unconditional source attribution.
+The physical homogeneity or inhomogeneity of both the base and the seed is
+still unresolved. The homogeneous-base/structured-seed split is a working
+branch, not a Nature-level conclusion; mixed origin and spontaneous breaking
+remain open.
+
+At 4D level the causal statement is broader. The body-borne contrast is the
+4D readout Jacobian applied to `K_B^{-1} Q J_U(s)`: the seed supplies the
+transverse forcing and the base shapes its realized amplitude and profile.
+An observer-relative correlated quantized descent may add a separate
+readout-borne contrast. Unique deterministic equivariant descent cannot do so
+from a homogeneous body. The manuscript therefore treats base, seed and
+readout as distinct causal roles and does not infer their shares from one
+observed 4D pattern.
+
 ## Observer Co-Descent
 
 `O` initially labels an occupied body-side carrier candidate. It becomes an
@@ -88,6 +138,14 @@ ranks `3 + 1`, one Hodge metric and one action unit. Source fidelity occupies
 both degrees for a pointed exterior seed. This is a conditional
 enriched-class theorem owned in detail by Technical Paper VII-B; the narrow
 base--seed reduct still does not force the pointed exterior grammar.
+
+Inside the same seed-fixed Hodge-generated completion, a charged Hodge
+operator that commutes with the full geometric Clifford factor must factor as
+`I4 x K_internal`. Its standard full-support spectral state is therefore
+`I4/4 x rho_internal`: the geometric functional is root-free and the photon
+and observer sectors share one cone without a fitted cone gain. This is an
+exact class-relative consequence, not evidence that the unrestricted physical
+base--seed law or the actual universe occupies that completion class.
 
 The paper defines a body/readout architecture in which observed physical
 descriptions are observer-indexed descents of an endpoint-blind parent
@@ -284,6 +342,16 @@ open.
   dependency map, compatible-limit diagram, and QOR lower-bound discriminator.
 - `scripts/`: figure, PDF, arXiv, and reproduction scripts.
 - `tests/`: smoke tests for the public package.
+
+## Full-4D Scoring Compiler Boundary
+
+The inherited source-frozen compiler identifies the exact Tau-over-standard
+quadratic object as
+`E_K = (K_HH - K_std) - C K_VV^-1 C^dagger`, followed by one coframe push
+and a stacked terminal prediction. A nonzero mixed parent block is not itself
+a physical signal: a graph-normal completion can have `C != 0` and `E_K = 0`.
+This is a conditional preregistration law, not a Nature score or empirical
+validation.
 
 ## Reproduce
 
