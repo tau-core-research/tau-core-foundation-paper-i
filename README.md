@@ -393,3 +393,11 @@ The current series-wide boundary is sharper: disjoint-source valuation
 conditionally yields isolated quantum protection, but lifting observed
 factorization to the parent requires a jointly faithful primitive-readout
 family. That global physical stacked readout is not yet complete.
+
+## Unified Selection Update (2026-08-27)
+
+Paper IV now owns the conditional `PD-USS1` source-selection theorem and its
+`PD-USS-N1` novelty no-go. Technical Paper VII-B owns the product-free P3
+falsifier and the updated `0/31` public-packet census. Paper I inherits the
+architectural conclusion only: one coherent conditional selector exists, but
+its physical premises and Nature-level occupation remain open.
