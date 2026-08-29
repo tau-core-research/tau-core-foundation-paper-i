@@ -54,7 +54,7 @@
 \large Foundation Paper I -- magyar változat}
 \author{Olcsák József\\
 \small Független kutató}
-\date{Draft v0.2 -- Legutóbb módosítva: 2026. augusztus 24.}
+\date{Draft v0.2 -- Legutóbb módosítva: 2026. augusztus 29.}
 
 \begin{document}
 
@@ -166,6 +166,35 @@ Az observer és a számára hozzáférhető 4D világ ugyanannak a testkondicion
 megoldásnak a co-readoutja. Egy 4D chart vagy egy hordozótámasz önmagában nem
 observer. A descent a testben lakó relációs törvény quotientje/restrikciója,
 nem külön fizikai csatornaréteg és nem a parent kvantumos összeomlása.
+\end{minipage}}
+\end{center}
+
+\begin{center}
+\fbox{\begin{minipage}{0.90\linewidth}\small
+\textbf{Az upstream reguláris 4D rekonstrukció állítási határa.}
+A tipizált terminálok előtt a claim-safe preterminális lánc
+\[
+ (\mathcal A^{\rm acc}_{OS}[M_\tau],z_{OS}[J^{\rm acc}_{OS}])
+ \longrightarrow \Xi_{OS}
+ \longrightarrow (\mathcal A^{\rm alg}_{OS},D_{OS},\leq_{OS})
+ \longrightarrow Z^{(a)}_{OS}
+ \xrightarrow{\ Q^{(a)}_{OS}\ }Y^{(a)}_{OS}.
+\]
+A
+$\mathfrak C_{OS}=(\mathcal A^{\rm alg}_{OS},\mathfrak d_\tau,
+R^{\mathfrak d}_{OS},\{\omega_{OS,x}\},G_{\rm occ})$ rövidítés ennek a
+post-body descentnek a matematikai reprezentációja, nem új ontológiai réteg.
+A $\mathfrak d_\tau$ observer-választás előtt definiált testoldali
+derivációcsalád, míg
+\(
+ \Phi_{OS,x}=\widetilde\Phi_{OS,x}\circ R^{\mathfrak d}_{OS}
+\)
+az observer-látható tangentjelöltet adja. A konstans lokális rank-4,
+integrálhatóság, Lorentz-konform realizálhatóság, kompatibilis sűrűség és a
+meglévő ROOT/M4TR 4D hordozóval való egyezés külön nyitott kapuk. Sikerük is
+csak lokális coframe-atlaszt ad; globális tetrádhoz és fermionos spin-lifthez
+további topológiai feltételek kellenek. Az operational observer-csomag ezért
+theorem-target, nem a téridő kész levezetése.
 \end{minipage}}
 \end{center}
 
@@ -1679,6 +1708,116 @@ top-form closure reprezentációelméleti okból nem állítja elő lineárisan 
 axiális páros closure-t.  A részletes bizonyítást a Technical Paper VII-B
 birtokolja; a Paper I csak az architekturális következményt örökli.
 
+\subsection{Közös kvantum--gravitációs transzport és akcióegység}
+
+Legyen egy hű, elfoglalt közös forráshányados pozitív generátora $K_*$,
+kvantum- és gravitációs terminálképe pedig $W_Q$, illetve $W_G$.  Az elfoglalt
+képeken az egyetlen forráskompatibilis transzport
+\[
+ T_{G\leftarrow Q}=W_GW_Q^{-1},\qquad
+ T_{G\leftarrow Q}K_Q=K_GT_{G\leftarrow Q}.
+\]
+Ha mindkét terminál metrikája ugyanarra a source-Hessianra húzódik vissza,
+akkor $T_{G\leftarrow Q}^\dagger h_GT_{G\leftarrow Q}=h_Q$.  A két readout
+közötti skálázás tehát nem szabad illesztési paraméter, miután a fizikai
+forrástérképek rögzítettek.
+
+A deklarált SHR--PSAL--QPHASE common-action completionben a standard kvantumos
+fáziskalibráció
+\[
+ \mathcal A_*=\frac{S_0}{2\pi}=\hbar,
+ \qquad
+ \mathcal A_*=C_G\ell_H^4=\frac{\ell_H^2}{6\kappa}
+\]
+azonosságot adja, így $\ell_H^2=48\pi\hbar G/c^3$ a használt
+akciókonvencióban.  Ez feltételes közös normalizációs zár, nem $\hbar$ SI
+értékének parentből való jóslata és nem Nature-szintű kiválasztás.  Külön
+publikált kvantum- és gravitációs marginálisokból a közös forrástérképek és a
+közös kovariancia nem rekonstruálhatók.
+
+A fennmaradó fanout-szabadság is lezárul egy szűkebb gazdagított csomagon
+belül.  Ha az elfoglalt közös forrásszektor abszolút irreducibilis, kvantum-
+és gravitációs kópiái multiplicitás-egy típusúak, a termináltérképek pedig
+forrásekvivariánsak, akkor a Schur-merevség minden nem nulla térképet skalárig
+egyedivé tesz.  A ciklikus no-bypass elfoglaltság kizárja a nulltérképet, a
+közös visszahúzott metrika rögzíti a skalár nagyságát, egy forrástulajdonú
+orientált horgony pedig a jelét.  Így a fenti transzport az egyetlen
+forrástermészetes izometria.  A nulltérkép, az ismételt kópia és a rögzítetlen
+horgony ellenmodellje megmutatja, hogy minden premissza szükséges.  Ez belső,
+feltételes lezárás; nem bizonyítja, hogy a korlátozatlan fizikai base--seed
+törvény ezt a szektort foglalja el.
+
+Egy endpoint-vak, Schur-semleges relációdefektus-négyzet bármely megadott
+pozitív válasz-Hessiant és vegyes source-jetet előállíthat úgy, hogy a post-body
+változó minimalizálása után pontosan az eredeti seed--body akció marad.  Ez a
+skaláris akcióalak keresését visszahatás nélkül lezárja.  Ortogonálisan
+elforgatott terminálprojektorok azonban változatlanul hagyják ezt az akciót,
+miközben megváltoztatják a megnevezett terminálválaszokat.  A deklarált
+osztály minimális elegendő objektuma ezért a joint jetet és a forrástulajdonú
+szerepreprezentációt együtt tartalmazó teljes grádált forráskarakterisztika.
+Ennek fizikai tulajdonjoga továbbra is nyitott.
+
+A pointed exterior eredmény tovább szűkíti ezt a fanout-csomagot. Egy onto,
+no-bypass CAR-pályán az üres gyök ciklikus, a reprezentált forrásalgebra teljes
+mátrixalgebra, fizikai modulja abszolút irreducibilis és nincs spectator
+kópiája. Ha ezt egy forrástulajdonú, orientált kétszerepű síkkal tenzorozzuk,
+pontosan egy kvantum- és egy gravitációs kópiát kapunk; a közös szorzatmetrika
+ezután megadja a fenti Schur-zárás többi feltételét. Ilyen típusozott szerepsík
+nélkül viszont egy $U(2)$-forgatás változatlanul hagyja a típusozatlan skalár
+akciót és metrikát, miközben megváltoztatja a megnevezett projektorokat; a
+null-láb és duplikált-kópia kontrollok is fennmaradnak. A nyitott fizikai input
+tehát egyetlen nem nulla, orientált Q/G incidencia a teljes grádált
+forrásreprezentációban, nem hat független fanout-együttható. A deklarált
+gazdagított P3 és Tau-lokális kompozíciós osztályban ez az incidencia nem új
+connector: a két forrástulajdonú, nem nulla rendezett kotangens port metrikus
+duálisa adja a Q/G-vonalakat, a lokális forráskópia-faktorizáció pedig
+szerepenként egy kópiát. Egy hidden-diagonal kontroll teljes Q- és G-marginális
+rang mellett megfelezi a joint rangot, ezért a faktorizációs feltevés
+lényeges. A paper nem vezeti le, hogy a fizikai base--seed törvény a
+gazdagított portcsomagot és ezt a Tau-lokális faktorizációt együtt realizálja.
+
+A két fennmaradó premisszát a korábban megkonstruált komponenslokális
+gazdagított akció,
+$\widehat\Gamma_{\rm CLP3}=\sum_C\widehat\Gamma_C$, együtt realizálja. A
+nemnegatív, egyszer számolt komponensakciók minimumai elérhetők, ezért minden
+globális minimizáló egyszerre foglalja el a P3 portcsomagot és az LC1--LC4
+lokalitást. A pointed-CAR és Schur tételekkel kompozálva ebből az egyedi
+normalizált izometrikus Q/G-transzport, a faithful fáziságon pedig
+$\mathcal A_*=\hbar$ következik új connector és gain nélkül. Ez lezárja a
+feltételes completion-to-fanout láncot. Azt nem bizonyítja, hogy a természet a
+$\Gamma_{\rm CLP3}$ törvényt választja: hidden-global-relation és hiányzó-port
+completionök ugyanazt a szűk upstream reduktot adják, mégis megsértik a
+következtetést.
+
+Pontosabban a fizikai cél nem egy kitüntetett off-shell skalárképlet. A fanout
+invariáns azon nemnegatív completionök osztályán, amelyeknek ugyanaz az
+elfoglalt minimumhalmaza, a közös egységben felírt valódi-normális fizikai
+Hessianja és a tipizált port/root/fázis csomagja. Valóban,
+$\Gamma_\lambda=\Gamma_{\rm CLP3}+\lambda\Gamma_{\rm CLP3}^2$ minden
+$\lambda>0$ esetén ugyanazt a minimumot, első variációt és fizikai Hessiánt
+adja, miközben off shell eltér. A természeti kiválasztás ezért ebbe a
+completion-osztályba tartozást jelent; a rejtett globális és hiányzó-port
+kontrollok az osztályon kívül vannak.
+
+\subsection*{A lokális fizikai hányados örökölt akcionális zárása}
+
+A IV. alapozó paper ACT-PCLOSE1 tétele most pontos feltételes hidat ad egy
+rendezett Parent-akciócsomagtól az összes deklarált readoutig. A csíra--test
+megoldás kiválasztása és befagyasztása után a reguláris post-body stacionaritás
+eredménye
+\[
+ D_SZ_*=-H_Z^{-1}B_{ZS},
+ \qquad O_i=Q_{OS,i}\circ T_i\circ P_i\circ\Xi(Z_*).
+\]
+A halmozott terminálok pontosan akkor rekonstruálják a deklarált lokális
+fizikai hányadost, ha
+$\ker J_{\rm term}=\mathcal N_{\rm phys}$. Ez azt jelenti, hogy az idő-,
+kvantum-, gravitációs és más kimenetek egy közös válasz tipizált leszármazottai,
+nem egymástól független illesztések. A tétel nem bizonyít globális
+forrásteljességet, természeti elfoglalást, Standard Modell-tartalmat, abszolút
+mértékegységeket vagy nem nulla Tau-specifikus jelet. Egy stabil,
+terminálvak forrásszektor pontos ellenpélda minden erősebb következtetésre.
+
 \section{Mit nem bizonyít a paper?}
 
 \begin{itemize}
@@ -1696,6 +1835,40 @@ birtokolja; a Paper I csak az architekturális következményt örökli.
 Ezek a korlátok nem lábjegyzetek.  A claim részei.  Az alapozó paper célja,
 hogy a blokkolókat elég láthatóvá tegye ahhoz, hogy későbbi munka egyenként
 támadhassa őket.
+
+\section{Feltételes gráf/Hilbert-reprezentáció és az oksági irány}
+
+Komplex kompatibilitási gráf csak akkor vezethető be, miután a forrás, a
+morfológiai test és az observer--forrás descent már meghatározott egy
+$\mathcal A_{OS}$ algebrát, egy pozitív $\omega_{OS}$ állapotot és nemnulla
+$x_a$ próbaelemeket. Ekkor a normalizált GNS-átfedések
+\begin{equation}
+ G^{OS}_{ab}=
+ \frac{\omega_{OS}(x_a^*x_b)}
+ {\sqrt{\omega_{OS}(x_a^*x_a)\omega_{OS}(x_b^*x_b)}}
+\end{equation}
+Hermitikus, pozitív szemidefinit, egységnyi diagonálú Gram-mátrixot adnak.
+Megfordítva minden ilyen véges mátrix reprezentálható egységvektorok
+Gram-mátrixaként, minimálisan $\operatorname{rank}G^{OS}$ dimenzióban. Ez
+standard matematika, nem új Parent-kiválasztási tétel.
+
+A megengedett irány ezért
+\[
+ B_\tau^{\rm base}+\sigma_U
+ \longrightarrow M_\tau
+ \longrightarrow (\mathcal A_{OS},\omega_{OS},\{x_a\})
+ \longrightarrow G^{OS}
+ \longrightarrow \hbox{típusos terminál-readoutok}.
+\]
+A fordított következtetés nem érvényes. Az $I_n$ és a
+$\mathbf1\mathbf1^*$ egyaránt egységdiagonálú pozitív Gram-mátrix, mégis
+teljesen eltérő rangot és korrelációs szerkezetet hordoz. A Gram-pozitivitás
+tehát nem választja ki a csírát, nem stabilizálja a testet, nem azonosítja az
+observert és nem bizonyít fizikai elfoglaltságot. Az alacsony spektrális
+módusok, projektív fázisok és gráfklaszterek csak feltételes readout-
+diagnosztikák maradnak, amíg egy forráseredetű akció és termináltérkép nem
+ad nekik fizikai szerepet. A Hilbert-gráf így egy már levezetett közös
+readout reprezentációja lehet, nem második Parent-ontológia.
 
 \section{Konklúzió}
 
