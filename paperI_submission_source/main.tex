@@ -58,7 +58,7 @@
 \large Foundation Paper I}
 \author{Jozsef Olcsak\\
 \small Independent researcher}
-\date{Draft v0.3 --- Last revised: 29 August 2026}
+\date{Draft v0.3 --- Last revised: 3 September 2026}
 
 \begin{document}
 
@@ -197,11 +197,16 @@ separate physical channel layer and not a quantum collapse of the parent.
 Before any typed terminal is evaluated, the claim-safe preterminal chain is
 \[
  (\mathcal A^{\rm acc}_{OS}[M_\tau],z_{OS}[J^{\rm acc}_{OS}])
- \longrightarrow \Xi_{OS}
+ \longrightarrow \Xi_{OS}^{\rm cont}
  \longrightarrow (\mathcal A^{\rm alg}_{OS},D_{OS},\leq_{OS})
  \longrightarrow Z^{(a)}_{OS}
  \xrightarrow{\ Q^{(a)}_{OS}\ }Y^{(a)}_{OS}.
 \]
+Thus \(\Xi_{OS}^{\rm cont}\) is the shared smooth preterminal descriptor,
+whereas the finite operational record is
+\(D_{OS}^{\rm op}=Q_{OS,\delta}(\Xi_{OS}^{\rm cont})\).  Differential and
+Hessian statements below apply to the former; hard resolution cells belong
+to the latter.
 The shorthand
 $\mathfrak C_{OS}=(\mathcal A^{\rm alg}_{OS},\mathfrak d_\tau,
 R^{\mathfrak d}_{OS},\{\omega_{OS,x}\},G_{\rm occ})$ is a mathematical
@@ -298,7 +303,7 @@ remains self-contained in the sense stated above.
 Symbol & Series-wide meaning & Primary treatment\\
 \midrule
 \(s\) & source/seed packet prior to observer descent & Paper I\\
-\(M_\tau\) & stabilized morphological body & Paper I\\
+\(M_\tau\) & stabilized morphological response configuration (morphological body) & Paper I\\
 \(\Desc_O\) & observer-indexed physical descent/readout & Paper I\\
 \(\Pi_{\rm phys}\) & selected coherent source representation & Paper II\\
 \(x_A\) & normalized finite source/body action separation & Papers I, III\\
@@ -345,21 +350,53 @@ Equivalently, the paper works with the following foundation package:
 \[
   \mathfrak T
   =
-  (\Ssrc,\RTspace,\Rmap,\Mta,\{U_i\},\{N_i\},\{J_i\}).
+  (B_\tau^{\rm base},\Ssrc,\RTspace,\Rmap,\Mta,
+   \{U_i\},\{N_i\},\{J_i\}).
 \]
-Here \(\Ssrc\) is a seed/source domain, \(\RTspace\) is a formal response
-domain, \(\Rmap\) is a map, relation, or set-valued response rule, \(\Mta\)
-is the morphological body, \(U_i\) are sector readouts, \(N_i\) are null or
+Here \(B_\tau^{\rm base}\) is the pre-readout carrier/support context,
+\(\Ssrc\) is a seed/source domain, \(\RTspace\) is a formal response domain,
+\(\Rmap\) is a map, relation, or set-valued response rule, and \(\Mta\) is
+the stabilized morphological response configuration (short name:
+morphological body).  The \(U_i\) are sector readouts, \(N_i\) are null or
 quotient policies, and \(J_i\) are optional relifts.  This package is an
 organizing object for later branches (Fig.~\ref{fig:core-spine}), not a proof
 that the unrestricted physical base--seed parent law realizes and occupies it.
 
 In informal Tau Core discussions, the phrase \emph{Tau Core base field} refers
-to this parent-side response substrate, represented here by
-\((\Ssrc,\RTspace,\Rmap)\), together with the morphological body \(\Mta\).
-The phrase is heuristic.  In this paper it does not denote a physical field
-with an action, equations of motion, units, stress-energy, or empirical
-calibration.
+to the carrier/support role \(B_\tau^{\rm base}\), not to \(\Mta\).  The seed
+is its base-readable relational/loading pattern, and their complete stable
+realized response is \(\Mta\).  The phrase ``field'' remains heuristic: this
+paper does not yet endow the base with ordinary spacetime dimension, time
+evolution, physical units, stress--energy, or empirical calibration.
+
+MRC-DEF2 fixes the word ``object'' on this side of the architecture. A base
+or seed object is an object of a typed parent relational domain, not an
+ordinary material body already embedded in the spacetime that the readouts
+are intended to recover. The base and seed are intended as pregeometric
+physical candidates, while their unrestricted realization and Nature
+occupation remain open. Ordinary particles, apparatuses and observers occur
+only downstream as persistent internal structures/readouts of \(\Mta\); using
+one as the upstream exciter of the same body would be circular.
+
+\paragraph{PGP-CON1: pregeometric-physics contract.}
+The parent side is therefore treated as a separate typed research layer,
+not as a second substance or a completed physical theory. Its minimum
+candidate package is
+\[
+ \mathfrak P_\tau=
+ (\mathcal X_B,\mathcal X_s,\mathcal X_M,
+  \mathcal C_\tau,\mathcal G_\tau,
+  \mathcal L_{\rm pre},\mathcal Q_{\rm pre}),
+\]
+where the entries type the base, seed, response space, simultaneous
+constraints, candidate symmetries, endpoint-blind parent-law class and
+quotient policy. The general law \(\mathcal L_{\rm pre}\) need not be a
+scalar action. Formal nonemptiness of its response class, source-owned
+physical realization and nonzero Nature occupation are three different
+claims. Only a frozen stabilized body may enter the later observer--source
+descent; terminal recovery cannot be read backward to select this package.
+The canonical full contract and its adversarial controls are maintained in
+the Tau Core theory hub.
 
 \paragraph{Method note.}
 The manuscript was developed in an AI-assisted theoretical-research workflow.
@@ -633,14 +670,48 @@ declared source-freeze rule.  No endpoint residual may be used to select the
 representative.
 \end{definition}
 
-\begin{definition}[Morphological body]
-The Tau-side morphological body \(\Mta\) is the intrinsic structured body that
-conditions readouts.  Minimally it is a stable selected source response
+\begin{definition}[Stabilized morphological response configuration]
+The Tau-side stabilized morphological response configuration \(\Mta\), called
+the \emph{morphological body} for short, is the complete seed-conditioned
+structured configuration that conditions readouts.  Minimally it is a stable selected source response
 $[M_s]\in\operatorname{Sel}_B(s)$ with $[M_s]\ne[M_0]$ on the protected
-quotient.  It is not an observed 4D morphology label.  It may carry
+quotient.  It is neither the bare base carrier nor merely a tangent response
+coordinate; a local notation such as $B\oplus u_s$ makes $u_s$ only a chart
+coordinate on the complete configuration.  It is not an observed 4D
+morphology label.  It may carry
 sector, branch, wall, null, Hessian-support, admissibility, global-order, and
 observer/path-relevant structure.  A projected morphology is only a readout
 handle on this deeper body.
+\end{definition}
+
+\begin{definition}[Atemporal formation versus traversal]
+The foundation arrow
+\[
+ [M_\tau^\star]
+ =
+ \bigl[\mathcal F_\tau(B_\tau^{\rm base},s_U,\mathcal K)\bigr]_{\sim}
+\]
+denotes source-conditioned selection or stabilization and assumes no external
+parent time.  A literally traversed path $M(\lambda)\to M_\tau^\star$ requires
+an additional occurrence/actuality law.  Its order parameter $\lambda$ is not
+observer time unless a separate terminal descent and calibration bridge is
+derived.
+\end{definition}
+
+\begin{definition}[Parent-side object and noncircular emergence]
+Before terminal descent, ``object'' denotes an object of a declared
+mathematical or relational type. In particular, \(B_\tau^{\rm base}\) and
+\(s_U\) presuppose neither a material worldline nor an already available
+spacetime-local collision. Their intended physical reading is conditional on
+a Nature-occupied parent realization. An ordinary object is represented
+downstream by a persistent relational subsystem
+\(S_a\in\operatorname{Sub}_{\rm rel}(M_\tau^\star)\) and a typed readout
+\(O_a=R_a(S_a)\). The chain \(O_a\to M_\tau^\star\to O_a\) is inadmissibly circular
+unless an independent, noncircular parent-side bridge is proved.
+This definition does not decide whether \(s_U\) is ontologically independent
+of the enriched base or a distinguished boundary, topological, or
+superselection sector of it. Both remain admissible noncircular parent
+completions until a physical source law discriminates them.
 \end{definition}
 
 \begin{proposition}[Zero-source factorization and formation certificates]
@@ -756,7 +827,7 @@ source class, we suppress it and write \(U_i(r)\).
 \begin{proposition}[Unified terminal atlas and common-ancestor criterion]
 \label{prop:mopr-ancestor}
 Fix an occupied body and observer--source context, and let
-\(\Xi_{OS}:\mathcal X_{OS}\to\mathcal Z_{OS}\) be the source-owned shared
+\(\Xi_{OS}^{\rm cont}:\mathcal X_{OS}\to\mathcal Z_{OS}\) be the source-owned shared
 preterminal descriptor supplied by the body-conditioned full channel.  For the
 declared terminal-role set \(\mathcal A_{\rm term}\), the unified readout is the
 typed product map
@@ -766,7 +837,7 @@ typed product map
  \left\langle
    Q_{OS}^{(a)}\circ T_{OS}^{(a)}
  \right\rangle_{a\in\mathcal A_{\rm term}}
- \circ\Xi_{OS}\circ A_{OS}[M_\tau],
+ \circ\Xi_{OS}^{\rm cont}\circ A_{OS}[M_\tau],
  \qquad
  M_\tau=\operatorname{Stab}_{B_\tau^{\rm base}}(\Sigma_\tau).
  \label{eq:unified-terminal-atlas}
@@ -776,22 +847,22 @@ unrestricted Nature-level theorem.  A candidate terminal
 \(R:\mathcal X_{OS}\to\mathcal Y\) descends through the same immediate ancestor
 if and only if it is constant on its fibres:
 \begin{equation}
- \Xi_{OS}(x)=\Xi_{OS}(x')
+ \Xi_{OS}^{\rm cont}(x)=\Xi_{OS}^{\rm cont}(x')
  \Longrightarrow R(x)=R(x').
  \label{eq:mopr-fibre-criterion}
 \end{equation}
 Equivalently, there is a unique
-\(\bar R:\operatorname{im}\Xi_{OS}\to\mathcal Y\) with
-\(R=\bar R\circ\Xi_{OS}\).  On a regular smooth branch with connected fibres,
+\(\bar R:\operatorname{im}\Xi_{OS}^{\rm cont}\to\mathcal Y\) with
+\(R=\bar R\circ\Xi_{OS}^{\rm cont}\).  On a regular smooth branch with connected fibres,
 the local criterion is
 \begin{equation}
- \ker D\Xi_{OS}\subseteq\ker DR.
+ \ker D\Xi_{OS}^{\rm cont}\subseteq\ker DR.
  \label{eq:mopr-kernel-criterion}
 \end{equation}
 The declared terminal stack recovers the same local quotient as the ancestor
 exactly when
 \begin{equation}
- \ker D\Xi_{OS}
+ \ker D\Xi_{OS}^{\rm cont}
  =
  \ker
  \begin{bmatrix}
@@ -802,9 +873,9 @@ exactly when
 \end{proposition}
 
 \begin{proof}
-If \(R=\bar R\circ\Xi_{OS}\), equality of descriptor values implies equality
+If \(R=\bar R\circ\Xi_{OS}^{\rm cont}\), equality of descriptor values implies equality
 of terminal values.  Conversely, Eq.~\eqref{eq:mopr-fibre-criterion} makes
-\(\bar R(\Xi_{OS}(x)):=R(x)\) well defined and unique on the image.  The
+\(\bar R(\Xi_{OS}^{\rm cont}(x)):=R(x)\) well defined and unique on the image.  The
 differential statement follows from the constant-rank theorem on connected
 local fibres.  Equality in Eq.~\eqref{eq:mopr-stack-completeness} says that
 the stack erases exactly, rather than strictly more than, the tangent
@@ -815,8 +886,37 @@ This theorem owns only the conditional common ancestry of the declared,
 physically occupied atlas.  It does not prove ambient terminal exhaustivity.
 The control \(\Xi(x,y)=x\), \(R_1(x,y)=x\), \(R_2(x,y)=y\) shows why:
 \(R_1\) factors and \(R_2\) does not.  A physically occupied terminal with
-\(D\Xi_{OS}v=0\) but \(DRv\neq0\) would therefore falsify completeness of the
+\(D\Xi_{OS}^{\rm cont}v=0\) but \(DRv\neq0\) would therefore falsify completeness of the
 proposed common ancestor rather than authorize a fitted repair.
+
+\begin{corollary}[Exact legacy migration through the continuous descriptor]
+\label{cor:mopr-migration}
+Let $L:\mathcal X_{OS}\to\mathcal Y_L$ be a historical descriptor or
+terminal law.  There is a unique map
+$U:\operatorname{im}\Xi_{OS}^{\rm cont}\to\mathcal Y_L$ satisfying
+\begin{equation}
+ L=U\circ\Xi_{OS}^{\rm cont}
+ \label{eq:mopr-legacy-migration}
+\end{equation}
+if and only if every \(\Xi_{OS}^{\rm cont}\)-fibre is contained in an
+$L$-fibre.  The two descriptors are exactly equivalent on the occupied
+domain if and only if their fibre equivalence relations coincide.  On a
+regular smooth branch the necessary local test is
+$\ker D\Xi_{OS}^{\rm cont}\subseteq\ker DL$, with equality giving the same
+local quotient.  Equal rank is not sufficient: the rank-one maps
+$\Xi(x,y)=x$ and $L(x,y)=x+y$ fail Eq.~\eqref{eq:mopr-legacy-migration}.
+\end{corollary}
+
+This migration theorem acts before hard finite resolution.  The operational
+record is separately
+\begin{equation}
+ D_{OS}^{\rm op}=Q_{OS,\delta}\!\left(\Xi_{OS}^{\rm cont}\right),
+ \label{eq:mopr-operational-record}
+\end{equation}
+and a hard quantizer migrates only when its stable partition is compatible
+with the same fibre map.  The corollary transports an already supplied
+terminal law or calibration; it does not derive the physical
+$Q_{OS,\delta}$, any calibration, $q_R(R)$, or Nature occupation.
 
 \begin{table}[H]
 \centering
@@ -1530,6 +1630,33 @@ The terminal rows are generated by variations of the same packet:
 \end{align}
 Common ownership fixes cross-sector covariance and prevents duplicate matter
 or Green-response terms (Fig.~\ref{fig:common-functional}).
+
+\paragraph{Generalized internal observer--target response.}
+Because the observer is internal to the occupied Parent/readout packet, a
+measurement may change the joint post-body state without reselecting the
+already stabilized body.  Hold $M_*$ fixed and let
+$\mathcal A_{\rm post}^{M_*}(x,o)$ be one regular common functional of a typed
+target coordinate $x$ and observer/apparatus coordinate $o$.  With
+\[
+ H_X=D_x^2\mathcal A_{\rm post}^{M_*}>0,
+ \qquad C_{XO}=D_xD_o\mathcal A_{\rm post}^{M_*},
+\]
+implicit stationarity and the terminal chain rule give
+\begin{equation}
+ \boxed{D_ox_*=-H_X^{-1}C_{XO}},\qquad
+ D_o\Pi_a^{\rm occ}
+ =D_o\Pi_a-D_x\Pi_aH_X^{-1}C_{XO}.
+ \label{eq:paperi-generalized-backaction}
+\end{equation}
+The two terminal terms are direct observer-context dependence and
+target-mediated backaction.  A hard record requires a same-context
+clamped-target comparison rather than differentiating its quantizer; a null
+or same-cell terminal may hide a real target response, while a context-only
+terminal may change at $C_{XO}=0$.  Across several terminals, independent
+visibility is the rank of the stacked backaction rows, not the number of
+terminal names.  This is a conditional common-functional theorem shared with
+ordinary interacting measurement models.  Physical selection of $C_{XO}$,
+Nature occupation and a Tau-specific excess remain open.
 
 \begin{figure}[t]
   \centering
@@ -3940,6 +4067,22 @@ are candidate carriers only, not asserted Tau realizations.  Likewise,
 cross-readout residuals are diagnostics only after matched null, covariance
 and source-freeze controls; they are not by themselves validation statistics.
 
+One conventional elastic-sheet control now makes a narrower architectural
+point concrete.  A two-parameter gapped stiffness family can select a
+rank-two modal projector before any endpoint is read.  Its Kato transport,
+reconstructed only from the frozen spectral projectors, agrees in the
+adiabatic limit with a second reconstruction obtained by propagating the
+complete elastic wave operator and removing only the source-known common
+dynamical phase.  Fast driving and closure of the spectral gap destroy this
+agreement.  Thus the body--occurrence--readout separation and its
+double-reconstruction test are realizable in standard mechanics; they are not
+peculiar to Tau Core.  The sheet is an ordinary subsystem of the one physical
+body, its microphone and sensor records are terminal projections, and the
+laboratory time coordinate is a calibrated terminal clock.  This control
+validates a method and supplies failure controls, but neither identifies the
+universe-level morphological body nor establishes physical occupation of a
+Tau parent law.
+
 \iffalse
 \section{A compact formal summary}
 
@@ -4320,6 +4463,21 @@ one response rather than independent fits.  It does not prove global source
 exhaustivity, Nature occupation, Standard-Model content, absolute units, or a
 nonzero Tau-specific signal.  A stable terminal-blind source sector is the
 exact countermodel to any stronger inference.
+
+The post-body active solder needs no additional fitted matrix when it is read
+from the same frozen action.  With response Hessian $H$ and mixed Hessian
+$B$, implicit stationarity gives
+\begin{equation}
+ \Gamma=D_YZ_*=-H^{-1}B.
+ \label{eq:active-solder-mixed-hessian}
+\end{equation}
+For the inherited SBTCL106 Bregman action one has
+$H=G_{OS}$, $B=-G_{OS}J_{OS}$, hence
+$\Gamma=J_{OS}$ and $C-B^*H^{-1}B=0$.  This is an internal conditional
+reduction, not a physical source-selection result: descent through a proposed
+active source variable still requires
+$p_sJ_{OS}|_{\ker DF}=0$, and neither its source ownership nor nonzero
+physical occupation follows from positivity or Schur neutrality.
 
 \section{Conditional Graph/Hilbert representation and forward-only placement}
 

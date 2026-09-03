@@ -54,7 +54,7 @@
 \large Foundation Paper I -- magyar változat}
 \author{Olcsák József\\
 \small Független kutató}
-\date{Draft v0.2 -- Legutóbb módosítva: 2026. augusztus 29.}
+\date{Draft v0.2 -- Legutóbb módosítva: 2026. szeptember 3.}
 
 \begin{document}
 
@@ -175,11 +175,16 @@ nem külön fizikai csatornaréteg és nem a parent kvantumos összeomlása.
 A tipizált terminálok előtt a claim-safe preterminális lánc
 \[
  (\mathcal A^{\rm acc}_{OS}[M_\tau],z_{OS}[J^{\rm acc}_{OS}])
- \longrightarrow \Xi_{OS}
+ \longrightarrow \Xi_{OS}^{\rm cont}
  \longrightarrow (\mathcal A^{\rm alg}_{OS},D_{OS},\leq_{OS})
  \longrightarrow Z^{(a)}_{OS}
  \xrightarrow{\ Q^{(a)}_{OS}\ }Y^{(a)}_{OS}.
 \]
+Itt \(\Xi_{OS}^{\rm cont}\) a közös sima preterminális descriptor, míg a
+véges operacionális rekord
+\(D_{OS}^{\rm op}=Q_{OS,\delta}(\Xi_{OS}^{\rm cont})\). Az alábbi
+differenciális és Hessian-állítások az előbbire vonatkoznak; a kemény
+felbontási cellák az utóbbihoz tartoznak.
 A
 $\mathfrak C_{OS}=(\mathcal A^{\rm alg}_{OS},\mathfrak d_\tau,
 R^{\mathfrak d}_{OS},\{\omega_{OS,x}\},G_{\rm occ})$ rövidítés ennek a
@@ -228,19 +233,51 @@ Ekvivalensen a paper a következő alapozó csomaggal dolgozik:
 \[
   \mathfrak T
   =
-  (\Ssrc,\RTspace,\Rmap,\Mta,\{U_i\},\{N_i\},\{J_i\}).
+  (B_\tau^{\rm base},\Ssrc,\RTspace,\Rmap,\Mta,
+   \{U_i\},\{N_i\},\{J_i\}).
 \]
-Itt \(\Ssrc\) forrásdomén, \(\RTspace\) formai válaszdomén, \(\Rmap\)
-térkép, reláció vagy halmazértékű válaszszabály, \(\Mta\) morfológiai test,
-\(U_i\) szektor-readout, \(N_i\) null/quotient politika, \(J_i\) opcionális
+Itt \(B_\tau^{\rm base}\) a kiolvasás előtti hordozó/támasz kontextus,
+\(\Ssrc\) forrásdomén, \(\RTspace\) formai válaszdomén, \(\Rmap\) térkép,
+reláció vagy halmazértékű válaszszabály, \(\Mta\) pedig a stabilizált
+morfológiai válaszkonfiguráció (röviden: morfológiai test). \(U_i\)
+szektor-readout, \(N_i\) null/quotient politika, \(J_i\) opcionális
 relift.  Ez a csomag későbbi ágak szervező objektuma, nem annak bizonyítása,
 hogy a természet ilyen csomagot használ.
 
 Informális Tau Core beszélgetésekben a \emph{Tau Core alapmező} kifejezés erre
-a parent-oldali válaszszubsztrátumra utal: ebben a paperben
-\((\Ssrc,\RTspace,\Rmap)\), a morfológiai testtel \(\Mta\) együtt.  A
-kifejezés heurisztikus.  Itt nem fizikai mezőt jelent akcióval,
-mozgásegyenlettel, egységekkel, stressz-energiával vagy empirikus kalibrációval.
+a hordozó/támasz szerepre, \(B_\tau^{\rm base}\)-re utal, nem \(\Mta\)-ra.
+A seed az alapmező számára olvasható relációs/terhelési minta, ezek teljes
+stabil realizált válasza pedig \(\Mta\). A „mező” szó heurisztikus: itt még
+nem jelent szokásos téridődimenziót, időfejlődést, fizikai egységeket,
+stressz--energiát vagy empirikus kalibrációt.
+
+Az MRC-DEF2 a parent-oldali „objektum” jelentését is rögzíti. A base- vagy
+seed-objektum egy típusos parent relációs domén objektuma, nem a readoutokból
+majd visszanyerendő téridőben már eleve elhelyezkedő anyagi test. A base és a
+seed pregeometrikus fizikai jelölt; korlátlan fizikai realizációjuk és
+Nature-occupationjük nyitott. A részecskék, műszerek és observerek csak
+\(\Mta\) tartós belső struktúráiként/readoutjaiként jelenhetnek meg downstream;
+egy ilyen objektumot ugyanennek a testnek az upstream gerjesztőjeként használni
+körkörös lenne.
+
+\paragraph{PGP-CON1: pregeometrikus fizikai szerződés.}
+A parent-oldalt ezért külön típusos kutatási rétegként kezeljük, nem második
+szubsztanciaként vagy kész fizikai elméletként. Minimális jelölt csomagja
+\[
+ \mathfrak P_\tau=
+ (\mathcal X_B,\mathcal X_s,\mathcal X_M,
+  \mathcal C_\tau,\mathcal G_\tau,
+  \mathcal L_{\rm pre},\mathcal Q_{\rm pre}),
+\]
+ahol a tagok a base, seed, válaszdomén, szimultán korlátok, jelölt
+szimmetriák, endpoint-vak parent-törvényosztály és quotient-politika típusait
+rögzítik. Az általános \(\mathcal L_{\rm pre}\) törvénynek nem kell skalár
+akciónak lennie. A válaszosztály formai nemüressége, a forrás tulajdonában álló
+fizikai realizáció és a nem nulla Nature-occupation három külön állítás. Csak
+a már stabilizált test léphet be a későbbi observer--source descentbe; a
+terminális visszanyerésből nem szabad visszafelé kiválasztani ezt a csomagot.
+A teljes kanonikus szerződést és az ellenmodelleket a Tau Core theory hub
+tartja fenn.
 
 \paragraph{Módszertani megjegyzés.}
 A kézirat AI-segített elméleti kutatási munkafolyamatban készült.  Az
@@ -447,14 +484,47 @@ kiválasztott reprezentánst jelöl.  Endpoint residual nem használható a
 reprezentáns kiválasztására.
 \end{definition}
 
-\begin{definition}[Morfológiai test]
-A Tau-oldali morfológiai test \(\Mta\) az intrinsic strukturált test, amely a
-kiolvasásokat kondicionálja.  Minimálisan stabilan kiválasztott, a semleges
+\begin{definition}[Stabilizált morfológiai válaszkonfiguráció]
+A Tau-oldali stabilizált morfológiai válaszkonfiguráció \(\Mta\), röviden
+\emph{morfológiai test}, a kiolvasásokat kondicionáló teljes seed-kondicionált
+strukturált konfiguráció. Minimálisan stabilan kiválasztott, a semleges
 $[M_0]$ osztálytól különböző forrásválasz.  Nem megfigyelt 4D morfológiai
-címke.  Tartalmazhat
+címke, nem a csupasz alapmező, és nem pusztán egy tangens válaszkoordináta.
+Egy $B\oplus u_s$ lokális alakban $u_s$ csak a teljes konfiguráció egyik
+koordinátája. Tartalmazhat
 szektor-, ág-, fal-, null-, Hessian-support-, admisszibilitási-, history- és
 megfigyelő/útvonal-releváns szerkezetet.  A vetített morfológia csak egy
 readout-handle erre a mélyebb testre.
+\end{definition}
+
+\begin{definition}[Atemporális kialakulás és tényleges bejárás]
+Az alapozó nyíl
+\[
+ [M_\tau^\star]
+ =
+ \bigl[\mathcal F_\tau(B_\tau^{\rm base},s_U,\mathcal K)\bigr]_{\sim}
+\]
+forráskondicionált kiválasztást vagy stabilizációt jelent, külső parent-idő
+nélkül. Egy ténylegesen bejárt $M(\lambda)\to M_\tau^\star$ út külön
+occurrence/aktualitási törvényt igényel. A \(\lambda\) rendparaméter nem
+observer-idő, amíg ezt külön terminális descent- és kalibrációs híd nem vezeti
+le.
+\end{definition}
+
+\begin{definition}[Parent-oldali objektum és nem körkörös megjelenés]
+A terminális descent előtt az „objektum” egy deklarált matematikai vagy
+relációs típus objektumát jelenti. Így \(B_\tau^{\rm base}\) és \(s_U\) nem
+feltételez anyagi világvonalat vagy már rendelkezésre álló téridőbeli
+ütközést. Fizikai értelmezésük egy Nature által elfoglalt parent-realizációtól
+függ. Egy közönséges objektumot downstream egy tartós relációs alrendszer
+\(S_a\in\operatorname{Sub}_{\rm rel}(M_\tau^\star)\) és annak típusos
+\(O_a=R_a(S_a)\) readoutja reprezentál. Az
+\(O_a\to M_\tau^\star\to O_a\) lánc elfogadhatatlanul körkörös, hacsak egy
+független, nem körkörös parent-oldali híd nincs bizonyítva.
+Ez a definíció nem dönti el, hogy \(s_U\) ontológiailag független-e a
+gazdagított base-től, vagy annak kitüntetett boundary-, topológiai vagy
+szuperszelekciós szektora. Mindkettő nem körkörös parent-completion marad,
+amíg egy fizikai forrástörvény nem választ közöttük.
 \end{definition}
 
 \begin{proposition}[Nulla-forrású faktorálás és testképződés]
@@ -733,6 +803,38 @@ Publikálatlan Tau Core protokolljegyzetek ugyanezt a fegyelmet konkrétabb
 empirikus beállításokban is használják, de ezek a jegyzetek nem bizonyítékok
 ehhez az alapozó paperhez.  Foundation Paper I ezért nem támaszkodik rájuk
 eredményként; legfeljebb belső terminológiai provenance-ként kezeli őket.
+
+\begin{proposition}[Egzakt örökölt-descriptor migráció]
+\label{prop:mopr-migration-hu}
+Rögzítsük az elfoglalt testet és observer--source kontextust, és legyen
+\(\Xi_{OS}^{\rm cont}:\mathcal X_{OS}\to\mathcal Z_{OS}\) a közös folytonos
+preterminális descriptor. Egy korábbi descriptor vagy termináltörvény
+\(L:\mathcal X_{OS}\to\mathcal Y_L\) pontosan akkor írható egyértelműen
+\begin{equation}
+ L=U\circ\Xi_{OS}^{\rm cont}
+ \label{eq:mopr-migration-hu}
+\end{equation}
+alakban az elfoglalt descriptor-képen, ha minden
+\(\Xi_{OS}^{\rm cont}\)-rost egy \(L\)-rost része. A két descriptor pontosan
+akkor ekvivalens, ha rostekvivalencia-relációik megegyeznek. Reguláris sima
+ágon a lokális feltétel
+\[
+ \ker D\Xi_{OS}^{\rm cont}\subseteq\ker DL,
+\]
+és az egyenlőség ugyanazt a lokális quotientet adja. Az azonos rang nem elég:
+\(\Xi(x,y)=x\) és \(L(x,y)=x+y\) egyaránt rank egy, de \(L\) nem faktorizál
+\(\Xi\)-n keresztül.
+\end{proposition}
+
+A kemény kvantáló külön vizsgálandó:
+\begin{equation}
+ D_{OS}^{\rm op}=Q_{OS,\delta}\!\left(\Xi_{OS}^{\rm cont}\right).
+ \label{eq:operational-record-hu}
+\end{equation}
+A fenti tétel egy már megadott termináltörvényt vagy kalibrációt visz át;
+nem vezeti le a fizikai \(Q_{OS,\delta}\)-t, kalibrációt, a galaktikus
+\(q_R(R)\)-t vagy a természeti elfoglalást. A kemény felbontási cellák csak
+akkor öröklődnek, ha a megfelelő stabil partíciók is kompatibilisek.
 
 \section{Nemtriviális reprezentációs feltétel}
 
@@ -1818,11 +1920,47 @@ forrásteljességet, természeti elfoglalást, Standard Modell-tartalmat, abszol
 mértékegységeket vagy nem nulla Tau-specifikus jelet. Egy stabil,
 terminálvak forrásszektor pontos ellenpélda minden erősebb következtetésre.
 
+Az aktív post-body solderhez nem kell új, illesztett mátrix, ha ugyanennek a
+befagyasztott akciónak a kevert Hessianjából olvassuk ki. A válasz-Hessian
+\(H\) és a kevert Hessian \(B\) mellett az implicit stacionaritás
+\begin{equation}
+ \Gamma=D_YZ_*=-H^{-1}B.
+ \label{eq:active-solder-mixed-hessian-hu}
+\end{equation}
+Az örökölt SBTCL106 Bregman-akciónál
+\(H=G_{OS}\), \(B=-G_{OS}J_{OS}\), ezért
+\(\Gamma=J_{OS}\) és \(C-B^*H^{-1}B=0\). Ez belső, feltételes redukció,
+nem fizikai forráskiválasztás: az aktív forrásváltozón keresztüli descenthez
+továbbra is kell
+\(p_sJ_{OS}|_{\ker DF}=0\), amelynek forráseredetét és nem nulla fizikai
+elfoglalását a pozitivitás vagy a Schur-semlegesség nem bizonyítja.
+
+\subsection*{Általános belső megfigyelő--cél visszahatás}
+
+A megfigyelő a közös Parent/readout konfiguráció része, ezért a mérés
+átrendezheti a közös post-body állapotot, de ebből nem következik a már
+stabilizált (M_\tau^\star) újbóli kiválasztása. Rögzített test és egy
+megadott reguláris (\mathcal A_{\rm post}^{M_*}(x,o)) funkcionál mellett
+\[
+ D_ox_*=-H_X^{-1}C_{XO},\qquad
+ H_X=D_x^2\mathcal A_{\rm post}^{M_*},\quad
+ C_{XO}=D_xD_o\mathcal A_{\rm post}^{M_*}.
+\]
+Egy sima terminális előkép változása közvetlen megfigyelői
+kontextushatásra és a célon közvetített visszahatásra bomlik. Kemény
+kvantálásnál ezt azonos kontextusú, rögzített-cél kontrollal kell szétválasztani.
+Terminál-null vagy azonos readout-cella elrejthet valós visszahatást, míg
+puszta kontextusváltozás nulla (C_{XO}) mellett is adhat terminális eltérést.
+Ez feltételes matematikai tétel, nem a fizikai (C_{XO}), a Nature-occupation
+vagy egy Tau-specifikus jel bizonyítása.
+
 \section{Mit nem bizonyít a paper?}
 
 \begin{itemize}
   \item Nem bizonyítja, hogy a Tau-szubsztrátum fizikailag létezik.
   \item Nem ad parent akciót.
+  \item Nem vezeti le a fizikai \(Q_{OS,\delta}\)-t, a terminális
+  kalibrációt vagy a galaktikus \(q_R(R)\)-t.
   \item Nem vezeti le a fizikai időt.
   \item Nem vezeti le az általános relativitáselméletet.
   \item Nem vezeti le a kvantummechanikát, Born-szabályt, kollapszust vagy QFT-t.

@@ -66,6 +66,14 @@ def test_claim_boundary_markers():
     assert "eq:seed-base-local-response" in text
     assert "eq:seed-base-local-response-active" in text
     assert "not a two-substance theorem" in normalized
+    assert "cor:mopr-migration" in text
+    assert "D_{OS}^{\\rm op}=Q_{OS,\\delta}" in text
+    assert "Equal rank is not sufficient" in text
+    assert "eq:active-solder-mixed-hessian" in text
+    assert "Generalized internal observer--target response" in text
+    assert "eq:paperi-generalized-backaction" in text
+    assert "D_ox_*=-H_X^{-1}C_{XO}" in text
+    assert "does not derive the physical" in text
     forbidden = [
         "we prove Tau Core",
         "dark matter is explained",

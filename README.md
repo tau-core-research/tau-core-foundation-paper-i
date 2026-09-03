@@ -11,6 +11,36 @@ It is the architectural entry point of the seven-stage foundation
 sequence; the shared series map is navigational and does not weaken this
 self-contained claim boundary.
 
+## Morphological-Response Terminology
+
+The base field is the pre-readout carrier/support context.  The universal seed
+is its base-readable relational/loading pattern, and the complete stable
+realized response is formally the **stabilized morphological response
+configuration** \(M_\tau^\star\); “morphological body” is retained as shorthand.
+It is neither the bare base nor merely a linear perturbation coordinate.
+Atemporal formation means source-conditioned selection. Literal traversal and
+observer time require separate occurrence and clock-descent laws.
+MRC-DEF2 further makes parent-side `object` type-theoretic: the base and seed
+are pregeometric physical candidates, not ordinary bodies already embedded in
+recovered spacetime. Their Nature occupation remains open, and ordinary
+objects appear only downstream as persistent internal structures/readouts of
+the stabilized response.
+PGP-CON1 packages this as an explicit pregeometric-physics research layer
+`(X_B,X_s,X_M,C_tau,G_tau,L_pre,Q_pre)`. It separates mathematical
+admissibility, source-owned physical realization and Nature occupation;
+`L_pre` is not assumed to be a scalar action. Paper I owns this definition,
+not the physical selection of its members.
+
+## Elastic-Sheet Architecture Control
+
+The manuscript now records a conventional gapped elastic-sheet model as a
+standard-physics control for the body--occurrence--readout separation. A
+projector-only Kato reconstruction and an independently propagated full-wave
+reconstruction agree only in the slow, spectrally gapped regime; fast and
+gapless controls fail. This validates the double-reconstruction method, not a
+Tau parent law. The sheet is an ordinary subsystem, its sensors are terminal
+projections, and laboratory time is a calibrated terminal clock.
+
 ## Unified Readout Atlas
 
 Paper I now owns the common-ancestor factorization theorem for the declared
@@ -20,16 +50,58 @@ occupied terminal atlas:
 \mathfrak R_{OS}
 =
 \left\langle Q_{OS}^{(a)}\circ T_{OS}^{(a)}\right\rangle_a
-\circ\Xi_{OS}\circ A_{OS}[M_\tau].
+\circ\Xi_{OS}^{\mathrm{cont}}\circ A_{OS}[M_\tau],
+\qquad
+D_{OS}^{\mathrm{op}}
+=Q_{OS,\delta}\!\left(\Xi_{OS}^{\mathrm{cont}}\right).
 \]
 
 A proposed terminal descends through the same immediate parent-readout
-ancestor exactly when it is constant on \(\Xi_{OS}\)-fibres; locally this
-requires \(\ker D\Xi_{OS}\subseteq\ker DR\). Equality with the kernel of the
+ancestor exactly when it is constant on \(\Xi_{OS}^{\mathrm{cont}}\)-fibres;
+locally this requires
+\(\ker D\Xi_{OS}^{\mathrm{cont}}\subseteq\ker DR\). Equality with the kernel of the
 stacked terminal Jacobian is the local reconstruction criterion. This is a
 conditional theorem for the declared occupied atlas, not proof that every
 possible physical terminal in Nature is included. A terminal that varies
-along a \(\Xi_{OS}\)-fibre is the explicit bypass falsifier.
+along a \(\Xi_{OS}^{\mathrm{cont}}\)-fibre is the explicit bypass falsifier.
+
+The exact legacy-migration rule is stronger than notation replacement.  A
+historical descriptor or terminal law (L) survives the refined ontology
+precisely when
+
+\[
+L=U\circ\Xi_{OS}^{\mathrm{cont}}
+\]
+
+for a unique map (U) on the occupied descriptor image, equivalently when
+the continuous-descriptor fibres refine the (L)-fibres.  Equality of the
+two fibre relations gives exact descriptor equivalence. Equal rank,
+dimension, signature or representation type alone is insufficient; for
+example, \(\Xi(x,y)=x\) and \(L(x,y)=x+y\) have the same rank but do not
+factor. Hard resolution cells migrate only when their partitions are also
+compatible. None of these conditional migration results derives the physical
+\(Q_{OS,\delta}\), terminal calibration, galactic \(q_R(R)\), or Nature
+occupation.
+
+## Generalized Internal Measurement Backaction
+
+Paper I now records the architectural consequence of treating the observer as
+an internal part of the occupied Parent/readout packet. With the stabilized
+body fixed, one supplied regular post-body observer--target functional gives
+
+\[
+D_o x_*=-H_X^{-1}C_{XO}.
+\]
+
+Each smooth terminal response splits into direct observer-context dependence
+and target-mediated backaction. Hard records require a same-context
+clamped-target control; a terminal null or unchanged stable cell can hide
+real response, while a context-only terminal can change at zero coupling.
+Independent multi-terminal visibility is a stacked-rank question, not a count
+of terminal labels. This conditional theorem is also standard interacting
+measurement mathematics: it does not derive physical `C_XO`, Nature
+occupation or a Tau-specific signal, and it does not feed measurement back
+into the already stabilized morphological body.
 
 ## Joint Source Integration
 
