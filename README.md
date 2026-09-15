@@ -381,6 +381,27 @@ functional, without a fitted record gain. The narrow parent action has not
 been shown to own this two-leg completion, so physical occupation remains
 open.
 
+## Expansion-Conditioned Common-Spectrum Inheritance
+
+The ECTR theorem packet adds one conditional specialization without changing
+the architecture of Foundation Paper I. After the body is frozen, a
+source-normalized Legendre--Riesz observer--source coevaluation may give
+`G=K_src/(2A_*)=k_(c,O)^2 A_(0,M)^-1`. A metric coframe and the Q filter
+`F_Q(a)=(I+a^2G)^-1/2` are then distinct descendants of the same positive
+operator packet. Positive occupied R1 access conditionally yields the exact
+classifier `H_O=Gamma/E_Q`; it does not make expansion universal.
+
+The corresponding causal statement is common-source co-descendance, not
+generation of terminal physics by observed expansion. The scale factor can
+modulate Q/G dominance only after the access law, quantizer and terminal types
+have been selected upstream.
+
+Paper I inherits only this architecture. Papers IV--VII-A own source
+selection, temporal sign, Q-filter and coframe/atlas specializations. The
+present source has not been shown to select the coevaluation, nonzero access,
+metric lock or Nature-wide atlas, and observed expansion cannot be used
+backward to certify them.
+
 ## Does Not Claim
 
 - It does not claim empirical validation of Tau Core.
@@ -473,3 +494,23 @@ Paper IV now owns the conditional `PD-USS1` source-selection theorem and its
 falsifier and the updated `0/31` public-packet census. Paper I inherits the
 architectural conclusion only: one coherent conditional selector exists, but
 its physical premises and Nature-level occupation remain open.
+
+<!-- BEGIN OBSERVER UPDATE 20260914 -->
+## Observer realization update (2026-09-14)
+
+The occupied observer--source context is relational instance data, not a uniquely selected observer identity inferred from the universal seed alone. Physical source realization and record preparation remain separate from conditional closure.
+
+The manuscript distinguishes inherited BRAC contact, conditional coherent-state
+selection and interacting local covariance from physical observer identification,
+preparation and stable resolution. Those physical claims remain open. No
+empirical score was changed. The [dependency and source-result ledger](data/derived/observer_update_2026_09_14.json) records the assumptions and controls.
+<!-- END OBSERVER UPDATE 20260914 -->
+
+<!-- BEGIN LAB UPDATE 20260915 -->
+## Finite lab integration (2026-09-15)
+
+The manuscript imports the scope-specific source, body, observer or terminal
+result from the current lab. Supplied priors, conditional recovery and physical
+selection remain separate. No SI constant, viable universe or Tau-specific
+signal is newly established. See the [source and ownership ledger](data/derived/lab_update_2026_09_15.json).
+<!-- END LAB UPDATE 20260915 -->

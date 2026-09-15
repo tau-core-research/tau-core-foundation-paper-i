@@ -142,3 +142,11 @@ def test_arxiv_zip_source_only():
     ]:
         assert fig in names
     assert all(not name.endswith(".aux") for name in names)
+
+
+def test_expansion_conditioned_inheritance_is_claim_bounded():
+    text = TEX.read_text()
+    assert "Expansion-conditioned shared-spectrum specialization" in text
+    assert "eq:paperi-ectr-lock" in text
+    assert "eq:paperi-ectr-classifier" in text
+    assert "does not say that every Tau-admissible universe expands" in text
