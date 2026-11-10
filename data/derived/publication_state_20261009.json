@@ -4,7 +4,9 @@
     {
       "source": "paperI_submission_source/main.tex",
       "role": "architecture",
-      "source_sha256": "d3239fed04d6f983862de0ddda422a4b14deac8093c7b5ed9fdbd04ae3cdc7c3"
+      "source_sha256": "93a6ebd6bd3bcc024908bc28d39bcbf680d32121b3ea142267812db65dc178b4",
+      "source_sha256_before_full_chain_20261110": "d3239fed04d6f983862de0ddda422a4b14deac8093c7b5ed9fdbd04ae3cdc7c3",
+      "current_source_update": "2026-11-10 full HRZ-HSL bounded chain import"
     },
     {
       "source": "paperI_hungarian_source/main.tex",
