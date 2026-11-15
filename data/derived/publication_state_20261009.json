@@ -4,14 +4,29 @@
     {
       "source": "paperI_submission_source/main.tex",
       "role": "architecture",
-      "source_sha256": "93a6ebd6bd3bcc024908bc28d39bcbf680d32121b3ea142267812db65dc178b4",
+      "source_sha256": "329a447b61b8518654d868aa011c66a040fa1c9c8ed9cfec42a5d0cefc3829b5",
       "source_sha256_before_full_chain_20261110": "d3239fed04d6f983862de0ddda422a4b14deac8093c7b5ed9fdbd04ae3cdc7c3",
-      "current_source_update": "2026-11-10 full HRZ-HSL bounded chain import"
+      "current_source_update": "Three-pillar mathematical optimization & single-postulate reduction (U1-U4, F1-F4, COV-DIR, HOMOG-K4, V19 lock; 2026-11-14)",
+      "source_sha256_before_f16_f20_20261112": "93a6ebd6bd3bcc024908bc28d39bcbf680d32121b3ea142267812db65dc178b4",
+      "source_sha256_before_f33_f40_20261113": "0cfdb874c0cc7c0581e2fc8055ac3d49e8bcc53a8af0393a7ed3791d250abd08",
+      "source_sha256_before_f41_f43_20261113": "71b73e2c4691e22ccffcb5a14e802c0301c1c2150b58f0d86685b85dd9c33a28",
+      "source_sha256_before_figures_20261113": "7ec91361e374bb27d8d6fb5d4f7c1f5b30d21c578a4302793256992d63b0d062",
+      "source_sha256_before_f46_20261113": "b1337e6bbe22e828759d6c56e5a0a08eaeaa0d49f1d37ef17d5b1730d7fefd41",
+      "source_sha256_before_f49_20261113": "c4ada08fbb95d57436a50b0a4c94956794cbe963216a7298374e109e05d5c71b",
+      "source_sha256_before_20261114": "a25331b4a7e5a7b04def4bde77e0fcdf5a68346134ec19c4f9fd6cf444e90bea"
     },
     {
       "source": "paperI_hungarian_source/main.tex",
       "role": "architecture-hungarian",
-      "source_sha256": "65d6d786ba2d5e32ac847830dde405d5cbdac5316debcac39b2cc02aeb5afbbd"
+      "source_sha256": "930a8dc0fd38e2f59dae29ba623c8bb71cf28ea5be79256d29daa395ec45408d",
+      "source_sha256_before_f16_f20_20261112": "65d6d786ba2d5e32ac847830dde405d5cbdac5316debcac39b2cc02aeb5afbbd",
+      "current_source_update": "Three-pillar mathematical optimization & single-postulate reduction (U1-U4, F1-F4, COV-DIR, HOMOG-K4, V19 lock; 2026-11-14)",
+      "source_sha256_before_f33_f40_20261113": "b1bacb4b2841a1ace491b4bb6c1d02502cf99dbb9e0366cef9938d67001c074e",
+      "source_sha256_before_f41_f43_20261113": "8d242d6e9601d42a4423701b3501544f73c8179a6572db8f0d47670b1c2d58f3",
+      "source_sha256_before_figures_20261113": "c96ef694eb89fcfa5f1c05bf1f09ad829ecb11bdda26cdb5d29f812da4d8d480",
+      "source_sha256_before_f46_20261113": "1c3daa3cdd4612ee4589f4a2e7072f8e9f43247ed7e51c5cf7e09ec48bede6de",
+      "source_sha256_before_f49_20261113": "8c387d2c9c5d9103027640c4f3030ae6fa16b67d2da4d6b987992bfbcce37e41",
+      "source_sha256_before_20261114": "118370ca4f5e21b094f61fa281caa17b738923ca385240c2d25cf8882aa619ab"
     }
   ],
   "empirical_scores_changed": false,

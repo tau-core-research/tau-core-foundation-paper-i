@@ -531,3 +531,11 @@ Foundation VII-A retains the detailed response derivation and compact receipts.
 Negative controls, numerical warning qualifications and physical-selection,
 particle, spatial/renormalized, stability and cosmology gaps remain explicit.
 This is a local manuscript/PDF update, not a publication or new empirical score.
+
+## Foundations blocker audit import (2026-11-12)
+
+Both the English (`paperI_submission_source/main.tex`) and Hungarian (`paperI_hungarian_source/main.tex`) manuscripts now record the `F16--F20` foundations blocker audit, separating unconditional finite theorems (`F18-T1` sequential Schur dilation, `F17-T1` two-sided fold continuation on `(-0.020270, +0.029052)`, `F17-T2` disjoint stage relaxation under `G_slot = A_tau (I_4 (+) I_6)`, and `F20-T1` exact `tau`- and `A_tau`-invariance of operational clock ratios) from conditional working selection principles (`OCSR-H1` vs `PDSS-C1`, `SMSD-H1` vs `IGM-H1`, `COCA-H1`, and `ZSNT-H1a` vs `ABNT-H1b`). Unrestricted `old-bare Tau` branch selection, SI calibration (`Gamma_0`, `ell_tau`, `delta_eta <-> GM/c^2`), and empirical validation remain open.
+
+## Three-pillar closure and postulate-reduction update (2026-11-14)
+
+Both the English (`paperI_submission_source/main.tex`, compacted from 4,877 to ~3,105 lines by removing legacy `\iffalse` blocks) and Hungarian (`paperI_hungarian_source/main.tex`, native UTF-8 throughout) manuscripts incorporate the 14 November 2026 three-pillar and postulate-reduction theorems (`U1--U4`, `F1--F4`, `COV-DIR`, `HOMOG-K4`, `V19` lock `m_bg = 0.52320998`, `m_eff = 2.12054781`), contracting the upstream foundation to one irreducible ontic postulate (`POST-OCC-NU1`, `omega != omega_0`) plus external rate scale `Gamma_0` (`NATURE_LEVEL_CLOSURE = false`).
